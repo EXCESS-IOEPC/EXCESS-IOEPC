@@ -5,21 +5,20 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-
 }
 body{
     font-family: "Audiowide", sans-serif;
-    background-color: black;
+    background-color: #101010;
 }
 nav{
-    background: #050505;
-    height: 80px;
+    background: black;
+    height: 64px;
     width: 100%;
 }
 label.logo{
     color: white;
     font-size: 35px;
-    line-height: 80px;
+    line-height: 64px;
     padding: 0% 2%;
     font-weight: bold;
 }
@@ -29,7 +28,7 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 64px;
     margin: 0 5px;
 }
 nav ul li a{
@@ -47,7 +46,7 @@ a.active, a:hover{
     font-size: 30px;
     color: white;
     float:right;
-    line-height: 80px;
+    line-height: 64px;
     margin-right: 40px;
     cursor: pointer;
 }
@@ -71,8 +70,8 @@ a.active, a:hover{
         position: fixed;
         width: 30%;
         height:  100vh;
-        background: #101010;
-        top: 80px;
+        background: #070707;
+        top: 64px;
         left: 70%;
         text-align: right;
         transition: .1s;
@@ -83,7 +82,7 @@ a.active, a:hover{
         line-height: 300%;
     }
     nav ul li a{
-        font-size: 20px;
+        font-size: 16px;
     }
     a:hover, a.active{
 
