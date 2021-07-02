@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 *{
     padding: 0;
     margin:0;
@@ -7,7 +8,7 @@
 
 }
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Audiowide", sans-serif;
 
 }
 nav{
@@ -50,7 +51,7 @@ a.active, a:hover{
     margin-right: 40px;
     cursor: pointer;
 }
-@media(max-width:952px){
+@media(max-width:468px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
