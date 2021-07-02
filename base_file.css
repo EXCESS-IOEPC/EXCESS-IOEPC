@@ -9,10 +9,10 @@
 }
 body{
     font-family: "Audiowide", sans-serif;
-
+    background-color: black;
 }
 nav{
-    background: #0a008f;
+    background: #050505;
     height: 80px;
     width: 100%;
 }
@@ -40,7 +40,7 @@ nav ul li a{
     text-transform: uppercase;
 }
 a.active, a:hover{
-    background: tomato;
+    background: #13529e;
     transition: .5s;
 }
 .checkbtn{
@@ -51,7 +51,7 @@ a.active, a:hover{
     margin-right: 40px;
     cursor: pointer;
 }
-@media(max-width:986px){
+@media(){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -69,25 +69,26 @@ a.active, a:hover{
     }
     ul{
         position: fixed;
-        width: 100%;
+        width: 30%;
         height:  100vh;
-        background: #2c3e50;
+        background: #101010;
         top: 80px;
-        left:0;
-        text-align: center;
-        transition: .5s;
+        left: 70%;
+        text-align: right;
+        transition: .1s;
     }
     nav ul li{
         display: block;
-        margin: 0 50px;
-        line-height: 30px;
+        margin: 0% 5%;
+        line-height: 300%;
     }
     nav ul li a{
         font-size: 20px;
     }
     a:hover, a.active{
-        background: none;
-        color: tomato;
+
+        background: black;
+        color: #13529e;
 
     }
     #check:checked ~ ul{
