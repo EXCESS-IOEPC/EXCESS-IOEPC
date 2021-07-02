@@ -20,7 +20,7 @@ label.logo{
     color: white;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0% 2%;
     font-weight: bold;
 }
 nav ul{
@@ -51,7 +51,7 @@ a.active, a:hover{
     margin-right: 40px;
     cursor: pointer;
 }
-@media(max-width:468px){
+@media(max-width:986px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
