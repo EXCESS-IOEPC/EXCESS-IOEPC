@@ -10,6 +10,7 @@ body{
   font-family: "Audiowide", sans-serif;
   background-color: #101010;
 }
+
 nav{
   background: black;
   height: 64px;
@@ -19,11 +20,11 @@ label.logo{
   color: white;
   font-size: 35px;
   line-height: 64px;
-  padding: 0% 2%;
+  padding: 0 100px;
   font-weight: bold;
 }
 nav ul{
-  float:right;
+  float: right;
   margin-right: 20px;
 }
 nav ul li{
@@ -32,62 +33,66 @@ nav ul li{
   margin: 0 5px;
 }
 nav ul li a{
-  color:white;
+  color: pink;
   font-size: 16px;
-  padding:7px 13px;
+  padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
-a.active, a:hover{
-  background: #13529e;
+
+a.active,a:hover{
+  background: #0082e6;
   transition: .5s;
 }
 .checkbtn{
   font-size: 30px;
   color: white;
-  float:right;
+  float: right;
   line-height: 64px;
   margin-right: 40px;
   cursor: pointer;
-}
-/* @media(){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-} */
-
-#check{
   display: none;
 }
-@media (max-width: 980px)
-{
-  .checkbtn{
-    display:block;
-  }
-  ul{
-    position: fixed;
-    width: 30%;
-    height:  100vh;
-    background: #070707;
-    top: 64px;
-    left: 70%;
-    text-align: right;
-    transition: .1s;
-  }
-  nav ul li{
-    display: block;
-    margin: 0% 5%;
-    line-height: 300%;
+#check{
+  display: table-row;
+}
+@media (max-width: 952px){
+  label.logo{
+      font-size: 30px;
+      padding-left: 50px;
   }
   nav ul li a{
-    font-size: 16px;
+      font-size: 16px;
+      
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      top: 64px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s
+  }
+  nav ul li{
+      display: block;
+      margin:50px 0;
+      line-height: 30px;
+  }
+  nav ul li a{
+      font-size: 20px;
   }
   a:hover, a.active{
-    background: black;
-    color: #13529e;
+      background: none;
+      color: #0082e6;
   }
   #check:checked ~ ul{
-    left:0;
+      left: 0;
   }
 }
