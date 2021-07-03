@@ -8,20 +8,21 @@
 }
 body{
   font-family: "Audiowide", sans-serif;
-  background-color: #101010;
+  background-color: black;
 }
 
 /* Main Navicaton Bar */
 nav{
-  background: black;
+  background: #020202;
   height: 64px;
   width: 100%;
+  opacity: 0.9;
 }
 label.logo{
   color: white;
   font-size: 35px;
   line-height: 64px;
-  padding: 0 100px;
+  padding: 0 2.5%;
   font-weight: bold;
 }
 nav ul{
@@ -91,23 +92,36 @@ a.active,a:hover{
   }
   a:hover, a.active{
       background: none;
-      color: #0082e6;
+      color: #13529e;
   }
   #check:checked ~ ul{
       left: 0;
   }
 }
-
+/* Main Header-A */
+.header-a{
+  align: center;
+  padding: 2%;
+  width: 2% 96%;
+  background-color: #6b7fd7;
+  opacity: 0.9;
+}
+.header-b{
+  align: center;
+  padding: 2%;
+  width: 2% 96%;
+  background-color: #94e8b4;
+  opacity: 0.9;
+}
 /* Main Footer */
 .footer{
-  position: fixed;
   padding: 20px;
   left: 0;
   bottom: 0;
   height: 250px;
   width: 100%;
-  background-color: black;
+  background-color: #101010;
   color: white;
   text-align: center;
-
+  opacity: 0.9;
 }
