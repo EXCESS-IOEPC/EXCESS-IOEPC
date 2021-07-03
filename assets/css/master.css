@@ -11,6 +11,7 @@ body{
   background-color: #101010;
 }
 
+/* Main Navicaton Bar */
 nav{
   background: black;
   height: 64px;
@@ -63,7 +64,7 @@ a.active,a:hover{
   }
   nav ul li a{
       font-size: 16px;
-      
+
   }
 }
 @media (max-width: 858px){
@@ -95,4 +96,18 @@ a.active,a:hover{
   #check:checked ~ ul{
       left: 0;
   }
+}
+
+/* Main Footer */
+.footer{
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  height: 250px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+
 }
