@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Audiowide");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
   padding: 0;
   margin:0;
@@ -6,88 +6,163 @@
   list-style: none;
   box-sizing: border-box;
 }
-body{
-  font-family: "Audiowide", sans-serif;
-  background-color: #101010;
+
+:root {
+  --bodybg: #141414;
+  --txt: white;
+  --txt2: black;
+  /* nav bar */
+  --navbar: #141414;
+  --hoverbg: #F7EF81;
+  --navtxt: white;
+  /* Dark Icon*/
+  --darkopacity: 1;
+  --lightopacity: 0;
+  /* body */
+  --abg: #141414;
+  --bbg: #141414;
+  /* footer */
+  --footerbg: #101010;
 }
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bodybg);
+  color: var(--txt);
+}
+
+/* Main Navicaton Bar */
 nav{
-  background: black;
   height: 64px;
   width: 100%;
+  background-color: var(--navbar)
 }
+
 label.logo{
-  color: white;
   font-size: 35px;
   line-height: 64px;
-  padding: 0% 2%;
+  padding: 0 2.5%;
   font-weight: bold;
+  color: var(--navtxt);
 }
+
 nav ul{
-  float:right;
-  margin-right: 20px;
+  float: right;
+  margin-right: 50px;
 }
+
 nav ul li{
   display: inline-block;
   line-height: 64px;
   margin: 0 5px;
 }
+
 nav ul li a{
-  color:white;
   font-size: 16px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  color: var(--navtxt);
 }
-a.active, a:hover{
-  background: #13529e;
+
+a.active,a:hover{
+  color: var(--txt2);
+  background: var(--hoverbg);
   transition: .5s;
 }
 .checkbtn{
   font-size: 30px;
   color: white;
-  float:right;
+  float: right;
   line-height: 64px;
   margin-right: 40px;
   cursor: pointer;
+  display: none;
 }
-@media(){
+
+#check{
+  display: table-row;
+}
+
+@media (max-width: 952px){
   label.logo{
     font-size: 30px;
     padding-left: 50px;
   }
+  nav ul li a{
+      font-size: 16px;
+  }
 }
 
-#check{
-  display: none;
-}
-@media (max-width: 980px)
-{
+@media (max-width: 858px){
   .checkbtn{
-    display:block;
+    display: block;
   }
   ul{
     position: fixed;
-    width: 30%;
-    height:  100vh;
-    background: #070707;
+    width: 100%;
+    height: 100vh;
+    background: black;
     top: 64px;
-    left: 70%;
-    text-align: right;
-    transition: .1s;
+    left: -100%;
+    text-align: center;
+    transition: all .5s
   }
   nav ul li{
     display: block;
-    margin: 0% 5%;
-    line-height: 300%;
+    margin:50px 0;
+    line-height: 30px;
   }
   nav ul li a{
-    font-size: 16px;
+    font-size: 20px;
   }
   a:hover, a.active{
-    background: black;
+    background: #89b0e3;
     color: #13529e;
   }
   #check:checked ~ ul{
-    left:0;
+    left: 0;
   }
+}
+
+/* Dark Mode Icon */
+svg.icondark{
+  opacity: var(--darkopacity);
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+svg.iconlight{
+  opacity: var(--lightopacity);
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+/* Dark Mode Icon Ends */
+
+/* Main Header-A */
+.header-a{
+  align: center;
+  padding: 2%;
+  width: 2% 96%;
+  background-color: var(--abg);
+}
+
+.header-b{
+  align: center;
+  padding: 2%;
+  width: 2% 96%;
+  background-color: var(--bbg);
+}
+/* Main Footer */
+footer{
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  height: 250px;
+  width: 100%;
+  background-color: var(--footerbg);
+  color: white;
+  text-align: center;
 }
