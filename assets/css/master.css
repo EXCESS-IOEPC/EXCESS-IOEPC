@@ -1,27 +1,17 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
   padding: 0;
   margin:0;
-  text-decoration: none;
+  text-decoration: none
   list-style: none;
   box-sizing: border-box;
 }
 
 :root {
+  /* Other Varaibles in JS */
   --bodybg: #141414;
-  --txt: white;
-  --txt2: black;
-  /* nav bar */
-  --navbar: #141414;
-  --hoverbg: #F7EF81;
-  --navtxt: white;
-  /* Dark Icon*/
-  --darkopacity: 1;
-  --lightopacity: 0;
-  /* body */
-  --abg: #141414;
-  --bbg: #141414;
-  /* footer */
+  /* bodybg changes (Dont Remove: causes Flashing Effect in Reload)*/
   --footerbg: #101010;
 }
 
@@ -41,7 +31,7 @@ nav{
 label.logo{
   font-size: 35px;
   line-height: 64px;
-  padding: 0 2.5%;
+  padding: 0px 40px 0px 25px;
   font-weight: bold;
   color: var(--navtxt);
 }
@@ -70,34 +60,45 @@ a.active,a:hover{
   background: var(--hoverbg);
   transition: .5s;
 }
-.checkbtn{
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 64px;
-  margin-right: 40px;
-  cursor: pointer;
+
+#check{
   display: none;
 }
 
-#check{
-  display: table-row;
-}
+/* Dark Mode Icon */
+  svg.icondarkmode{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    fill: var(--navtxt);
+    cursor: pointer;
+  }
+/* Dark Mode Icon Ends */
 
 @media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
+  input[type="checkbox"]{
+    apperance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
   }
-  nav ul li a{
-      font-size: 16px;
-  }
-}
 
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
+  input[type="checkbox"]:after{
+    height: 40px;
+    width: 40px;
+    margin-top: 2%;
+    cursor: pointer;
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 30px;
+    color : var(--navtxt);
+    transition: .5s;
   }
+
   ul{
     position: fixed;
     width: 100%;
@@ -120,39 +121,46 @@ a.active,a:hover{
     background: #89b0e3;
     color: #13529e;
   }
+
   #check:checked ~ ul{
     left: 0;
   }
-}
+
+ #check{
+  display:table-row;
+  position: absolute;
+  right: 45px;
+  top: 12.5px;
+ }
 
 /* Dark Mode Icon */
-svg.icondark{
-  opacity: var(--darkopacity);
-  position: absolute;
-  top: 18px;
-  right: 20px;
-}
-
-svg.iconlight{
-  opacity: var(--lightopacity);
-  position: absolute;
-  top: 18px;
-  right: 20px;
-}
+  svg.icondarkmode{
+    position: absolute;
+    top: 18px;
+    right: 65px;
+    cursor: pointer;
+  }
 /* Dark Mode Icon Ends */
+}
 
 /* Main Header-A */
 .header-a{
+  border-radius: 25px;
   align: center;
   padding: 2%;
-  width: 2% 96%;
+  height: 500px;
+  margin: 3%;
+  width: auto;
   background-color: var(--abg);
 }
 
 .header-b{
+  border-radius: 25px;
   align: center;
   padding: 2%;
-  width: 2% 96%;
+  margin: 3%;
+  height: 500px;
+  width: 5% 95%;
   background-color: var(--bbg);
 }
 /* Main Footer */
@@ -166,3 +174,215 @@ footer{
   color: white;
   text-align: center;
 }
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+footer.container{
+  max-width: 1170px;
+  background-color: rgba(76, 67, 110, 0);
+  margin:auto;
+
+
+} 
+footer.row{
+  display: flex;
+  flex-wrap: warp;
+}
+ footer.ul {
+ list-style: none;
+
+ }
+
+
+
+footer.footer-col{
+ width: 25%;
+ padding:0 15px;
+
+
+}
+
+
+
+
+
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+  padding: 0;
+  margin:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Other Varaibles in JS */
+  --bodybg: #141414;
+  /* bodybg changes (Dont Remove: causes Flashing Effect in Reload)*/
+  --footerbg: #101010;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bodybg);
+  color: var(--txt);
+}
+
+/* Main Navicaton Bar */
+nav{
+  height: 64px;
+  width: 100%;
+  background-color: var(--navbar)
+}
+
+label.logo{
+  font-size: 35px;
+  line-height: 64px;
+  padding: 0px 40px 0px 25px;
+  font-weight: bold;
+  color: var(--navtxt);
+}
+
+nav ul{
+  float: right;
+  margin-right: 50px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 64px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: var(--navtxt);
+}
+
+a.active,a:hover{
+  color: var(--txt2);
+  background: var(--hoverbg);
+  transition: .5s;
+}
+
+#check{
+  display: none;
+}
+
+/* Dark Mode Icon */
+  svg.icondarkmode{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    fill: var(--navtxt);
+    cursor: pointer;
+  }
+/* Dark Mode Icon Ends */
+
+@media (max-width: 952px){
+  input[type="checkbox"]{
+    apperance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:after{
+    height: 40px;
+    width: 40px;
+    margin-top: 2%;
+    cursor: pointer;
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 30px;
+    color : var(--navtxt);
+    transition: .5s;
+  }
+
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 64px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s
+  }
+  nav ul li{
+    display: block;
+    margin:50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: #89b0e3;
+    color: #13529e;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+ #check{
+  display:table-row;
+  position: absolute;
+  right: 45px;
+  top: 12.5px;
+ }
+
+/* Dark Mode Icon */
+  svg.icondarkmode{
+    position: absolute;
+    top: 18px;
+    right: 65px;
+    cursor: pointer;
+  }
+/* Dark Mode Icon Ends */
+}
+
+/* Main Header-A */
+.header-a{
+  border-radius: 25px;
+  align: center;
+  padding: 2%;
+  height: 500px;
+  margin: 3%;
+  width: auto;
+  background-color: var(--abg);
+}
+
+.header-b{
+  border-radius: 25px;
+  align: center;
+  padding: 2%;
+  margin: 3%;
+  height: 500px;
+  width: 5% 95%;
+  background-color: var(--bbg);
+}
+/* Main Footer */
+footer{
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  height: 250px;
+  width: 100%;
+  background-color: var(--footerbg);
+  color: white;
+  text-align: center;
+}
+>>>>>>> ac7cc66611863a5a49f34069ad07036120612291
