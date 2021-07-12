@@ -18,13 +18,15 @@ body{
   font-family: 'Roboto', sans-serif;
   background-color: var(--bodybg);
   color: var(--txt);
+  transition: 1s;
 }
 
 /* Main Navicaton Bar */
 nav{
   height: 64px;
   width: 100%;
-  background-color: var(--navbar)
+  background-color: var(--navbar);
+  transition: 1s;
 }
 
 label.logo{
@@ -152,6 +154,7 @@ svg.icondarkmode{
   margin: 3%;
   width: auto;
   background-color: var(--abg);
+  transition: 0,5s;
 }
 
 .header-b{
@@ -162,6 +165,7 @@ svg.icondarkmode{
   height: 500px;
   width: 5% 95%;
   background-color: var(--bbg);
+  transition: 0.5s;
 }
 
 
