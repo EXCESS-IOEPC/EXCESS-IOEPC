@@ -162,6 +162,7 @@ a.active,a:hover{
   width: 5% 95%;
   background-color: var(--bbg);
 }
+
 /* Main Footer */
 footer{
   padding: 20px;
@@ -176,9 +177,8 @@ footer{
 
 footer.container{
   max-width: 1170px;
-  background-color: rgba(76, 67, 110, 0);
   margin:auto;
-} 
+}
 footer.row{
   display: flex;
   flex-wrap: warp;
