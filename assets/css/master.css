@@ -55,7 +55,7 @@ nav ul li a{
 }
 
 a.active,a:hover{
-  color: var(--txt2);
+  color: var(--txt1);
   background: var(--hoverbg);
   transition: .5s;
 }
@@ -65,13 +65,13 @@ a.active,a:hover{
 }
 
 /* Dark Mode Icon */
-  svg.icondarkmode{
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    fill: var(--navtxt);
-    cursor: pointer;
-  }
+svg.icondarkmode{
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  fill: var(--navtxt);
+  cursor: pointer;
+}
 /* Dark Mode Icon Ends */
 
 @media (max-width: 952px){
@@ -98,11 +98,11 @@ a.active,a:hover{
     transition: .5s;
   }
 
-  ul{
+  nav ul{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: black;
+    background: var(--hoverbg);
     top: 64px;
     left: -100%;
     text-align: center;
@@ -117,8 +117,9 @@ a.active,a:hover{
     font-size: 20px;
   }
   a:hover, a.active{
-    background: #89b0e3;
-    color: #13529e;
+    color: white;
+    background: var(--navbar);
+    transition: .5s;
   }
 
   #check:checked ~ ul{
@@ -133,12 +134,12 @@ a.active,a:hover{
  }
 
 /* Dark Mode Icon */
-  svg.icondarkmode{
-    position: absolute;
-    top: 18px;
-    right: 65px;
-    cursor: pointer;
-  }
+svg.icondarkmode{
+  position: absolute;
+  top: 18px;
+  right: 65px;
+  cursor: pointer;
+}
 /* Dark Mode Icon Ends */
 }
 
@@ -162,33 +163,39 @@ a.active,a:hover{
   width: 5% 95%;
   background-color: var(--bbg);
 }
+
+
 /* Main Footer */
 footer{
+  margin:0;
+  padding:0;
+  height: 200px;
+  box-sizing:border-box;
+  background-color: #24262b;
   padding: 20px;
-  left: 0;
-  bottom: 0;
-  height: 250px;
-  width: 100%;
-  background-color: var(--footerbg);
-  color: white;
-  text-align: center;
 }
 
-footer.container{
-  max-width: 1170px;
-  background-color: rgba(76, 67, 110, 0);
-  margin:auto;
-} 
-footer.row{
+.footer-container{
+  margin: 20px;
+}
+
+.row{
   display: flex;
   flex-wrap: warp;
 }
- footer.ul {
+
+.ul {
  list-style: none;
 
 }
 
-footer.footer-col{
+.footer-col{
  width: 25%;
  padding:0 10px;
+}
+.footer-col h4{
+  font-size; 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
 }
