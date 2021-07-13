@@ -116,7 +116,7 @@ footer{
   padding:0;
   height: 200px;
   box-sizing:border-box;
-  background-color: #24262b;
+  background-color: #011c39;
   padding: 20px;
 }
 
@@ -144,6 +144,10 @@ footer{
   text-transform: capitalize;
   margin-bottom: 30px;
 }
+.container .sec{
+  margin-right:95px;
+}
+
 
 @media (max-width: 952px){
   input[type="checkbox"]{
