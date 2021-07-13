@@ -10,6 +10,7 @@
 :root {
   /* Other Varaibles in JS */
   --bodybg: #141414;
+  --navtxt: white;
   /* bodybg changes (Dont Remove: causes Flashing Effect in Reload)*/
   --footerbg: #101010;
 }
@@ -18,13 +19,15 @@ body{
   font-family: 'Roboto', sans-serif;
   background-color: var(--bodybg);
   color: var(--txt);
+  transition: 1s;
 }
 
 /* Main Navicaton Bar */
 nav{
   height: 64px;
   width: 100%;
-  background-color: var(--navbar)
+  background-color: var(--navbar);
+  transition: 1s;
 }
 
 label.logo{
@@ -55,7 +58,7 @@ nav ul li a{
 }
 
 a.active,a:hover{
-  color: var(--txt1);
+  color: var(--navtxt);
   background: var(--hoverbg);
   transition: .5s;
 }
@@ -74,75 +77,17 @@ svg.icondarkmode{
 }
 /* Dark Mode Icon Ends */
 
-@media (max-width: 952px){
-  input[type="checkbox"]{
-    height: 1px;
-    width: 10px;
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  input[type="checkbox"]:after{
-    height: 40px;
-    width: 40px;
-    margin-top: 2%;
-    cursor: pointer;
-    content: "\f0c9";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 800;
-    font-size: 30px;
-    color : var(--navtxt);
-    transition: .5s;
-  }
-
-  nav ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: var(--hoverbg);
-    top: 64px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s
-  }
-  nav ul li{
-    display: block;
-    margin:50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover, a.active{
-    color: white;
-    background: var(--navbar);
-    transition: .5s;
-  }
-
-  #check:checked ~ ul{
-    left: 0;
-  }
-
- #check{
-  display:table-row;
-  position: absolute;
-  right: 45px;
-  top: 12.5px;
- }
-
-/* Dark Mode Icon */
-svg.icondarkmode{
-  position: absolute;
-  top: 18px;
-  right: 65px;
-  cursor: pointer;
-}
-/* Dark Mode Icon Ends */
-}
-
 /* Main Header-A */
-.header-a{
+.body-top{
+  height: 400px;
+  width: auto;
+  padding: 5% 0% 5% 0%;
+  text-align: center;
+  font-size: 50px;
+  transition: 0.5s;
+}
+
+.body-a{
   border-radius: 25px;
   align: center;
   padding: 2%;
@@ -150,9 +95,10 @@ svg.icondarkmode{
   margin: 3%;
   width: auto;
   background-color: var(--abg);
+  transition: 0.5s;
 }
 
-.header-b{
+.body-b{
   border-radius: 25px;
   align: center;
   padding: 2%;
@@ -160,6 +106,7 @@ svg.icondarkmode{
   height: 500px;
   width: 5% 95%;
   background-color: var(--bbg);
+  transition: 0.5s;
 }
 
 
@@ -196,4 +143,74 @@ footer{
   color: #ffffff;
   text-transform: capitalize;
   margin-bottom: 30px;
+}
+
+@media (max-width: 952px){
+  input[type="checkbox"]{
+    height: 1px;
+    width: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:after{
+    height: 40px;
+    width: 40px;
+    margin-top: 2%;
+    cursor: pointer;
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 30px;
+    color : var(--navtxt);
+    transition: .5s;
+  }
+
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--hoverbg);
+    top: 64px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s
+  }
+
+  nav ul li{
+    display: block;
+    margin:50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a{
+    font-size: 20px;
+  }
+
+  a:hover, a.active{
+    color: white;
+    background: var(--navbar);
+    transition: .5s;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  #check{
+  display:table-row;
+  position: absolute;
+  right: 45px;
+  top: 12.5px;
+ }
+
+/* Dark Mode Icon */
+  svg.icondarkmode{
+    position: absolute;
+    top: 18px;
+    right: 65px;
+    cursor: pointer;
+  }
+/* Dark Mode Icon Ends */
 }
