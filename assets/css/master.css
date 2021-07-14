@@ -19,15 +19,16 @@ body{
   font-family: 'Roboto', sans-serif;
   background-color: var(--bodybg);
   color: var(--txt);
-  transition: 1s;
+  transition: .5s;
 }
 
 /* Main Navicaton Bar */
 nav{
   height: 64px;
   width: 100%;
+  position: fixed;
   background-color: var(--navbar);
-  transition: 1s;
+  transition: .5s;
 }
 
 label.logo{
@@ -60,7 +61,7 @@ nav ul li a{
 a.active,a:hover{
   color: var(--navtxt);
   background: var(--hoverbg);
-  transition: .5s;
+  transition: .25s;
 }
 
 #check{
@@ -69,7 +70,7 @@ a.active,a:hover{
 
 /* Dark Mode Icon */
 svg.icondarkmode{
-  position: absolute;
+  position: fixed;
   top: 18px;
   right: 20px;
   fill: var(--navtxt);
@@ -84,31 +85,8 @@ svg.icondarkmode{
   padding: 5% 0% 5% 0%;
   text-align: center;
   font-size: 50px;
-  transition: 0.5s;
+  transition: 0.25s;
 }
-
-.body-a{
-  border-radius: 25px;
-  align: center;
-  padding: 2%;
-  height: 500px;
-  margin: 3%;
-  width: auto;
-  background-color: var(--abg);
-  transition: 0.5s;
-}
-
-.body-b{
-  border-radius: 25px;
-  align: center;
-  padding: 2%;
-  margin: 3%;
-  height: 500px;
-  width: 5% 95%;
-  background-color: var(--bbg);
-  transition: 0.5s;
-}
-
 
 /* Main Footer */
 footer{
