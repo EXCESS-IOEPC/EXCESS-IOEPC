@@ -118,9 +118,11 @@ footer{
   box-sizing:border-box;
   background-color: #011c39;
   padding: 20px;
+  text-align: center;
 }
 
 .footer-container{
+  width: auto;
   margin: 20px;
 }
 
