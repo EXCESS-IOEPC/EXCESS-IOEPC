@@ -8,6 +8,7 @@ function darkmode() {
     document.body.style.setProperty('--hoverbg', '#141414');
     document.body.style.setProperty('--abg', '#141414');
     document.body.style.setProperty('--bbg', '#0F3F7A');
+    document.body.style.setProperty('--darkicon', '0deg');
     localStorage.darkmode = 1;
     n = 0;
   }
@@ -20,6 +21,7 @@ function darkmode() {
     document.body.style.setProperty('--hoverbg', '#0F3F7A');
     document.body.style.setProperty('--abg', '#E3E1DE');
     document.body.style.setProperty('--bbg', '#76ACEE');
+    document.body.style.setProperty('--darkicon', '180deg');
     localStorage.darkmode = 0;
     n = 1;
   }

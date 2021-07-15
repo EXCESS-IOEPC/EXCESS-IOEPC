@@ -75,6 +75,7 @@ svg.icondarkmode{
   right: 20px;
   fill: var(--navtxt);
   cursor: pointer;
+  transform: rotateZ(var(--darkicon));
 }
 /* Dark Mode Icon Ends */
 
@@ -103,7 +104,7 @@ footer{
   padding: 1%;
 }
 
-.row-full {
+.clear {
   clear: both;
 }
 
