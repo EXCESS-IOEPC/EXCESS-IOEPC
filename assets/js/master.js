@@ -1,5 +1,5 @@
 function darkmode() {
-  if (n) {
+  if (mode) {
     // Darktheme
     document.body.style.setProperty('--bodybg', 'black');
     document.body.style.setProperty('--txt', 'white');
@@ -10,7 +10,7 @@ function darkmode() {
     document.body.style.setProperty('--bbg', '#0F3F7A');
     document.body.style.setProperty('--darkicon', '0deg');
     localStorage.darkmode = 1;
-    n = 0;
+    mode = 0;
   }
   else {
     // lighttheme
@@ -23,12 +23,12 @@ function darkmode() {
     document.body.style.setProperty('--bbg', '#76ACEE');
     document.body.style.setProperty('--darkicon', '180deg');
     localStorage.darkmode = 0;
-    n = 1;
+    mode = 1;
   }
 }
 
 function load() {
-  if (localStorage.darkmode == 0) n = 0;
-  else n = 1;
+  if (localStorage.darkmode == 0) mode = 0;
+  else mode = 1;
   darkmode();
 }

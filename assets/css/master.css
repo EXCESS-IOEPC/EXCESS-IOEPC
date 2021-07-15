@@ -91,14 +91,13 @@ svg.icondarkmode{
 
 /* Main Footer */
 footer{
-  margin:0;
-  padding: 5%;
+  padding: 1%;
   box-sizing: border-box;
   background-color: #011c39;
   text-align: center;
 }
 
-.row {
+.float {
   width: 30%;
   float: left;
   padding: 1%;
