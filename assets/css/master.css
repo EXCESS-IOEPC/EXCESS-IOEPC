@@ -75,6 +75,7 @@ svg.icondarkmode{
   right: 20px;
   fill: var(--navtxt);
   cursor: pointer;
+  transform: rotateZ(var(--darkicon));
 }
 /* Dark Mode Icon Ends */
 
@@ -91,41 +92,21 @@ svg.icondarkmode{
 /* Main Footer */
 footer{
   margin:0;
-  padding:0;
-  height: 200px;
-  box-sizing:border-box;
+  padding: 5%;
+  box-sizing: border-box;
   background-color: #011c39;
-  padding: 20px;
+  text-align: center;
 }
 
-.footer-container{
-  margin: 20px;
+.row {
+  width: 30%;
+  float: left;
+  padding: 1%;
 }
 
-.row{
-  display: flex;
-  flex-wrap: warp;
+.clear {
+  clear: both;
 }
-
-.ul {
- list-style: none;
-
-}
-
-.footer-col{
- width: 25%;
- padding:0 10px;
-}
-.footer-col h4{
-  font-size; 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-}
-.container .sec{
-  margin-right:95px;
-}
-
 
 @media (max-width: 952px){
   input[type="checkbox"]{
