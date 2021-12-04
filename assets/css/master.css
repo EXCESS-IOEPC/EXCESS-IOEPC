@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
-  padding: 0;
-  margin:0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
@@ -16,32 +14,37 @@
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
   background-color: var(--bodybg);
   color: var(--txt);
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
   transition: .5s;
+  align-content: center;
 }
 
-/* Main Navicaton Bar */
+/* Navicaton Bar Begin*/
 nav{
-  height: 64px;
-  width: 100%;
-  position: fixed;
   background-color: var(--navbar);
+  height: 64px;
+  position: fixed;
   transition: .5s;
+  width: 100%;
 }
 
 label.logo{
+  color: var(--navtxt);
   font-size: 35px;
+  font-weight: bold;
   line-height: 64px;
   padding: 0px 40px 0px 25px;
-  font-weight: bold;
-  color: var(--navtxt);
 }
 
 nav ul{
   float: right;
+  margin: 0px;
   margin-right: 50px;
+  line-height: 64px;
+
 }
 
 nav ul li{
@@ -51,64 +54,136 @@ nav ul li{
 }
 
 nav ul li a{
+  border-radius: 3px;
+  color: var(--navtxt);
   font-size: 16px;
   padding: 7px 13px;
-  border-radius: 3px;
   text-transform: uppercase;
-  color: var(--navtxt);
 }
 
 a.active,a:hover{
-  color: var(--navtxt);
   background: var(--hoverbg);
+  color: var(--navtxt);
   transition: .25s;
 }
 
 #check{
   display: none;
 }
+/* Navicaton Bar End*/
 
 /* Dark Mode Icon */
 svg.icondarkmode{
-  position: fixed;
-  top: 18px;
-  right: 20px;
-  fill: var(--navtxt);
   cursor: pointer;
+  fill: var(--navtxt);
+  position: fixed;
+  right: 20px;
+  top: 18px;
   transform: rotateZ(var(--darkicon));
 }
 /* Dark Mode Icon Ends */
 
-/* Main Header-A */
+/* Body Begin*/
 .body-top{
-  height: 400px;
-  width: auto;
+  font-size: 50px;
+  height: auto;
   padding: 5% 0% 5% 0%;
   text-align: center;
-  font-size: 50px;
+  transition: 0.25s;
+  width: auto;
+}
+
+.body-a{
+  border-radius: 25px;
+  background-color: var(--abg);
+  height: auto;
+  padding: 2%;
+  margin: 3%;
   transition: 0.25s;
 }
 
-/* Main Footer */
+.body-b{
+  background-color: var(--bbg);
+  border-radius: 25px;
+  height: auto;
+  padding: 2%;
+  margin: 3%;
+  transition: 0.25s;
+}
+
+.clear-a {
+  clear: both;
+  border-radius: 25px;
+  align: center;
+  padding: 2%;
+  margin: 3%;
+  width: auto;
+  height: auto;
+  background-color: var(--abg);
+  transition: 0.25s;
+}
+
+.clear-b{
+  clear: both;
+  border-radius: 25px;
+  align: center;
+  padding: 2%;
+  margin: 3%;
+  height: auto;
+  background-color: var(--bbg);
+  transition: 0.25s;
+}
+
+.mini50-a{
+  align: center;
+  background-color: var(--abg);
+  border-radius: 25px;
+  float: left;
+  height: auto;
+  margin: 1%;
+  margin-left: 3%;
+  padding: 2%;
+  width: 46%;
+  transition: 0.25s;
+}
+
+.mini50-b{
+  align: center;
+  background-color: var(--bbg);
+  border-radius: 25px;
+  float: left;
+  height: auto;
+  margin: 1%;
+  margin-right: 3%;
+  padding: 2%;
+  transition: 0.25s;
+  width: 46%;
+}
+
+/* Body End */
+
+/* Footer Begin */
 footer{
-  margin:0;
-  padding: 5%;
+  padding: 1%;
   box-sizing: border-box;
   background-color: #011c39;
   text-align: center;
 }
 
-.row {
+footer .clear{
+  clear: both;
+}
+
+.float {
   width: 30%;
   float: left;
   padding: 1%;
 }
+/* Footer End */
 
-.clear {
-  clear: both;
-}
 
 @media (max-width: 952px){
+/* Navicaton Bar Begin*/
   input[type="checkbox"]{
     height: 1px;
     width: 10px;
@@ -138,12 +213,13 @@ footer{
     top: 64px;
     left: -100%;
     text-align: center;
-    transition: all .5s
+    transition: all .5s;
   }
 
   nav ul li{
     display: block;
-    margin:50px 0;
+    margin: 50px;
+    margin-left: 0px;
     line-height: 30px;
   }
 
@@ -167,6 +243,7 @@ footer{
   right: 45px;
   top: 12.5px;
  }
+ /* Navicaton Bar End*/
 
 /* Dark Mode Icon */
   svg.icondarkmode{
@@ -176,4 +253,31 @@ footer{
     cursor: pointer;
   }
 /* Dark Mode Icon Ends */
+
+/* Body Begin*/
+.body-top{
+  font-size: 25px;
+  height: auto;
+  padding: 5% 0% 5% 0%;
+  padding-top: 60px;
+  text-align: center;
+  transition: 0.25s;
+  width: auto;
+}
+
+.mini50-a{
+  margin-left: 0%;
+  float: none;
+  width: auto;
+  clear: both;
+}
+
+.mini50-b{
+  margin-right: 0%;
+  margin-bottom: 2%;
+  float: none;
+  width: auto;
+  clear: both;
+}
+/* Body End */
 }

@@ -1,0 +1,55 @@
+.body-a{
+  border-radius: 25px;
+  float: none;
+  align: center;
+  padding: 2%;
+  height: 500px;
+  margin: 3% auto;
+  max-width: 50%;
+  background-color: var(--abg);
+  transition: 0.25s;
+  text-align: center;
+}
+
+.body-b{
+  border-radius: 25px;
+  align: center;
+  float: none;
+  padding: 2%;
+  margin: 3%;
+  height: 500px;
+  width: 5% 95%;
+  background-color: var(--bbg);
+  transition: 0.25s;
+}
+
+.body-50a{
+  border-radius: 25px;
+  float: right;
+  align: center;
+  padding: 2%;
+  height: 500px;
+  margin: 3%;
+  width: 50%;
+  background-color: var(--abg);
+  transition: 0.25s;
+}
+
+.body-50b{
+  border-radius: 25px;
+  align: center;
+  float: right;
+  padding: 2%;
+  margin: 3%;
+  height: 500px;
+  width: 5% 95%;
+  background-color: var(--bbg);
+  transition: 0.25s;
+}
+
+.membersimg{
+  width: 300px;
+  border-radius: 50%;
+  height: 300px;
+  object-fit: cover;
+}
