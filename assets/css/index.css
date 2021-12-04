@@ -1,0 +1,26 @@
+<<<<<<< Updated upstream
+=======
+.body-a{
+  border-radius: 25px;
+  float: none;
+  align: center;
+  padding: 2%;
+  height: 500px;
+  margin: 3%;
+  width: auto;
+  background-color: var(--abg);
+  transition: 0.25s;
+}
+
+.body-b{
+  border-radius: 25px;
+  align: center;
+  float: none;
+  padding: 2%;
+  margin: 3%;
+  height: 500px;
+  width: 5% 95%;
+  background-color: var(--bbg);
+  transition: 0.25s;
+}
+>>>>>>> Stashed changes

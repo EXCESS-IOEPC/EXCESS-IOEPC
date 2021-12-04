@@ -19,6 +19,7 @@ body{
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   transition: .5s;
+  align-content: center;
 }
 
 /* Navicaton Bar Begin*/
