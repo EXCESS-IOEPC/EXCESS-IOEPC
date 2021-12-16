@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#particles-js{
+  background-size: cover;
+  background-color: rgb(255, 6, 6);
+  height: 800px;
+
+}
