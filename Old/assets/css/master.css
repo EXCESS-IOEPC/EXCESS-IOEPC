@@ -29,6 +29,8 @@ nav{
   position: fixed;
   transition: .5s;
   width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  
 }
 
 label.logo{
@@ -37,6 +39,7 @@ label.logo{
   font-weight: bold;
   line-height: 64px;
   padding: 0px 40px 0px 25px;
+
 }
 
 nav ul{
