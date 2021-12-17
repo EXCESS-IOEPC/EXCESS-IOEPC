@@ -4,9 +4,7 @@
 }
 #particles-js{
   background-size: cover;
-  height: 60%;
+  max-width: 100%;
   width: auto;
-  background-image: url("/Old/assets/images/excess.jpg");
-  
-
+  background-image: url("https://th.bing.com/th/id/R.68cfae3ed50fff3db3d710003ecc631f?rik=twgIWVFUfq8a%2bg&pid=ImgRaw&r=0");
 }

@@ -29,6 +29,8 @@ nav{
   position: fixed;
   transition: .5s;
   width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  
 }
 
 label.logo{
@@ -37,6 +39,7 @@ label.logo{
   font-weight: bold;
   line-height: 64px;
   padding: 0px 40px 0px 25px;
+
 }
 
 nav ul{
@@ -114,7 +117,6 @@ svg.icondarkmode{
 .clear-a {
   clear: both;
   border-radius: 25px;
-  align: center;
   padding: 2%;
   margin: 3%;
   width: auto;
@@ -126,7 +128,6 @@ svg.icondarkmode{
 .clear-b{
   clear: both;
   border-radius: 25px;
-  align: center;
   padding: 2%;
   margin: 3%;
   height: auto;
@@ -135,7 +136,6 @@ svg.icondarkmode{
 }
 
 .mini50-a{
-  align: center;
   background-color: var(--abg);
   border-radius: 25px;
   float: left;
@@ -148,7 +148,6 @@ svg.icondarkmode{
 }
 
 .mini50-b{
-  align: center;
   background-color: var(--bbg);
   border-radius: 25px;
   float: left;

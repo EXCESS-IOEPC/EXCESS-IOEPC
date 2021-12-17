@@ -1,0 +1,13 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--bodybg);
+}
+
+h1,
+p {
+  color: var(--txxt-color);
+}
+
