@@ -4,7 +4,9 @@
 }
 #particles-js{
   background-size: cover;
-  background-color: black;
-  height: 800px;
+  height: 60%;
+  width: auto;
+  background-image: url("/Old/assets/images/excess.jpg");
+  
 
 }
