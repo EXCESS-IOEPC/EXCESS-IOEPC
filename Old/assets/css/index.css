@@ -59,4 +59,69 @@
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+
+}
+/* sudip
+.overlay-image {
+  position: relative;
+  width: 100%;
+} */
+
+/* Original image */
+/* .overlay-image .image {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+/* Original text overlay */
+.overlay-image .text {
+  
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.5em;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+/* 
+typewriter animation */
+.typewriter {
+  font-family: Courier, monospace;
+display: inline-block;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+ animation: typing 5s steps(30, end), blink .75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { 
+      width: 0% 
+  }
+  to { 
+      width: 100% 
+  }
+}
+
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
+  }
+  50% { 
+      border-color: orange; 
+  }
 }
