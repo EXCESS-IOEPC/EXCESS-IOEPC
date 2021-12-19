@@ -1,0 +1,51 @@
+nav {
+  --nav-height: 60px;
+  --checkbox-ani: 22px;
+}
+
+nav {
+  position: fixed;
+  height: var(--nav-height);
+  width: 100%;
+  background-color: var(--nav);
+  opacity: 0.7;
+}
+
+nav ul {
+  clear: both;
+  display: flex;
+  float: right;
+  max-width: 700px;
+  justify-content: space-around;
+}
+
+nav ul a, nav ul li{
+  float: right;
+  margin: 13.5px 5px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: var(--nav-txt);
+  opacity: 1;
+  text-transform: capitalize;
+}
+
+nav ul a.active, nav ul a:hover{
+  background-color: var(--body);
+}
+
+nav ul .switch{
+  height: 30px;
+  width: 55px;
+  margin: 15px 10px;
+  border-radius: 20px;
+  background-color: var(--slider);
+}
+
+nav ul .switch .round{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  margin: 2.5px 0px 2.5px var(--dm-round);;
+  background-color: var(--slider-round);
+}

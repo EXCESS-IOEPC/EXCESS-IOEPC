@@ -1,9 +1,23 @@
 body{
-  --bodybg: #fff;
-
+  --body: #fff;
+  --txt: #000;
+  /* NAV BAR */
+  --nav: #141414;
+  --nav-txt: #fff;
+  --slider: #fff;
+  --slider-round: #000;
+  --dm-round: 2.5px;
+  /*  */
 }
 
 body.darkmode {
-  --bodybg: #000;
-
+  --body: #000;
+  --txt: #fff;
+  /* NAV BAR */
+  --nav: #1357aa;
+  --nav-txt: #fff;
+  --slider: #000;
+  --slider-round: #fff;
+  --dm-round: 27px;
+  /*  */
 }

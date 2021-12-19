@@ -1,7 +1,6 @@
 .body-a{
   border-radius: 25px;
   float: none;
-  align: center;
   padding: 2%;
   height: 500px;
   margin: 3%;
@@ -12,7 +11,6 @@
 
 .body-b{
   border-radius: 25px;
-  align: center;
   float: none;
   padding: 2%;
   margin: 3%;
@@ -87,13 +85,13 @@
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 800px;
 }
 /* 
 typewriter animation */
 .typewriter {
   font-family: Courier, monospace;
-display: inline-block;
+  display: inline-block;
 }
 
 .typewriter-text {
@@ -113,7 +111,7 @@ display: inline-block;
       width: 0% 
   }
   to { 
-      width: 100% 
+      width: 80% 
   }
 }
 
