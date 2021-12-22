@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  background-color: var(--footer-bg);
+  justify-content: space-around;
+  color: var(--footer-txt);
+  text-align: center;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  min-width: 200px;
+}
+
+footer .col>h1 {
+  padding: 5%;
+}
+
+footer>.end {
+  width: 100%;
+  padding: 1%;
+}

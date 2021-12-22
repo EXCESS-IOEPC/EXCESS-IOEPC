@@ -1,7 +1,6 @@
 .body-a{
   border-radius: 25px;
   float: none;
-  align: center;
   padding: 2%;
   height: 500px;
   margin: 3% auto;
@@ -13,7 +12,6 @@
 
 .body-b{
   border-radius: 25px;
-  align: center;
   float: none;
   padding: 2%;
   margin: 3%;
@@ -26,7 +24,6 @@
 .body-50a{
   border-radius: 25px;
   float: right;
-  align: center;
   padding: 2%;
   height: 500px;
   margin: 3%;
@@ -37,7 +34,6 @@
 
 .body-50b{
   border-radius: 25px;
-  align: center;
   float: right;
   padding: 2%;
   margin: 3%;

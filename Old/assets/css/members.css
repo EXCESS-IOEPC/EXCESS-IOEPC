@@ -1,6 +1,5 @@
 .body-a{
   border-radius: 25px;
-  align: center;
   padding: 2%;
   height: 500px;
   margin: 3%;
@@ -11,7 +10,6 @@
 
 .body-b{
   border-radius: 25px;
-  align: center;
   padding: 2%;
   margin: 3%;
   height: 500px;
