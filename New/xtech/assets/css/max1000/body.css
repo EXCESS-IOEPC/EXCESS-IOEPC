@@ -10,8 +10,13 @@ body {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
+  justify-content: center;
   background: var(--body);
   z-index: 2;
+}
+
+section.body {
+  max-width: 1000px;
 }
 
 .top-img {

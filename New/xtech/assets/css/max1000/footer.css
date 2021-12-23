@@ -19,6 +19,11 @@ footer .col>h1 {
   padding: 5%;
 }
 
+footer a{
+  color: var(--footer-txt);
+  text-decoration: none;
+}
+
 footer>#end {
   width: 100%;
   padding: 1%;
