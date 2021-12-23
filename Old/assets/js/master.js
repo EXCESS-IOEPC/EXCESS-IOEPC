@@ -14,7 +14,7 @@ function darkmode() {
   }
   else {
     // lighttheme
-    document.body.style.setProperty('--bodybg', '#white');
+    document.body.style.setProperty('--bodybg', 'white');
     document.body.style.setProperty('--txt', 'black');
     document.body.style.setProperty('--txt2', 'white');
     document.body.style.setProperty('--navbar', '#141414');

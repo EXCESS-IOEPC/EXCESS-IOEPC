@@ -1,19 +1,19 @@
-function load() {
-  document.body.classList.add("darkmode");
-  if (localStorage.darkmode == "true") localStorage.darkmode = "false";
-  else localStorage.darkmode = "true";
-  darkmode();
+function load() { 
+  document.body.classList.add("lightmode");
+  if (localStorage.lightmode == "true") localStorage.lightmode = "false";
+  else localStorage.lightmode = "true";
+  lightmode();
 }
 
-function darkmode() {
-  if (localStorage.darkmode == "false") {
-    // Darktheme
-    document.body.classList.add("darkmode");
-    localStorage.darkmode = "true";
+function lightmode() {
+  if (localStorage.lightmode == "false") {
+    // lighttheme
+    document.body.classList.add("lightmode");
+    localStorage.lightmode = "true";
   }
   else {
     // lighttheme
-    document.body.classList.toggle("darkmode");
-    localStorage.darkmode = "false";
+    document.body.classList.toggle("lightmode");
+    localStorage.lightmode = "false";
   }
 }
