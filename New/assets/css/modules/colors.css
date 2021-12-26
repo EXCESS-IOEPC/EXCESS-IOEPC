@@ -1,7 +1,4 @@
 body{
-  /* OPACITY */
-  --op-1-0: 1;
-  --op-0-1: 0;
   /* NAV BAR */
   --nav: #1e3e76d0;
   --nav-txt: #fff;
@@ -17,25 +14,4 @@ body{
   /* FOOTER */
   --footer-bg: #1e3e76;
   --footer-txt: #000;
-}
-  
-body.lightmode {
-  /* OPACITY */
-  --op-1-0: 0;
-  --op-0-1: 1;
-  /* NAV BAR */
-  --nav: #141414d0;
-  --nav-txt: #fff;
-  --nav-txt2: #000;
-  --nav-hover-bg: #0f3f7a;
-  --slider: #fff;
-  --slider-round: #000;
-  --dm-round: 27px;
-  /* BODY */
-  --body: #fff;
-  --txt: black;
-  --txt2: white;
-  /* FOOTER */
-  --footer-bg: #3f3e3e;
-  --footer-txt: #fff;
 }

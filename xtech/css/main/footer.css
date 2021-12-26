@@ -6,6 +6,7 @@ footer {
   justify-content: space-around;
   color: var(--footer-txt);
   text-align: center;
+  align-self: flex-end;
 }
 
 footer .col {
@@ -20,11 +21,12 @@ footer .col>h1 {
 }
 
 footer a{
+  margin: 1%;
   color: var(--footer-txt);
   text-decoration: none;
 }
 
-footer>#end {
+footer #end {
   width: 100%;
-  padding: 1%;
+  padding: 3%;
 }

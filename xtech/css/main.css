@@ -1,0 +1,8 @@
+@import "./static/colors.css";
+@import "./static/txt.css";
+
+@import "./main/nav.css";
+@import "./main/body.css";
+@import "./main/footer.css";
+
+@import "./max560/nav560.css";

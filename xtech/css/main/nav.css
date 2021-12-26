@@ -5,23 +5,28 @@
 }
 
 nav {
-  clear: both;
-  position: fixed;
   height: var(--nav-height);
   width: 100%;
-  background-color: var(--nav);
   opacity: 1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 }
 
-nav.container{
-  max-width: 1000px;
-  z-index: 5;
+nav.container {
+  z-index: 10;
+  position: fixed;
 }
 
-nav.blur {
-  z-index: 4;
+nav#junk {
+  background-color: var(--nav);
+  position: fixed;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: 10;
+}
+
+div#navbg {
+  width: 100%;
+  height: var(--nav-height);
 }
 
 nav img.logo {
@@ -52,12 +57,4 @@ nav ul a, nav ul li{
 nav ul a.active, nav ul a:hover{
   background-color: var(--nav-hover-bg);
   color: var(--nav-txt2);
-}
-
-nav.navback{
-  height: var(--nav-height);
-  width: 100%;
-  background-color: var(--nav-back);
-  color: var(--nav-back);
-  z-index: 0;
 }
