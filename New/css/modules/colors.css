@@ -1,0 +1,20 @@
+body{
+  /* NAV BAR */
+  --nav: #1e3e76e7;
+  --nav-media: #1e3e76f6;
+  --nav-txt: #fff;
+  --nav-txt2: #fff;
+  --nav-hover-bg: #141414;
+  
+  /* BODY */
+  --body: black;
+  --body-a: #011627;
+  --body-a-trans: rgba(255, 255, 255, 0.795);
+  --body-b: #FDFFFC;
+  --txt: #FDFFFC;
+  --txt2: #011627;
+
+  /* FOOTER */
+  --footer-bg: #1e3e76;
+  --footer-txt: rgb(255, 255, 255);
+}
