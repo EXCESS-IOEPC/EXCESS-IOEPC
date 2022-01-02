@@ -1,48 +1,57 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXCESS</title>
 
-  <link rel="stylesheet" href="assets/main.css">
-  <script src="assets/main.js"></script>
+  <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/per-page/index.css">
+
+  <script src="./js/main.js"></script>
 
 </head>
-<body onload="load()">
-<nav>
-  <div class="logo">EXCESS</div>
-  <ul>
-    <a class="active">HOME</a>
-    <a>XTECH</a>
-    <a>EVENTS</a>
-    <a>MEMBERS ▼</a>
-    <a>CONTACT US</a>
-    <label class="switch" onclick="lightmode()">
-      <span class="round"></span>
-    </label>
-  </ul>
-</nav>
-<div class="top-img">
 
-</div>
-<div class="body-a">
+<body>
+  <!-- NAV BEGINS -->
+  <nav>
+    <div class="logo">EXCESS</div>
+    <div class="button" onclick="navbar()">
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
+    <ul>
+      <a class="active" href="./index.html">HOME</a>
+      <a href="./xtech/index.html">XTECH</a>
+      <a href="./members.html">MEMBERS</a>
+      <!-- <a>EVENTS</a>
+      <a>CONTACT US</a> -->
+    </ul>
+  </nav>
+  <div id="junknav"></div>
+  <!-- NAV ENDS -->
 
-</div>
-<div class="body-b">
+  <!-- MAIN BEGINS -->
 
-</div>
+  <!-- MAIN ENDS -->
 
-<footer>
-  <div class="col">
-    <h1>Site Links</h1>
-      <a>Home</a>
-      <a>X-Tech</a>
-      <a>Events</a>
-      <a>Members</a>
-      <a>Contact Us</a>
-  </div>
-  <p id="end">Powered by EXCESS Web Team</p>
-</footer>
+  <!-- FOOTER BEGINS -->
+  <footer>
+    <div class="col">
+      <h3>Site Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./xtech/index.html">X-Tech</a>
+      <a href="./members.html"Members></a>
+      <!-- <a>Events</a>
+      <a>Contact Us</a> -->
+    </div>
+    <p id="end">Powered by EXCESS Web Team</p>
+  </footer>
+  <!-- FOOTER ENDS -->
 </body>
+
 </html>

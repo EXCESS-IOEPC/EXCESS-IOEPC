@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0%;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background: var(--body);
+  z-index: 1;
+}
+
+.body-a{
+  width: 100vw;
+  padding: 2.5vh 0vw;
+  background-color: var(--body-a);
+  color: var(--body-a);
+}
+
+.body-b{
+  width: 100vw;
+  padding: 2.5vh 0vw;
+  background-color: var(--body-b);
+  color: var(--body-b);
+}
+
+.row-wrap-around {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+
+div.part-a {
+  border-radius: 20px;
+  border-width: 10px;
+  margin: 20px auto;
+  max-width: 45vw;
+  min-width: 250px;
+  padding: 2%;
+  background-color: var(--body-a);
+  text-align: center;
+}
+
+div.part-a>h2{
+  max-width: 15ch;
+  text-align: center;
+  margin: 5px auto;
+  color: var(--txt);
+}
+
+div.part-a img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}

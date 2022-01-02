@@ -1,58 +1,91 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXCESS</title>
 
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/main.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <script src="assets/main.js"></script>
+  <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/per-page/index.css">
+
+  <script src="./js/main.js"></script>
 
 </head>
-<body onload="load()">
-<!-- <nav class="blur"></nav> -->
-<nav>
-  <div class="logo">EXCESS</div>
-  <ul>
-    <a class="active">HOME</a>
-    <a href="xtech/index.html">XTECH</a>
-    <!-- <a>EVENTS</a>
-    <a>MEMBERS ▼</a>
-    <a>CONTACT US</a> -->
-    <label class="switch" onclick="lightmode()">
-      <span class="round"></span>
-    </label>
-  </ul>
-</nav>
-<section id="particles-js">
-  <div class="overlay-image"><a href="index.html">
-    <img class="image">
-    <div class="typewriter">
-      <div class="typewriter-text text">UNDERCONSTRUCTION</div>
+
+<body>
+  <!-- NAV BEGINS -->
+  <nav>
+    <div class="logo">EXCESS</div>
+    <div class="button" onclick="navbar()">
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
+    <ul>
+      <a class="active" href="./index.html">HOME</a>
+      <a href="./xtech/index.html">XTECH</a>
+      <a href="./members.html">MEMBERS</a>
+      <!-- <a>EVENTS</a>
+      <a>CONTACT US</a> -->
+    </ul>
+  </nav>
+  <div id="junknav"></div>
+  <!-- NAV ENDS -->
+
+  <!-- MAIN BEGINS -->
+  <div id="overlay">
+    <h1>Electronics, Communication And Information Engineering Student Society</h1>
+    <div id="aboutus">
+      <h2>About Us</h2>
+      <p>&nbsp;&nbsp;&nbsp;The Electronics, Communication and Information Engineering Student Society (EXCESS) is a
+        non-political umbrella-type society registered within the IOE Purwanchal campus, Dharan. It was formed in 2070
+        B.S. since the Electronics and Computing department was introduced in 2069 B.S. on campus to unite BEI students
+        with no political affiliations. It works in coordination with the Department of Electronics and Computing and
+        campus administration to act as a bridge between department administration and students. </p>
+    </div>
   </div>
-    <div class="text"></div>
-  </a></div>
 
-  <script type="text/javascript" src="assets/js/particles/particles.min.js"></script>
-  <script type="text/javascript" src="assets/js/particles/particle.js"></script>
-</section>
-<div class="body-a">
-</div>
-<div class="body-b">
-</div>
+  <div class="body-b">
+    <div class="row-wrap-around">
+      <!-- <div class="part-a">
+        <h2>Message From Campus Chief</h2>
+        <img src="./img/campuschief.jpg" alt="Campus Chief">
+      </div>
+      <div class="part-a">
+        <h2>Message From HOD</h2>
+        <img src="" alt="">
+      </div> -->
+      <div class="part-a">
+        <h2>Message From President</h2>
+        <img src="./img/president.jpeg" alt="President">
+        <h3>Mr. Sushan Kattel</h3>
+        <p>&nbsp;&nbsp;&nbsp;We EXCESS are devoted to developing the skill of Electronic Engineering students in a broad
+          way by providing them with a platform to broaden their knowledge of the digital world so that they can be at
+          the forefront of future technologies. We have been active in helping students learn new skills so they can
+          deal with the implementation of applications, principles, and algorithms developed within many related fields.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<footer>
-  <div class="col">
-    <h1>Site Links</h1>
-      <a>Home</a>
-      <a>X-Tech</a>
+  <!-- MAIN ENDS -->
+
+  <!-- FOOTER BEGINS -->
+  <footer>
+    <div class="col">
+      <h3>Site Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./xtech/index.html">X-Tech</a>
+      <a href="./members.html" Members></a>
       <!-- <a>Events</a>
-      <a>Members</a>
       <a>Contact Us</a> -->
-  </div>
-  <p id="end">Powered by EXCESS Web Team</p>
-</footer>
+    </div>
+    <p id="end">Powered by EXCESS Web Team</p>
+  </footer>
+  <!-- FOOTER ENDS -->
 </body>
+
 </html>

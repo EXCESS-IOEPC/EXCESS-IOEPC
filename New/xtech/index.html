@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,37 +7,86 @@
   <title>XTECH</title>
 
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/master.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <script src="assets/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/per-page/index.css">
 
+  <script src="./js/main.js"></script>
 </head>
+
 <body>
-<nav class="container">
-  <img class="logo" src="./img/logo.png" alt="XTech Logo">
-  <ul>
-    <a class="active" href="index.html">HOME</a>
-    <a href="../index.html">EXCESS</a>
-    <!-- <a>EVENTS</a> -->
-  </ul>
-</nav>
-<nav class="navback"></nav>
-<section class="body">
-<img src="./img/mainimg.jpg" alt="XTech" width="100%">
-<!-- 
-<div class="body-a">
-</div>
-<div class="body-b">
-</div> -->
-</section>
-<footer>
-  <div class="col">
-    <h1>Site Links</h1>
-    <a href="index.html">Home</a>
-    <a href="../index.html">EXCESS</a>
-    <!-- <a>Events</a> -->
+  <!-- NAV BAR  BEGINS -->
+  <nav id="junk"></nav>
+  <nav class="container">
+    <img class="logo" src="./img/logo.png" alt="XTech Logo">
+    <div class="button" onclick="navbar()">
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
+    <ul>
+      <a class="active" href="index.html">HOME</a>
+      <a href="../index.html">EXCESS</a>
+      <!-- <a>EVENTS</a> -->
+    </ul>
+  </nav>
+  <div id="navbg"></div>
+  <!-- NAV BAR ENDS -->
+
+  <!-- MAIN BEGINS -->
+  <img class="container top-img" src="./img/mainimg.jpg" alt="XTech">
+  <div class="body-b">
+    <div class="container">
+      <img class="per50 what" src="./img/X-Tech_Studio.png" alt="">
+      <div class="per50">
+        <h1>What is XTech Studio?</h1>
+        <p>X-Tech Studio is an Annual Technical Festival organized by EXCESS. This fest includes many events and
+          programs related primary to Electronics.</p>
+      </div>
+    </div>
   </div>
-  <p id="end">Powered by XTech Web Team</p>
-</footer>
+  <div class="body-a">
+    <div class="container">
+      <div class="per50">
+        <h1>Our Events</h1>
+        <ul>
+          <a>School Level Quiz Competition</a>
+          <a>College Level Presentation Competition</a>
+          <a>Non-Thematic Project Competition</a>
+          <a>Thematic Project Competition</a>
+          <a>Robotic Competition</a>
+          <a>Hardware Hackathon</a>
+          <a>Internship Fair</a>
+        </ul>
+      </div>
+      <div class="per50">
+        <h1>Pre-Events</h1>
+        <ul>
+          <a>Hardware Quiz</a>
+          <a>Theme Competition</a>
+          <a>Photo Competition</a>
+          <a>Debate</a>
+          <a>Art Competition</a>
+          <a></a>
+          <a></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN ENDS -->
+
+  <!-- FOOTER BEGINS -->
+  <footer>
+    <section class="container">
+      <div class="col">
+        <h1>Site Links</h1>
+        <a href="index.html">Home</a>
+        <a href="../index.html">EXCESS</a>
+        <!-- <a>Events</a> -->
+      </div>
+      <p id="end">Powered by XTech Web Team</p>
+    </section>
+  </footer>
+  <!-- FOOTER ENDS -->
 </body>
+
 </html>

@@ -1,0 +1,14 @@
+div.container h1 {
+  font-size: 1.75rem;
+}
+
+img.top-img {
+  height: 100%;
+  max-width: 70%;
+}
+
+@media (max-width:560px) {
+  img.top-img {
+    max-width: 90%;
+  }
+}
