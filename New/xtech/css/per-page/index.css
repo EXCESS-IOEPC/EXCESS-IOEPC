@@ -1,10 +1,14 @@
-div.container h1 {
-  font-size: 1.75rem;
+img.top-img {
+  max-width: 70%;
 }
 
-img.top-img {
-  height: 100%;
-  max-width: 70%;
+#sponsers {
+  background-color: rgb(255, 255, 255);
+}
+
+#sponsers img{
+  width: 300px;
+
 }
 
 @media (max-width:560px) {

@@ -4,9 +4,45 @@
 }
 
 h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 5%;
+  width: 90%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 90%;
+  padding: 5%;
+}
+
+h3 {
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+  padding: 5%;
+}
+
+h3 {
+  font-size: 1.75rem;
+  text-align: center;
+  width: 90%;
+  padding: 5%;
+}
+
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 90%;
   padding: 5%;
 }
 
 p {
   padding: 2% 5%;
+  text-align: justify;
+}
+
+a {
+  text-align: center;
 }

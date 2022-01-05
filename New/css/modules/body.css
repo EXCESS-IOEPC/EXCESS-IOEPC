@@ -44,7 +44,6 @@ div.part-a {
 }
 
 div.part-a>h2{
-  max-width: 15ch;
   text-align: center;
   margin: 5px auto;
   color: var(--txt);
