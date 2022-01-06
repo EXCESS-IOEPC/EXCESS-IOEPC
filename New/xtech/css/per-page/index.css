@@ -6,7 +6,13 @@ img.top-img {
   background-color: rgb(255, 255, 255);
 }
 
-#sponsers img{
+div.sponsers-img {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+#sponsers img {
   width: 300px;
 
 }
