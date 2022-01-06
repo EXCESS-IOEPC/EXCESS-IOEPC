@@ -10,6 +10,9 @@ div.sponsers-img {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  width: 50%;
 }
 
 #sponsers img {
