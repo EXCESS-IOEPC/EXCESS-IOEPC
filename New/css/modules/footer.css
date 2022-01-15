@@ -2,7 +2,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  background-color: var(--footer-bg);
+  background-color: var(--footer-bg1);
   justify-content: space-around;
   color: var(--footer-txt);
   text-align: center;
@@ -17,7 +17,7 @@ footer .col {
 
 footer .col a:hover{
   color: rgb(5, 207, 214);
-  display: block;
+  
   
 }
 
