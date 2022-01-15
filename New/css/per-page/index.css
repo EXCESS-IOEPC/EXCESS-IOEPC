@@ -1,7 +1,7 @@
 #overlay {
   display: flex;
   flex-flow: column;
-  background-image: url(../../img/topimg.jpg);
+  background-image: url(../../img/topimg.jpeg);
   background-position: center;
   background-size: cover;
   width: 100%;
