@@ -15,6 +15,12 @@ footer .col {
   min-width: 200px;
 }
 
+footer .col a:hover{
+  color: rgb(5, 207, 214);
+  display: block;
+  
+}
+
 footer .col>h3 {
   padding: 5%;
 }
