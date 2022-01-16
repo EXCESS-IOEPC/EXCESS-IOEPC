@@ -3,7 +3,7 @@ body{
   --nav: #1e3e76e7;
   --nav-media: #1e3e76f6;
   --nav-txt: #fff;
-  --nav-txt2: #fff;
+  --nav-txt2: rgb(0, 0, 0);
   --nav-hover-bg: #141414;
   
   /* BODY */
@@ -16,5 +16,13 @@ body{
 
   /* FOOTER */
   --footer-bg: #1e3e76;
-  --footer-txt: rgb(255, 255, 255);
+  --footer-txt: rgb(153, 153, 153);
+
+  /* NEW THEME */
+  
+  --nav1: rgba(255, 255, 255, 0.2)
+  --footer-bg1: #000
+  --backgg: #4158D0;
+  --background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
 }

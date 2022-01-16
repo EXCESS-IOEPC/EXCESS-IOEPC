@@ -17,30 +17,28 @@ body {
   max-width: 1000px;
 }
 
-.body-a .container, .body-b .container{
+.body .container{
   display: flex;
   align-content: space-around;
   justify-content: center;
-  text-align: center;
   flex-flow: wrap;
-  padding: 2% 0%;
+  padding: 50px 0%;
 
 }
 
-
-.body-a, .body-b {
+.body {
   display: flex;
   width: 100%;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.body-a{
+.a-color{
   background-color: var(--body);
   color: var(--txt);
 }
 
-.body-b{
+.b-color{
   background-color: var(--body2);
   color: var(--txt2);
 }
@@ -50,6 +48,12 @@ body {
   min-width: 305px;
   max-width: 50%;
   flex-flow: column;
-  justify-content: center;
+  justify-content: top;
   text-justify: center;
+}
+
+div>ul {
+  display: flex;
+  flex-flow: column;
+  padding: 0 0 0 20px;
 }
