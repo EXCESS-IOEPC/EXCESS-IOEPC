@@ -1,0 +1,11 @@
+.map {
+  width: 600px;
+  min-height: 400px;
+  border-radius: 2.5%;
+}
+
+@media (max-width:560px) {
+  img.top-img {
+    max-width: 90%;
+  }
+}
