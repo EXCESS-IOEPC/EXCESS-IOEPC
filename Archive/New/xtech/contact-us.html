@@ -8,8 +8,9 @@
 
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/per-page/contact-us.css">
 
+  <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -17,9 +18,16 @@
   <nav id="junk"></nav>
   <nav class="container">
     <img class="logo" src="./img/logo.png" alt="XTech Logo">
+    <div class="button" onclick="navbar()">
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
     <ul>
       <a href="index.html">HOME</a>
       <a href="../index.html">EXCESS</a>
+      <a href="./partners.html">PARTNERS</a>
+      <a class="active" href="./contact-us.html">CONTACT-US</a>
       <!-- <a>EVENTS</a> -->
     </ul>
   </nav>
@@ -27,18 +35,41 @@
   <!-- NAV BAR ENDS -->
 
   <!-- MAIN BEGINS -->
-  
+  <div class="body a-color">
+    <div class="container">
+      <h1>OUR CONTACTS</h1>
+    </div>
+  </div>
+  <div class="body b-color">
+    <div class="container">
+      <div class="per50">
+        <h3>Location</h3>
+        <p></p>
+      </div>
+      <div class="per50">
+        <h3>Contact</h3>
+      </div>
+    </div>
+  </div>
+  <div class="body a-color">
+    <div class="container">
+      <h3>Map</h3>
+      <iframe class="map"
+        src="https://maps.google.com/maps?q=Purwanchal%20Engineering%20Campus&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
   <!-- MAIN ENDS -->
 
- 
+
   <!-- FOOTER BEGINS -->
   <footer>
     <section class="container">
       <div class="col">
         <h3>Site Links</h3>
-        <a href="index.html">Home</a>
+        <a href="./index.html">Home</a>
         <a href="../index.html">EXCESS</a>
         <a href="./partners.html">Partners</a>
+        <a href="./contact-us.html">Contact Us</a>
         <!-- <a>Events</a> -->
       </div>
       <p id="end">Powered by XTech Web Team</p>
