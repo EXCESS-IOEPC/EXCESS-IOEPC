@@ -33,6 +33,9 @@ ul {
   font: inherit;
   vertical-align: baseline;
 }
+.onlyshow{
+  display: none;
+}
 footer,
 header,
 nav,
@@ -860,6 +863,8 @@ ul.feature-icons li:nth-child(2) {
   color: rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   left: 50vw;
+  text-align: center;
+  font-weight: 900;
   position: relative;
   width: 50vw;
 }
@@ -1364,11 +1369,18 @@ nav ul a:hover {
   display: none;
 }
 @media (max-width: 500px) {
+  .onlyshow{
+    display: block;
+    margin-bottom: 0px;
+  }
   body {
     --nav-left: -100%;
   }
   body.show {
     --nav-left: 0%;
+  }
+  .display{
+    display: none;
   }
   nav ul {
     display: flex;
@@ -1414,4 +1426,11 @@ nav ul a:hover {
 }
 .front {
   border: none;
+}
+.rang2{
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  background: url(../../images/X-TECH\ background.svg);
 }
