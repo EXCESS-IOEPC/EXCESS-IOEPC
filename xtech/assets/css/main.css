@@ -3924,10 +3924,19 @@ body.is-ie #wrapper > section > .content > section {
 }
 
 /* known  */
+#first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eight, #nine, #ten, #eleven, #twelve{
+  height: 20px;
+}
+.checkout{
+  padding-left: 20px;
 
+}
 @media screen and (max-width: 1280px) {
   body.is-ie #wrapper section > footer {
     padding: 4rem;
+  }
+  .end{
+    padding-left: 0px;
   }
   .sideframe {
     text-align: center;
@@ -3945,7 +3954,7 @@ body.is-ie #wrapper > section > .content > section {
   border-radius: 20px;
   background-color: #0824ae;
   margin-top: 30px;
-  color: w;
+  width: 100%;
 }
 a {
   color: white;
@@ -3954,8 +3963,15 @@ a {
   display: flex;
   text-decoration: none;
   list-style: none;
-  justify-content: center;
+  
+  
 }
+.end{
+  padding-left: 200px;
+  
+}
+
+
 /* arrow  */
 /* Arrow */
 
@@ -4131,4 +4147,13 @@ nav ul a:hover {
     width: 2px;
     height: 20%;
   }
+  .end{
+    padding-left: 0px;
+  }
+  .front{
+    padding-left: 0px;
+    border: 1px solid red;
+    margin-left: -20px;
+  }
+  
 }
