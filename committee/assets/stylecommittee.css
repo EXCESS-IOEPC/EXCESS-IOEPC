@@ -11,54 +11,76 @@ body{
 
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 
+}
+header{
+    display: flex;
+}
+.logo{
+    display: flex;
+}
+.logo >img{
+    width: 9vw;
+    align-self:flex-start ;
 }
 
 
 h1{
+    
     color: aliceblue;
-    text-align: center;
+    align-self: center;
+    margin-left: 18vw;
+    margin-right: 22vw;
     font-size: 3em;
     font-family: 'Patrick Hand', cursive;
 
 }
 .top{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(225, 231, 50);
     border-radius: 150px;
     width: 12vw;
+    border-style: ridge;
+    
     
     /* display: flex;
     flex-direction: column; */
 }
  .president{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(92, 217, 255);
     border-radius: 600px;
     width: 12vw;
     display: flex;
+    border-style: ridge;
     
 } 
 .seceretary{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(226, 96, 249);
     border-radius: 600px;
     width: 12vw;
+    border-style: ridge;
     
 }
 .adviser{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(255, 173, 85);
     border-radius: 600px;
     width: 12vw;
+    border-style: ridge;
     
 }
 .project-manager{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(99, 255, 78);
     border-radius: 600px;
     width: 12vw;
+    border-style: ridge;
 }
  .members{
-    border: 6px solid rgb(249, 96, 96);
+    border: 6px solid rgb(246, 67, 67);
     border-radius: 600px;
     width: 12vw;
+    border-style: ridge;
 }
 .container1{
     display: flex;
@@ -222,49 +244,66 @@ h1{
 
 
 @media screen and (max-width:720px) {
+    body{
+        background-image: url("/committee/assets/images/X-Tech\ Background\ 03.svg");
+        background-repeat: no-repeat;
+        padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    }
+    .h1{
+        font-size: 2.3em;
+    }
     .top{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(225, 231, 50);
         border-radius: 600px;
         width: 25vw;
-        margin-right: 8vw;
-        margin-left:  8vw;
+        /* margin-right: 8vw;
+        margin-left:  8vw; */
+        border-style: ridge;
     }
     .president{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(92, 217, 255);
         border-radius: 600px;
-        width: 12vw;
-        margin-right: 4vw;
-        margin-left: 4vw;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 4vw;
+        margin-left: 4vw; */
     }
     .seceretary{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(226, 96, 249);
         border-radius: 600px;
-        width: 12vw;
-        margin-right: 15vw;
-        margin-left: 15vw;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 15vw;
+        margin-left: 15vw; */
     }
     .adviser{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(255, 173, 85);
         border-radius: 600px;
-        width: 12vw;
-        margin-right: 6vw;
-        margin-left:  6vw;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 6vw;
+        margin-left:  6vw; */
     }
     .project-manager{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(99, 255, 78);
         border-radius: 600px;
-        width: 12vw;
+        width: 25vw;
+        border-style: ridge;
     }
     .members{
-        border: 6px solid rgb(249, 96, 96);
+        border: 6px solid rgb(251, 69, 69);
         border-radius: 600px;
-        width: 12vw;
+        width: 25vw;
+        border-style: ridge;
     }
     .container1{
-        display: block;
+        display: flex;
         padding: 12px;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        margin: 0 !important;
     }
     .container2{
         display: flex;
@@ -283,6 +322,7 @@ h1{
         padding: 12px;
         flex-wrap: wrap;
         justify-content: center;
+        
     }
     
     .container5{
