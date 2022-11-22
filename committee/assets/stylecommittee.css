@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/* font-family: 'Patrick Hand', cursive; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/committee/assets/images/X-Tech\ Background\ 03.svg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 22px;
+
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Patrick Hand', cursive;
+
+}
+.top{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+    margin-right: 8vw;
+    margin-left:  8vw;
+}
+.president{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+    margin-right: 4vw;
+    margin-left: 4vw;
+}
+.seceretary{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+.adviser{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+    margin-right: 6vw;
+    margin-left:  6vw;
+}
+.project-manager{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+}
+.members{
+    border: 6px solid rgb(249, 96, 96);
+    border-radius: 600px;
+    width: 12vw;
+}
+.container1{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container2{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container3{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container4{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container5{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container6{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.item{
+    padding: 6px;
+    
+}
+/* legend{
+    float: center;
+    color: white;
+    font-family: 'Patrick Hand', cursive ;
+    width: 70px;
+    padding: 2px;
+    margin-left: calc(50% - 35px - 8px);
+} */
+@media screen and (max-width:720px) {
+    .top{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 25vw;
+        margin-right: 8vw;
+        margin-left:  8vw;
+    }
+    .president{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 12vw;
+        margin-right: 4vw;
+        margin-left: 4vw;
+    }
+    .seceretary{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 12vw;
+        margin-right: 15vw;
+        margin-left: 15vw;
+    }
+    .adviser{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 12vw;
+        margin-right: 6vw;
+        margin-left:  6vw;
+    }
+    .project-manager{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 12vw;
+    }
+    .members{
+        border: 6px solid rgb(249, 96, 96);
+        border-radius: 600px;
+        width: 12vw;
+    }
+    .container1{
+        display: block;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .container2{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container3{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .container4{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .container5{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .container6{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+}
