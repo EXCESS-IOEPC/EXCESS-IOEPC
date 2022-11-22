@@ -529,6 +529,7 @@ ul.items > li > :last-child {
 ul.items > li:last-child {
   margin-bottom: 0;
 }
+
 @media screen and (max-width: 736px) {
   ul.items > li {
     margin: 0 0 2rem 0;
@@ -1433,4 +1434,7 @@ nav ul a:hover {
   text-align: center;
   color: white;
   background: url(../../images/X-TECH\ background.svg);
+}
+.button.large{
+  display: block;
 }
