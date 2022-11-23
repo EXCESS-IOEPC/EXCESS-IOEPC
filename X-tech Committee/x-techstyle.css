@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image:url("/X-tech Committee/img/X-TECH\ background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left:20px ;
+    padding-right:20px ;
+    padding-bottom: 20px ;
+}
+/* Images basic Formatting */
+img{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Images basic Fotmatiing */
+
+/* Heading title */
+.heading{
+    font-family: 'Patrick Hand', cursive;
+    color: aliceblue;
+    /* margin-left: 30vw;
+    padding-top: 12vh; */
+    font-weight: 2em;
+    /* margin-right: 35vw; */
+    justify-self: center;
+}
+.highlight{
+    color: darkorange;
+    text-decoration:overline;
+}
+/* Heading title */
+
+/* Header  */
+header{
+    display: flex;
+}
+.logo{
+    display: flex;
+    flex-wrap: nowrap ;
+}
+.logo > img{
+    width: 150px;
+}
+/* Header */
+
+/* Photo borders and details */
+.coordinator{
+    border: 10px solid rgb(219, 225, 44);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+    
+}
+.graphics{
+    border: 10px solid rgb(244, 131, 19);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+    
+}
+.site{
+    border: 10px solid rgb(250, 28, 28);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+
+}
+.business{
+    border: 10px solid rgb(134, 255, 6);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+
+}
+.web{
+    border: 10px solid rgb(19, 250, 231);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+}
+.media{
+    border: 10px solid rgb(172, 47, 255);
+    border-radius:600px;
+    border-style:ridge;
+    width: 10vw;
+}
+
+/* Photo borders and details */
+
+/* text formatting */
+h3{
+    color: burlywood;
+    font-size: 1.5em;
+    font-family: 'Patrick Hand', cursive;
+}
+.position{
+    color: aliceblue;
+    font-size: 1.2em;
+    font-family: 'Patrick Hand', cursive;
+}
+.item{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Text formatting */
+legend{
+    font-size: 1.5em;
+    float: center;
+    color: white;
+    font-family: 'Patrick Hand', cursive ;
+    width: 70px;
+    padding: 2px;
+    margin-left: calc(50% - 35px - 8px);
+}
+/* Containers all */
+.container1{
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2{
+    margin: 12px;
+   padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 5px solid rgb(245, 123, 17);
+    padding-bottom: 50px;
+    border-style:dashed;
+
+}
+.container3{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(255, 13, 13);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container4{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(134, 255, 6);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container5{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(19, 229, 252);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container6{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(224, 24, 255);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ /* Containers all */
+ 
+
+.top1{
+    display: flex;
+    justify-content: space-around;
+}
+.second{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:720px){
+    /* Photo borders and details */
+.coordinator{
+    border: 10px solid rgb(219, 225, 44);
+    border-radius:600px;
+    border-style:ridge;
+    width: 18vw;
+    
+}
+.graphics{
+    border: 10px solid rgb(244, 131, 19);
+    border-radius:600px;
+    border-style:ridge;
+    width: 14vw;
+    
+}
+.site{
+    border: 10px solid rgb(250, 28, 28);
+    border-radius:600px;
+    border-style:ridge;
+    width: 14vw;
+
+}
+.business{
+    border: 10px solid rgb(134, 255, 6);
+    border-radius:600px;
+    border-style:ridge;
+    width: 14vw;
+
+}
+.web{
+    border: 10px solid rgb(19, 250, 231);
+    border-radius:600px;
+    border-style:ridge;
+    width: 14vw;
+}
+.media{
+    border: 10px solid rgb(172, 47, 255);
+    border-radius:600px;
+    border-style:ridge;
+    width: 14vw;
+}
+
+/* Photo borders and details */
+
+    .heading{
+        font-weight: 20px;
+    }
+    /* Header  */
+header{
+    display: block;
+}
+.logo{
+    display:flex;
+    flex-wrap: nowrap ;
+}
+.logo > img{
+    width: 20vw;
+}
+/* Header */
+    
+}
+/* Heading title */
+.heading{
+    font-family: 'Patrick Hand', cursive;
+    color: aliceblue;
+    margin-left: 12vw;
+    padding-top: 12vh;
+    font-weight: 2em;
+    margin-right: 35vw;
+}
+.highlight{
+    color: darkorange;
+    text-decoration:overline;
+}
+
+.container1{
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2{
+    margin: 12px;
+   padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 5px solid rgb(245, 123, 17);
+    padding-bottom: 50px;
+    border-style:dashed;
+
+}
+.container3{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(255, 13, 13);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container4{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(134, 255, 6);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container5{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(19, 229, 252);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ .container6{
+    margin: 12px;
+    padding: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     border: 5px solid rgb(224, 24, 255);
+     padding-bottom: 50px;
+     border-style:dashed;
+ 
+ }
+ /* Containers all */
+ .top1{
+    display: block;
+    justify-content: space-around;
+}
+.second{
+    display: block;
+    justify-content: space-around;
+}
+
+
+
+
+
+@media screen and (max-width:530px) {
+    .heading{
+        font-family: 'Patrick Hand', cursive;
+        color: aliceblue;
+        
+        padding-top: 12vh;
+        font-weight: 2em;
+        
+        text-align: center;
+    }
+    .highlight{
+        color: darkorange;
+        text-decoration:overline;
+    }
+    .logo{
+        
+        display:flex;
+        flex-wrap: nowrap ;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo > img{
+        display: none;
+        width: 20vw;
+    }
+    .top1{
+        display: block;
+        justify-content: space-around;
+    }
+    .second{
+        display: block;
+        justify-content: space-around;
+    }
+    .container1{
+        margin: 15px;
+        padding: 10px;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .container2{
+        margin: 12px;
+       padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 5px solid rgb(245, 123, 17);
+        padding-bottom: 50px;
+        border-style:dashed;
+    
+    }
+    .container3{
+        margin: 12px;
+        padding: 10px;
+         display:flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+         border: 5px solid rgb(255, 13, 13);
+         padding-bottom: 50px;
+         border-style:dashed;
+     
+     }
+     .container4{
+        margin: 12px;
+        padding: 10px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+         border: 5px solid rgb(134, 255, 6);
+         padding-bottom: 50px;
+         border-style:dashed;
+     
+     }
+     .container5{
+        margin: 12px;
+        padding: 10px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+         border: 5px solid rgb(19, 229, 252);
+         padding-bottom: 50px;
+         border-style:dashed;
+     
+     }
+     .container6{
+        margin: 12px;
+        padding: 10px;
+         display:flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+         border: 5px solid rgb(224, 24, 255);
+         padding-bottom: 50px;
+         border-style:dashed;
+     
+     }
+     /* Photo borders and details */
+.coordinator{
+    border: 10px solid rgb(219, 225, 44);
+    border-radius:600px;
+    border-style:ridge;
+    width: 22vw;
+    
+}
+.graphics{
+    border: 10px solid rgb(244, 131, 19);
+    border-radius:600px;
+    border-style:ridge;
+    width: 19vw;
+    
+}
+.site{
+    border: 10px solid rgb(250, 28, 28);
+    border-radius:600px;
+    border-style:ridge;
+    width: 19vw;
+
+}
+.business{
+    border: 10px solid rgb(134, 255, 6);
+    border-radius:600px;
+    border-style:ridge;
+    width: 19vw;
+
+}
+.web{
+    border: 10px solid rgb(19, 250, 231);
+    border-radius:600px;
+    border-style:ridge;
+    width: 19vw;
+}
+.media{
+    border: 10px solid rgb(172, 47, 255);
+    border-radius:600px;
+    border-style:ridge;
+    width: 19vw;
+}
+
+/* Photo borders and details */
+    
+}
