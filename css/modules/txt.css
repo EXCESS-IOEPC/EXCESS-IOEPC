@@ -1,0 +1,36 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-align: justify;
+
+}
+
+h1 {
+  padding: 3%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.body-a h1 {
+  color: var(--txt);
+}
+
+.body-b h2 {
+  color: var(--txt2);
+}
+
+h2 {
+  padding: 1%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3 {
+  padding: 1%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+p {
+  padding: 1%;
+}
