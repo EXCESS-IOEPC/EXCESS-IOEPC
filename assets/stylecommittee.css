@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/* font-family: 'Patrick Hand', cursive; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/assets/images/X-Tech\ Background\ 03.svg") ;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+header{
+    display: flex;
+}
+.logo{
+    display: flex;
+}
+.logo >img{
+    width: 9vw;
+    align-self:flex-start ;
+}
+
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    align-self: center;
+    margin-left: 30vw;
+    margin-right: 22vw;
+    font-size: 3em;
+    font-family: 'Patrick Hand', cursive;
+
+}
+.top{
+    border: 6px solid rgb(225, 231, 50);
+    border-radius: 150px;
+    width: 12vw;
+    border-style: ridge;
+    
+    
+    /* display: flex;
+    flex-direction: column; */
+}
+ .president{
+    border: 6px solid rgb(92, 217, 255);
+    border-radius: 600px;
+    width: 12vw;
+    display: flex;
+    border-style: ridge;
+    
+} 
+.seceretary{
+    border: 6px solid rgb(226, 96, 249);
+    border-radius: 600px;
+    width: 12vw;
+    border-style: ridge;
+    
+}
+.adviser{
+    border: 6px solid rgb(255, 173, 85);
+    border-radius: 600px;
+    width: 12vw;
+    border-style: ridge;
+    
+}
+.project-manager{
+    border: 6px solid rgb(99, 255, 78);
+    border-radius: 600px;
+    width: 12vw;
+    border-style: ridge;
+}
+ .members{
+    border: 6px solid rgb(246, 67, 67);
+    border-radius: 600px;
+    width: 12vw;
+    border-style: ridge;
+}
+.container1{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:8vw ;
+}
+.container2{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+.container3{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container4{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container5{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container6{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.item{
+    display: flex;
+    padding: 1px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+/* legend{
+    float: center;
+    color: white;
+    font-family: 'Patrick Hand', cursive ;
+    width: 70px;
+    padding: 2px;
+    margin-left: calc(50% - 35px - 8px);
+} */
+.detail{
+    width: 12vw;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Patrick Hand', cursive;
+    
+
+}
+.container1 .name{
+    color: rgb(255, 251, 251);
+    justify-self: center;
+    align-items: center;
+    font-family: 'Patrick Hand', cursive;
+    
+    
+    
+}
+.container2 .name{
+    color: rgb(255, 251, 251);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container3 .name{
+    color: rgb(255, 251, 251);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container4 .name{
+    color: rgb(255, 251, 251);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container5 .name{
+    color: rgb(255, 251, 251);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container6 .name{
+    color: rgb(255, 251, 251);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container1 .details{
+    color:rgb(243, 175, 48);
+    justify-self: center;
+    align-items: center;
+    font-family: 'Patrick Hand', cursive;
+    
+    
+    
+}
+.container2 .details{
+    color: rgb(243, 175, 48);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container3 .details{
+    color: rgb(243, 175, 48);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container4 .details{
+    color:rgb(243, 175, 48);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container5 .details{
+    color: rgb(243, 175, 48);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+.container6 .details{
+    color: rgb(243, 175, 48);
+    
+    align-self: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* .details>.position{
+    color: rgb(244, 187, 117);
+    text-align: center;
+} */
+/* .details{
+    
+    color: rgb(239, 188, 127);
+    font-family: 'Patrick Hand', cursive;
+    align-items: center;
+    justify-content: center;
+    
+    
+} */
+
+
+
+@media screen and (max-width:720px) {
+    body{
+        background-image: url("/assets/images/X-Tech\ Background\ 03.svg");
+        background-repeat: no-repeat;
+        padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    }
+    .h1{
+        font-size: 2.3em;
+    }
+    .top{
+        border: 6px solid rgb(225, 231, 50);
+        border-radius: 600px;
+        width: 25vw;
+        /* margin-right: 8vw;
+        margin-left:  8vw; */
+        border-style: ridge;
+    }
+    .president{
+        border: 6px solid rgb(92, 217, 255);
+        border-radius: 600px;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 4vw;
+        margin-left: 4vw; */
+    }
+    .seceretary{
+        border: 6px solid rgb(226, 96, 249);
+        border-radius: 600px;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 15vw;
+        margin-left: 15vw; */
+    }
+    .adviser{
+        border: 6px solid rgb(255, 173, 85);
+        border-radius: 600px;
+        width: 25vw;
+        border-style: ridge;
+        /* margin-right: 6vw;
+        margin-left:  6vw; */
+    }
+    .project-manager{
+        border: 6px solid rgb(99, 255, 78);
+        border-radius: 600px;
+        width: 25vw;
+        border-style: ridge;
+    }
+    .members{
+        border: 6px solid rgb(251, 69, 69);
+        border-radius: 600px;
+        width: 25vw;
+        border-style: ridge;
+    }
+    .container1{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 !important;
+    }
+    .container2{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container3{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .container4{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    
+    .container5{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .container6{
+        display: flex;
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+}
