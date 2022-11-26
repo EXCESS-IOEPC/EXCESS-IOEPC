@@ -1438,3 +1438,49 @@ nav ul a:hover {
 .button.large{
   display: block;
 }
+.xtech{
+  color: #0824ae;
+  font-weight: 700;
+  background: #2ee4bb;
+  font-size: 20px;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+}
+.xtech:hover{
+  font-weight: 900;
+  background-color: aquamarine;
+}
+.buttons_register{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.popup_cybersecurity{
+  margin: 0 auto;
+  background: url(../../images/X-TECH\ background\ 01.svg)
+}
+.header_title h1{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.registration::-webkit-scrollbar{
+  display: none;
+}
+.registration{
+  display: block;
+  margin: 0 auto;
+}
+.close{
+  width: 50px;
+  text-align: center;
+  height: 40px;
+  background-color: red;
+  font-weight: 900;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
+  
+}
