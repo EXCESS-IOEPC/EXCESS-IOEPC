@@ -1,5 +1,5 @@
 nav {
-  --nav-height: 60px;
+  --nav-height: 100px;
   --checkbox-ani: 22px;
 }
 
@@ -24,19 +24,23 @@ backdrop-filter: blur(7px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-nav .logo {
+.logo img{
   float: left;
-  color: var(--nav-txt);
-  margin: 6.5px 20px;
-  font-size: 2.5em;
+  width: 100px;
+  border-radius: 8px;
+  background-color: white;
+  margin-left: 10px;
+
 }
 
 nav ul {
   display: flex;
   float: right;
   max-width: 700px;
+  margin-top: 20px;
   justify-content: space-around;
   opacity: 1;
+  
 }
 
 nav ul a, nav ul li{
@@ -44,16 +48,17 @@ nav ul a, nav ul li{
   float: right;
   margin: 10.5px 5px;
   border-radius: 3px;
-  padding: 10px 10px;
+  padding: 10px 20px;
   color: var(--nav-txt);
   text-transform: capitalize;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 nav ul a.activeS, nav ul a:hover{
   color: var(--nav-txt);
   /* new */
-/* background: #801B27; */
+background: #801B27;
 /* background: -webkit-linear-gradient(top left, #801B27, #4B6D9C);
 background: -moz-linear-gradient(top left, #801B27, #4B6D9C);
 background: linear-gradient(to bottom right, #801B27, #4B6D9C); */
@@ -61,7 +66,7 @@ background: linear-gradient(to bottom right, #801B27, #4B6D9C); */
 
 #junknav {
   width: 100vw;
-  height: 60px;
+  height: 100px;
 }
 
 @media (max-width: 500px) {

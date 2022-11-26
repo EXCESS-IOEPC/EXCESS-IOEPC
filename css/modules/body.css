@@ -127,3 +127,25 @@ h1 .console-container #text{
  
  }
 }
+@media screen and (max-width: 395px){
+  .console-container {
+    height:600px;
+    width:400px;
+  }
+  
+  h1 .console-container #text{
+    font-size: 20px;
+  
+  }
+}
+@media screen and (max-width: 380px){
+  .console-container {
+    height:450px;
+    width:400px;
+  }
+ 
+  h1 .console-container #text{
+    font-size: 20px;
+  
+  }
+}
