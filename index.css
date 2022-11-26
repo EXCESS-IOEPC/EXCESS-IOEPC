@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #24292f;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  border: 1px solid white;
+  height: 130px;
+}
+
+li > a {
+  text-decoration: none;
+  padding-left: 40px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0FFF95;
+}
+.logo {
+ 
+  margin-right: auto;
+}
+img{
+    background: white;
+    border-radius: 10px;
+}
