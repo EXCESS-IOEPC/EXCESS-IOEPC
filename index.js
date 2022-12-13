@@ -1,4 +1,3 @@
-
 navshow = 0;
 
 function navbar() {
