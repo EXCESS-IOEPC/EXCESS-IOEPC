@@ -27,6 +27,8 @@ footer a{
 }
 
 footer #end {
-  width: 100%;
   padding: 3%;
+  margin: auto;
+  min-width: 300px;
+  text-align: center;
 }

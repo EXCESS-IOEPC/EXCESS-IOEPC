@@ -57,3 +57,17 @@ div>ul {
   flex-flow: column;
   padding: 0 0 0 20px;
 }
+
+#aarambha {
+  background-color: white;
+}
+
+div#aarambha img {
+  margin: auto;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+div.per50>p {
+  margin: auto;
+}
