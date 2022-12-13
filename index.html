@@ -1,110 +1,371 @@
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./excess.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Electronics, Communication and Information Engineering Student Society (EXCESS), IOE, Purwanchal Campus, Dharan, Nepal">
-  <meta name="keywords" content="EXCESS, IOEPC, IOE, Purwanchal Campus, Dharan, Electronics, BEI, Communication, Information, Engineering, Nepal">
-  <meta name="author" content="EXCESS Web Design Team (Sudip Parajuli(@sudipnext), Dhiraj KC (@DKC195)">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <title>EXCESS</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <script src="./index.js"></script>
+    <title>EXCESS</title>
+  </head>
+  <body>
+    <nav id="junk"></nav>
+    <nav class="container">
+      <img class="logo" src="./images/assets/favicon.png" alt="EXCESS Logo" />
 
-  <link rel="icon" href="./img/favicon.png" type="image/x-icon">
-  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/per-page/index.css">
-
-  <script src="./js/main.js"></script>
-  
-</head>
-
-<body>
-  <!-- NAV BEGINS -->
-  <nav>
-    <div class="logo"><img href="./img/favicon.png"></div>
-    <div class="button" onclick="navbar()">
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-    </div>
-    <ul>
-      <a class="activeS" href="./index.html">HOME</a>
-      <a class="glow-on-hover" href="./xtech/index.html">X-TECH</a>
-      <a href="./committee.html">COMMITTEE</a>
-      <!-- <a href="./training.html">TRAININGS</a> -->
-      <!-- <a>EVENTS</a>
-      <a>CONTACT US</a> -->
-    </ul>
-  </nav>
-  <div id="junknav"></div>
-  <!-- NAV ENDS -->
-
-  <!-- MAIN BEGINS -->
-  <div id="overlay">
-    <h1><div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div></h1>
-    <script src="./js/typer.js"></script>
-    <!-- <h1>Electronics, Communication And Information Engineering Student Society</h1> -->
-    
-    <div id="aboutus">
-      <h2>About Us</h2>
-      <p>&nbsp;&nbsp;&nbsp;The Electronics, Communication and Information Engineering Student Society (EXCESS) is a
-        non-political umbrella-type society registered within the IOE Purwanchal campus, Dharan. It was formed in 2070
-        B.S. since the Electronics and Computing department was introduced in 2069 B.S. on campus to unite BEI students
-        with no political affiliations. It works in coordination with the Department of Electronics and Computing and
-        campus administration to act as a bridge between department administration and students. </p>
-    </div>
-  </div>
-
-  <div class="body-b">
-    <div class="row-wrap-around">
-      <!-- <div class="part-a">
-        <h2>Message From Campus Chief</h2>
-        <img src="./img/campuschief.jpg" alt="Campus Chief">
+      <div class="button" onclick="navbar()">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
       </div>
-      <div class="part-a">
-        <h2>Message From HOD</h2>
-        <img src="" alt="">
-      </div> -->
-      <div class="part-a">
-        <h2>Message From President</h2>
-        <img src="./assets/images/Gokarna Baskota 1.png" alt="President">
-        <h3>Mr. Gokarna Baskota</h3>
-        <p>&nbsp;&nbsp;&nbsp;We EXCESS are devoted to developing the skill of Electronic Engineering students in a broad
-          way by providing them with a platform to broaden their knowledge of the digital world so that they can be at
-          the forefront of future technologies. We have been active in helping students learn new skills so they can
-          deal with the implementation of applications, principles, and algorithms developed within many related fields.
-        </p>
+      <ul id="nav-ul">
+        <a class="activity" href="#">HOME</a>
+        <a href="./xtech/index.html">X-TECH</a>
+        <a id="about" href="#third">ABOUT-US</a>
+        <!-- <a href="#">TEAMS</a> -->
+        <a href="#gallery">GALLERY</a>
+        <a href="#footer">CONTACT-US</a>
+      </ul>
+    </nav>
+
+    <div id="navbg"></div>
+    <div class="part1">
+      <div class="containered">
+        <div class="foreground">
+          <h1>
+            Electronics Communication And Information Engineering
+            <span style="color: #2cdab0">Student Society</span>
+          </h1>
+          <p>
+            The Electronics Communication and Information Engineering Student
+            Society (EXCESS) is a non-political umbrella type society registered
+            within the IOE Purwanchal campus, Dharan. <br />
+            It was formed in 2070 B.S.
+          </p>
+          <button class="x-tech-btn">
+            <img width="60%" src="./images/assets/3.0-PhotoRoom.png" />
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="container">
+      <div class="part2">
+        <section class="intro">
+          <h1>Message From President</h1>
 
-  <!-- MAIN ENDS -->
+          <p>
+            We EXCESS are devoted to developing the skill of Electronic
+            Engineering students in a broad way by providing them with a
+            platform to broaden their knowledge of the digital world so that
+            they can be at the forefront of future technologies. We have been
+            active in helping students learn new skills so they can deal with
+            the implementation of applications, principles, and algorithms
+            developed within many related fields.
+          </p>
+          <h2>- Gokarna Baskota<br />President</h2>
+        </section>
+        <img
+          class="pres-img"
+          src="./images/assets/Gokarna-Baskota-1.webp"
+          alt="Gokarna Baskota President"
+          id="img-a"
+        />
+      </div>
+    </div>
 
-  <!-- FOOTER BEGINS -->
-  <footer>
-    <div class="col">
-      <h3>Useful Links</h3>
-      <a href="https://ioepc.edu.np">Purwanchal Campus</a>
-      <a href="https://acesnepal.ioepc.edu.np">ACES</a>
-      <a href="https://ioe.edu.np/">IOE</a>
+    <div id="third" style="height: 50px"></div>
+    <div class="third">
+      <h1>About Us</h1>
+      <p style="line-height: 25px">
+        Electronics, Communication and Information Engineering Students' Society
+        ( EXCESS ) is a non political , non profit oriented, umbrella-type
+        society of students pursuing Bachelor's degree in Electronics,
+        Communication and Information Engineering at IOE Purwanchal Campus,
+        Dharan. Ever since it's establishment, from 2070 BS till now, it works
+        with no political or any other college influences rather serves the
+        students with utmost dedication and feeling of grooming. It is always
+        guided by Electronics and Computer Department and itself acts as a
+        bridge to students and campus fraternity.
+      </p>
     </div>
-    <div class="col">
-      <h3>Site Links</h3>
-      <a href="./index.html">Home</a>
-      <a href="./xtech/index.html">X-Tech</a>
-      <a href="./Committee.html">Committee</a>
-      <!-- <a>Events</a>
-      <a>Contact Us</a> -->
-    </div>
-    <div class="col">
-      <h3>Social Links</h3>
-      <a href="https://www.facebook.com/excessnepal">FaceBook</a>
-      <a href="https://www.instagram.com/excess.ioe/">Instagram</a>
-    </div>
-    <p id="end">Powered by EXCESS Web Team</p>
-  </footer>
-  <!-- FOOTER ENDS -->
-</body>
+    <!-- TEAM SECTION  -->
+    <style>
+      .mySlides {
+        display: none;
+        display: block;
+        margin: 0 auto;
+      }
+      .mySlides img {
+        height: 280px;
+        width: 300px;
+      }
 
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Caption text */
+      .text {
+        color: white;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: white;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #343578;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #2cdab0;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+    <div id="gallery" style="height: 80px"></div>
+    <h1 style="margin-bottom: 30px;">Gallery</h1>
+    <div class="slideshow-container" style="margin: 0 auto; width: 50%;">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 18</div>
+        <img src="./images/X-tech-Events/1 (1).jpg" />
+        <!-- <div class="text">C</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 18</div>
+        <img src="./images/X-tech-Events/1 (1).png" />
+        <!-- <div class="text">Caption Two</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 18</div>
+        <img src="./images/X-tech-Events/1 (10).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 18</div>
+        <img src="./images/X-tech-Events/1 (11).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 18</div>
+        <img src="./images/X-tech-Events/1 (7).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 18</div>
+        <img src="./images/X-tech-Events/1 (12).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 18</div>
+        <img src="./images/X-tech-Events/1 (7).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 18</div>
+        <img src="./images/X-tech-Events/1 (13).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 18</div>
+        <img src="./images/X-tech-Events/1 (14).jpg" />
+        <!-- <div class="text">Caption Three</div>/\ -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 18</div>
+        <img src="./images/X-tech-Events/1 (9).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">11 / 18</div>
+        <img src="./images/X-tech-Events/1 (15).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">12 / 18</div>
+        <img src="./images/X-tech-Events/1 (16).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">13 / 18</div>
+        <img src="./images/X-tech-Events/1 (17).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">14 / 18</div>
+        <img src="./images/X-tech-Events/1 (18).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">15 / 18</div>
+        <img src="./images/X-tech-Events/1 (19).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">16 / 18</div>
+        <img src="./images/X-tech-Events/1 (2).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">17 / 18</div>
+        <img src="./images/X-tech-Events/1 (7).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">18 / 18</div>
+        <img src="./images/X-tech-Events/1 (3).jpg" />
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center; margin-bottom: 80px;">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+    <!-- ENDS  -->
+    <footer id="footer">
+      <div class="useful-links">
+        <ul>
+          <li><a href="https://www.ioepc.edu.np/" target="_blank">IOEPC</a></li>
+          <li><a href="https://ioe.edu.np/" target="_blank">IOE</a></li>
+          <li>
+            <a href="https://robotics.ioepc.edu.np/" target="_blank"
+              >Robotics</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            />
+          </svg>
+        </div>
+        <div style="margin: auto 0;">
+         <a href="https://www.facebook.com/excessnepal" target="_blank"><img src="./images/logos/icons8-facebook.svg" width="40px"></a>
+        </div>
+        <div  style="margin: auto 0;">
+          <a href="https://www.instagram.com/excess.ioe/" target="_blank"><img src="./images/logos/icons8-instagram-94.png" width="40px"></a>
+        </div>
+        <div  style="margin: auto 0;" >
+          <a href="https://www.linkedin.com/in/excess-nepal-690ba5216/"><img src="./images/logos/icons8-linkedin-circled.svg" width="40px"></a>
+        </div>
+        <div  style="margin: auto 0;" >
+          <a href="https://github.com/EXCESS-IOEPC" target="_blank"><img src="./images/logos/icons8-github.svg" width="40px"></a>
+        </div>
+      </div>
+      <div class="site-links">
+        <ul>
+          <li><a href="#" target="_blank">Home</a></li>
+          <li><a href="./xtech/index.html" target="_blank">X-Tech 3.0</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div style="background: whitesmoke; color: #343578">
+      Powered By <span style="color: red">EXCESS</span> Web Team
+    </div>
+  </body>
 </html>
