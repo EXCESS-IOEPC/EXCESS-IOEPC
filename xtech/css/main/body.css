@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0%;
+}
+
+body {
+  display: flex;
+  align-content: flex-start;
+  background: var(--body);
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index: var(--z-body);
+}
+
+.container{
+  max-width: 1000px;
+}
+
+.body .container{
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  flex-flow: wrap;
+  padding: 50px 0%;
+
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.a-color{
+  background-color: var(--body);
+  color: var(--txt);
+}
+
+.b-color{
+  background-color: var(--body2);
+  color: var(--txt2);
+}
+
+.per50 {
+  display: flex;
+  min-width: 305px;
+  max-width: 50%;
+  flex-flow: column;
+  justify-content: top;
+  text-justify: center;
+}
+
+div>ul {
+  display: flex;
+  flex-flow: column;
+  padding: 0 0 0 20px;
+}
+
+#aarambha {
+  background-color: white;
+}
+
+div#aarambha img {
+  margin: auto;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+div.per50>p {
+  margin: auto;
+}
