@@ -1,2 +1,10 @@
-assets/pics
+
+# Images
+.jpeg
+.jpg
+.png
+.heic
+.webp
+
+#Mac
 .DS_Store
