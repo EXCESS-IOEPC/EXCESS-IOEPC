@@ -22,6 +22,32 @@
     <title>EXCESS</title>
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
     <nav id="junk"></nav>
     <nav class="container">
       <img class="logo" src="./images/assets/favicon.png" alt="EXCESS Logo" />
@@ -32,12 +58,12 @@
         <div class="rectangle"></div>
       </div>
       <ul id="nav-ul">
-        <a class="activity" href="#">HOME</a>
+        <a href="#">HOME</a>
         <a href="./xtech/index.html">X-TECH</a>
         <a id="about" href="#third">ABOUT-US</a>
         <!-- <a href="#">TEAMS</a> -->
         <a href="#gallery">GALLERY</a>
-        <a href="#footer">CONTACT-US</a>
+        <a href="./xtech/contact-us.html">CONTACT-US</a>
       </ul>
     </nav>
 
@@ -55,9 +81,13 @@
             within the IOE Purwanchal campus, Dharan. <br />
             It was formed in 2070 B.S.
           </p>
-          <button class="x-tech-btn">
-            <img width="60%" src="./images/assets/3.0-PhotoRoom.png" />
-          </button>
+          <a href="./xtech/index.html"
+            ><button class="x-tech-btn">
+              <img
+                width="60%"
+                src="./images/assets/3.0-PhotoRoom.png"
+              /></button
+          ></a>
         </div>
       </div>
     </div>
@@ -178,8 +208,8 @@
       }
     </style>
     <div id="gallery" style="height: 80px"></div>
-    <h1 style="margin-bottom: 30px;">Gallery</h1>
-    <div class="slideshow-container" style="margin: 0 auto; width: 50%;">
+    <h1 style="margin-bottom: 30px">Gallery</h1>
+    <div class="slideshow-container" style="margin: 0 auto; width: 50%">
       <div class="mySlides fade">
         <div class="numbertext">1 / 18</div>
         <img src="./images/X-tech-Events/1 (1).jpg" />
@@ -274,7 +304,7 @@
     </div>
     <br />
 
-    <div style="text-align: center; margin-bottom: 80px;">
+    <div style="text-align: center; margin-bottom: 80px">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
@@ -344,23 +374,31 @@
             />
           </svg>
         </div>
-        <div style="margin: auto 0;">
-         <a href="https://www.facebook.com/excessnepal" target="_blank"><img src="./images/logos/icons8-facebook.svg" width="40px"></a>
+        <div style="margin: auto 0">
+          <a href="https://www.facebook.com/excessnepal" target="_blank"
+            ><img src="./images/logos/icons8-facebook.svg" width="40px"
+          /></a>
         </div>
-        <div  style="margin: auto 0;">
-          <a href="https://www.instagram.com/excess.ioe/" target="_blank"><img src="./images/logos/icons8-instagram-94.png" width="40px"></a>
+        <div style="margin: auto 0">
+          <a href="https://www.instagram.com/excess.ioe/" target="_blank"
+            ><img src="./images/logos/icons8-instagram-94.png" width="40px"
+          /></a>
         </div>
-        <div  style="margin: auto 0;" >
-          <a href="https://www.linkedin.com/in/excess-nepal-690ba5216/"><img src="./images/logos/icons8-linkedin-circled.svg" width="40px"></a>
+        <div style="margin: auto 0">
+          <a href="https://www.linkedin.com/in/excess-nepal-690ba5216/"
+            ><img src="./images/logos/icons8-linkedin-circled.svg" width="40px"
+          /></a>
         </div>
-        <div  style="margin: auto 0;" >
-          <a href="https://github.com/EXCESS-IOEPC" target="_blank"><img src="./images/logos/icons8-github.svg" width="40px"></a>
+        <div style="margin: auto 0">
+          <a href="https://github.com/EXCESS-IOEPC" target="_blank"
+            ><img src="./images/logos/icons8-github.svg" width="40px"
+          /></a>
         </div>
       </div>
       <div class="site-links">
         <ul>
-          <li><a href="#" target="_blank">Home</a></li>
-          <li><a href="./xtech/index.html" target="_blank">X-Tech 3.0</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="./xtech/index.html">X-Tech 3.0</a></li>
         </ul>
       </div>
     </footer>
