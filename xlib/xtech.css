@@ -294,6 +294,10 @@ footer #end {
 }
 
 /* Index */
+#index {
+  max-height: 100vh;
+}
+
 #index img.top-img {
   margin: 20vh 25vw;
   max-width: 50vw;
