@@ -194,7 +194,7 @@ div#aarambha img {
   margin: auto;
   max-width: 300px;
   max-height: 150px;
-  padding: 20px 20px;
+  padding: 20px 50px;
 }
 
 div.per50>p {
@@ -295,13 +295,13 @@ footer #end {
 
 /* Index */
 #index {
-  max-height: 100vh;
+  height: 100vh;
 }
 
 #index img.top-img {
-  margin: 20vh 25vw;
+  margin: 10vh 25vw;
   max-width: 50vw;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 @media (max-width:560px) {
