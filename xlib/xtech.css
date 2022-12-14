@@ -4,11 +4,11 @@ body {
   --nav: #222222b4;
   --nav-txt: #fff;
   --nav-txt2: #fff;
-  --nav-hover-bg: #3944da;
+  --nav-hover-bg: #002A69;
 
   /* BODY */
   --body: black;
-  --body2: #3944da;
+  --body2: rgb(13 41 101);
   --txt: white;
   --txt2: rgb(255, 255, 255);
   --z-body: 0;
@@ -109,7 +109,7 @@ nav ul {
   opacity: 1;
 }
 
-nav ul a, nav ul li{
+nav ul a, nav ul li {
   opacity: 1;
   float: right;
   margin: 10.5px 5px;
@@ -121,7 +121,7 @@ nav ul a, nav ul li{
   text-decoration: none;
 }
 
-nav ul a.active, nav ul a:hover{
+nav ul a.active, nav ul a:hover {
   background-color: var(--nav-hover-bg);
   color: var(--nav-txt2);
 }
@@ -140,11 +140,11 @@ body {
   z-index: var(--z-body);
 }
 
-.container{
+.container {
   max-width: 1000px;
 }
 
-.body .container{
+.body .container {
   display: flex;
   align-content: space-around;
   justify-content: center;
@@ -160,12 +160,12 @@ body {
   justify-content: center;
 }
 
-.a-color{
+.a-color {
   background-color: var(--body);
   color: var(--txt);
 }
 
-.b-color{
+.b-color {
   background-color: var(--body2);
   color: var(--txt2);
 }
@@ -224,7 +224,7 @@ footer .col>h1 {
   padding: 5%;
 }
 
-footer a{
+footer a {
   margin: 1%;
   color: var(--footer-txt);
   text-decoration: none;
@@ -243,16 +243,16 @@ footer #end {
     --nav-left: -100%;
   }
 
-  body.show{
+  body.show {
     --nav-left: 0%;
   }
 
-  nav ul{
+  nav ul {
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     position: fixed;
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     background: var(--nav-back);
     top: var(--nav-height);
@@ -267,7 +267,7 @@ footer #end {
     margin: 10px auto;
   }
 
-  .button{
+  .button {
     display: flex;
     float: right;
     flex-flow: column;
@@ -276,15 +276,15 @@ footer #end {
     width: 45px;
     height: 30px;
   }
-  
-  .rectangle{
+
+  .rectangle {
     background-color: var(--nav-txt);
     border-radius: 3px;
     width: 100%;
     height: 20%;
   }
 
-  .body .container.rev{
+  .body .container.rev {
     display: flex;
     align-content: space-around;
     justify-content: center;
@@ -295,11 +295,20 @@ footer #end {
 
 /* Index */
 #index {
-  height: 100vh;
+  height: max(calc(100vh - 65px), fit-content);
+}
+
+#index p {
+  width: fit-content;
+  max-width: 60vw;
+  margin: 0 auto 50px auto;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
 }
 
 #index img.top-img {
-  margin: 10vh 25vw;
+  margin: 15vh 25vw;
   max-width: 50vw;
   max-height: 50vh;
 }
