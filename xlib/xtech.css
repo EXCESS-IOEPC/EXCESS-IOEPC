@@ -179,6 +179,7 @@ body {
   text-justify: center;
 }
 
+
 div>ul {
   display: flex;
   flex-flow: column;
