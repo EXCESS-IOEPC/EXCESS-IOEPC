@@ -34,21 +34,21 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   width: 90%;
   padding: 4%;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 90%;
   text-align: center;
   padding: 3%;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
   width: 90%;
   padding: 2%;
@@ -191,8 +191,9 @@ div>ul {
 
 div#aarambha img {
   margin: auto;
-  max-width: 300px;
-  max-height: 200px;
+  max-width: min(35vw, 300px);
+  max-height: min(30vw, 150px);
+  padding: 5px;
 }
 
 div.per50>p {
@@ -334,12 +335,6 @@ footer #end {
 /* Partners */
 #aarambha {
   background-color: white;
-}
-
-#partners img {
-  margin: auto;
-  max-width: 300px;
-  max-height: 200px;
 }
 
 #partners .per50>p {
