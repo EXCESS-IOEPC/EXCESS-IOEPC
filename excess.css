@@ -14,7 +14,7 @@ body {
   --nav: #222222b4;
   --nav-txt: #fff;
   --nav-txt2: #fff;
-  --nav-hover-bg: #3944da;
+  --nav-hover-bg: none;
   font-family: "Inter", sans-serif;
   /* max-width: 80vw;
   margin: 0 auto;
@@ -40,8 +40,7 @@ body {
 }
 .third {
   height: 100vh;
-  background: white;
-  color: #343578;
+  color: whitesmoke;
   padding: 20px 20px;
 }
 .third h1 {
@@ -146,7 +145,7 @@ nav ul li {
 
 nav ul a.activity,
 nav ul a:hover {
-  border-bottom: 2px solid white;
+  border: 0.1px solid white;
   color: var(--nav-txt2);
 }
 @media (max-width: 500px) {
@@ -236,13 +235,15 @@ div.part2 {
   align-items: center;
   padding: 10vh 10vw;
   min-height: 100vh;
+  background: whitesmoke;
+
 }
 
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: black;
   max-width: 500px;
 }
 .intro p {
@@ -265,7 +266,6 @@ div.part2 {
   min-height: 90vh;
   /* background-color: #743d3d; */
   background: url(./images/background/circuit-board-3773755\ 2.svg);
-  border-bottom: 40px solid white;
 }
 
 .part1 > div.containered {
@@ -404,6 +404,7 @@ div.part2 {
 }
 .foreground p {
   margin-bottom: 20px;
+  line-height: 22px;
 }
 
 /* all margin left and right */
