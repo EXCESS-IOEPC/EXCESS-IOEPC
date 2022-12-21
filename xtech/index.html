@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>X-Tech</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons -->
+    <link href="image/favicon.png" rel="icon" />
+    
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/venobox/venobox.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <!--==========================
+    Header
+  ============================-->
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+          <a href="#intro" class="scrollto"
+            ><img src="image/logo.png" alt="" title=""
+          /></a>
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="">EXCESS</a></li>
+            <!-- <li><a href="#speakers">Team</a></li> -->
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="buy-tickets"><a href="#register">Register</a></li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+      </div>
+    </header>
+    <!-- #header -->
+
+    <!--==========================
+    Intro Section
+  ============================-->
+    <section id="intro">
+      <div class="intro-container wow fadeIn">
+        <h1 class="mb-4 pb-0">
+          The Only<br /><span>ELECTRONICS</span> FESTIVAL
+        </h1>
+        <p class="mb-4 pb-0">
+          11,12,13 Jan, Institute Of Engineering Purwanchal Campus, Dharan
+        </p>
+        <a
+          href="https://youtu.be/x8EVqVPYo60"
+          class="venobox play-btn mb-4"
+          data-vbtype="video"
+          data-autoplay="true"
+        ></a>
+        <a href="#about" class="about-btn scrollto">About The Event</a>
+      </div>
+    </section>
+    <!-- style section  -->
+<style>
+  #demo {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color: black;
+  
+}
+</style>
+    <!-- ends  -->
+    <section class="counter-section bg-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+              <div class="counter-text">
+                  <span>X-Tech Season-03</span>
+                  <h3>Event Will be live in</h3>
+              </div>
+          </div>
+          <div class="col-lg-8" id="demo">
+              <div class="cd-timer" id="countdown">
+                  <div class="cd-item">
+                      <span>40</span>
+                      <p>Days</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>18</span>
+                      <p>Hours</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>46</span>
+                      <p>Minutes</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>32</span>
+                      <p>Seconds</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+      </div>
+  </section>
+  <!-- js section  -->
+<script>
+  var countDownDate = new Date("Jan 11, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  // + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = ` <div class="cd-timer" id="countdown">
+                  <div class="cd-item">
+                      <span>${days}</span>
+                      <p>Days</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${hours}</span>
+                      <p>Hours</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${minutes}</span>
+                      <p>Minutes</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${seconds}</span>
+                      <p>Seconds</p>
+                  </div>
+              </div>
+          </div>
+      </div>`
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+  </script>
+  <!-- ends -->
+    <main id="main">
+      <!--==========================
+      About Section
+    ============================-->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>About The Event</h2>
+              <p>
+                Xtech Studio, is more than an event, rather a technical festival
+                which encompasses of all the technical events that are
+                inevitable to be known as an Engineering student. Going into the
+                tenth year of establishment of EXCESS Society, here we come with
+                the third installment of Xtech title "Xtech Studio 3.0". Xtech
+                is filled with lots of technical events such as Natural Language
+                Processing Workshop, Satellite and Communication Workshop, Cyber
+                security and Blockchain Webinar, IOT Training, MATLAB Simulation
+                Training and Competition, PCB Designing Training and
+                Competition, Robotic Event, Hackathon, Project Demonstration
+                complemented by Quizzes, Seminars and Webinars. Pre Events have
+                already begun and we're heading to out Main Event to be
+                conducted at Poush 20,21,22 2079. EXCESS Has always been
+                following the ideology of learning and teaching with utmost
+                generosity and sense of brotherhood. The Even Xtech Studio 3.0
+                is expected to bring a cordial involvement of above 10000
+                students altogether to cherish our motive and make it a grand
+                success.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3>Where</h3>
+              <p>Institute of Engineering, Purwanchal Campus, Dharan</p>
+            </div>
+            <div class="col-lg-3">
+              <h3>When</h3>
+              <p>Monday to Wednesday<br />11,12,13 Jan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
+      Speakers Section
+    ============================-->
+      <!-- <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Team</h2>
+            <p>Our Committee</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/campuschief.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Om Prakash Dhakal</a></h3>
+                  <p>Campus Cheif, IOEPC</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/manojkumarguragain.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Manoj Kumar Guragain</a></h3>
+                  <p>HOD, Department of Electronics and Computer</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/ranish.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Ranish Devkota</a></h3>
+                  <p>Advisor, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Gokarna Baskota 1.png"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Gokarna Baskota</a></h3>
+                  <p>President, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/suraj.jpg"
+                  alt="Speaker 2"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Suraj Bhattarai</a></h3>
+                  <p>Vice-President, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Saroj Baniya.png"
+                  alt="Speaker 3"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Saroj Baniya</a></h3>
+                  <p>Secretary, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Sudip Poudel.jpg"
+                  alt="Speaker 4"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Sudip Parajuli</a></h3>
+                  <p>Vice-Secretary, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Dhiraj K.C..jpg"
+                  alt="Speaker 5"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Dhiraj K.C.</a></h3>
+                  <p>Treasurer, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Pushkar Bhatta -Project Manager.jpg"
+                  alt="Speaker 6"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Pushkar Bhatta</a></h3>
+                  <p>Project Manager, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Suwash Shrestha.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Suwash Shrestha</a></h3>
+                  <p>Project Manager, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Sunil Poudel.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Sunil Poudel</a></h3>
+                  <p>Project Manager, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Mahesh Chaudhary- Executive Member.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Mahesh Chaudhary</a></h3>
+                  <p>Executive, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Ankita Rai Khaling- executive Member.jpeg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Ankita Rai Khaling</a></h3>
+                  <p>Executive, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Bishakha Pokherel -Executive Member.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Bishakha Pokhrel</a></h3>
+                  <p>Executive, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img
+                  src="images/Safal Basnet.jpg"
+                  alt="Speaker 1"
+                  class="img-fluid"
+                />
+                <div class="details">
+                  <h3><a href="speaker-details.html">Safal Basnet</a></h3>
+                  <p>Executive, EXCESS</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!--==========================
+      Schedule Section
+    ============================-->
+      <section id="schedule" class="section-with-bg">
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h2>Event Schedule</h2>
+            <p>Here is our event schedule it's now Under Construction!</p>
+          </div>
+
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#day-1"
+                role="tab"
+                data-toggle="tab"
+                >Day 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#day-2" role="tab" data-toggle="tab"
+                >Day 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#day-3" role="tab" data-toggle="tab"
+                >Day 3</a
+              >
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">
+            Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet
+            officia. Eius necessitatibus voluptatem quis labore perspiciatis
+            quia.
+          </h3>
+
+          <div class="tab-content row justify-content-center">
+            <!-- Schdule Day 1 -->
+            <div
+              role="tabpanel"
+              class="col-lg-9 tab-pane fade show active"
+              id="day-1"
+            >
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>09:30 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Registration Ends</h4>
+                  <p>
+                    participants are notified
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/1.jpg" alt="Brenden Legros" />
+                  </div>
+                  <h4>Keynote <span>Brenden Legros</span></h4>
+                  <p>Facere provident incidunt quos voluptas.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>11:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/2.jpg" alt="Hubert Hirthe" />
+                  </div>
+                  <h4>
+                    Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span>
+                  </h4>
+                  <p>
+                    Maiores dignissimos neque qui cum accusantium ut sit sint
+                    inventore.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/3.jpg" alt="Cole Emmerich" />
+                  </div>
+                  <h4>
+                    Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span>
+                  </h4>
+                  <p>
+                    Veniam accusantium laborum nihil eos eaque accusantium
+                    aspernatur.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>02:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/4.jpg" alt="Jack Christiansen" />
+                  </div>
+                  <h4>
+                    Qui non qui vel amet culpa sequi.
+                    <span>Jack Christiansen</span>
+                  </h4>
+                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>03:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>
+                    Quos ratione neque expedita asperiores.
+                    <span>Alejandrin Littel</span>
+                  </h4>
+                  <p>
+                    Eligendi quo eveniet est nobis et ad temporibus odio quo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>04:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/6.jpg" alt="Willow Trantow" />
+                  </div>
+                  <h4>
+                    Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                  </h4>
+                  <p>
+                    Voluptatem et alias dolorum est aut sit enim neque
+                    veritatis.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Schdule Day 1 -->
+
+            <!-- Schdule Day 2 -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/1.jpg" alt="Brenden Legros" />
+                  </div>
+                  <h4>
+                    Libero corrupti explicabo itaque.
+                    <span>Brenden Legros</span>
+                  </h4>
+                  <p>Facere provident incidunt quos voluptas.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>11:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/2.jpg" alt="Hubert Hirthe" />
+                  </div>
+                  <h4>
+                    Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span>
+                  </h4>
+                  <p>
+                    Maiores dignissimos neque qui cum accusantium ut sit sint
+                    inventore.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/3.jpg" alt="Cole Emmerich" />
+                  </div>
+                  <h4>
+                    Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span>
+                  </h4>
+                  <p>
+                    Veniam accusantium laborum nihil eos eaque accusantium
+                    aspernatur.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>02:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/4.jpg" alt="Jack Christiansen" />
+                  </div>
+                  <h4>
+                    Qui non qui vel amet culpa sequi.
+                    <span>Jack Christiansen</span>
+                  </h4>
+                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>03:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>
+                    Quos ratione neque expedita asperiores.
+                    <span>Alejandrin Littel</span>
+                  </h4>
+                  <p>
+                    Eligendi quo eveniet est nobis et ad temporibus odio quo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>04:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/6.jpg" alt="Willow Trantow" />
+                  </div>
+                  <h4>
+                    Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                  </h4>
+                  <p>
+                    Voluptatem et alias dolorum est aut sit enim neque
+                    veritatis.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Schdule Day 2 -->
+
+            <!-- Schdule Day 3 -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/2.jpg" alt="Hubert Hirthe" />
+                  </div>
+                  <h4>
+                    Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span>
+                  </h4>
+                  <p>
+                    Maiores dignissimos neque qui cum accusantium ut sit sint
+                    inventore.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>11:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/3.jpg" alt="Cole Emmerich" />
+                  </div>
+                  <h4>
+                    Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span>
+                  </h4>
+                  <p>
+                    Veniam accusantium laborum nihil eos eaque accusantium
+                    aspernatur.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/1.jpg" alt="Brenden Legros" />
+                  </div>
+                  <h4>
+                    Libero corrupti explicabo itaque.
+                    <span>Brenden Legros</span>
+                  </h4>
+                  <p>Facere provident incidunt quos voluptas.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>02:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/4.jpg" alt="Jack Christiansen" />
+                  </div>
+                  <h4>
+                    Qui non qui vel amet culpa sequi.
+                    <span>Jack Christiansen</span>
+                  </h4>
+                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>03:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>
+                    Quos ratione neque expedita asperiores.
+                    <span>Alejandrin Littel</span>
+                  </h4>
+                  <p>
+                    Eligendi quo eveniet est nobis et ad temporibus odio quo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>04:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="img/speakers/6.jpg" alt="Willow Trantow" />
+                  </div>
+                  <h4>
+                    Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                  </h4>
+                  <p>
+                    Voluptatem et alias dolorum est aut sit enim neque
+                    veritatis.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Schdule Day 2 -->
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
+      Venue Section
+    ============================-->
+      <section id="venue" class="wow fadeInUp">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Event Venue</h2>
+            <p>Event venue location info and gallery</p>
+          </div>
+
+          <div class="row no-gutters">
+            <div class="col-lg-6 venue-map">
+              <iframe
+             
+              src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Purwanchal Campus&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+            </div>
+
+            <div class="col-lg-6 venue-info">
+              <div class="row justify-content-center">
+                <div class="col-11 col-lg-8">
+                  <h3>Institute Of Engineering Purwanchal Campus, Dharan</h3>
+                  <p>
+                    Purwanchal Campus, formerly known as Eastern Region (ERC) Campus is one of constituent campuses of Tribhuvan University (TU) and one of the associate engineering campuses of Institute of Engineering (IOE) which is a comprehensive, non-profit making institution and pioneering institution of higher education level in Nepal funded by Government of Nepal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="container-fluid venue-gallery-container">
+          <div class="row no-gutters">
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/1.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/1.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/2.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/2.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/3.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/3.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/4.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/4.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/5.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/5.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/6.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/6.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/7.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/7.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="venue-gallery">
+                <a
+                  href="img/venue-gallery/8.jpg"
+                  class="venobox"
+                  data-gall="venue-gallery"
+                >
+                  <img src="img/venue-gallery/8.jpg" alt="" class="img-fluid" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!--==========================
+      Hotels Section
+    ============================-->
+    <section id="events" class="events-section">
+          
+      </section>
+
+      <!--==========================
+      Gallery Section
+    ============================-->
+      <section id="gallery" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Gallery</h2>
+            <p>Check our gallery from the recent events</p>
+          </div>
+        </div>
+
+        <div class="owl-carousel gallery-carousel">
+          <a
+            href="images/X-tech-Events/1 (1).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (1).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (1).png"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (1).png" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (10).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (10).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (11).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (11).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (12).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (12).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (13).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (13).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (14).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (14).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (15).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (15).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (16).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (16).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (17).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (17).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (18).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (18).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (19).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (19).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (2).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (2).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (3).png"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (3).png" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (9).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (9).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (15).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (8).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (8).jpg" alt=""
+          /></a>
+        </div>
+      </section>
+
+      <!--==========================
+      Sponsors Section
+    ============================-->
+    <style>
+      .partner{
+        display: block;
+      
+
+        text-align: center;
+        
+      }
+      .partners-title{
+        margin: 40px 0px;
+        font-weight: bold;
+        text-align: center;
+        margin: 40px 0px;
+        font-size: 2rem;
+      }
+      .supporting-partners{
+       
+        margin: 0 auto;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .supporting-partners > img{
+        margin-bottom: 40px;
+      }
+      .mb-20{
+        margin-bottom: 20px;
+      }
+      .community-partners{
+        margin: 0 auto;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+      }
+      .community-partners >img{
+        margin: 40px;
+      }
+      
+    </style>
+    <section id="sponsors">
+    <div class="partner">
+      <div class="partners-title">Our Partners</div>
+      <div class="mb-20"></div>
+      <div class="supporting-partners">
+        <img src="https://pdscnepal.org.np/assets/images/HeadOnlyAlt.png" alt="PDSC" width="100px" height="100px">
+          <img src="https://wiki.documentfoundation.org/images/7/77/LibreOffice_external_logo_300px.png"
+            alt="LibreOffice">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Tu_2.png" alt="Purwanchal Campus"  width="100px" height="100px">
+          <img
+            src="./image/robotics.webp"
+            alt="Robotics Club"  width="100px" height="100px">
+      </div>
+    </div>
+    <div class="partners-title">Community Partners</div>
+      <div class="community-partners">
+        <img src="image/community/AskBuddie.png" alt="AskBuddie" width="100px" height="100px">
+          <img src="image/community/Shikshyashala Logo.png" alt="SikshyaShala" width="200px" height="50px">
+          <img src="image/community/DEV community Nepal Logo.png" alt="Dev Community Nepal" width="100px" height="50px">
+          <img src="image/community/Eng.png" alt="इन्जिनियरको ब्यथा अरुलाई के था" width="90px" height="90px">
+          <img src="image/community/scns.jpg" alt="SNSC IT Club" width="100px" height="100px">
+          <img src="image/community/Data.png" alt="DRCFS" width="100px" height="100px">
+          <img
+            src="https://imaviinash.github.io/CSITAN-Purwanchal-Website/images/csit%20logo.jpg"
+            alt="CSIT Association fo Nepal" width="100px" height="100px">
+      </div>
+    </div>
+  </section>
+    <!-- <span id="partners">
+      <div class="body a-color">
+        <div class="containers">
+          <h2>OUR PARTNERS</h2>
+        </div>
+      </div>
+      <div class="body" id="aarambha">
+        <div class="containers per50">
+          <h3>Supporting Partner</h3>
+          <img src="https://pdscnepal.org.np/assets/images/HeadOnlyAlt.png" alt="PDSC">
+          <img src="https://wiki.documentfoundation.org/images/7/77/LibreOffice_external_logo_300px.png"
+            alt="LibreOffice">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Tu_2.png" alt="Purwanchal Campus">
+          <img
+            src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/308095369_392889236379845_7468129408645898821_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6FXPt3Drbg8AX8fCs09&_nc_ht=scontent.fbir1-1.fna&oh=00_AfBFXXzYmIQaBDg7KUcQ6K8eK8DCZZxqP8hH4Oj7JFen0Q&oe=639EFD8D"
+            alt="Robotics Club">
+        </div>
+      </div>
+      <div class="body" id="aarambha">
+        <div class="containers per50">
+          <h3>Internet Partner</h3>
+          <img src="image/Classic.png" alt="Classic Tech">
+        </div>
+      </div>
+      <div class="body" id="aarambha">
+        <div class="container">
+          <h3>Community Partner</h3>
+          <img src="image/community/AskBuddie.png" alt="AskBuddie">
+          <img src="image/community/Shikshyashala Logo.png" alt="SikshyaShala">
+          <img src="image/community/DEV community Nepal Logo.png" alt="Dev Community Nepal">
+          <img src="image/community/Eng.png" alt="इन्जिनियरको ब्यथा अरुलाई के था">
+          <img src="image/community/scns.jpg" alt="SNSC IT Club">
+          <img src="image/community/Data.png" alt="DRCFS">
+          <img
+            src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/308667753_463778965793523_1070807241999798745_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WaVltFFoxRcAX-W3gx1&_nc_ht=scontent.fbir1-1.fna&oh=00_AfCHI_Y0RSz83tRdy00kvichNLr4N-c5SK79BSrs2t9ukw&oe=639D7090"
+            alt="CSIT Association fo Nepal">
+        </div>
+      </div>
+    </span> -->
+      <!-- <section id="sponsors" class="section-with-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sponsors</h2>
+          </div>
+
+          <div class="row no-gutters sponsors-wrap clearfix">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="image/community/AskBuddie.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/2.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/3.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/4.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/5.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/6.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/7.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="sponsor-logo">
+                <img src="img/sponsors/8.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!--==========================
+      F.A.Q Section
+    ============================-->
+      <section id="faq" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>F.A.Q</h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <ul id="faq-list">
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1"
+                    >How can i Register for the event?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      You can register to any event through the register button.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed"
+                    >Is there accommodation for the Hackathon? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Yes, there is accommodation for that for every participants.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed"
+                    >Can i bring my own hardware in hackathon? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                     Yes, Definitely.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed"
+                    >Do i have to be a IOE student to participate?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                     No, anyone from any of the University can participate.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq5" class="collapsed"
+                    >I am not a bachelor student can i participate? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq5" class="collapse" data-parent="#faq-list">
+                    <p>
+                     Yes, but we will go through your application during registration.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- <li>
+                  <a data-toggle="collapse" href="#faq6" class="collapsed"
+                    >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
+                    turpis nunc eget lorem dolor?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq6" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Laoreet sit amet cursus sit amet dictum sit amet justo.
+                      Mauris vitae ultricies leo integer malesuada nunc vel.
+                      Tincidunt eget nullam non nisi est sit amet. Turpis nunc
+                      eget lorem dolor sed. Ut venenatis tellus in metus
+                      vulputate eu scelerisque. Pellentesque diam volutpat
+                      commodo sed egestas egestas fringilla phasellus faucibus.
+                      Nibh tellus molestie nunc non blandit massa enim nec.
+                    </p>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
+      Subscribe Section
+    
+    ============================-->
+    
+      <!--==========================
+      Contact Section
+    ============================-->
+      <section id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>You can Contact to Us through the</p>
+          </div>
+
+          <div class="row contact-info">
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Address</h3>
+                <address>56700 Gangalal Marga Tinkune Dharan-8 Sunsari Province 01, Nepal</address>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Phone Number</h3>
+                <p><a href="Phone:+155895548855">Gokarna Baskota</a></p>
+                <p><a href="Phone:+155895548855">9865375041</a></p>
+                <!-- <p><a href="Phone:+155895548855">Sudip Parajuli</a></p>
+                <p><a href="Phone:+155895548855">9811359372</a></p> -->
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:info@example.com">xtech@ioepc.edu.np</a></p>
+                <p><a href="mailto:info@example.com">excessnepal@ioepc.edu.np</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    data-rule="minlen:4"
+                    data-msg="Please enter at least 4 chars"
+                  />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    data-rule="email"
+                    data-msg="Please enter a valid email"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 8 chars of subject"
+                />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  data-rule="required"
+                  data-msg="Please write something for us"
+                  placeholder="Message"
+                ></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- #contact -->
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-info">
+              <img src="images/assets/3.0-PhotoRoom.png" alt="TheEvenet" />
+              <p>
+                Xtech Studio, is more than an event, rather a technical festival which encompasses of all the technical events that are inevitable to be known as an Engineering student. Going into the tenth year of establishment of EXCESS Society, here we come with the third installment of Xtech title "Xtech Studio 3.0".
+              </p>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Important Links</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="#">EXCESS</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Partners/Sponsers</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                56700 Gangalal Marga Tinkune <br />
+                Dharan-8 Sunsari Province 01, <br />
+                Nepal <br />
+                <strong>Phone:</strong>9865375041<br />
+                <strong>Email:</strong> xtech@ioepc.edu.np<br />
+                <strong>Email:</strong>excessnepal@ioepc.edu.np<br />
+              </p>
+
+              <div class="social-links">
+                <a href="https://www.linkedin.com/company/excessioepc/mycompany/" class="twitter"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/excessnepal" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/excess.ioe/" class="instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="https://github.com/EXCESS-IOEPC" class="linkedin"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>X-Tech</strong>. All Rights Reserved
+        </div>
+       
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
