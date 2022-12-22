@@ -469,7 +469,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../ima) top center;
+  background: url("https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/316288252_668133728037663_3282790877573865528_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=-_R3SazN2lcAX9sYr4Q&_nc_ht=scontent.fbir1-1.fna&oh=00_AfD1WnZh8D9_vojiRbBqrWJbfssF4q5vXNjHG4bHOC_bYw&oe=63A8B4D7") top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -717,7 +717,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #about {
-  background: url("../images/background/circuit-board-3773755\ 2.svg");
+  background: url("https://cdn.ioepc.edu.np/ioepc-core-b/uploads/2018/10/stack_ioe_purwanchal_user_images-23.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1689,6 +1689,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   .back-to-top {
     bottom: 15px;
   }
+  .counter-text{
+    text-align: center;
+  }
+  .cd-timer{
+   padding-right: 8%;
+    
+  }
 
   #faq #faq-list a {
     font-size: 18px;
@@ -1723,3 +1730,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 /* blog  */
+@media (max-width: 380px) {
+  .cd-timer{
+   padding-right: 19px;
+    
+  }
+}
