@@ -263,9 +263,9 @@ div.part2 {
 }
 /* part 1  */
 .part1 {
-  min-height: 90vh;
+  min-height: 100vh;
   /* background-color: #743d3d; */
-  background: url(./images/background/circuit-board-3773755\ 2.svg);
+  background: url(../xtech/images/background/circuit-board-3773755\ 2.svg);
 }
 
 .part1 > div.containered {
