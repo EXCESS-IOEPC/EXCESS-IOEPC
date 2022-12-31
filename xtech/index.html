@@ -243,7 +243,8 @@ var x = setInterval(function() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(./images/background/circuit-board-3773755\ 2.svg);
+        
+       
       }
       .block h2{
         color: whitesmoke;
@@ -724,6 +725,8 @@ var x = setInterval(function() {
           /></a>
         </div>
       </section>
+      <!-- new style test  -->
+
 
       <!--==========================
       Sponsors Section
@@ -770,19 +773,35 @@ var x = setInterval(function() {
         font-size: 2rem;
         margin-bottom: 40px;
       }
+      .border-style{
+        border-top: 8px solid black; border-bottom: 8px solid black;
+        border-style:groove;
+        width: fit-content;
+         margin: 40px auto;
+          padding: 20px;
+
+      }
+      .border-style-underline{
+        border-bottom: 2px solid #f8ad00;
+      }
       
     </style>
     <section id="sponsors">
     <div class="partner">
-      <div class="partners-title" style="border-bottom: 2px solid black;">Our Partners</div>
+      <div class="partners-title">Our Partners</div>
       <div class="mb-20"></div>
-      <div  class="partners-titlew">Our Event Sponsor as Hardware Partner</div>
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Our Event Sponsor/Hardware Partner</div>
       <a target="_blank" href="https://www.facebook.com/AVELECTRONICSNEPAL"><img src="./image/Sponsors/AV Logo Final.jpg" alt="Purwanchal Campus"  width="300px"></a>
+    </div>
+    <!-- new style  -->
+    
       <div class="mb-20"></div>
 
-      <div  class="partners-titlew">Supporting Partners</div>
+     <div class="border-style">
+      <div class="partners-titlew border-style-underline">Supporting Partners</div>
  
-      <div class="supporting-partners">
+      <div class="supporting-partners" >
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Tu_2.png" alt="Purwanchal Campus"  width="200px" height="220px">
         <img src="./image/community/libreoffice-seeklogo.com.svg" width="350px"
         alt="LibreOffice">
@@ -792,12 +811,14 @@ var x = setInterval(function() {
           <img style="margin-top: 18px;" src="https://pdscnepal.org.np/assets/images/HeadOnlyAlt.png" alt="PDSC" width="170px" height="170px">
       </div>
     </div>
-    <div  class="media-partner">
-      <div class="partners-titlew">Media Partner</div>
+    </div>
+    <div  class="media-partner border-style">
+      <div class="partners-titlew border-style-underline">Media Partner</div>
       <img style="display: block; margin: 10px auto;" src="./image/mediaPartner/Artha Sarokar Logo.png" width="150px" height="120px">
     </div>
-    <div class="partners-titlew">Community Partners</div>
-      <div class="community-partners">
+    <div class="border-style">
+    <div class="partners-titlew border-style-underline">Community Partners</div>
+    <div class="community-partners">
         <div class="github" style="display: flex; align-items: center;">
           <img src="image/community/github-mark.svg" width="50px" height="50px"><span style="margin-left: 10px; font-weight: 400; font-size: 3em;">Education</span>
         </div>
@@ -820,8 +841,10 @@ var x = setInterval(function() {
             200px">
       </div>
     </div>
+  </div>
    
   </section>
+ 
       <!--==========================
       F.A.Q Section
     ============================-->
