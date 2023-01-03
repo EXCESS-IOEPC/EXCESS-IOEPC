@@ -78,6 +78,21 @@
         <p class="mb-4 pb-0">
           11,12,13 Jan, Institute Of Engineering Purwanchal Campus, Dharan
         </p>
+        <br>
+        <p>Total Page Visits So Far:</p>
+        <p id="count">0</p>
+        <script>
+          const countEl=document.getElementById('count');
+          countVisits();
+
+          function countVisits(){
+            fetch('https://api.countapi.xyz/update/excess.ioepc.edu.np/new/?amount=1')
+            .then((res)=>res.json())
+            .then((res)=> {
+              countEl.innerHTML = res.value;
+            })
+          }
+        </script>
         <a
           href="https://youtu.be/x8EVqVPYo60"
           class="venobox play-btn mb-4"
