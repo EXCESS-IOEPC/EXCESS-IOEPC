@@ -165,4 +165,5 @@ jQuery(document).ready(function ($) {
 
   //  ends
 });
+
 //counter 
