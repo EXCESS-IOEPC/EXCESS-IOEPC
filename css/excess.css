@@ -16,11 +16,11 @@ body {
   --nav-txt2: #fff;
   --nav-hover-bg: none;
   font-family: "Inter", sans-serif;
+  height: 100vh;
   /* max-width: 80vw;
   margin: 0 auto;
   border: 2px solid red; */
 }
-
 .x-tech-btn {
   width: 200px;
   height: 100px;
@@ -50,16 +50,16 @@ body {
   width: 20px;
 }
 footer {
+  padding-top: 15px;
   background: whitesmoke;
   display: flex;
   justify-content: space-evenly;
-  height: 20vh;
+  height: 10vh;
   align-items: center;
   color:#343578;
 }
 footer ul {
   list-style: none;
- 
 }
 .useful-links ul li {
   font-size: 15px;

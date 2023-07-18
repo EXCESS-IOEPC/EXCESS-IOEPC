@@ -1,7 +1,6 @@
 * {
   --nav-height: 60px;
   --checkbox-ani: 22px;
-  --nav-back: #141414;
 }
 
 nav {
@@ -41,9 +40,11 @@ nav ul {
   max-width: 700px;
   justify-content: space-around;
   opacity: 1;
+
 }
 
-nav ul a, nav ul li{
+nav ul a,
+nav ul li {
   opacity: 1;
   float: right;
   margin: 10.5px 5px;
@@ -55,7 +56,8 @@ nav ul a, nav ul li{
   text-decoration: none;
 }
 
-nav ul a.active, nav ul a:hover{
+nav ul a.active,
+nav ul a:hover {
   background-color: var(--nav-hover-bg);
   color: var(--nav-txt2);
 }
@@ -64,31 +66,37 @@ nav ul a.active, nav ul a:hover{
     --nav-left: -100%;
   }
 
-  body.show{
+  body.show {
     --nav-left: 0%;
   }
 
-  nav ul{
+  nav ul {
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     position: fixed;
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     background: var(--nav-back);
     top: var(--nav-height);
     padding: 0px;
     left: var(--nav-left);
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
     cursor: pointer;
+    border-radius: 0.1px;
+    box-shadow: 0 4px 30px rgba(214, 175, 175, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  nav ul a, nav ul li {
+  nav ul a,
+  nav ul li {
     margin: 10px auto;
   }
 
-  .button{
+  .button {
     display: flex;
     float: right;
     flex-flow: column;
@@ -97,8 +105,8 @@ nav ul a.active, nav ul a:hover{
     width: 45px;
     height: 30px;
   }
-  
-  .rectangle{
+
+  .rectangle {
     background-color: var(--nav-txt);
     border-radius: 3px;
     width: 100%;

@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicons -->
-    <link href="../images/assets/favicon.png" rel="icon" />
+    <link href="../assets/assets/favicon.png" rel="icon" />
 
     <!-- Google Fonts -->
     <link
@@ -17,58 +17,79 @@
     />
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/venobox/venobox.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="../lib/venobox/venobox.css" rel="stylesheet" />
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/memberstyle.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/excess.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
   </head>
 
-  <body>
-    <!--==========================
-    Header
-  ============================-->
-    <header id="header" class="header-fixed">
-      <div class="container">
-        <div id="logo" class="pull-left">
-          <a href="index.html#intro" class="scrollto"
-            ><img
-              src="../images/assets/favicon.png"
-              style="background: white; border-radius: 20%"
-              alt=""
-              title=""
-          /></a>
-        </div>
+  <!-- js  -->
+  <script src="../js/index.js"></script>
 
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">
-            <li class="menu-active"><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="./index.html">X-TECH</a></li>
-            <li><a href="../contactus.html">Contact</a></li>
-            <li class="buy-tickets">
-              <a href="index.html#register">Register</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- #nav-menu-container -->
-      </div>
-    </header>
-    <!-- #header -->
+ <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
+  <script>
+    let mybutton = document.getElementById("myBtn");
 
-    <main id="main" class="main-page">
+    // // When the user scrolls down 20px from the top of the document, show the button
+    // window.onscroll = function () {
+    //   scrollFunction();
+    // };
+
+    // function scrollFunction() {
+    //   if (
+    //     document.body.scrollTop > 20 ||
+    //     document.documentElement.scrollTop > 20
+    //   ) {
+    //     mybutton.style.display = "block";
+    //   } else {
+    //     mybutton.style.display = "none";
+    //   }
+    // }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+ 
+  <nav style="z-index: 9999999999;">
+    <img class="logo" src="../assets/assets/favicon.png" alt="EXCESS Logo" />
+
+    <div class="button" onclick="navbar()">
+      <div class="rectangle" ></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
+    <ul id="nav-ul" style="z-index: 9999;">
+      <a href="../index.html" onclick="o=navbar()">HOME</a>
+      <a href="./xtech/" onclick="o=navbar()">X-TECH</a>
+      <!-- <a id="about" href="../index.html#third" onclick="o=navbar()">ABOUT-US</a> -->
+      <!-- <a href="#">TEAMS</a> -->
+      <a href="./contactus.html" onclick="o=navbar()">CONTACT-US</a>
+       <a href="./members.html" onclick="o=navbar()">MEMBERS</a>
+      <a href="./certify.html" onclick="o=navbar()">VERIFY</a>
+     
+    </ul>
+  </nav>
+    <main id="main" class="main-page" style="z-index: 99;">
       <!-- ==========================
       Speaker Details Section
     ============================-->
-      <section id="speakers" class="wow fadeInUp">
+      <section id="speakers" class="wow fadeInUp" style="padding-top: 0;">
         <div class="container">
           <div class="section-header">
-            <h2>Our Team</h2>
+            <h2 style="color: #f8234a;">Our Team</h2>
             <p>EXCESS 10th Executive Committee</p>
           </div>
           <!-- Kaji Ram Karki  -->
@@ -76,7 +97,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                  <img
-                  src="images/campuschief.jpg"
+                  src="../assets/Committee/Campus Chief.jpg"
                   alt="Campus Chief Photo"
                   class="img-fluid"/> 
                 <div class="details">
@@ -94,12 +115,12 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                  <img
-                  src="images/manojkumarguragain.jpg"
+                  src="../assets/Committee/Manoj Kumar Guragai.jpg"
                   alt="HOD Photo"
                   class="img-fluid"/>
                 <div class="details">
                   <h3>
-                    <a target="_blank"  >Manoj Kumar Guragain</a>
+                    <a target="_blank"  >Manoj Kumar Guragai</a>
                   </h3>
                   <p>HOD, Department of Electronics and Computer</p>
                   <div class="social">
@@ -112,7 +133,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Samin.jpg"
+                  src="../assets/Committee/Samin Gaire.jpg"
                   alt="Advisor Photo"
                   class="img-fluid"
                 />
@@ -131,7 +152,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/president.png"
+                  src="../assets/Committee/Suraj Bhattarai.png"
                   alt="President Photo"
                   class="img-fluid"
                 />
@@ -153,7 +174,7 @@
             <!-- Mahesh Chaudhary  -->
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <img src="images/Mahesh Chaudhary.jpg" alt="Vice-President Photo" class="img-fluid" />
+                <img src="../assets/Committee/Mahesh Chaudhary.jpg" alt="Vice-President Photo" class="img-fluid" />
                 <div class="details">
                   <h3><a  >Mahesh Chaudhary</a></h3>
                   <p>Vice-President, EXCESS</p>
@@ -171,7 +192,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Sudip Parajuli.jpg"
+                  src="../assets/Committee/Sudip Parajuli.jpg"
                   alt="Secretary Photo"
                   class="img-fluid"
                 />
@@ -193,7 +214,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Lokesh Kumar Mandal.jpg"
+                  src="../assets/Committee/Lokesh Kumar Mandal.jpg"
                   alt="Vice-Secretary Photo"
                   class="img-fluid"
                 />
@@ -212,7 +233,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/NISHA.jpg"
+                  src="../assets/Committee/Nisha Karn.jpg"
                   alt="Treasurer Photo"
                   class="img-fluid"
                 />
@@ -230,7 +251,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Sunil.jpg"
+                  src="../assets/Committee/Sunil Paudel.jpg"
                   alt="Project Manager Photo 1"
                   class="img-fluid"
                 />
@@ -255,7 +276,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Safal.jpg"
+                  src="../assets/Committee/Safal Raj Basnet.jpg"
                   alt="Project Manager Photo 2"
                   class="img-fluid"
                 />
@@ -276,7 +297,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/pawan_awasthi.jpeg"
+                  src="../assets/Committee/Pawan Awasthi.jpeg"
                   alt="Project Manager Photo 3"
                   class="img-fluid"
                 />
@@ -294,7 +315,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Sarthak.jpg"
+                  src="../assets/Committee/Sarthak Chaudhary.jpg"
                   alt="Executive Member Photo 1"
                   class="img-fluid"
                 />
@@ -313,7 +334,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="speaker">
                   <img
-                    src="images/Kishor.jpg"
+                    src="../assets/Committee/Kishor Thagunna.jpg"
                     alt="Executive Member Photo 2"
                     class="img-fluid"
                   />
@@ -333,7 +354,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="speaker">
                   <img
-                    src="images/Yogesh.jpg"
+                    src="../assets/Committee/Yogesh Giri.jpg"
                     alt="Executive Member Photo 3"
                     class="img-fluid"
                   />
@@ -351,7 +372,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/ajaysah.png"
+                  src="../assets/Committee/Ajay Sah.png"
                   alt="Executive Member 4"
                   class="img-fluid"
                 />
@@ -372,7 +393,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Aman kumar sah.jpg"
+                  src="../assets/Committee/Aman Kumar Sah.jpg"
                   alt="Executive Member 5"
                   class="img-fluid"
                 />
@@ -392,7 +413,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
                 <img
-                  src="images/Anjali Suman.jpg"
+                  src="../assets/Committee/Anjali Suman.jpg"
                   alt="Executive Member Photo 5"
                   class="img-fluid"
                 />
@@ -414,97 +435,77 @@
     <!--==========================
     Footer
   ============================-->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <img src="images/assets/3.0-PhotoRoom.png" alt="TheEvenet" />
-              <p>
-                Xtech Studio, is more than an event, rather a technical festival
-                which encompasses of all the technical events that are
-                inevitable to be known as an Engineering student. Going into the
-                tenth year of establishment of EXCESS Society, here we come with
-                the third installment of Xtech title "Xtech Studio 3.0".
-              </p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Important Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-                <li>
-                  <i class="fa fa-angle-right"></i> <a href="#">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i> <a target="_blank" href="#">EXCESS</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#">Partners/Sponsers</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                56700 Gangalal Marga Tinkune <br />
-                Dharan-8 Sunsari Province 01, <br />
-                Nepal <br />
-                <strong>Phone:</strong>9865375041<br />
-                <strong>Email:</strong> xtech@ioepc.edu.np<br />
-                <strong>Email:</strong>excessnepal@ioepc.edu.np<br />
-              </p>
-
-              <div class="social-links">
-                <a target="_blank"
-                  href="https://www.linkedin.com/company/excessioepc/mycompany/"
-                  class="twitter"
-                  ><i class="fa fa-linkedin"></i
-                ></a>
-                <a target="_blank" href="https://www.facebook.com/excessnepal" class="facebook"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-                <a target="_blank"
-                  href="https://www.instagram.com/excess.ioe/"
-                  class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a target="_blank" href="https://github.com/EXCESS-IOEPC" class="linkedin"
-                  ><i class="fa fa-github"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <footer id="footer" style="background:whitesmoke; padding-top:8vh; padding-bottom: 5vh;">
+    <div class="useful-links">
+      <ul>
+        <li><a href="https://www.ioepc.edu.np/" target="_blank">IOEPC</a></li>
+        <li><a href="https://ioe.edu.np/" target="_blank">IOE</a></li>
+        <li>
+          <a href="https://robotics.ioepc.edu.np/" target="_blank"
+            >Robotics</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="social-media">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+          <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+          />
+        </svg>
       </div>
-
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>X-Tech</strong>. All Rights Reserved
-        </div>
+      <div style="margin: auto 0">
+        <a href="https://www.facebook.com/excessnepal" target="_blank"
+          ><img src="../assets/logos/facebook.svg" width="40px"
+        /></a>
       </div>
-    </footer>
-    <!-- #footer -->
+      <div style="margin: auto 0">
+        <a href="https://www.instagram.com/excess.ioe/" target="_blank"
+          ><img src="../assets/logos/instagram.svg" width="40px"
+        /></a>
+      </div>
+      <div style="margin: auto 0">
+        <a target="_blank" href="https://www.linkedin.com/in/excess-nepal-690ba5216/"
+          ><img src="../assets/logos/linkedin.svg" width="40px"
+        /></a>
+      </div>
+      <div style="margin: auto 0">
+        <a href="https://github.com/EXCESS-IOEPC" target="_blank"
+          ><img src="../assets/logos/github.svg" width="40px"
+        /></a>
+      </div>
+    </div>
+    <div class="site-links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../xtech/index.html">X-Tech 3.0</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-text" style="background: whitesmoke; color: #343578; padding-bottom: 20px;">
+    Powered By <span href="../index.html" style="color: red">EXCESS</span> Web Team
+  </div>
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/venobox/venobox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/jquery-migrate.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/superfish/hoverIntent.js"></script>
+    <script src="../lib/superfish/superfish.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/venobox/venobox.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Form JavaScript File -->
     <script src="contactform/contactform.js"></script>
 
     <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
