@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 200vh;
+  background: linear-gradient(98.19deg, #1d1e4e 41.35%, #353675 89.84%);
 }
 ul {
   margin-bottom: 0px;
@@ -12,8 +13,9 @@ img {
   overflow: hidden;
 }
 
+/*Pre Header CSS */
 .pre-header {
-  background-color: #efefef;
+  background-color: whitesmoke;
   height: 40px;
   font-size: 0px;
 }
@@ -76,14 +78,13 @@ img {
   height: 30px;
   width: 30px;
 }
+/*pre header css end*/
 
 /* CSS Classes  */
 .flex {
   display: flex;
 }
-.align-center {
-  align-items: center;
-}
+
 .justify-center {
   justify-content: center;
 }
@@ -93,6 +94,29 @@ img {
 .justify-around {
   justify-content: space-around;
 }
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-start{
+  justify-content: start;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-right{
+  align-items: end;
+}
+.align-left{
+  align-items: start;
+}
 .block {
   display: block;
 }
@@ -100,6 +124,7 @@ img {
   margin: 0 auto;
 }
 
+/*Screen Size CSS*/
 @media only screen and (max-width: 600px) {
   .mail-icon {
     height: 30px;
@@ -110,3 +135,30 @@ img {
     font-size: 0;
   }
 }
+/*Screen Size CSS END*/
+
+/*nav bar css start*/
+/* .logo-top-left{
+  height: 48px;
+  width: 48px;
+  border: 1px solid whitesmoke;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  margin-left: 5px;
+  margin-top: 5px;
+} */
+nav img.logo-top-left{
+  float: left;
+  margin: 6px 10px 6px 20px;
+  height: 48px;
+  width: 48px;
+}
+
+nav ul{
+  display: flex;
+  float: right;
+  max-width: 700px;
+  justify-content: space-around;
+  opacity: 1;
+}
+/*nav bar css end*/
