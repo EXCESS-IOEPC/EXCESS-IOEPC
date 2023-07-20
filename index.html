@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords"
+    content="XTech, EXCESS, IOEPC, IOE, Purwanchal Campus, Dharan, Electronics, BEI, Bachelors in Electronics, Committee and Information, Nepal">
+  <meta name="author" content="EXCESS Web Design Team (Sudip Parajuli(@sudipnext), Dhiraj KC (@DKC195), Sunil Paudel (@khostaa)">
+    <link rel="stylesheet" href="./css/excess.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="shortcut icon" href="./assets/assets/favicon.png" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <script src="./js/index.js"></script>
+    <title>EXCESS</title>
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">⬆</button>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <nav id="junk"></nav>
+    <nav class="container">
+      <img class="logo" src="./assets/assets/favicon.png" alt="EXCESS Logo" />
+
+      <div class="button" onclick="navbar()">
+        <div class="rectangle" ></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+      </div>
+      <ul id="nav-ul">
+        <a href="./index.html" onclick="o=navbar()">HOME</a>
+        <a href="./xtech/" onclick="o=navbar()">X-TECH</a>
+        <a id="about" href="#third" onclick="o=navbar()">ABOUT-US</a>
+        <!-- <a href="#">TEAMS</a> -->
+        <a href="./Pages/contactus.html" onclick="o=navbar()">CONTACT-US</a>
+         <a href="./Pages/members.html" onclick="o=navbar()">MEMBERS</a>
+        <a href="./Pages/certify.html" onclick="o=navbar()">VERIFY</a>
+       
+      </ul>
+    </nav>
+
+    <!-- <div id="navbg"></div> -->
+    <div class="part1">
+      <div class="containered">
+        <div class="foreground">
+          <h1>
+            Electronics Communication And Information Engineering
+            <span style="color: #2cdab0">Student Society</span>
+          </h1>
+          <p>
+            The Electronics Communication and Information Engineering Student
+            Society (EXCESS) is a non-political umbrella type society registered
+            within the IOE Purwanchal campus, Dharan. <br />
+            It was formed in 2070 B.S.
+          </p>
+          <a href="./xtech"
+            ><button class="x-tech-btn">
+              <img
+                width="60%"
+                src="./assets/assets/3.0-PhotoRoom.png"
+              /></button
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="part2">
+        <section class="intro">
+          <h1 ">Message From President</h1>
+
+          <p style="margin-bottom: 40px;">
+            We EXCESS are devoted to developing the skill of Electronic
+            Engineering students in a broad way by providing them with a      platform to broaden their knowledge of the digital world so that
+            they can be at the forefront of future technologies. We have been
+            active in helping students learn new skills so they can deal with
+            the implementation of applications, principles, and algorithms
+            developed within many related fields.
+          </p>
+          <h2>- Suraj Bhattarai<br />President</h2>
+        </section>
+        <img
+          class="pres-img"
+          src="./assets/assets/president.png"
+          alt="Suraj Bhattarai President"
+          id="img-a"
+        />
+      </div>
+    </div>
+
+    <div id="third" style="height: 50px; background: whitesmoke; margin-bottom: 0px;"></div>
+    <div class="third">
+      <h1 style="margin: 40px auto;">About Us</h1>
+      <p style="line-height: 20px;">
+        Electronics, Communication and Information Engineering Students' Society
+        ( EXCESS ) is a non political , non profit oriented, umbrella-type
+        society of students pursuing Bachelor's degree in Electronics,
+        Communication and Information Engineering at IOE Purwanchal Campus,
+        Dharan. Ever since it's establishment, from 2070 BS till now, it works
+        with no political or any other college influences rather serves the
+        students with utmost dedication and feeling of grooming. It is always
+        guided by Electronics and Computer Department and itself acts as a
+        bridge to students and campus fraternity.
+      </p>
+    </div>
+  </div>
+  
+
+    <!-- ENDS  -->
+    <footer id="footer">
+      <div class="useful-links">
+        <ul>
+          <li><a href="https://www.ioepc.edu.np/" target="_blank">IOEPC</a></li>
+          <li><a href="https://ioe.edu.np/" target="_blank">IOE</a></li>
+          <li>
+            <a href="https://robotics.ioepc.edu.np/" target="_blank"
+              >Robotics</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            />
+          </svg>
+        </div>
+        <div style="margin: auto 0">
+          <a href="https://www.facebook.com/excessnepal" target="_blank"
+            ><img src="./assets/logos/facebook.svg" width="40px"
+          /></a>
+        </div>
+        <div style="margin: auto 0">
+          <a href="https://www.instagram.com/excess.ioe/" target="_blank"
+            ><img src="./assets/logos/instagram.svg" width="40px"
+          /></a>
+        </div>
+        <div style="margin: auto 0">
+          <a target="_blank" href="https://www.linkedin.com/in/excess-nepal-690ba5216/"
+            ><img src="./assets/logos/linkedin.svg" width="40px"
+          /></a>
+        </div>
+        <div style="margin: auto 0">
+          <a href="https://github.com/EXCESS-IOEPC" target="_blank"
+            ><img src="./assets/logos/github.svg" width="40px"
+          /></a>
+        </div>
+      </div>
+      <div class="site-links">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./xtech">X-Tech 3.0</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div style="background: whitesmoke; color: #343578; padding-bottom: 20px;">
+      Powered By <span href="./index.html" onclick="topFunction()" style="color: red">EXCESS</span> Web Team
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  </body>
+</html>

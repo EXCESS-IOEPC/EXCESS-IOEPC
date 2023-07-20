@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1d1e4e;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: block;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: 15% auto;
+}
+
+.verify-title {
+  text-align: center;
+  color: #ff9000;
+  text-shadow: 0 1 red;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ff9000;
+}
+
+#btn {
+  background: #ff9000;
+  border-radius: 10%;
+  padding: 10px 20px;
+  font-weight: bolder;
+  font-size: larger;
+  color: 1d1e4e;
+}
+
+.red {
+  background: red;
+}
+
+.white {
+  color: white;
+}
+
+/* table  */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100vw;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  color: black;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+th {
+  background-color: #1d1e4e;
+  color: white;
+}
+
+/* message  */
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.hide {
+  display: none;
+}
+
+/* search suggestions */
+
+.suggestion-list {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.suggestion-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f1f1f1;
+}

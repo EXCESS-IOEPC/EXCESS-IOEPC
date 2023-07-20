@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>X-Tech</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons -->
+    <link href="image/favicon.png" rel="icon" />
+    
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/venobox/venobox.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <!--==========================
+    Header
+  ============================-->
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+          <a href="#intro" class="scrollto"
+            ><img src="image/logo.png" alt="" title=""
+          /></a>
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="../index.html">EXCESS</a></li>
+            <li><a href="#events">Events</a></li>
+            <!-- <li><a href="#speakers">Team</a></li> -->
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#social-media-presence">Social Presence</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="buy-tickets"><a href="">Facebook</a></li> -->
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+      </div>
+    </header>
+    <!-- #header -->
+
+    <!--==========================
+    Intro Section
+  ============================-->
+    <section id="intro">
+      <div class="intro-container wow fadeIn">
+        <h1 class="mb-4 pb-0">
+          The Only<br /><span>ELECTRONICS</span> FESTIVAL
+        </h1>
+        <p class="mb-4 pb-0">
+          11,12,13 Jan, Institute Of Engineering Purwanchal Campus, Dharan
+        </p>
+        <br>
+        <!-- <p>Total Page Visits So Far:</p>
+        <p id="count">0</p>
+        <script>
+          const countEl=document.getElementById('count');
+          countVisits();
+
+          function countVisits(){
+            fetch('https://api.countapi.xyz/update/xtech3/excessioepc/?amount=1')
+            .then((res)=>res.json())
+            .then((res)=> {
+              countEl.innerHTML = res.value;
+            })
+          }
+        </script> -->
+        <a
+          href="https://youtu.be/x8EVqVPYo60"
+          class="venobox play-btn mb-4"
+          data-vbtype="video"
+          data-autoplay="true"
+        ></a>
+        <a href="#about" class="about-btn scrollto">About The Event</a>
+      </div>
+    </section>
+    <!-- style section  -->
+<style>
+  #demo {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color: black;
+  
+}
+</style>
+    <!-- ends  -->
+    <section class="counter-section bg-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+              <div class="counter-text">
+                  <span>X-Tech Season-03</span>
+                  <h3>Event Will be live in</h3>
+              </div>
+          </div>
+          <div class="col-lg-8" id="demo">
+              <div class="cd-timer" id="countdown">
+                  <div class="cd-item">
+                      <span>40</span>
+                      <p>Days</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>18</span>
+                      <p>Hours</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>46</span>
+                      <p>Minutes</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>32</span>
+                      <p>Seconds</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+      </div>
+  </section>
+  <!-- js section  -->
+<script>
+  var countDownDate = new Date("Jan 11, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  // + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = ` <div class="cd-timer" id="countdown">
+                  <div class="cd-item">
+                      <span>${days}</span>
+                      <p>Days</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${hours}</span>
+                      <p>Hours</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${minutes}</span>
+                      <p>Minutes</p>
+                  </div>
+                  <div class="cd-item">
+                      <span>${seconds}</span>
+                      <p>Seconds</p>
+                  </div>
+              </div>
+          </div>
+      </div>`
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Event Completed!";
+  }
+}, 1000);
+  </script>
+  <!-- ends -->
+    <main id="main">
+      <!--==========================
+      About Section
+    ============================-->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>About The Event</h2>
+              <p>
+                Xtech Studio, is more than an event, rather a technical festival
+                which encompasses of all the technical events that are
+                inevitable to be known as an Engineering student. Going into the
+                tenth year of establishment of EXCESS Society, here we come with
+                the third installment of Xtech title "Xtech Studio 3.0". Xtech
+                is filled with lots of technical events such as Natural Language
+                Processing Workshop, Satellite and Communication Workshop, Cyber
+                security and Blockchain Webinar, IOT Training, MATLAB Simulation
+                Training and Competition, PCB Designing Training and
+                Competition, Robotic Event, Hackathon, Project Demonstration
+                complemented by Quizzes, Seminars and Webinars. Pre Events have
+                already begun and we're heading to out Main Event to be
+                conducted at Jan 11,12,13 2023. EXCESS Has always been
+                following the ideology of learning and teaching with utmost
+                generosity and sense of brotherhood. The Even Xtech Studio 3.0
+                is expected to bring a cordial involvement of above 10000
+                students altogether to cherish our motive and make it a grand
+                success.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3>Where</h3>
+              <p>Institute of Engineering, Purwanchal Campus, Dharan</p>
+            </div>
+            <div class="col-lg-3">
+              <h3>When</h3>
+              <p>Wednesday to Friday<br />11,12,13 Jan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--==========================
+      Schedule Section
+    ============================-->
+    <div  id="events"></div>
+    <style>
+      .pre{
+        display: flex;
+        justify-content: space-evenly;
+        
+        flex-wrap: wrap;
+      }
+      .block{
+        margin-bottom: 20px;
+        height: 250px;
+        width: 250px;
+        background: #3d4354;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+       
+      }
+      .block h2{
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+      .block h4{
+        color: whitesmoke;
+        font-weight: 500;
+        background: #f82249;
+        border-radius: 8px;
+        font-size: 1rem;
+        width: 150px;
+        margin: auto auto;
+        padding: 10px;
+      }
+      .block h4:hover{
+        color: white;
+        font-weight: 600;
+        background: #171a20;
+        font-size: 1rem;
+        width: 150px;
+        margin: auto auto;
+        padding: 10px;
+      }
+      .finished{
+        padding: 10px;
+        color: white;
+
+      }
+      .labels{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+      .finish{
+        background: red;
+
+      }
+      .run{
+        background: green;
+      }
+      </style>
+    <section  class="preevents border-style" style="text-align: center; width: 80%; margin: 20px auto;" >
+      <h1 style="font-weight: 700; margin-top: 40px;" class="border-style-underline">Pre Events</h1>
+      <div class="pre">
+        <div class="block">
+          <div class="labels">
+            <label class="finished finish">Finished !</label>
+          </div>
+          <div class="block">
+            <h2>X-Tech Quiz</h2>
+           <a href="./quiz.html"><h4>Learn More</h4></a>
+          </div>
+          <!-- <div style="width: 100%; color: white; background: #2271f8;">
+            <label style="font-size: 0.3 rem; padding: 5px;padding-top: 12px;">2079/08/03     to      2079/09/01</label>
+          </div> -->
+          
+        </div>
+        <div class="block">
+          <div class="labels">
+            <label class="finished finish">Finished  !</label>
+          </div>
+          <div class="block">
+            <h2>CyberSecurity Webinar</h2>
+            <a href="https://www.facebook.com/excessnepal/posts/pfbid0372S5sMSGCr72bMREPxGDijTjAEVsxNxWLBcqLWWgH5jz5ZktewgFAFTZ4KKQQgwWl"><h4>Learn More</h4></a>
+          </div>
+        </div>
+        <div class="block">
+          <div class="labels">
+            <label class="finished finish">Finished !</label>
+          </div>
+          <div class="block">
+            <h2>LibreOffice Webinar</h2>
+            <a href="https://www.facebook.com/excessnepal/posts/pfbid036omKTqtQWwCYjJavvpCQNPq5cHKAMKg7qKEFVyETxUe7Me7AEgcAP88CNwhkEugWl"><h4>Learn More</h4></a>
+          </div>
+        </div>
+       <div class="block">
+        <div class="labels">
+          <label class="finished finish">Finished !</label>
+        </div>
+        <div class="block">
+          <h2>Software Engineering Webinar</h2>
+          <a href="https://www.facebook.com/excessnepal/posts/pfbid02YkuABUBaaL1uYQMdWspJbFAxBomRVamwhhuXM72SBZnkxRFQn8kvu6XpmkGRBeWwl"><h4>Learn More</h4></a>
+        </div>
+       </div>
+        <div class="block">
+          <div class="labels">
+            <label class="finished finish">Finished !</label>
+          </div>
+          <div class="block">
+            <h2>IoT Training</h2>
+            <a href="https://www.facebook.com/excessnepal/posts/pfbid02n4aVeHVzbUf6fob5hz1CWnoMrrPg18LaDaQnhho7ieNwmjtFetUdi5o6E5EfJbtrl"><h4>Learn More</h4></a>
+          </div>
+        </div>
+        <div class="block">
+          <div class="labels">
+            <label class="finished run">Comming Soon!</label>           
+          </div>
+          <div class="block">
+            <h2>BlockChain Webinar</h2>
+            <a href="./quiz.html"><h4>Learn More</h4></a>
+          </div>
+        </div>
+        <div class="block">
+          <div class="labels">
+            <!-- <label class="finished finish">Registration closed !</label> -->
+            <label class="finished finish">Finished !</label>           
+          </div>
+          <div class="block">
+            <h2>MATLAB Training</h2>
+            <a href="./matlab.html"><h4>Learn More</h4></a>
+          </div>
+        </div>
+        <div class="block">
+          <div class="labels">
+            <label class="finished run">Comming Soon!</label>           
+          </div>
+          <div class="block">
+            <h2>PCB Designing</h2>
+            <a href="./quiz.html"><h4>Learn More</h4></a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- scripts for pre-events here -->
+  <section class="preevents border-style" style="text-align: center; width: 80%; margin: 0 auto;" >
+    <h1 style="font-weight: 700; margin-top: 40px;" class="border-style-underline">Main Events</h1>
+    <div class="pre">
+      <div class="block">
+        <div class="labels">
+          <label class="finished finish">Finished!</label>
+        </div>
+        <div class="block">
+          <h2>Hardware Hackathon</h2>
+         <a href="./xhack.html"><h4>Learn More</h4></a>
+        </div>
+      </div>
+      <div class="block">
+        <div class="labels">
+          <label class="finished run">Registration Closed !</label>
+        </div>
+        <div class="block">
+          <h2>Robotics Event</h2>
+         <a href="./robo.html"><h4>Learn More</h4></a>
+        </div>
+      </div>
+      <div class="block">
+        <div class="labels">
+          <label class="finished run">Registration Closed !</label>
+        </div>
+        <div class="block">
+          <h2>Project Demonstration</h2>
+         <a href="./prode.html"><h4>Learn More</h4></a>
+        </div>
+      </div>
+      <div class="block">
+        <div class="labels">
+          <label class="finished finish">Finished !</label>
+        </div>
+        <div class="block">
+          <h2>Inter School Quiz</h2>
+         <a href="./mainquiz.html"><h4>Learn More</h4></a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+    <!-- new section starts here  -->
+      <section id="schedule" class="section-with-bg">
+        <style>
+          .nav-link{
+            margin-bottom: 10px;
+          }
+         </style>
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h2>Main Event Schedule</h2>
+          </div>
+
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#day-1"
+                role="tab"
+                data-toggle="tab"
+                >Day 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#day-2" role="tab" data-toggle="tab"
+                >Day 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#day-3" role="tab" data-toggle="tab"
+                >Day 3</a
+              >
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">
+            Three days of continuous attraction,
+              exciting projects, tough competitions,
+              surprises, music and more all
+              exclusively at IOE Purwanchal
+              Campus, Dharan.
+          </h3>
+
+          <div class="tab-content row justify-content-center">
+            <!-- Schdule Day 1 -->
+            <div
+              role="tabpanel"
+              class="col-lg-9 tab-pane fade show active"
+              id="day-1"
+            >
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 PM</time></div>
+              <div class="col-md-10">
+               
+                <h4>Opening Ceremony <span>Starts</span></h4>
+                <p>Official Opening Event of X-Tech 3.0</p>
+              </div>
+            </div>    
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>03:30 PM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>Soldering Competition <span>Starts</span></h4>
+                  <p>Visitors can participate and win prizes and gift hampers</p>
+                </div>
+              </div>     
+             
+            </div>
+            <!-- End Schdule Day 1 -->
+
+            <!-- Schdule Day 2 -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>Inter School Quiz Competition <span>Starts</span></h4>
+                  <p>Different Schools Participate to win Prizes and Exciting Gift Hampers</p>
+                </div>
+              </div>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>All Stall Games <span>Starts</span></h4>
+                  <p>Visitors can participate and win prizes and gift hampers. Plus some lucky winners can get really exciting prizes.</p>
+                </div>
+              </div>
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>Robotics Event<span>Starts</span></h4>
+                  <p>Anyone can Register and participate in this event.</p>
+                </div>
+              </div>         
+
+            </div>
+            <!-- End Schdule Day 2 -->
+
+            <!-- Schdule Day 3 -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:30 AM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>Robotics Event<span>Final</span></h4>
+                  <p>Final Event of Robotics</p>
+                </div>
+              </div> 
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM</time></div>
+                <div class="col-md-10">
+                 
+                  <h4>Project Demonstration <span>Final</span></h4>
+                  <p>Final Results.</p>
+                </div>
+              </div> 
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM</time></div>
+                <div class="col-md-10">        
+                  <h4>Closing Ceremony <span>End of the Event</span></h4>
+                  <p>Final Ending and Celebration of X-Tech 3.0.</p>
+                </div>
+              </div>    
+            </div>
+            <!-- End Schdule Day 2 -->
+
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
+      Venue Section
+    ============================-->
+      <section id="venue" class="wow fadeInUp">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Event Venue</h2>
+            <p>Event venue location info and gallery</p>
+          </div>
+
+          <div class="row no-gutters">
+            <div class="col-lg-6 venue-map">
+              <iframe
+             
+              src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Purwanchal Campus&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+            </div>
+
+            <div class="col-lg-6 venue-info">
+              <div class="row justify-content-center">
+                <div class="col-11 col-lg-8">
+                  <h3>Institute Of Engineering Purwanchal Campus, Dharan</h3>
+                  <p>
+                    Purwanchal Campus, formerly known as Eastern Region (ERC) Campus is one of constituent campuses of Tribhuvan University (TU) and one of the associate engineering campuses of Institute of Engineering (IOE) which is a comprehensive, non-profit making institution and pioneering institution of higher education level in Nepal funded by Government of Nepal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--==========================
+      Hotels Section
+    ============================-->
+    <!-- <section id="events" class="events-section">
+          
+      </section> -->
+      <style>
+        .posts{
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+        }
+        .posts iframe{
+          margin-bottom: 20px;
+        }
+      </style>
+    <section class="wow-fadeInUp" id="social-media-presence">
+      <div class="container">
+        <div class="section-header">
+          <h2>Social Media Presence</h2>
+          <p>Our Latest Pre Events On Social Media Links and Collaboration</p>
+        </div>
+      </div>
+      <div class="posts">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexcessnepal%2Fposts%2Fpfbid0UWCHts8rpdGHyRtwwmYjGHGkd3itsipN5kPY2sec9yZ8CUL4aKPakd6dykMg4gvrl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexcessnepal%2Fposts%2Fpfbid02rbSuVLnd2Agx8maxXVhUUHNqWyD6Epj9kyVvq191iWquNzbansEijfZ4ApC7kz7ql&show_text=true&width=500" width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexcessnepal%2Fposts%2Fpfbid02VwxXbrUjcHXZ7X2vppKo9GSeiJNpp44tp8DGSrbMeFeC6TfKW2UhdPi6mBvQSuAcl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexcessnepal%2Fposts%2Fpfbid02WSnkfMjEhUr76cHeXzaM7xmwo6vT95USj7haFRSRN9Znk9uno7S9ExCP8n5eWBFQl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexcessnepal%2Fposts%2Fpfbid02YkuABUBaaL1uYQMdWspJbFAxBomRVamwhhuXM72SBZnkxRFQn8kvu6XpmkGRBeWwl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdelta.ioe%2Fposts%2Fpfbid0V1TrVBQTdCpbYoWMp73x9HtvJ9qWqZbdtiPUnbbcxe1pKQ1w6PPsts4h3sdohvTrl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+     
+     
+    </section>
+      <!--==========================
+      Gallery Section
+    ============================-->
+      <section id="gallery" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Gallery</h2>
+            <p>Here are glimpses of Images</p>
+            <a href="https://drive.google.com/drive/folders/1-FlIhc9X8yEg_YE8v6E8ljKz3BPZ2OMq?usp=sharing"><p><span style="color: blue; font-weight: 400;">Click here</span> to see our complete images of X-Tech Studio 3.0</p></a>
+           
+          </div>
+        </div>
+
+        <div class="owl-carousel gallery-carousel">
+          <a
+            href="images/NewEvent/IMG_0174-ASa61zhs.jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/NewEvent/IMG_0174-ASa61zhs.jpg" alt=""
+          /></a>
+         
+        <a
+        href="images/NewEvent/IMG_0180-i3b61zhs.jpg"
+        class="venobox"
+        data-gall="gallery-carousel"
+        ><img src="images/NewEvent/IMG_0180-i3b61zhs.jpg" alt=""
+      /></a>
+      <a
+      href="images/NewEvent/IMG_0221-VUa61zhs.jpg"
+      class="venobox"
+      data-gall="gallery-carousel"
+      ><img src="images/NewEvent/IMG_0221-VUa61zhs.jpg" alt=""
+    /></a>
+    <a
+    href="images/NewEvent/IMG_0286-xad61zhs.jpg"
+    class="venobox"
+    data-gall="gallery-carousel"
+    ><img src="images/NewEvent/IMG_0286-xad61zhs.jpg" alt=""
+  /></a>
+  <a
+  href="images/NewEvent/IMG_0297-tXc61zhs.jpg"
+  class="venobox"
+  data-gall="gallery-carousel"
+  ><img src="images/NewEvent/IMG_0297-tXc61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0305-zEd61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_0305-zEd61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0308-4re61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_0308-4re61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0312-YIf61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_0312-YIf61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0344-0ug61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_0344-0ug61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0346-RUf61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_0346-RUf61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_0400-dBg61zhs.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img height= "50%" src="images/NewEvent/IMG_0400-dBg61zhs.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_4742-4hg61zhs.JPG"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_4742-4hg61zhs.JPG" alt=""
+/></a>
+
+<a
+href="images/NewEvent/IMG_4802-2Qh61zhs.JPG"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_4802-2Qh61zhs.JPG" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_4862-oRh61zhs.JPG"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_4862-oRh61zhs.JPG" alt=""
+/></a>
+
+<a
+href="images/NewEvent/IMG_7502.jpg"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_7502.jpg" alt=""
+/></a>
+
+<a
+href="images/NewEvent/IMG_7506.heic"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_7506.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_7517.heic"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_7517.jpg" alt=""
+/></a>
+<a
+href="images/NewEvent/IMG_7540.heic"
+class="venobox"
+data-gall="gallery-carousel"
+><img src="images/NewEvent/IMG_7540.jpg" alt=""
+/></a>
+          <!-- <a
+            href="images/X-tech-Events/1 (1).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (1).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (1).png"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (1).png" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (10).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (10).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (11).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (11).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (12).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (12).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (13).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (13).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (14).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (14).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (15).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (15).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (16).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (16).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (17).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (17).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (18).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (18).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (19).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (19).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (2).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (2).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (3).png"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (3).png" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (9).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (9).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (15).jpg" alt=""
+          /></a>
+          <a
+            href="images/X-tech-Events/1 (8).jpg"
+            class="venobox"
+            data-gall="gallery-carousel"
+            ><img src="images/X-tech-Events/1 (8).jpg" alt=""
+          /></a> -->
+        </div>
+      </section>
+      <!-- new style test  -->
+
+
+      <!--==========================
+      Sponsors Section
+    ============================-->
+    <style>
+      .partner{
+        display: block;
+        text-align: center;
+      }
+      .partners-title{
+        margin: 40px 0px;
+        font-weight: bold;
+        text-align: center;
+        margin: 40px 0px;
+        font-size: 3rem;
+      }
+      .supporting-partners{
+        margin: 0 auto;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .supporting-partners > img{
+        margin-bottom: 40px;
+      }
+      .mb-20{
+        margin-bottom: 20px;
+      }
+      .community-partners{
+        margin: 0 auto;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+      }
+      .community-partners >img{
+        margin: 40px;
+      }
+      .partners-titlew{
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      .border-style{
+        border-top: 8px solid black; border-bottom: 8px solid black;
+        border-style:groove;
+        width: fit-content;
+         margin: 40px auto;
+          padding: 20px;
+
+      }
+      .border-style-underline{
+        border-bottom: 2px solid #f8ad00;
+      }
+      .onhover:hover{
+        width: 400px;
+      }
+      .onhover2:hover{
+        width: 250px;
+        
+      }
+      .onhover3:hover{
+        width: 250px;
+        height: 250px;
+      }
+      .onhover4:hover{
+        width: 160px;
+      }
+      
+    </style>
+    <section id="sponsors">
+      
+    <div class="partner">
+      <div class="partners-title">Our Partners</div>
+      <div class="mb-20"></div>
+      <div class="mb-20"></div>
+      <div class="partner">
+        <div class="border-style">
+        <div  class="partners-titlew border-style-underline" >Title Sponsor</div>
+        <a href="https://www.lftechnology.com/" target="_blank"><img class="onhover" src="https://www.lftechnology.com/wp-content/themes/Froggy/img/logo_leapfrog.svg" alt="logo_leapfrog"  width="300px"></a>
+      </div>
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Our Event Sponsor/Hardware Partner</div>
+      <a target="_blank" href="https://www.facebook.com/AVELECTRONICSNEPAL"><img class="onhover" src="./image/Sponsors/AV Logo Final.jpg" alt="Purwanchal Campus"  width="250px"></a>
+    </div>
+    <!-- new style  -->
+    
+      <div class="mb-20"></div>
+      <div class="partner">
+        <div class="border-style">
+        <div  class="partners-titlew border-style-underline" >Internet Partner</div>
+        <a href="https://www.ntc.net.np/" target="_blank"><img class="onhover2" src="./image/Sponsors/NepalTelecome.jpg" alt="Purwanchal Campus"  width="200px"></a>
+      </div>
+
+     <div class="border-style">
+      <div class="partners-titlew border-style-underline">Supporting Partners</div>
+ 
+      <div class="supporting-partners" >
+        <a href="https://ioepc.edu.np" target="_blank"><img class="onhover3" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Tu_2.png" alt="Purwanchal Campus"  width="200px" height="220px"></a>
+        <a href="https://www.facebook.com/YantraScienceTechEntrepreneurshipFestival/" target="_blank"><img class="onhover2" src="./image/yantra.png" alt="Purwanchal Campus"  width="200px"></a>
+        <a href="https://www.libreoffice.org/" target="_blank"><img class="onhover" style="margin-top: 40px;" src="./image/community/libreoffice-seeklogo.com.svg" width="350px"
+        alt="LibreOffice"></a>
+        <a href="https://robotics.ioepc.edu.np/" target="_blank"><img class="onhover3"
+          src="./image/robotics.webp"
+          alt="Robotics Club"  width="200px" height="200px"></a>
+          <img class="onhover3" style="margin-top: 18px;" src="https://pdscnepal.org.np/assets/images/HeadOnlyAlt.png" alt="PDSC" width="170px" height="170px">
+      </div>
+    </div>
+    </div>
+     <!-- banking partner  -->
+     <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Banking Partner</div>
+      <div style="background: red;" ><a href="https://www.nicasiabank.com/" target="_blank"><img class="onhover2"  src="https://www.nicasiabank.com/assets/backend/uploads/Logo/NICASIA-logo-reverse.png" alt="Purwanchal Campus"  width="200px"></a>
+      </div>
+    </div>
+    <!-- payment partner  -->
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Payment Partner</div>
+      <a href="https://khalti.com/" target="_blank"><img class="onhover2" src="https://dao578ztqooau.cloudfront.net/static/img/logo1.png" alt="Khalti"  width="200px"></a>
+    </div>
+    <!-- consultancy partner  -->
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Consultancy Partner</div>
+      <a href="#" target="_blank"><img class="onhover2" src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/299535292_491785766280437_970605060513377017_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=-VN8J88xoLUAX-Hn0tC&tn=k4rg7I1RgBzYKXo9&_nc_ht=scontent.fbir1-1.fna&oh=00_AfAPlhitvDvgRCTwfjDcJ_aowDDgARze9yuHVPhEPGqGuA&oe=63D47CB8" alt="sumedha"  width="200px"></a>
+    </div>
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Printing Partner</div>
+      <div style="background: red;" ><a href="https://www.facebook.com/people/Himal-Flex/100067089460435/" target="_blank"><img class="onhover2" src="./image/himal.png" alt="Himal Flex"  width="200px"></a>
+      </div>
+    </div>
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Education Partner</div>
+      <a href="https://sikshyashala.com/" target="_blank"><img class="onhover2" src="https://sikshyashala.com/static/default/sikshyashala.svg" alt="sikshyashala"  width="200px"></a>
+    </div>
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Dental Health Partner</div>
+      <a href="https://dharandental.com/" target="_blank"><img class="onhover2" src="https://dharandental.com/public/uploads/media-19581569826188bd4acefd9.jpg" alt="dharan dental"  width="100px"></a>
+    </div>
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Stall Partners</div>
+      <a href="https://www.dishhome.com.np/" target="_blank"><img class="onhover2" src="https://admin.dishhome.com.np/uploads/images/1615365178.png" alt="dishhomenepal"  width="200px"></a>
+      <a href="https://manjushreefinance.com.np/" target="_blank"><img class="onhover2" src="https://manjushreefinance.com.np/frontend/images/logo.jpg" alt="manjushree finance"  width="200px"></a>
+      <a href="https://www.facebook.com/basementdharan/" target="_blank"><img class="onhover4" style="margin: 10px;" src="./image/basement.png" alt="the basement"  width="150px"></a>
+    </div>
+
+    <!-- gift partners -->
+    <div class="partner">
+      <div class="border-style">
+      <div  class="partners-titlew border-style-underline" >Gift Partners</div>
+      <a href="https://www.mantralab.tech/" target="_blank"><img class="onhover4" src="https://www.mantralab.tech/images/icon.png" alt="mantralabs"  width="100px"></a>
+      <a href="#" target="_blank"><img class="onhover4" src="./image/gfx.png" alt="gfx "  width="100px"></a>
+      <a href="https://www.facebook.com/The-Cake-Palace-101889738228899/?paipv=0&eav=AfYnOaiQD81VjGRd3lkNuEe_hAgKyfR2EKN4haR1Vuq0X82lt4zA2zs_hSOVoL3baPY&_rdr" target="_blank"><img class="onhover4" style="margin: 10px;" src="./image/the cake palace.png" alt="the cake palace"  width="100px"></a>
+      <a href="#" target="_blank"><img class="onhover4" src="./image/chef garden.png" alt="chef garden"  width="100px"></a>
+      <a href="#" target="_blank"><img class="onhover4" src="./image/microtech.png" alt="microtech computer"  width="100px"></a>
+    </div>
+
+  
+    <div  class="media-partner border-style">
+      <div class="partners-titlew border-style-underline">Media Partners</div>
+      <a href="https://arthasarokar.com/" target="_blank"><img class="onhover3" style="display: block; margin: 10px auto;" src="./image/mediaPartner/Artha Sarokar Logo.png" width="150px" height="120px"></a>
+      <a href="https://techsathi.com/" target="_blank"><img class="onhover3" style="display: block; margin: 10px auto;" src="./image/mediaPartner/TS-HEADER-RGB.png" width="200px" height="100px"></a>
+
+    </div>
+    <!-- <div class="border-style"> -->
+     
+    <div class="partners-titlew border-style-underline">Community Partners</div>
+    <div class="community-partners">
+        <div class="github" style="display: flex; align-items: center;" >
+          <img src="image/community/github-mark.svg" width="50px" height="50px"><span style="margin-left: 10px; font-weight: 400; font-size: 3em;">Education</span>
+        </div>
+        <img src="image/community/AskBuddie.png" alt="AskBuddie" width="200px" height="120px">
+          <img style="margin-top: 58px;" src="image/community/Shikshyashala Logo.png" alt="SikshyaShala" width="300px" height="80px">
+          <img  src="image/community/DEV community Nepal Logo.png" alt="Dev Community Nepal" width="250px" height="100px">
+          <img class="onhover3"  style="margin-top: 24px;" src="image/community/Eng.png" alt="इन्जिनियरको ब्यथा अरुलाई के था" width="150px" height="150px">
+          <img class="onhover3"  style="margin-top: 48px;" src="image/community/scns.jpg" alt="SNSC IT Club" width="150px" height="150px">
+          <img class="onhover3"  src="image/community/Data.png" alt="DRCFS" width="200px" height="190px">
+          <img class="onhover3" 
+            src="https://imaviinash.github.io/CSITAN-Purwanchal-Website/images/csit%20logo.jpg"
+            alt="CSIT Association fo Nepal" width="200px" height="200px">
+            <img class="onhover3"  style="margin-top: 70px;"
+            src="./image/community/1648222000613.png"
+            alt="CSIT Association fo Nepal" width="200px" height="
+            100px">
+            <img class="onhover3" 
+            src="./image/community/315251915_1069851743671796_2334451667579104793_n.jpg"
+            alt="Sharing Mentorship" width="200px" height="
+            100px">
+      </div>
+    <!-- </div> -->
+  </div>
+   
+  </section>
+  <!-- <section>
+    <div>
+      <img width = "100%" src="./image/eight8six-01-min.png">
+    </div>
+
+  </section> -->
+ 
+      <!--==========================
+      F.A.Q Section
+    ============================-->
+      <section id="faq" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>F.A.Q</h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <ul id="faq-list">
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1"
+                    >How can I register for the event?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      You can register to any event through the register button.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed"
+                    >Is there accommodation for the Hackathon? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Yes, there is accommodation for that for every participants.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed"
+                    >Can i bring my own hardware in hackathon? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                     Yes, Definitely.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed"
+                    >Do i have to be a IOE student to participate?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                     No, anyone from any of the University can participate.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-toggle="collapse" href="#faq5" class="collapsed"
+                    >I am not a bachelor student can i participate? <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq5" class="collapse" data-parent="#faq-list">
+                    <p>
+                     Yes, but we will go through your application during registration.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- <li>
+                  <a data-toggle="collapse" href="#faq6" class="collapsed"
+                    >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
+                    turpis nunc eget lorem dolor?
+                    <i class="fa fa-minus-circle"></i
+                  ></a>
+                  <div id="faq6" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Laoreet sit amet cursus sit amet dictum sit amet justo.
+                      Mauris vitae ultricies leo integer malesuada nunc vel.
+                      Tincidunt eget nullam non nisi est sit amet. Turpis nunc
+                      eget lorem dolor sed. Ut venenatis tellus in metus
+                      vulputate eu scelerisque. Pellentesque diam volutpat
+                      commodo sed egestas egestas fringilla phasellus faucibus.
+                      Nibh tellus molestie nunc non blandit massa enim nec.
+                    </p>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
+      Subscribe Section
+    
+    ============================-->
+    
+      <!--==========================
+      Contact Section
+    ============================-->
+      <section id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>You can Contact to Us through the</p>
+          </div>
+
+          <div class="row contact-info">
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Address</h3>
+                <address>56700 Gangalal Marga Tinkune Dharan-8 Sunsari Province 01, Nepal</address>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Phone Number</h3>
+                <p><a href="">Gokarna Baskota</a></p>
+                <p style="font-size: 0.8rem; font-weight: 800;">President, EXCESS</p>
+                <p><a href="Phone:+9779865375041">9865375041</a></p>
+                <br>
+                <p><a href="">Sadanandh Paneru</a></p>
+                <p style="font-size: 0.8rem; font-weight: 800;">Business Head, X-TECH</p>
+                <p><a href="Phone:+9779843521965">9843521965</a></p>
+                <br>
+                <p><a href="">Dipak Acharya</a></p>
+                <p style="font-size: 0.8rem; font-weight: 800;">Business Vice, X-TECH</p>
+                <p><a href="Phone:++9779864931402">9864931402</a></p>
+                <br>
+                <p><a href="">Saroj Baniya</a></p>
+                <p style="font-size: 0.8rem; font-weight: 800;">Secretary, EXCESS</p>
+                <p><a href="Phone:+9779811354949">9811354949</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:xtech@ioep.edu.np">xtech@ioepc.edu.np</a></p>
+                <p><a href="mailto:excessnepal@ioepc.edu.np">excessnepal@ioepc.edu.np</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    data-rule="minlen:4"
+                    data-msg="Please enter at least 4 chars"
+                  />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    data-rule="email"
+                    data-msg="Please enter a valid email"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 8 chars of subject"
+                />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  data-rule="required"
+                  data-msg="Please write something for us"
+                  placeholder="Message"
+                ></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section> -->
+      <!-- #contact -->
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-info">
+              <img src="images/assets/3.0-PhotoRoom.png" alt="TheEvenet" />
+              <p>
+                Xtech Studio, is more than an event, rather a technical festival which encompasses of all the technical events that are inevitable to be known as an Engineering student. Going into the tenth year of establishment of EXCESS Society, here we come with the third installment of Xtech title "Xtech Studio 3.0".
+              </p>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Important Links</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="#intro">Home</a></li>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="#about">About us</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="../index.html">EXCESS</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Partners/Sponsers</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                56700 Gangalal Marga Tinkune <br />
+                Dharan-8 Sunsari Province 01, <br />
+                Nepal <br />
+                <strong>Phone:</strong>9865375041<br />
+                <strong>Email:</strong> xtech@ioepc.edu.np<br />
+                <strong>Email:</strong>excessnepal@ioepc.edu.np<br />
+              </p>
+
+              <div class="social-links">
+                <a target="_blank" href="https://www.linkedin.com/company/excessioepc/mycompany/" class="twitter"><i class="fa fa-linkedin"></i></a>
+                <a target="_blank"  href="https://www.facebook.com/excessnepal" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/excess.ioe/" class="instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a target="_blank" href="https://github.com/EXCESS-IOEPC" class="linkedin"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>X-Tech</strong>. All Rights Reserved
+        </div>
+       
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
