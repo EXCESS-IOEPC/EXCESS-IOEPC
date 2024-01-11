@@ -53,7 +53,10 @@
             <li><a href="index.html#sponsors">Sponsors</a></li>
             <li><a href="index.html#contact">Contact</a></li>
             <li class="buy-tickets">
-              <a href="index.html#register">Register</a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScmIi7SHVDBOesiwcfLypHHpXlqrKd3bwFVDuhifTFAg1Co7w/viewform"
+                >Register</a
+              >
             </li>
           </ul>
         </nav>
@@ -62,20 +65,89 @@
     </header>
     <!-- #header -->
     <style>
+      .full-width-image {
+        width: 100%;
+      }
+
+      .center-text {
+        text-align: center;
+        color: #2c3e50; /* Dark blue color */
+      }
+
+      .top-margin {
+        margin-top: 20px; /* Adjust the value as needed */
+        background-color: #f0f0f0; /* Change to the color you want */
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .large-font {
+        font-size: 3rem; /* Larger font size */
+        font-weight: bold; /* Make the text bold */
+        text-transform: uppercase; /* Convert the text to uppercase */
+        letter-spacing: 2px; /* Add some spacing between the letters */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the text */
+      }
+      .bold {
+        font-weight: bolder;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        text-align: center;
+        margin: 10px;
+      }
+
+      .button a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
       .register {
         background-color: green;
       }
+
       .rules {
-        margin-left: 20px;
-        background-color: #f8ad00;
+        background-color: red;
       }
-      .register,
-      .rules {
-        color: white;
-        border-radius: 10px;
-        padding: 10px 15px;
-        border: none;
-        font-size: 1.5rem;
+
+      .register:hover {
+        background-color: darkgreen;
+      }
+
+      .rules:hover {
+        background-color: darkred;
+      }
+
+      /* Responsive styling */
+      @media (max-width: 600px) {
+        .button-container {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .button a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .highlight {
+        font-size: 1rem;
+        font-weight: bolder;
+        color: black;
+        text-underline-offset: 5px;
       }
     </style>
     <main id="main" class="main-page">
@@ -85,58 +157,56 @@
       <section id="speakers-details" class="wow fadeIn">
         <div class="container">
           <div class="section-header">
-            <h2>HARDWARE HACKATHON(X-Hack)</h2>
+            <h2>HARDWARE HACKATHON (X-Hack)</h2>
           </div>
 
           <div class="row">
             <div class="col-md-6">
-              <img src="./image/events/hackathon (2).png" width="100%">
+              <img src="./images/FINAL.png" class="full-width-image" />
             </div>
 
             <div class="col-md-6">
               <div class="details">
-                <h2 style="text-align: center; font-size: 2.8rem">
-                  X-HACK 2.0
-                </h2>
+                <h2 class="center-text large-font">X-HACK 2.0</h2>
 
-                <p style="font-weight: bolder; font-size: larger;">
-                  Tech enthusiasts, get ready to unleash your creativity! EXCESS proudly presents the pinnacle event of our annual technical festival: the X-Tech 4.0 Green Technology Hardware Hackathon! In this thrilling 28-hour challenge, immerse yourself in crafting hardware prototypes that address real-world problems, all within the realm of sustainable and eco-friendly technology.
-
-                  Collaborate with passionate minds, form teams, and transform your concepts into tangible solutions. The winning team stands a chance to secure substantial cash rewards. This is your platform to bring innovation to life and leave a lasting impact on the tech industry through sustainable hardware development.
-                  
-                  Don't miss this golden opportunity to display your skills and potentially catalyze your career in the world of eco-conscious hardware innovation. Join us at X-Tech 3.0 and let's elevate this hackathon to new heights of excellence in green technology!
+                <p class="bold">
+                  Tech enthusiasts, get ready to unleash your creativity! EXCESS
+                  proudly presents the pinnacle event of our annual technical
+                  festival: the
+                  <span class="highlight"
+                    >X-Tech 4.0 Green Technology Hardware Hackathon</span
+                  >! In this thrilling 28-hour challenge, immerse yourself in
+                  crafting hardware prototypes that address real-world problems,
+                  all within the realm of sustainable and eco-friendly
+                  technology. Collaborate with passionate minds, form teams, and
+                  transform your concepts into tangible solutions. The winning
+                  team stands a chance to secure substantial cash rewards. This
+                  is your platform to bring innovation to life and leave a
+                  lasting impact on the tech industry through sustainable
+                  hardware development. Don't miss this golden opportunity to
+                  display your skills and potentially catalyze your career in
+                  the world of eco-conscious hardware innovation. Join us at
+                  <span class="highlight">X-Tech 4.0</span> and let's elevate
+                  this hackathon to new heights of excellence in green
+                  technology!
                 </p>
-                <a target="_blank" href="https://www.facebook.com/AVELECTRONICSNEPAL">Click Here </a><span>for Our Event Sponsor and Hardware vendor Facebook Page. You can get from 5-15% discount on Hardware products during X-TECH 3.0.</span>
-                <!-- <a href="https://drive.google.com/file/d/18TCnzu_s-Z8jV9CEF9gyNQt6-iPYQsnl/view?usp=sharing"><h3 style="color: green; font-weight: 900;">Flat Discount ! SEE DISCOUNTED PRICES!</h3></a> -->
-                <br>
-
-                <a target="_blank" href="https://www.facebook.com/AVELECTRONICSNEPAL"><img style="margin-top: 20px;"width="200px" src="./image/Sponsors/AV Logo Final.jpg"></a>
-                <br>
-                <span>
-                  B.P. Chowk, Itahari
-                 </span>
               </div>
-              <h1 style="text-align: center; margin-top: 40px;">Registration is Closed !<br>Deadline till 4th of Magh</h1>
-              <div style="display: flex; justify-content: center; flex-wrap: wrap; ">
-                <div class="buttons" style="text-align: center; background: red;">
+              <h1 class="center-text top-margin">
+                Registration is Open !<br />Deadline till 3rd of Magh
+              </h1>
+              <div class="button-container">
+                <div class="button">
                   <a
-                    style="background-color: green;"
                     target="_blank"
-                    href="
-                    https://docs.google.com/forms/d/e/1FAIpQLScmIi7SHVDBOesiwcfLypHHpXlqrKd3bwFVDuhifTFAg1Co7w/viewform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScmIi7SHVDBOesiwcfLypHHpXlqrKd3bwFVDuhifTFAg1Co7w/viewform"
                     class="register"
-                    >Registration Started!</a
+                    >Register</a
                   >
                 </div>
-                <div class="button" style="text-align: center;">
-                  <a
-                    target="_blank"
-                    href="
-                    http://tiny.cc/oxqyvz"
-                    class="rules"
+                <div class="button">
+                  <a target="_blank" href="http://tiny.cc/oxqyvz" class="rules"
                     >Rule Book</a
                   >
-                  
                 </div>
               </div>
             </div>
@@ -153,7 +223,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6 footer-info">
-              <img src="images/assets/3.0-PhotoRoom.png" alt="TheEvenet" />
+              <img src="images/assets/4.0-PhotoRoom.png" alt="TheEvenet" />
               <p>
                 Xtech Studio, is more than an event, rather a technical festival
                 which encompasses of all the technical events that are
