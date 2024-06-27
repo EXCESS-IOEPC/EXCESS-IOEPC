@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords"
-    content="XTech, EXCESS, IOEPC, IOE, Purwanchal Campus, Dharan, Electronics, BEI, Bachelors in Electronics, Committee and Information, Nepal">
-  <meta name="author" content="EXCESS Web Design Team (Sudip Parajuli(@sudipnext), Dhiraj KC (@DKC195), Sunil Paudel (@khostaa))">
+    <meta
+      name="keywords"
+      content="XTech, EXCESS, IOEPC, IOE, Purwanchal Campus, Dharan, Electronics, BEI, Bachelors in Electronics, Committee and Information, Nepal"
+    />
+    <meta
+      name="author"
+      content="EXCESS Web Design Team (Sudip Parajuli(@sudipnext), Dhiraj KC (@DKC195), Sunil Paudel (@khostaa))"
+    />
     <link rel="stylesheet" href="./css/excess.css" />
     <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="shortcut icon" href="./assets/assets/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/assets/favicon.png"
+      type="image/x-icon"
+    />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    
 
     <link
       rel="stylesheet"
@@ -23,6 +31,7 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/testimonial.css">
     <script src="./js/index.js"></script>
     <title>EXCESS</title>
   </head>
@@ -58,44 +67,41 @@
       <img class="logo" src="./assets/assets/favicon.png" alt="EXCESS Logo" />
 
       <div class="button" onclick="navbar()">
-        <div class="rectangle" ></div>
+        <div class="rectangle"></div>
         <div class="rectangle"></div>
         <div class="rectangle"></div>
       </div>
       <ul id="nav-ul">
-        <a href="./index.html" onclick="o=navbar()">HOME</a>
-        <a href="./xtech/" onclick="o=navbar()">X-TECH</a>
-        <a id="about" href="#third" onclick="o=navbar()">ABOUT-US</a>
-        <!-- <a href="#">TEAMS</a> -->
-        <a href="./Pages/contactus.html" onclick="o=navbar()">CONTACT-US</a>
-         <a href="./Pages/members.html" onclick="o=navbar()">MEMBERS</a>
+        <a href="#" onclick="o=navbar()">HOME</a>
+        <a  href="#about-section" onclick="o=navbar()">ABOUT</a>
+        <a href="./Pages/contactus.html" onclick="o=navbar()">CONTACT</a>
+        <a href="./Pages/members.html" onclick="o=navbar()">MEMBERS</a>
         <a href="./Pages/certify.html" onclick="o=navbar()">VERIFY</a>
-       
+        <a class="glow-button-yellow" href="./xtech/" onclick="o=navbar()">XTECH</a>
+        <a href="#" class="glow-button">CS50XNEPAL</a>
       </ul>
     </nav>
 
     <!-- <div id="navbg"></div> -->
     <div class="part1">
       <div class="containered">
-        <div class="foreground">
-          <h1>
-            Electronics Communication And Information Engineering
-            <span style="color: #2cdab0">Student Society</span>
-          </h1>
-          <p>
-            The Electronics Communication and Information Engineering Student
-            Society (EXCESS) is a non-political umbrella type society registered
-            within the IOE Purwanchal campus, Dharan. <br />
-            It was formed in 2070 B.S.
-          </p>
-          <a href="./xtech"
-            ><button class="x-tech-btn">
-              <img
-                width="60%"
-                src="./assets/assets/3.0-PhotoRoom.png"
-              /></button
-          ></a>
-        </div>
+      <div class="foreground">
+        <h1>
+        Electronics Communication And Information Engineering
+        <span style="color: #2cdab0">Student Society</span>
+        </h1>
+        <p>
+        The Electronics Communication and Information Engineering Student
+        Society (EXCESS) is a non-political umbrella type society registered
+        within the IOE Purwanchal campus, Dharan. <br />
+        It was formed in 2070 B.S.
+        </p>
+        <a  href="./xtech"
+        ><button class="glow-button-yellow xtech">
+          <h2>X-TECH</h2>
+        </button></a
+        >
+      </div>
       </div>
     </div>
     <div class="container">
@@ -103,9 +109,10 @@
         <section class="intro">
           <h1>Message From President</h1>
 
-          <p style="margin-bottom: 40px;">
+          <p style="margin-bottom: 40px">
             We EXCESS are devoted to developing the skill of Electronic
-            Engineering students in a broad way by providing them with a      platform to broaden their knowledge of the digital world so that
+            Engineering students in a broad way by providing them with a
+            platform to broaden their knowledge of the digital world so that
             they can be at the forefront of future technologies. We have been
             active in helping students learn new skills so they can deal with
             the implementation of applications, principles, and algorithms
@@ -121,11 +128,36 @@
         />
       </div>
     </div>
+    <!-- testimonial  -->
+    <div class="container-test">
+      <h1>Testimonials</h1>
+      <div class="main-div">
+          <div class="img-container">
+              <img src="" id="img" alt="">
+          </div>
+          <div class="main-content">
 
-    <div id="third" style="height: 50px; background: whitesmoke; margin-bottom: 0px;"></div>
-    <div class="third">
-      <h1 style="margin: 40px auto;">About Us</h1>
-      <p style="line-height: 20px;">
+              <h2 class="author" id="author">Sudip Parajuli</h2>
+              <p class="job" id="job">Advisor</p>
+              <p class="text" id="text">Working with EXCESS, from Vice-Secretary to Advisor, has been an incredible journey. I’ve transitioned from participating in various trainings to delivering them myself.</p>
+              <div class="btnContainer">
+                <button id="prev-btn">Prev</button>
+              
+                  <button id="next-btn">Next</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    <!-- end testimonial -->
+
+    <!-- <div
+      id="third"
+      
+    ></div> -->
+    <div id="about-section" class="third" style="background: whitesmoke; color: #343578;">
+      <h1 style="margin: 40px auto">About Us</h1>
+      <p style="line-height: 20px">
         Electronics, Communication and Information Engineering Students' Society
         ( EXCESS ) is a non political , non profit oriented, umbrella-type
         society of students pursuing Bachelor's degree in Electronics,
@@ -137,8 +169,6 @@
         bridge to students and campus fraternity.
       </p>
     </div>
-  </div>
-  
 
     <!-- ENDS  -->
     <footer id="footer">
@@ -173,7 +203,9 @@
           /></a>
         </div>
         <div style="margin: auto 0">
-          <a target="_blank" href="https://www.linkedin.com/in/excess-nepal-690ba5216/"
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/excess-nepal-690ba5216/"
             ><img src="./assets/logos/linkedin.svg" width="40px"
           /></a>
         </div>
@@ -190,8 +222,12 @@
         </ul>
       </div>
     </footer>
-    <div style="background: whitesmoke; color: #343578; padding-bottom: 20px;">
-      Powered By <span href="./index.html" onclick="topFunction()" style="color: red">EXCESS</span> Web Team
+    <div style="background: whitesmoke; color: #343578; padding-bottom: 20px">
+      Powered By
+      <span href="./index.html" onclick="topFunction()" style="color: red"
+        >EXCESS</span
+      >
+      Web Team
     </div>
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>

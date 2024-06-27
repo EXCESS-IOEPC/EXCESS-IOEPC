@@ -1,12 +1,18 @@
 * {
   --nav-height: 60px;
   --checkbox-ani: 22px;
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 nav {
   height: var(--nav-height);
   width: 100%;
   opacity: 1;
+  position: sticky; /* Make navigation sticky */
+  top: 0;
+  background-color: #fff; /* Assuming a light theme for visibility */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  z-index: 1000; /* Ensure nav is above other content */
 }
 
 nav.container {
@@ -40,7 +46,7 @@ nav ul {
   max-width: 700px;
   justify-content: space-around;
   opacity: 1;
-
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
 nav ul a,
@@ -50,10 +56,11 @@ nav ul li {
   margin: 10.5px 5px;
   border-radius: 3px;
   padding: 10px 10px;
-  max-width: 300px;
+  max-width: 350px;
   color: var(--nav-txt);
   text-transform: capitalize;
   text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav ul a.active,
@@ -61,6 +68,7 @@ nav ul a:hover {
   background-color: var(--nav-hover-bg);
   color: var(--nav-txt2);
 }
+
 @media (max-width: 500px) {
   body {
     --nav-left: -100%;

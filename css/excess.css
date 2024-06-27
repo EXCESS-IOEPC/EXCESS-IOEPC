@@ -707,3 +707,43 @@ div.part2 {
   background: #343578;
   
 }
+
+.glow-button {
+  display: inline-block;
+  padding: 10px 10px;
+  color: white;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+  height: 40px; /* Set the height */
+}
+.glow-button:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+}
+
+.glow-button-yellow {
+  display: inline-block;
+  padding: 10px 10px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(255, 111, 0);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 128, 0, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+  height: 40px; /* Set the height */
+}
+.glow-button:hover {
+  box-shadow: 0 0 10px rgb(255, 111, 0);
+}
+
+.xtech{
+
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 100px;
+  border-radius: 10%;
+}
