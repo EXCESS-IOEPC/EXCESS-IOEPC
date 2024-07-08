@@ -188,13 +188,13 @@ let data = [
     completion: "9th July",
     percentage: "A",
   },
-  {
-    cert_id: "#079-PDJ-29",
-    Name: "Suwarna Pyakurel",
-    type: "Engaged Participant",
-    completion: "9th July",
-    percentage: "A",
-  },
+  // {
+  //   cert_id: "#079-PDJ-29",
+  //   Name: "Suwarna Pyakurel",
+  //   type: "Engaged Participant",
+  //   completion: "9th July",
+  //   percentage: "A",
+  // },
 ];
 
 const input = document.getElementById("lname");
