@@ -1,0 +1,47 @@
+.swiper 
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+.previous, .next {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: auto;
+  background-color: #E5E5E5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.previous:hover, .next:hover {
+  background-color: #3572EF;
+  transition: .5s;
+}
+.previous:hover, .next:hover .icon
+{
+  color: rgb(187 232 250 / 1);
+}
+.previous, .next .icon
+{
+  color: #C4C4C4;
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: #a3a6ac;
+  opacity: 1;
+  border: none;
+  height: 10px;
+  width: 10px;
+}
+
+.swiper-pagination-bullet-active 
+{
+  background-color: #3572EF;
+  transition: .5s;
+}
