@@ -1,0 +1,36 @@
+/* Custom Pagination Style */
+
+.members 
+{
+  background: linear-gradient(to bottom, #3B3C3D 44%,#F6F6F6 44%);
+}
+
+.swiper-pagination-bullet {
+    /* Size of bullet */
+    width: 10px;
+    height: 10px;
+    background: #007aff; /* Bullet color */
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #ff5722; /* Active bullet color */
+  }
+  
+  /* Custom Navigation Arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #007aff; /* Arrow color */
+  }
+  
+  /* doesnT work */
+  .swiper-button-next {
+    right: 10px; /* Adjust the position from the right */
+  }
+  
+  .swiper-button-prev {
+    left: 10px; /* Adjust the position from the left */
+  }
+  

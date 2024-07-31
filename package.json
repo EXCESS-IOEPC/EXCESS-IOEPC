@@ -1,0 +1,38 @@
+{
+  "name": "excess-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^6.4.15",
+    "autoprefixer": "^10.4.19",
+    "boring-avatars": "^1.10.2",
+    "minidenticons": "^4.2.1",
+    "next": "14.2.5",
+    "nodemailer": "^6.9.14",
+    "pnpm": "^9.5.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
+    "react-icons": "^5.2.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-social-icons": "^6.16.0",
+    "send-email": "^1.1.3",
+    "swiper": "^11.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5"
+  }
+}
