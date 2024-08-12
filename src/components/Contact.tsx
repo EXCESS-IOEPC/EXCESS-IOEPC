@@ -28,8 +28,7 @@ const About = () => {
                           </div>
                           <div className="border-t border-primaryBlue px-6 py-4">
                               <h3 className="text-lg   text-primaryBlue">Contact</h3>
-                              <p className="mt-1 text-sm text-offBlack">Mahesh Chaudhary: +977 9842203290</p>
-                              <p className="mt-1 text-sm text-offBlack">Sudip Parajuli: +977 98321231231</p>
+                              <p className="mt-1 text-sm text-offBlack">Mahesh Chaudhary: +977 9809574797</p>
                           </div>
                       </div>
                   </div>

@@ -1,16 +1,15 @@
 "use client";
-
-import "@/src/app/globals.css";
-import Contact from '@/src/components/Contact';
-import HeaderTop from '@/src/components/HeaderTop';
-import Navbar from "@/src/components/Navbar";
-import React, { useState, useEffect } from 'react';
-import { useRouter } from "next/navigation";
-import { Router } from "next/router"; 
+import React, { useState, useEffect, ReactNode } from 'react';
 import Loading from '@/src/components/Loading';
+import { useRouter } from "next/navigation";
+import { Router } from "next/router";
 
+interface ClientSideWrapperProps {
+  children: ReactNode;
+}
 
-export default function Home() {
+const ClientSideWrapper: React.FC<ClientSideWrapperProps> = ({ children }) => {
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -41,15 +40,12 @@ export default function Home() {
     };
   }, [router]);
 
-
   return (
-    <main>
-      {isLoading ? <Loading /> : ""}
-      <section id="header">
-        <HeaderTop />
-        <Navbar />
-      </section>
-      <Contact />
-    </main>
+    <>
+      {isLoading && <Loading />}
+      {children}
+    </>
   );
-}
+};
+
+export default ClientSideWrapper;

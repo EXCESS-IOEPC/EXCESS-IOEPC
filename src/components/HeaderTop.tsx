@@ -24,7 +24,7 @@ export default function HeaderTop() {
 
 
           {[
-            ['facebook', "https://www.facebook.com"],
+            ['facebook', "https://www.facebook.com/excessnepal/"],
             ['instagram', "https://www.instagram.com/excess.ioe/"],
             ['linkedin', "https://www.linkedin.com/company/excessioepc/"],
             ['github', "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC"],

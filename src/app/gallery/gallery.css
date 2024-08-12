@@ -1,0 +1,118 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+@media screen and (max-width: 640px) {
+    .gallery {
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+    .gallery img {
+        max-width: 350px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .gallery {
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+    .gallery img {
+        max-width: 350px;
+    }
+    
+}
+
+.gallery-menu{
+  text-align:center;
+  max-width: 80%;
+}
+.gallery-menu button{
+  background-color: #F6F6F6;
+  border: 2px solid #3B3C3D;
+  display:inline-block;
+	margin: 4px;
+  border-radius: 4px;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+.gallery-active{
+  border: 2px solid #3572EF !important;
+  color: #3572EF;
+  -webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+.gallery-active:hover {
+  background-color: #3572EF !important;
+  color: #F6F6F6;
+}
+.gallery-menu button:hover{
+  background-color: #3B3C3D;
+  border: 2px solid #3B3C3D;
+  color: #F6F6F6;
+}
+
+.scroll-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: auto;
+  background-color: #E5E5E5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.scroll-button:hover, .next:hover {
+  background-color: #3572EF;
+  transition: .5s;
+}
+@media screen and (max-width: 640px) {
+    .scroll-button {
+      width: 30px;
+      height: 30px;
+    }
+}
+.scroll-button:hover, .next:hover .icon
+{
+  color: rgb(187 232 250 / 1);
+}
+.scroll-button svg
+{
+  color: #C4C4C4;
+}

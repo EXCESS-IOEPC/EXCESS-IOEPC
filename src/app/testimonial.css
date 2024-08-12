@@ -33,7 +33,7 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: #a3a6ac;
+  background-color: #a3a6ac !important;
   opacity: 1;
   border: none;
   height: 10px;
@@ -42,6 +42,6 @@
 
 .swiper-pagination-bullet-active 
 {
-  background-color: #3572EF;
+  background-color: #3572EF !important;
   transition: .5s;
 }

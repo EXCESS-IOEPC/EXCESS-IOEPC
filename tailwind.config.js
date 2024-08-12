@@ -1,8 +1,10 @@
+const {nextui} = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
   ],
   theme: {
     extend: {
@@ -21,9 +23,10 @@ module.exports = {
         'erc-scaled': "url('../../public/images/erc-scaled.jpg')",
         'wave': "url('../../public/images/wave.svg')",
         'line': "url('../../public/images/line.svg')",
+        'server_down': "url('../../public/images/server_down.svg')",
       }
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 }
 

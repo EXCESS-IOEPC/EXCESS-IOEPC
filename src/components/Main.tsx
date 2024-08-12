@@ -17,7 +17,7 @@ const Main = () => {
                       <a href="https://ioepc.edu.np/" title="" className="inline-flex items-center justify-center w-full px-8 py-2  text-white transition-all duration-500 bg-ioeBlue border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-ioeBlue hover:text-ioeBlue" role="button"> Purwanchal Campus </a>
 
 
-                      <a href="https://xtech.ioepc.edu.np/" title="" className="inline-flex items-center justify-center w-full px-8 py-2 text-white transition-all duration-500 bg-xyellow border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-xyellow hover:text-xyellow" role="button"> X-Tech </a>
+                      <a href="https://excess.ioepc.edu.np/xtech" title="" className="inline-flex items-center justify-center w-full px-8 py-2 text-white transition-all duration-500 bg-xyellow border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-xyellow hover:text-xyellow" role="button"> X-Tech </a>
 
 
                       <a href="https://cs50xnepal.ioepc.edu.np/" title="" className="inline-flex items-center justify-center w-full px-8 py-2  text-white transition-all duration-500 bg-cs50red border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-cs50red hover:text-cs50red" role="button"> CS50xNepal </a>

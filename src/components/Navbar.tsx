@@ -25,7 +25,7 @@ function NavBar() {
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
                 <button
-                  className="p-2 rounded-md text-xl hover:text-primaryBlue transition duration-500"
+                  className="p-2 rounded-md text-xl hover:text-primaryBlue transition duration-500 ease"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -44,7 +44,7 @@ function NavBar() {
           >
               <ul className="md:h-auto items-center justify-center md:flex font-semibold ">
                 {navItems.map(([link, title], index) => (
-                  <li key={index}  className = { pathname == link ? "active text-sm py-2 max-[910px]:px-2 px-6  overflow-hidden nav-item h-14 content-center text-center hover:text-primaryBlue" : " overflow-hidden text-sm py-2 max-[910px]:px-3 px-6 nav-item h-14 content-center text-center hover:text-primaryBlue"}>
+                  <li key={index}  className = {`text-sm py-2 max-[910px]:px-2 px-6  overflow-hidden nav-item h-14 content-center text-center hover:text-primaryBlue ${ pathname == link ? 'active' : ''}`}>
                     <Link href={link} onClick={() => setNavbar(!navbar)}> 
                       {title}
                     </Link>
@@ -54,12 +54,12 @@ function NavBar() {
                   <div className="md:flex md:ml-2 text-sm gap-2 max-[550px]:gap-1 md:mt-0 mt-2 md:space-y-0 space-y-2 justify-center content-center items-center">
                     <li>
                       <Link onClick={() => setNavbar(!navbar)}  href="https://excess.ioepc.edu.np/xtech/">
-                        <button className="w-full md:w-auto md:px-4 h-10 rounded-md bg-xyellow transition text-offWhite duration-500 hover:bg-offWhite hover:border-[2px] hover:border-xyellow hover:text-xyellow font-bold">XTech</button>
+                        <button className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-all duration-500 bg-xyellow border-2 border-transparent md:w-auto rounded-md hover:bg-transparent hover:border-xyellow hover:text-xyellow">XTech</button>
                       </Link>
                     </li>
                     <li>
                       <Link onClick={() => setNavbar(!navbar)} href="https://cs50xnepal.ioepc.edu.np/">
-                        <button className="w-full md:w-auto md:px-4 h-10 rounded-md bg-cs50red transition text-offWhite duration-500 hover:bg-offWhite hover:border-[2px] hover:border-cs50red hover:text-cs50red font-bold">CS50xNepal</button>
+                        <button className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-all duration-500 bg-cs50red border-2 border-transparent md:w-auto rounded-md hover:bg-transparent hover:border-cs50red hover:text-cs50red font-bold">CS50xNepal</button>
                       </Link>
                     </li>
 
