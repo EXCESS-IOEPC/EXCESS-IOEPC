@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import React from 'react';
 import View from "@/src/app/gallery/view";
 import HeaderTop from '@/src/components/HeaderTop';
