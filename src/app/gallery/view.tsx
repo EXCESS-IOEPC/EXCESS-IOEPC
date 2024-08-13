@@ -51,13 +51,13 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
             {images.map((image, idx) => (
                     <CldImage
                         key={idx}
-                        className="h-auto max-w-full rounded-lg cursor-pointer"
+                        className="h-auto max-w-full rounded-lg cursor-pointer object-contain"
                         src={image.public_id}
                         alt="Gallery Image"
                         width="300"
                         height="300"
                         crop="fill"
-                        loading="eager"
+                        loading="lazy"
                         onClick={() => openImage(idx)}
                     />
                 ))}
@@ -71,7 +71,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
                 onClick={closeImage}
                 onKeyDown={(e) => e.key === 'Escape' && closeImage()}
                 tabIndex={0}>
-                <button className="absolute top-0 mt-0 md:mt-4 scroll-button cross z-50" onClick={closeImage}>
+                <button className="absolute top-0 mt-2 md:mt-4 scroll-button cross z-50" onClick={closeImage}>
                     <FaXmark />
                 </button>
                 <button className="scroll-button absolute left-0 ml-4 md:ml-14  z-50"  onClick={(e) => {

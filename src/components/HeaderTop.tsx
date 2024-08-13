@@ -13,7 +13,7 @@ export default function HeaderTop() {
             
 
             <Image
-              src="./icon.png"
+              src="/icon.png"
               width = {35}
               height = {35}
               alt =  "EXCESS ICON Image"

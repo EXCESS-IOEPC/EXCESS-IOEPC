@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from 'react';
 import View from "@/src/app/gallery/view";
 import HeaderTop from '@/src/components/HeaderTop';
@@ -7,7 +8,6 @@ import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
 import ErrorComponent from '@/src/app/error';
-import { DynamicServerError, isDynamicServerError } from "next/dist/client/components/hooks-server-context";
 
 
 
@@ -24,7 +24,6 @@ export default async function Home({
     filter: string;
   };
 }) {
-
   const expression = filter
     ? `resource_type:image AND folder:"${filter}"`
     : 'resource_type:image';
@@ -36,9 +35,6 @@ export default async function Home({
       .sort_by('public_id', 'desc')
       .execute() as { resources: Image[] };
   } catch (error) {
-    if (isDynamicServerError(error)){
-      throw error;
-    }
     return (
       <ErrorComponent message="There was an error fetching the gallery images. Please check your internet connection or try again later." />
     );
