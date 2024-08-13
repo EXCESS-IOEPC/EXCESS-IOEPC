@@ -11,7 +11,7 @@ const About = () => {
         </div>
         <div className="md:w-2/5 border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue">
           <picture>
-            <Image width={32} height={32} alt="ERC Image" src="/images/erc-scaled.jpg" className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"/>
+            <Image width={32} height={32} alt="ERC Image" src="./images/erc-scaled.jpg" className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"/>
           </picture>
         </div>
       </div>
