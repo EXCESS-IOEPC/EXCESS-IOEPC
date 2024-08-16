@@ -54,7 +54,7 @@ export default function Home() {
       <section id="header">
         <HeaderTop />
         <Navbar />
-        <Main />
+        <Main isLoading={isLoading} />
       </section>
       <section id="about-us">
         <About />

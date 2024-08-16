@@ -9,7 +9,28 @@ import 'swiper/css/navigation';
 import "@/src/app/member.css";
 import { Autoplay, Pagination, Navigation, Mousewheel } from 'swiper/modules';
 import { FaFacebook , FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    duration: 0.8,
+    y: 0,
+    opacity: 1
+  }
+};
 
 // twitterLink is actually LinkedIn link. I was too lazy to fix it. :)
 const excess_fbLink = "https://www.facebook.com/excessnepal/";
@@ -155,16 +176,11 @@ const Member = () => {
                     <h2 className="text-2xl font-bold text-offWhite sm:text-4xl xl:text-3xl">Our Members</h2>
                     <h2 className='text-offWhite text-sm mt-2'>EXCESS 11&apos;th Executive Committee</h2>
         </div>
-        <div className="">
+        <motion.div initial="hidden" whileInView="visible" className="container" viewport={{ once: true }}  variants={container}>
         <Swiper
             spaceBetween={5}
             slidesPerView={1}
             navigation
-            autoplay = {{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
             mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
             pagination={{ clickable: true, dynamicBullets: true,}}
             modules={[Autoplay, Pagination, Navigation, Mousewheel]}
@@ -181,9 +197,9 @@ const Member = () => {
                 },
             }}
             >
-            {data.map((d)=>(
-                <SwiperSlide key={d.id}>
-                <div className='mb-4 bg-transparent'>
+            {data.map((d, idx)=>(
+                <SwiperSlide key={idx}>
+                <motion.div variants={item} className='mb-4 bg-transparent'>
                 <div className="text-black rounded-3xl">
                     <div className="rounded-t-3xl flex justify-center items-center">
                         <Image
@@ -216,11 +232,11 @@ const Member = () => {
                     </div>
                     </div>
                 </div>
-                </div>
+                </motion.div>
                 </SwiperSlide>
             ))}
             </Swiper>
-        </div>
+        </motion.div>
         </div>
     </div>
   )

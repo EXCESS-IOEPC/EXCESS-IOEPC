@@ -49,7 +49,7 @@ export default function Home() {
         <HeaderTop />
         <Navbar />
       </section>
-      <Contact />
+      <Contact isLoading = {isLoading} />
     </main>
   );
 }

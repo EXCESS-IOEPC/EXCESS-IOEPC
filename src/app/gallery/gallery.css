@@ -70,14 +70,11 @@
 }
 .gallery-active{
   border: 2px solid #3572EF !important;
-  color: #3572EF;
   -webkit-transition:all 05s ease;
 	-moz-transition:all 05s ease;
 	-ms-transition:all 05s ease;
 	-o-transition:all 05s ease;
 	transition:all .5s ease;
-}
-.gallery-active:hover {
   background-color: #3572EF !important;
   color: #F6F6F6;
 }
