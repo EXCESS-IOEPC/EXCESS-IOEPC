@@ -36,7 +36,7 @@ const About = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className="md:w-2/5 border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue relative"
+          className="md:w-2/5 h-[300px] md:h-auto border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue relative"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
