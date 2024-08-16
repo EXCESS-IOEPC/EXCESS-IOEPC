@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { SocialIcon } from 'react-social-icons'
 
 const Footer = () => {
@@ -42,7 +41,7 @@ const Footer = () => {
     return (
         <footer className="text-gray-400 bg-white px-4 py-5 mx-auto md:px-8">
             <div className="max-w-lg   sm:mx-auto sm:text-center">
-                <Image width={12} height={12} src="./icon.png" alt='Excess Icon' className="w-12 sm:mx-auto" />
+                <Image width={12} height={12} src="/icon.png" quality={100} alt='Excess Icon' className="w-12 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-[13px]">
                     EXCESS commits to remain at the forefront of growth, excellancy and innovation preparing students to shape a meaningful future.
                     <br />
@@ -71,7 +70,7 @@ const Footer = () => {
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-2">
                         {[
-                            ['facebook', "https://www.facebook.com"],
+                            ['facebook', "https://www.facebook.com/excessnepal/"],
                             ['instagram', "https://www.instagram.com/excess.ioe/"],
                             ['linkedin', "https://www.linkedin.com/company/excessioepc/"],
                             ['github', "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC"],

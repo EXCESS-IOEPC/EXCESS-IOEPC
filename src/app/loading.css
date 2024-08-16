@@ -1,0 +1,21 @@
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Change to match your desired background color */
+  z-index: 9999; /* Ensure this is higher than any other content on your page */
+}
+
+#preloader {
+	position: absolute;
+	width: 120px;
+	height: 60px;
+	top: 0; right: 0;
+	bottom: 0; left: 0; 
+	margin: auto;
+}
