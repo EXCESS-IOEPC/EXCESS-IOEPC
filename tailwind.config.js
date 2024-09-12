@@ -16,6 +16,7 @@ module.exports = {
         xyellow: '#F8AE00',
         cs50red: '#F5233C',
         ioeBlue: '#253B80', 
+		datacamp: '#31E078',
         offBlueTrans: 'rgb(187 232 250 / 1)',
       },
       backgroundImage: {
