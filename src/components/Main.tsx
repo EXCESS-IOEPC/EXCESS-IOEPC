@@ -82,7 +82,7 @@ const Main = ({ isLoading }: { isLoading: boolean }) => {
 							</motion.a>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
-								href="https://cs50xnepal.ioepc.edu.np/"
+								href="/datacamp"
 								title=""
 								className="inline-flex items-center justify-center w-full px-8 py-2 text-white transition-all duration-500 bg-datacamp border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-datacamp hover:text-datacamp"
 								role="button"
