@@ -13,7 +13,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 				<div className="flex flex-col justify-center items-center mx-auto text-center max-w-auto lg:max-w-[80rem]">
 					{/* data camp */}
 					<div className="justify-center text-transparent mt-16 mx-15 sm:mx-10 bg-clip-text bg-gradient-to-r from-green-400 to-green-900 text-4xl sm:text-5xl font-bold pb-8">
-						<h1>DataCamp 2024</h1>
+						<h1>DataCamp Fellowship 2024</h1>
 					</div>
 
 					{/* info/logo/image */}
@@ -21,21 +21,29 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						<div className="mb-5 flex flex-col">
 							<div className="flex flex-row w-48 md:w-60 h-14 mt-4 mb-4">
 								{/* Excess Logo */}
-								<Image
-									src="/icon.png"
-									alt="Excess Logo"
-									className="pr-6 w-20 md:w-[6.5rem]"
-								/>
+								<div className="flex-shrink-0 pr-6">
+									<Image
+										src="/icon.png"
+										alt="Excess Logo"
+										width={54}
+										height={56}
+										layout="intrinsic"
+									/>
+								</div>
 								<div className="h-14 rounded-xl bg-gradient-to-b from-blue-400 to-blue-800">
 									{/* logo seperator */}
 									<div className="w-0.5"></div>
 								</div>
-								{/* DAta Camp Logo */}
-								<Image
-									src="/images/datacamp/datacamp donates 1.png"
-									className="pl-6 w-20 md:w-[6.5rem]"
-									alt="Datacamp Donates Logo"
-								/>
+								{/* DataCamp Donates Logo */}
+								<div className="flex-shrink-0 pl-6">
+									<Image
+										src="/images/datacamp/datacamp donates 1.png"
+										alt="Datacamp Donates Logo"
+										width={180}
+										height={90}
+										layout="intrinsic"
+									/>
+								</div>
 							</div>
 							<div className="text-justify text-xs pt-4 sm:pr-6 ">
 								<p>
@@ -48,7 +56,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 									</a>{' '}
 									in partership with{' '}
 									<a
-										href="https://www.datacamp.com/"
+										href="https://www.datacamp.com/donates"
 										className="text-green-400 font-semibold">
 										DataCamp Donates
 									</a>
@@ -70,9 +78,8 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						</div>
 
 						{/* side Image */}
-						{/* hidden till min 768px */}
 						<div className="block md:min-w-[24rem] align-center justify-center">
-							<Image src="/images/datacamp/Image.png" alt="logo" />
+							<Image src="/images/datacamp/Image.png" alt="Data Girl" />
 						</div>
 					</div>
 
@@ -147,7 +154,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 					</div>
 					{/* center line */}
 					<div className="h-1 sm:h-28 rounded-2xl sm:bg-gradient-to-b from-blue-400 to-blue-800 mt-1 sm:mt-40 md:mt-20">
-						<div className="sm:w-1.5"></div>
+						<div className="sm:w-0.5"></div>
 					</div>
 					{/* More detail */}
 					<div className=" sm:ml-10 text-xl sm:w-1/2 pr-10">
@@ -193,8 +200,8 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 
 				{/* APPLY NOW */}
 				<div className="flex flex-col justify-center align-center">
-					<div className="mx-auto mb-2">
-						<p className="font-semibold text-md text-offBlack">
+					<div className="mb-2 mx-auto px-5">
+						<p className="font-semibold text-sm text-offBlack">
 							Take the next step toward mastering data skills and shaping your
 							future! Apply for the EXCESS Data Fellowship 2024 and join us in
 							building a brighter, data-powered Nepal.
