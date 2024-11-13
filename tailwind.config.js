@@ -1,10 +1,11 @@
-const {nextui} = require('@nextui-org/theme');
+const { nextui } = require('@nextui-org/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+    "./node_modules/@nextui-org/theme/dist/components/(card|progress|spinner|ripple).js",
   ],
   theme: {
     extend: {
@@ -15,8 +16,8 @@ module.exports = {
         offBlue: '#bbe8fa',
         xyellow: '#F8AE00',
         cs50red: '#F5233C',
-        ioeBlue: '#253B80', 
-		datacamp: '#31E078',
+        ioeBlue: '#253B80',
+        datacamp: '#31E078',
         offBlueTrans: 'rgb(187 232 250 / 1)',
       },
       backgroundImage: {
@@ -25,9 +26,9 @@ module.exports = {
         'wave': "url('../../public/images/wave.svg')",
         'line': "url('../../public/images/line.svg')",
         'server_down': "url('../../public/images/server_down.svg')",
-      }
+      },
     },
   },
   plugins: [nextui()],
-}
+};
 
