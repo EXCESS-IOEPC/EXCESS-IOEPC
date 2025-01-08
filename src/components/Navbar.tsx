@@ -108,7 +108,7 @@ function NavBar() {
 									<motion.li variants={variants}>
 										<Link href="https://cs50xnepal.ioepc.edu.np/hackathon">
 											<button className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-all duration-500 bg-xyellow border-2 border-transparent md:w-auto rounded-md hover:bg-transparent hover:border-xyellow hover:text-xyellow">
-												XHack
+												X-Hack 3.0
 											</button>
 										</Link>
 									</motion.li>
