@@ -37,6 +37,7 @@
     "react-image-gallery": "^1.3.0",
     "react-loader-spinner": "^6.1.6",
     "react-responsive-carousel": "^3.2.23",
+    "react-responsive-pagination": "^2.10.1",
     "react-social-icons": "^6.16.0",
     "react-spinners": "^0.14.1",
     "send-email": "^1.1.3",

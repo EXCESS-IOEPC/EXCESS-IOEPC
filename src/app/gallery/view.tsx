@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 import Loading from '@/src/components/LoadingGallery';
+import ResponsivePagination from 'react-responsive-pagination';
+import 'react-responsive-pagination/themes/classic.css';
 
 interface Image {
 	width: number;
@@ -28,6 +30,8 @@ const View = ({
 	const [filteredImages, setFilteredImages] = useState(images);
 	const [activeFilter, setActiveFilter] = useState('All');
 	const [loading, setLoading] = useState(false);
+	const [currentPage, setCurrentPage] = useState(1);
+	const imagesPerPage = 20;
 
 	const filters = [
 		'All',
@@ -132,12 +136,25 @@ const View = ({
 
 	const handleFilterChange = (filter: string) => {
 		setActiveFilter(filter);
+		setCurrentPage(1);
 		if (filter === 'All') {
 			setFilteredImages(images);
 		} else {
 			setFilteredImages(
 				images.filter((image) => image.asset_folder === filter)
 			);
+		}
+	};
+
+	const totalPages = Math.ceil(filteredImages.length / imagesPerPage);
+	const paginatedImages = filteredImages.slice(
+		(currentPage - 1) * imagesPerPage,
+		currentPage * imagesPerPage
+	);
+
+	const handlePageChange = (newPage: number) => {
+		if (newPage >= 1 && newPage <= totalPages) {
+			setCurrentPage(newPage);
 		}
 	};
 
@@ -180,7 +197,7 @@ const View = ({
 					</motion.p>
 				</div>
 
-				<div className="mt-10 lg:mt-16D">
+				<div className="mt-10 lg:mt-16">
 					<div className="gallery-menu">
 						{filters.map((filter) => (
 							<button
@@ -194,7 +211,7 @@ const View = ({
 						))}
 					</div>
 					<div className="gallery">
-						{filteredImages.map((image, idx) => (
+						{paginatedImages.map((image, idx) => (
 							<motion.div
 								key={idx}
 								initial="hidden"
@@ -203,7 +220,7 @@ const View = ({
 									hidden: { opacity: 0 },
 									visible: {
 										opacity: 1,
-										transition: { duration: 0.6, delay: idx * 0.2 },
+										transition: { duration: 0.1, delay: idx * 0.1 },
 									},
 								}}
 								custom={idx}>
@@ -224,8 +241,14 @@ const View = ({
 						))}
 					</div>
 				</div>
+				<div className="flex justify-center items-center font-bold gap-6">
+					<ResponsivePagination
+						current={currentPage}
+						total={totalPages}
+						onPageChange={setCurrentPage}
+					/>
+				</div>
 			</section>
-
 			{isOpen && (
 				<section
 					className={`w-screen relative h-[100%] top-0 items-center justify-center z-50 ${
