@@ -43,6 +43,10 @@ const View = ({
 		'IOT Training',
 		'Web Scraping',
 		'Libre Office',
+		'CS50xAI Classes',
+		'CS50xAI Hackathon',
+		'CS50 AI Closing Ceremony',
+		'Robo Ramailo',
 	];
 	const openImage = (index: number) => {
 		setLoading(true);
@@ -176,7 +180,7 @@ const View = ({
 					</motion.p>
 				</div>
 
-				<div className="mt-10 lg:mt-16 gallery">
+				<div className="mt-10 lg:mt-16D">
 					<div className="gallery-menu">
 						{filters.map((filter) => (
 							<button
@@ -189,35 +193,36 @@ const View = ({
 							</button>
 						))}
 					</div>
-
-					{filteredImages.map((image, idx) => (
-						<motion.div
-							key={idx}
-							initial="hidden"
-							animate="visible"
-							variants={{
-								hidden: { opacity: 0 },
-								visible: {
-									opacity: 1,
-									transition: { duration: 0.6, delay: idx * 0.2 },
-								},
-							}}
-							custom={idx}>
-							<Image
-								className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
-								src={image.secure_url ? image.secure_url : image.url}
-								alt="Gallery Image"
-								width="300"
-								height="300"
-								quality={100}
-								loading="eager"
-								onClick={() => openImage(idx)}
-							/>
-							<p className="text-center text-xs mt-2 text-offBlack">
-								{image.asset_folder}
-							</p>
-						</motion.div>
-					))}
+					<div className="gallery">
+						{filteredImages.map((image, idx) => (
+							<motion.div
+								key={idx}
+								initial="hidden"
+								animate="visible"
+								variants={{
+									hidden: { opacity: 0 },
+									visible: {
+										opacity: 1,
+										transition: { duration: 0.6, delay: idx * 0.2 },
+									},
+								}}
+								custom={idx}>
+								<Image
+									className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
+									src={image.secure_url ? image.secure_url : image.url}
+									alt="Gallery Image"
+									width="300"
+									height="300"
+									quality={100}
+									loading="eager"
+									onClick={() => openImage(idx)}
+								/>
+								<p className="text-center text-xs mt-2 text-offBlack">
+									{image.asset_folder}
+								</p>
+							</motion.div>
+						))}
+					</div>
 				</div>
 			</section>
 

@@ -64,12 +64,12 @@ const Main = ({ isLoading }: { isLoading: boolean }) => {
 							</motion.a>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
-								href="https://excess.ioepc.edu.np/xtech"
+								href="https://cs50xnepal.ioepc.edu.np/hackathon"
 								title=""
 								className="inline-flex items-center justify-center w-full px-8 py-2 text-white transition-all duration-500 bg-xyellow border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-xyellow hover:text-xyellow"
 								role="button"
 								variants={childVariants}>
-								X-Hack
+								XHack
 							</motion.a>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
@@ -78,7 +78,7 @@ const Main = ({ isLoading }: { isLoading: boolean }) => {
 								className="inline-flex items-center justify-center w-full px-8 py-2 text-white transition-all duration-500 bg-cs50red border-2 border-transparent sm:w-auto rounded-md hover:bg-transparent hover:border-cs50red hover:text-cs50red"
 								role="button"
 								variants={childVariants}>
-								CS50xNepal
+								CS50 AI
 							</motion.a>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
