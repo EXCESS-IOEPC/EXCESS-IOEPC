@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 import Loading from '@/src/components/LoadingGallery';
 import ResponsivePagination from 'react-responsive-pagination';
-import 'react-responsive-pagination/themes/classic.css';
+import 'react-responsive-pagination/themes/bootstrap.css';
 
 interface Image {
 	width: number;
@@ -64,14 +64,14 @@ const View = ({
 	};
 
 	const handleNext = () => {
-		setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredImages.length);
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % paginatedImages.length);
 		setLoading(true);
 	};
 
 	const handlePrev = () => {
 		setCurrentIndex(
 			(prevIndex) =>
-				(prevIndex - 1 + filteredImages.length) % filteredImages.length
+				(prevIndex - 1 + paginatedImages.length) % paginatedImages.length
 		);
 		setLoading(true);
 	};
@@ -252,7 +252,7 @@ const View = ({
 			{isOpen && (
 				<section
 					className={`w-screen relative h-[100%] top-0 items-center justify-center z-50 ${
-						loading ? 'h-[85vh] py-10' : ''
+						loading ? 'h-[90vh] py-10' : ''
 					} `}>
 					<div
 						className="m-10 inset-0 z-50 flex items-center justify-center w-[80vh] bg-black bg-opacity-90"
@@ -275,9 +275,9 @@ const View = ({
 						<Image
 							className={`object-contain ${loading ? 'hidden' : ''}`}
 							src={
-								filteredImages[currentIndex].secure_url
-									? filteredImages[currentIndex].secure_url
-									: filteredImages[currentIndex].url
+								paginatedImages[currentIndex].secure_url
+									? paginatedImages[currentIndex].secure_url
+									: paginatedImages[currentIndex].url
 							}
 							alt={`Fullscreen Image ${currentIndex + 1}`}
 							width={1200}
@@ -287,7 +287,7 @@ const View = ({
 							onLoad={() => setLoading(false)}
 						/>
 						{loading && (
-							<div className="flex items-center justify-center bg-offWhite z-50 py-10">
+							<div className="flex items-center justify-center z-50 py-10">
 								<Loading />
 							</div>
 						)}
