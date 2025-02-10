@@ -161,8 +161,8 @@ const View = ({
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			if (loading) setLoading(false); // Hide loader after 5 seconds
-		}, 5000);
+			if (loading) setLoading(false); // Hide loader after a second
+		}, 500);
 
 		return () => clearTimeout(timer);
 	}, [loading]);
