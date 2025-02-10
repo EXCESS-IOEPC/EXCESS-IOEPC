@@ -47,8 +47,9 @@ const View = ({
 		'IOT Training',
 		'Web Scraping',
 		'Libre Office',
-		'CS50xAI Classes',
-		'CS50xAI Hackathon',
+		'CS50 AI Orientation',
+		'CS50 AI Classes',
+		'X-Hack 3.0',
 		'CS50 AI Closing Ceremony',
 		'Robo Ramailo',
 	];
