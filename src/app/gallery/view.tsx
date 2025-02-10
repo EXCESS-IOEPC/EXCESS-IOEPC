@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ClipLoader } from 'react-spinners';
 import Loading from '@/src/components/LoadingGallery';
+import ResponsivePagination from 'react-responsive-pagination';
+import 'react-responsive-pagination/themes/bootstrap.css';
 
 interface Image {
 	width: number;
@@ -28,6 +30,8 @@ const View = ({
 	const [filteredImages, setFilteredImages] = useState(images);
 	const [activeFilter, setActiveFilter] = useState('All');
 	const [loading, setLoading] = useState(false);
+	const [currentPage, setCurrentPage] = useState(1);
+	const imagesPerPage = 20;
 
 	const filters = [
 		'All',
@@ -43,6 +47,11 @@ const View = ({
 		'IOT Training',
 		'Web Scraping',
 		'Libre Office',
+		'CS50 AI Orientation',
+		'CS50 AI Classes',
+		'X-Hack 3.0',
+		'CS50 AI Closing Ceremony',
+		'Robo Ramailo',
 	];
 	const openImage = (index: number) => {
 		setLoading(true);
@@ -56,14 +65,14 @@ const View = ({
 	};
 
 	const handleNext = () => {
-		setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredImages.length);
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % paginatedImages.length);
 		setLoading(true);
 	};
 
 	const handlePrev = () => {
 		setCurrentIndex(
 			(prevIndex) =>
-				(prevIndex - 1 + filteredImages.length) % filteredImages.length
+				(prevIndex - 1 + paginatedImages.length) % paginatedImages.length
 		);
 		setLoading(true);
 	};
@@ -128,6 +137,7 @@ const View = ({
 
 	const handleFilterChange = (filter: string) => {
 		setActiveFilter(filter);
+		setCurrentPage(1);
 		if (filter === 'All') {
 			setFilteredImages(images);
 		} else {
@@ -137,10 +147,22 @@ const View = ({
 		}
 	};
 
+	const totalPages = Math.ceil(filteredImages.length / imagesPerPage);
+	const paginatedImages = filteredImages.slice(
+		(currentPage - 1) * imagesPerPage,
+		currentPage * imagesPerPage
+	);
+
+	const handlePageChange = (newPage: number) => {
+		if (newPage >= 1 && newPage <= totalPages) {
+			setCurrentPage(newPage);
+		}
+	};
+
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			if (loading) setLoading(false); // Hide loader after 5 seconds
-		}, 5000);
+			if (loading) setLoading(false); // Hide loader after a second
+		}, 500);
 
 		return () => clearTimeout(timer);
 	}, [loading]);
@@ -176,7 +198,7 @@ const View = ({
 					</motion.p>
 				</div>
 
-				<div className="mt-10 lg:mt-16 gallery">
+				<div className="mt-10 lg:mt-16">
 					<div className="gallery-menu">
 						{filters.map((filter) => (
 							<button
@@ -189,42 +211,49 @@ const View = ({
 							</button>
 						))}
 					</div>
-
-					{filteredImages.map((image, idx) => (
-						<motion.div
-							key={idx}
-							initial="hidden"
-							animate="visible"
-							variants={{
-								hidden: { opacity: 0 },
-								visible: {
-									opacity: 1,
-									transition: { duration: 0.6, delay: idx * 0.2 },
-								},
-							}}
-							custom={idx}>
-							<Image
-								className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
-								src={image.secure_url ? image.secure_url : image.url}
-								alt="Gallery Image"
-								width="300"
-								height="300"
-								quality={100}
-								loading="eager"
-								onClick={() => openImage(idx)}
-							/>
-							<p className="text-center text-xs mt-2 text-offBlack">
-								{image.asset_folder}
-							</p>
-						</motion.div>
-					))}
+					<div className="gallery">
+						{paginatedImages.map((image, idx) => (
+							<motion.div
+								key={idx}
+								initial="hidden"
+								animate="visible"
+								variants={{
+									hidden: { opacity: 0 },
+									visible: {
+										opacity: 1,
+										transition: { duration: 0.1, delay: idx * 0.1 },
+									},
+								}}
+								custom={idx}>
+								<Image
+									className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
+									src={image.secure_url ? image.secure_url : image.url}
+									alt="Gallery Image"
+									width="300"
+									height="300"
+									quality={100}
+									loading="eager"
+									onClick={() => openImage(idx)}
+								/>
+								<p className="text-center text-xs mt-2 text-offBlack">
+									{image.asset_folder}
+								</p>
+							</motion.div>
+						))}
+					</div>
+				</div>
+				<div className="flex justify-center items-center font-bold gap-6">
+					<ResponsivePagination
+						current={currentPage}
+						total={totalPages}
+						onPageChange={setCurrentPage}
+					/>
 				</div>
 			</section>
-
 			{isOpen && (
 				<section
 					className={`w-screen relative h-[100%] top-0 items-center justify-center z-50 ${
-						loading ? 'h-[85vh] py-10' : ''
+						loading ? 'h-[90vh] py-10' : ''
 					} `}>
 					<div
 						className="m-10 inset-0 z-50 flex items-center justify-center w-[80vh] bg-black bg-opacity-90"
@@ -247,9 +276,9 @@ const View = ({
 						<Image
 							className={`object-contain ${loading ? 'hidden' : ''}`}
 							src={
-								filteredImages[currentIndex].secure_url
-									? filteredImages[currentIndex].secure_url
-									: filteredImages[currentIndex].url
+								paginatedImages[currentIndex].secure_url
+									? paginatedImages[currentIndex].secure_url
+									: paginatedImages[currentIndex].url
 							}
 							alt={`Fullscreen Image ${currentIndex + 1}`}
 							width={1200}
@@ -259,7 +288,7 @@ const View = ({
 							onLoad={() => setLoading(false)}
 						/>
 						{loading && (
-							<div className="flex items-center justify-center bg-offWhite z-50 py-10">
+							<div className="flex items-center justify-center z-50 py-10">
 								<Loading />
 							</div>
 						)}
