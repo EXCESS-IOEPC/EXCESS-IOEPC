@@ -79,7 +79,14 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 
 						{/* side Image */}
 						<div className="block md:min-w-[24rem] align-center justify-center">
-							<Image src="/images/datacamp/Image.png" alt="Data Girl" />
+							<Image
+								src="/images/datacamp/Image.png"
+								width={200}
+								height={200}
+								className="w-full h-full"
+								quality={100}
+								alt="Data Girl"
+							/>
 						</div>
 					</div>
 

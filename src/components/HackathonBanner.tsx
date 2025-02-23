@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function HackathonBanner() {
 	return (
 		<>
-			<div className="bg-white text-red-600 h-10 flex justify-center items-center">
+			<div className="bg-white text-red-600 h-auto py-2 flex justify-center items-center px-6">
 				<h1>
 					Follow our successful completion of{' '}
 					<Link
