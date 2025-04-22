@@ -20,7 +20,13 @@ interface member {
 	photo?: string;
 }
 
-const MemberCard = ({ member }: { member: member }) => (
+const MemberCard = ({
+	member,
+	activeIndex,
+}: {
+	member: member;
+	activeIndex: number;
+}) => (
 	<motion.div
 		variants={cardVariants}
 		className=" shadow-xl rounded-lg px-8 py-4 flex flex-col justify-center items-center"
@@ -29,7 +35,7 @@ const MemberCard = ({ member }: { member: member }) => (
 			{member.photo ? (
 				<div className="mb-3">
 					<Image
-						src={`/images/member/${member.photo}`}
+						src={`./images/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						width={128}
 						height={128}
@@ -176,7 +182,11 @@ export default function Committee() {
 									{CommitteeList[activeIndex].committeeMembers
 										.slice(0, 3)
 										.map((member, index2) => (
-											<MemberCard key={index2} member={member} />
+											<MemberCard
+												activeIndex={activeIndex}
+												key={index2}
+												member={member}
+											/>
 										))}
 								</motion.div>
 
@@ -189,7 +199,11 @@ export default function Committee() {
 									{CommitteeList[activeIndex].committeeMembers
 										.slice(3)
 										.map((member, index2) => (
-											<MemberCard key={index2} member={member} />
+											<MemberCard
+												activeIndex={activeIndex}
+												key={index2}
+												member={member}
+											/>
 										))}
 								</motion.div>
 							</SwiperSlide>
