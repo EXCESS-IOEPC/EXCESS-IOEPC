@@ -34,7 +34,7 @@ const MemberCard = ({
 		<div className="flex items-center justify-center">
 			{member.photo ? (
 				<div className="mb-3">
-					<Image
+					<img
 						src={`${
 							typeof window !== 'undefined' &&
 							window.location.pathname.includes('/EXCESS-IOEPC')
@@ -42,8 +42,6 @@ const MemberCard = ({
 								: ''
 						}/images/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
-						width={128}
-						height={128}
 						className="testimonial-image flex-shrink-0 object-cover rounded-full w-28 h-28"
 					/>
 				</div>
