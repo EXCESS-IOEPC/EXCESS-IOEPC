@@ -165,7 +165,7 @@ export default function Committee() {
 					modules={[Navigation, Keyboard]}
 					className="relative w-full">
 					{CommitteeList.map((committee, index) => (
-						<div className="h-max w-full px-4">
+						<div className="h-max w-full px-4" key={`Committee-${index}`}>
 							<SwiperSlide>
 								{/* First Row - 3 Members */}
 								<motion.div
