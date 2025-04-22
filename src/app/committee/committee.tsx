@@ -35,7 +35,12 @@ const MemberCard = ({
 			{member.photo ? (
 				<div className="mb-3">
 					<Image
-						src={`@/public/images/${CommitteeList[activeIndex].year}/${member.photo}`}
+						src={`${
+							typeof window !== 'undefined' &&
+							window.location.pathname.includes('/EXCESS-IOEPC')
+								? '/EXCESS-IOEPC'
+								: ''
+						}/images/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						width={128}
 						height={128}
