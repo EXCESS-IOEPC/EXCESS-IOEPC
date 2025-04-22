@@ -5,14 +5,14 @@ import Icon from '@/src/app/icon.png';
 import { motion } from 'framer-motion';
 import Binary from '@/public/images/Binary.svg';
 import { CommitteeList } from '@/src/app/committee/committee_list';
-import { Keyboard } from 'swiper/modules';
+import { FaArrowRightLong, FaArrowLeftLong } from 'react-icons/fa6';
+import { Navigation, Keyboard } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
-import '@/src/app/testimonial.css';
 
 interface member {
 	name: string;
@@ -122,12 +122,16 @@ export default function Committee() {
 						visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 					}}
 					className="flex flex-col items-center my-4">
-					<div>
-						<div></div>
+					<div className="flex flex-row justify-center items-center">
+						<div className="previous w-12 h-12 rounded-ful flex items-center justify-center">
+							<FaArrowLeftLong className="icon" />
+						</div>
 						<p className="text-md text-primaryBlue font-bold text-xl">
 							{CommitteeList[activeIndex].year}
 						</p>
-						<div></div>
+						<div className=" next w-12 h-12 flex items-center justify-center">
+							<FaArrowRightLong className="icon" />
+						</div>
 					</div>
 				</motion.div>
 			</div>
@@ -142,16 +146,19 @@ export default function Committee() {
 						hidden: { opacity: 0, y: -10 },
 						visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 					}}
-					className="relative flex items-center justify-center my-4 bg-white/90 z-[100]">
-					<p className="font-bold text-primaryBlue text-xl">
-						{CommitteeList[activeIndex].committeeNumber}
-					</p>
+					className="relative flex flex-row text-center items-center justify-center my-4 bg-white/90">
+					<div className="flex items-center justify-center text-center max-w-max">
+						<p className="font-bold text-primaryBlue text-xl my-0">
+							{CommitteeList[activeIndex].committeeNumber}
+						</p>
+					</div>
 				</motion.div>
 				<Swiper
 					cssMode={true}
 					keyboard={true}
 					onSlideChange={handleSlideChange}
-					modules={[Keyboard]}
+					navigation={{ enabled: true, nextEl: '.next', prevEl: '.previous' }}
+					modules={[Navigation, Keyboard]}
 					className="relative w-full">
 					{CommitteeList.map((committee, index) => (
 						<div className="h-max w-full lg:px-48 md:px-36 sm:px-16 px-4">
