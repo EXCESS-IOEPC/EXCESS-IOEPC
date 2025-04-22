@@ -34,8 +34,8 @@ const MemberCard = ({
 		<div className="flex items-center justify-center">
 			{member.photo ? (
 				<div className="mb-3">
-					<img
-						src={`/images/${CommitteeList[activeIndex].year}/${member.photo}`}
+					<Image
+						src={`/images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						className="testimonial-image flex-shrink-0 object-cover rounded-full w-28 h-28"
 					/>
