@@ -3,7 +3,7 @@ import { CommitteeListType } from './committee_list_type';
 export const CommitteeList: CommitteeListType[] = [
 	{
 		year: '2024-2025',
-		committeeNumber: 'EXCESS 11th Committee',
+		committeeNumber: "EXCESS 11'th Committee",
 		committeeMembers: [
 			{
 				photo: 'pravinsir.jpg',
@@ -71,7 +71,7 @@ export const CommitteeList: CommitteeListType[] = [
 				position: 'Executive Member',
 			},
 			{
-				photo: 'Rishav.jpg',
+				photo: 'Rishav.jpeg',
 				name: 'Rishav Senchury',
 				position: 'Executive Member',
 			},
@@ -84,7 +84,7 @@ export const CommitteeList: CommitteeListType[] = [
 	},
 	{
 		year: '2023-2024',
-		committeeNumber: 'EXCESS 10th Committee',
+		committeeNumber: "EXCESS 10t'h Committee",
 		committeeMembers: [
 			{
 				name: 'Aayush Kumar',
@@ -102,7 +102,7 @@ export const CommitteeList: CommitteeListType[] = [
 	},
 	{
 		year: '2022-2023',
-		committeeNumber: 'EXCESS 9th Committee',
+		committeeNumber: "EXCESS 9'th Committee",
 		committeeMembers: [
 			{
 				name: 'Abhishek  Kumar Yadav',
