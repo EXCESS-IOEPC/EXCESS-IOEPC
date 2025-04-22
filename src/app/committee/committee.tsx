@@ -76,8 +76,8 @@ export default function Committee() {
 	};
 
 	return (
-		<section className="py-16 lg:py-20 bg-white">
-			<div className="max-w-2xl flex flex-col mx-auto justify-center px-4 sm:px-6 lg:px-8 items-center text-center">
+		<section className="py-16 lg:py-0 bg-white flex flex-col md:grid md:grid-cols-1 lg:grid-cols-[27%_1fr]">
+			<div className="md:sticky lg:top-80 lg:h-fit max-w-2xl flex flex-col mx-auto px-4 sm:px-6  items-center text-center px-">
 				<motion.div
 					initial="hidden"
 					animate="visible"
@@ -93,9 +93,9 @@ export default function Committee() {
 					<Image
 						src={Icon}
 						alt="EXCESS ICON"
-						width={100}
-						height={20}
-						className="w-24"
+						width={200}
+						height={30}
+						className="w-36"
 					/>
 					<div className="w-full mx-auto relative px-2">
 						<div className="diamond-divider-container">
@@ -123,19 +123,19 @@ export default function Committee() {
 					}}
 					className="flex flex-col items-center my-4">
 					<div className="flex flex-row justify-center items-center">
-						<div className="previous w-12 h-12 rounded-ful flex items-center justify-center">
+						<div className="previousEl w-12 h-12 rounded-ful flex items-center justify-center">
 							<FaArrowLeftLong className="icon" />
 						</div>
 						<p className="text-md text-primaryBlue font-bold text-xl">
 							{CommitteeList[activeIndex].year}
 						</p>
-						<div className=" next w-12 h-12 flex items-center justify-center">
+						<div className=" nextEl w-12 h-12 flex items-center justify-center">
 							<FaArrowRightLong className="icon" />
 						</div>
 					</div>
 				</motion.div>
 			</div>
-			<div className="relative py-8 lg:px-48 md:px-36 sm:px-16 overflow-hidden">
+			<div className="relative py-4 px-8 md:py-8 overflow-hidden lg:border-l-4 lg:border-primaryBlue">
 				<div
 					className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0"
 					style={{ backgroundImage: `url(${Binary.src})` }}></div>
@@ -157,11 +157,15 @@ export default function Committee() {
 					cssMode={true}
 					keyboard={true}
 					onSlideChange={handleSlideChange}
-					navigation={{ enabled: true, nextEl: '.next', prevEl: '.previous' }}
+					navigation={{
+						enabled: true,
+						nextEl: '.nextEl',
+						prevEl: '.previousEl',
+					}}
 					modules={[Navigation, Keyboard]}
 					className="relative w-full">
 					{CommitteeList.map((committee, index) => (
-						<div className="h-max w-full lg:px-48 md:px-36 sm:px-16 px-4">
+						<div className="h-max w-full px-4">
 							<SwiperSlide>
 								{/* First Row - 3 Members */}
 								<motion.div

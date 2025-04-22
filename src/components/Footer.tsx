@@ -15,12 +15,16 @@ const Footer = () => {
 			name: 'Members',
 		},
 		{
+			href: '/committee',
+			name: 'Past Committee',
+		},
+		{
 			href: '/contact-us',
 			name: 'Contact Us',
 		},
 		{
-			href: 'https://excess.ioepc.edu.np/xtech/',
-			name: 'X-Tech',
+			href: 'https://cs50xnepal.ioepc.edu.np/hackathon',
+			name: 'XHack',
 		},
 		{
 			href: 'https://cs50xnepal.ioepc.edu.np/',
