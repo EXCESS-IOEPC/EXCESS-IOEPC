@@ -5,6 +5,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
+	"./src/app/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/components/(card|progress|spinner|ripple).js",
   ],
   theme: {
@@ -22,6 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         'background': "url('../../public/images/background-main.png')",
+		'binary': "url('../../public/images/Binary.svg')",
         'erc-scaled': "url('../../public/images/erc-scaled.jpg')",
         'wave': "url('../../public/images/wave.svg')",
         'line': "url('../../public/images/line.svg')",

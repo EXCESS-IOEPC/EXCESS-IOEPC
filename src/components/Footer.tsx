@@ -15,12 +15,16 @@ const Footer = () => {
 			name: 'Members',
 		},
 		{
+			href: '/committee',
+			name: 'Past Committee',
+		},
+		{
 			href: '/contact-us',
 			name: 'Contact Us',
 		},
 		{
-			href: 'https://excess.ioepc.edu.np/xtech/',
-			name: 'X-Tech',
+			href: 'https://cs50xnepal.ioepc.edu.np/hackathon',
+			name: 'XHack',
 		},
 		{
 			href: 'https://cs50xnepal.ioepc.edu.np/',
@@ -43,7 +47,7 @@ const Footer = () => {
 				<Image
 					width={12}
 					height={12}
-					src="/icon.png"
+					src="./icon.png"
 					quality={100}
 					alt="Excess Icon"
 					className="w-12 sm:mx-auto"

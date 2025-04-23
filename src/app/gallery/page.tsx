@@ -49,7 +49,7 @@ export default async function Home() {
 			</section>
 
 			<ClientSideWrapper>
-				<div className="bg-offWhite top-12">
+				<div className="bg-offWhite top-12 overflow-x-hidden">
 					<View initialSearch="" images={images} />
 				</div>
 			</ClientSideWrapper>

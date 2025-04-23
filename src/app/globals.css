@@ -136,3 +136,31 @@ body {
     height: 150px;
   }
 }
+
+.diamond-divider-container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .diamond {
+	width: 10px;
+	height: 10px;
+	border-radius: 2px;
+	border: 2px solid white;
+	background: var(--offBlack);
+	position: absolute;
+	transform: rotate(45deg);
+	z-index: 10;
+  }
+  
+  .center-diamond {
+	border: 0;
+	height: 2px;
+	width: 100%;
+	margin: 10px auto;
+	border-radius: 20px;
+	background: var(--offBlack);
+  }
