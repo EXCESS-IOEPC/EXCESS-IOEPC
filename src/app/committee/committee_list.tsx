@@ -2,6 +2,93 @@ import { CommitteeListType } from './committee_list_type';
 
 export const CommitteeList: CommitteeListType[] = [
 	{
+		year: '2025-2026',
+		currentCommittee: true,
+		committeeNumber: "EXCESS 12'th Committee",
+		committeeMembers: [
+			{
+				photo: 'Rajnish.jpg',
+				name: 'Er. Rajnish Rajbahak',
+				position: 'Mentor',
+			},
+			{
+				photo: 'Safal.jpg',
+				name: 'Safal Raj Basnet',
+				position: 'President',
+			},
+			{
+				photo: 'Lokesh.jpg',
+				name: 'Lokesh Kumar Yadav',
+				position: 'Advisor',
+			},
+			{
+				photo: 'Aman.jpg',
+				name: 'Aman Kumar Shah',
+				position: 'Vice President',
+			},
+			{
+				photo: 'Bijaya.jpg',
+				name: 'Bijaya Giri',
+				position: 'Secretary',
+			},
+			{
+				photo: 'Abhishek.jpg',
+				name: 'Abhishek Niraula',
+				position: 'Vice Secretary',
+			},
+			{
+				photo: 'Nandini.jpg',
+				name: 'Nandini Karn',
+				position: 'Treasurer',
+			},
+			{
+				photo: 'Rohan.webp',
+				name: 'Rohan Kumar Jha',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Kiran.jpg',
+				name: 'Kiran Upadhyay',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Bhagwati.JPG',
+				name: 'Bhagwati Prasad Thakur',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Sijan.jpg',
+				name: 'Sijan Adhikari',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Soniya.jpg',
+				name: 'Soniya Rajbanshi',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Sneha.jpg',
+				name: 'Sneha Karna',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Ritesh.jpg',
+				name: 'Ritesh Bogati',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Pravakar.jpg',
+				name: 'Pravakar Jung Thapa',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Diksha.jpg',
+				name: 'Diksha Jha',
+				position: 'Executive Member',
+			},
+		],
+	},
+	{
 		year: '2024-2025',
 		committeeNumber: "EXCESS 11'th Committee",
 		committeeMembers: [
@@ -79,42 +166,6 @@ export const CommitteeList: CommitteeListType[] = [
 				photo: 'Saubhagya.jpg',
 				name: 'Saubhagya Rajbhandari',
 				position: 'Executive Member',
-			},
-		],
-	},
-	{
-		year: '2023-2024',
-		committeeNumber: "EXCESS 10t'h Committee",
-		committeeMembers: [
-			{
-				name: 'Aayush Kumar',
-				position: 'President',
-			},
-			{
-				name: 'Siddharth Singh',
-				position: 'Vice President',
-			},
-			{
-				name: 'Shivam Kumar',
-				position: 'General Secretary',
-			},
-		],
-	},
-	{
-		year: '2022-2023',
-		committeeNumber: "EXCESS 9'th Committee",
-		committeeMembers: [
-			{
-				name: 'Abhishek  Kumar Yadav',
-				position: 'President',
-			},
-			{
-				name: 'Siddharth Singh',
-				position: 'Vice President',
-			},
-			{
-				name: 'Shivam Kumar',
-				position: 'General Secretary',
 			},
 		],
 	},

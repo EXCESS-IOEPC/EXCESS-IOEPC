@@ -11,6 +11,7 @@
   --primaryBlue: #3572EF;
   --offBlue: #bbe8fa;
   --yellow: #F8AE00;
+  --cs50red: #F5233C;
   --red: #F5233C;
   --ioeBlue: #253B80;
 }
@@ -78,7 +79,7 @@ body {
 .testimonial-image {
   box-shadow:
     0 0 0 3px var(--offWhite),
-    0 0 0 5px var(--primaryBlue);
+    0 0 0 6px var(--primaryBlue);
   -moz-box-shadow:
     0 0 0 3px var(--offWhite),
     0 0 0 5px var(--primaryBlue);

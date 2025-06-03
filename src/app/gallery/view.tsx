@@ -170,9 +170,7 @@ const View = ({
 	return (
 		<>
 			<section
-				className={`w-screen h-auto mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 ${
-					isOpen ? 'hidden' : ''
-				}`}>
+				className={`h-auto mx-auto py-16 lg:py-20 ${isOpen ? 'hidden' : ''}`}>
 				<div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
 					<motion.h2
 						className="text-3xl font-extrabold text-primaryBlue"
@@ -198,7 +196,7 @@ const View = ({
 					</motion.p>
 				</div>
 
-				<div className="mt-10 lg:mt-16">
+				<div className="container mx-auto mt-10 lg:mt-16">
 					<div className="gallery-menu">
 						{filters.map((filter) => (
 							<button
@@ -211,7 +209,7 @@ const View = ({
 							</button>
 						))}
 					</div>
-					<div className="gallery">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4 py-4 w-full">
 						{paginatedImages.map((image, idx) => (
 							<motion.div
 								key={idx}
@@ -224,9 +222,10 @@ const View = ({
 										transition: { duration: 0.1, delay: idx * 0.1 },
 									},
 								}}
+								className="w-full"
 								custom={idx}>
 								<Image
-									className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
+									className="w-full h-[300px] cursor-pointer object-cover rounded-lg"
 									src={image.secure_url ? image.secure_url : image.url}
 									alt="Gallery Image"
 									width="300"
@@ -242,7 +241,7 @@ const View = ({
 						))}
 					</div>
 				</div>
-				<div className="flex justify-center items-center font-bold gap-6">
+				<div className="container mx-auto flex justify-center items-center font-bold gap-6 pt-4">
 					<ResponsivePagination
 						current={currentPage}
 						total={totalPages}
