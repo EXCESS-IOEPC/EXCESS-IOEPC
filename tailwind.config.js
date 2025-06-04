@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+		background: 'hsl(var(--background))',
         offWhite: '#F6F6F6',
         offBlack: '#3B3C3D',
         primaryBlue: '#3572EF',

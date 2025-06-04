@@ -20,7 +20,7 @@ export default function Testimonial() {
 			"current": true,
 			"post": "EXCESS President 12'th Committee",
 			"name": "Safal Raj Basnet",
-			"body": "EXCESS has been a transformative journey for me, where I honed my skills in electronics and engineering. The society's commitment to innovation and excellence has inspired me to push boundaries and explore new horizons in technology.",
+			"body": "EXCESS is more than just a technical society—it is a community where ideas turn into actions. It creates a space for learning, sharing, and growing together. Through workshops,trainings, projects, and teamwork, we explore the world of Electronics, Communication and Information with curiosity and build skills that will stay with us for a lifetime.",
 			"profile": "./images/committee/2025-2026/Safal.jpg",
 		},
 		{

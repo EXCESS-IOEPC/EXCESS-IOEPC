@@ -50,7 +50,7 @@ export default async function Home() {
 
 			<ClientSideWrapper>
 				<div className="bg-offWhite top-12 overflow-x-hidden">
-					<View initialSearch="" images={images} />
+					<View images={images} />
 				</div>
 			</ClientSideWrapper>
 		</>
