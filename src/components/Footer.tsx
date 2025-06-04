@@ -47,7 +47,7 @@ const Footer = () => {
 				<Image
 					width={12}
 					height={12}
-					src="/icon.png"
+					src="./icon.png"
 					quality={100}
 					alt="Excess Icon"
 					className="w-12 sm:mx-auto"

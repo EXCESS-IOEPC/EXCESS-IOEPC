@@ -35,7 +35,7 @@ const MemberCard = ({
 			{member.photo ? (
 				<div className="mb-3">
 					<Image
-						src={`/images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
+						src={`./images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						width={112}
 						height={112}
