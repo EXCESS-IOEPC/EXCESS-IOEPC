@@ -1,12 +1,15 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CldImage } from 'next-cloudinary';
-import { FaXmark, FaArrowRightLong, FaArrowLeftLong } from 'react-icons/fa6';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+	FaMagnifyingGlassPlus,
+	FaCircleXmark,
+	FaArrowRightLong,
+	FaArrowLeftLong,
+	FaDownload,
+} from 'react-icons/fa6';
 import '@/src/app/gallery/gallery.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ClipLoader } from 'react-spinners';
-import Loading from '@/src/components/LoadingGallery';
 import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/bootstrap.css';
 
@@ -18,21 +21,60 @@ interface Image {
 	secure_url: string;
 }
 
-const View = ({
-	images,
-	initialSearch,
-}: {
-	images: Image[];
-	initialSearch: string;
-}) => {
+const View = ({ images }: { images: Image[] }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [filteredImages, setFilteredImages] = useState(images);
 	const [activeFilter, setActiveFilter] = useState('All');
-	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
 	const imagesPerPage = 20;
 
+	// Image controls in selected mode.
+	const openImage = (index: number) => {
+		setCurrentIndex(index);
+		setIsOpen(true);
+	};
+
+	const closeImage = () => {
+		setIsOpen(false);
+	};
+
+	const handleNext = () => {
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % paginatedImages.length);
+	};
+
+	const handlePrev = () => {
+		setCurrentIndex(
+			(prevIndex) =>
+				(prevIndex - 1 + paginatedImages.length) % paginatedImages.length
+		);
+	};
+
+	// Handle keypresses for navigation and closing
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (isOpen) {
+				switch (e.key) {
+					case 'ArrowRight':
+						handleNext();
+						break;
+					case 'ArrowLeft':
+						handlePrev();
+						break;
+					case 'Escape':
+						closeImage();
+						break;
+				}
+			}
+		};
+
+		document.addEventListener('keydown', handleKeyDown);
+		return () => {
+			document.removeEventListener('keydown', handleKeyDown);
+		};
+	}, [isOpen]);
+
+	// Filtering the image based on filters
 	const filters = [
 		'All',
 		'CS50xNepal',
@@ -53,88 +95,6 @@ const View = ({
 		'CS50 AI Closing Ceremony',
 		'Robo Ramailo',
 	];
-	const openImage = (index: number) => {
-		setLoading(true);
-		setCurrentIndex(index);
-		setIsOpen(true);
-	};
-
-	const closeImage = () => {
-		setIsOpen(false);
-		setLoading(false);
-	};
-
-	const handleNext = () => {
-		setCurrentIndex((prevIndex) => (prevIndex + 1) % paginatedImages.length);
-		setLoading(true);
-	};
-
-	const handlePrev = () => {
-		setCurrentIndex(
-			(prevIndex) =>
-				(prevIndex - 1 + paginatedImages.length) % paginatedImages.length
-		);
-		setLoading(true);
-	};
-
-	// Handle keypresses for navigation and closing
-	useEffect(() => {
-		const handleKeyDown = (e: KeyboardEvent) => {
-			if (isOpen) {
-				switch (e.key) {
-					case 'ArrowRight':
-					case 'ArrowDown':
-						handleNext();
-						break;
-					case 'ArrowLeft':
-					case 'ArrowUp':
-						handlePrev();
-						break;
-					case 'Escape':
-						closeImage();
-						break;
-				}
-			}
-		};
-
-		document.addEventListener('keydown', handleKeyDown);
-		return () => {
-			document.removeEventListener('keydown', handleKeyDown);
-		};
-	}, [isOpen]);
-
-	// Handle swipe gestures for navigation
-	useEffect(() => {
-		const handleTouchStart = (e: TouchEvent) => {
-			const touch = e.touches[0];
-			touchStartX = touch.clientX;
-		};
-
-		const handleTouchMove = (e: TouchEvent) => {
-			if (!isOpen) return;
-			const touch = e.touches[0];
-			const touchEndX = touch.clientX;
-
-			if (touchStartX - touchEndX > 50) {
-				handleNext();
-			}
-
-			if (touchStartX - touchEndX < -50) {
-				handlePrev();
-			}
-		};
-
-		let touchStartX = 0;
-
-		document.addEventListener('touchstart', handleTouchStart);
-		document.addEventListener('touchmove', handleTouchMove);
-
-		return () => {
-			document.removeEventListener('touchstart', handleTouchStart);
-			document.removeEventListener('touchmove', handleTouchMove);
-		};
-	}, [isOpen]);
-
 	const handleFilterChange = (filter: string) => {
 		setActiveFilter(filter);
 		setCurrentPage(1);
@@ -147,32 +107,59 @@ const View = ({
 		}
 	};
 
+	// Pagination Logic
 	const totalPages = Math.ceil(filteredImages.length / imagesPerPage);
 	const paginatedImages = filteredImages.slice(
 		(currentPage - 1) * imagesPerPage,
 		currentPage * imagesPerPage
 	);
 
-	const handlePageChange = (newPage: number) => {
-		if (newPage >= 1 && newPage <= totalPages) {
-			setCurrentPage(newPage);
+	// To enter fullscreen mode with selected image
+	const imageRef = useRef(null);
+	const handleFullScreen = () => {
+		const el = imageRef.current;
+		if (el) {
+			if ((el as any).webkitRequestFullscreen) {
+				(el as any).webkitRequestFullscreen();
+			} else if ((el as any).webkitRequestFullscreen) {
+				(el as any).webkitRequestFullscreen(); // Safari
+			} else if ((el as any).msRequestFullscreen) {
+				(el as any).msRequestFullscreen(); // IE
+			}
 		}
 	};
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			if (loading) setLoading(false); // Hide loader after a second
-		}, 500);
+	const [downloadError, setDownloadError] = useState(false);
+	const handleDownload = async () => {
+		const imageUrl =
+			paginatedImages[currentIndex].secure_url ||
+			paginatedImages[currentIndex].url;
 
-		return () => clearTimeout(timer);
-	}, [loading]);
+		try {
+			const response = await fetch(imageUrl, { mode: 'cors' });
+			const blob = await response.blob();
+			const blobUrl = URL.createObjectURL(blob);
+
+			const link = document.createElement('a');
+			link.href = blobUrl;
+			link.download = `EXCESS-${currentIndex + 1}.jpg`;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			URL.revokeObjectURL(blobUrl);
+		} catch (error) {
+			setDownloadError(true);
+			console.error('Download error:', error);
+			setTimeout(() => {
+				setDownloadError(false);
+			}, 3000);
+		}
+	};
 
 	return (
 		<>
 			<section
-				className={`w-screen h-auto mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 ${
-					isOpen ? 'hidden' : ''
-				}`}>
+				className={`h-auto mx-auto py-16 lg:py-20 ${isOpen ? 'hidden' : ''}`}>
 				<div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
 					<motion.h2
 						className="text-3xl font-extrabold text-primaryBlue"
@@ -198,7 +185,7 @@ const View = ({
 					</motion.p>
 				</div>
 
-				<div className="mt-10 lg:mt-16">
+				<div className="container mx-auto mt-10 lg:mt-16">
 					<div className="gallery-menu">
 						{filters.map((filter) => (
 							<button
@@ -211,7 +198,7 @@ const View = ({
 							</button>
 						))}
 					</div>
-					<div className="gallery">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4 py-4 w-full">
 						{paginatedImages.map((image, idx) => (
 							<motion.div
 								key={idx}
@@ -224,9 +211,10 @@ const View = ({
 										transition: { duration: 0.1, delay: idx * 0.1 },
 									},
 								}}
+								className="w-full"
 								custom={idx}>
 								<Image
-									className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
+									className="w-full h-[300px] cursor-pointer object-cover rounded-lg"
 									src={image.secure_url ? image.secure_url : image.url}
 									alt="Gallery Image"
 									width="300"
@@ -242,7 +230,7 @@ const View = ({
 						))}
 					</div>
 				</div>
-				<div className="flex justify-center items-center font-bold gap-6">
+				<div className="container mx-auto flex justify-center items-center font-bold gap-6 pt-4">
 					<ResponsivePagination
 						current={currentPage}
 						total={totalPages}
@@ -251,58 +239,69 @@ const View = ({
 				</div>
 			</section>
 			{isOpen && (
-				<section
-					className={`w-screen relative h-[100%] top-0 items-center justify-center z-50 ${
-						loading ? 'h-[90vh] py-10' : ''
-					} `}>
-					<div
-						className="m-10 inset-0 z-50 flex items-center justify-center w-[80vh] bg-black bg-opacity-90"
-						onClick={closeImage}
-						tabIndex={0}>
-						<button
-							className="absolute top-0 mt-2 md:mt-4 scroll-button cross z-50"
-							onClick={closeImage}>
-							<FaXmark />
-						</button>
-						<button
-							className="scroll-button absolute left-0 ml-4 md:ml-14 z-50"
-							onClick={(e) => {
-								e.stopPropagation();
-								handlePrev();
-							}}>
-							<FaArrowLeftLong />
-						</button>
-
-						<Image
-							className={`object-contain ${loading ? 'hidden' : ''}`}
-							src={
-								paginatedImages[currentIndex].secure_url
-									? paginatedImages[currentIndex].secure_url
-									: paginatedImages[currentIndex].url
-							}
-							alt={`Fullscreen Image ${currentIndex + 1}`}
-							width={1200}
-							height={400}
-							quality={100}
-							loading="lazy"
-							onLoad={() => setLoading(false)}
-						/>
-						{loading && (
-							<div className="flex items-center justify-center z-50 py-10">
-								<Loading />
+				<AnimatePresence>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center"
+						onClick={closeImage}>
+						<motion.div
+							initial={{ scale: 0.8, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							exit={{ scale: 0.8, opacity: 0 }}
+							transition={{ duration: 0.25 }}
+							className="bg-slate-50 fixed w-full border max-h-[90vh] max-w-[90vw] p-4 rounded-xl shadow-lg sm:max-w-5xl sm:rounded-lg z-50 overflow-auto"
+							onClick={(e) => e.stopPropagation()}>
+							<div className="flex justify-between items-start p-2 gap-3">
+								<div className="flex justify-center items-start p-2 gap-3 py-2">
+									<button className="p-2 bg-offBlack text-white rounded-full text-lg hover:bg-primaryBlue duration-300 transition-colors">
+										<FaArrowLeftLong onClick={handlePrev} />
+									</button>
+									<button className="p-2 bg-offBlack text-white rounded-full text-lg hover:bg-primaryBlue duration-300 transition-colors">
+										<FaArrowRightLong onClick={handleNext} />
+									</button>
+								</div>
+								<div className="flex justify-end items-start py-2 px-2 z-50 gap-3">
+									<button
+										onClick={handleFullScreen}
+										className="p-2 bg-offBlack text-white rounded-full text-lg hover:bg-primaryBlue duration-300 transition-colors">
+										<FaMagnifyingGlassPlus />
+									</button>
+									<button
+										onClick={handleDownload}
+										className="p-2 bg-offBlack text-white rounded-full text-lg hover:bg-primaryBlue duration-300 transition-colors">
+										<FaDownload />
+									</button>
+									<button
+										className="p-2 bg-offBlack text-white rounded-full text-lg hover:bg-primaryBlue duration-300 transition-colors"
+										onClick={closeImage}>
+										<FaCircleXmark />
+									</button>
+								</div>
 							</div>
-						)}
-
-						<button
-							className="scroll-button absolute right-0 mr-4 md:mr-14"
-							onClick={(e) => {
-								e.stopPropagation();
-								handleNext();
-							}}>
-							<FaArrowRightLong />
-						</button>
-					</div>
-				</section>
+							<Image
+								src={
+									paginatedImages[currentIndex].secure_url
+										? paginatedImages[currentIndex].secure_url
+										: paginatedImages[currentIndex].url
+								}
+								alt={`Fullscreen Image ${currentIndex + 1}`}
+								width={1200}
+								ref={imageRef}
+								height={1200}
+								quality={100}
+								className="w-full h-auto object-contain object-center rounded-lg"
+								unoptimized
+							/>
+							{downloadError && (
+								<div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-50 animate-fade-in-out">
+									Failed to download Image.
+								</div>
+							)}
+						</motion.div>
+					</motion.div>
+				</AnimatePresence>
 			)}
 		</>
 	);

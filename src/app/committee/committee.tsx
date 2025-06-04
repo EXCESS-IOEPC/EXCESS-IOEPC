@@ -37,6 +37,8 @@ const MemberCard = ({
 					<Image
 						src={`./images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
+						width={112}
+						height={112}
 						className="testimonial-image flex-shrink-0 object-cover rounded-full w-28 h-28"
 					/>
 				</div>
@@ -130,7 +132,12 @@ export default function Committee() {
 						<div className="previousEl w-12 h-12 rounded-ful flex items-center justify-center">
 							<FaArrowLeftLong className="icon" />
 						</div>
-						<p className="text-md text-primaryBlue font-bold text-xl">
+						<p
+							className={`text-md  font-bold text-xl ${
+								CommitteeList[activeIndex].currentCommittee
+									? 'text-cs50red'
+									: 'text-primaryBlue'
+							}`}>
 							{CommitteeList[activeIndex].year}
 						</p>
 						<div className=" nextEl w-12 h-12 flex items-center justify-center">
@@ -152,7 +159,17 @@ export default function Committee() {
 					}}
 					className="relative flex flex-row text-center items-center justify-center my-4 bg-white/90">
 					<div className="flex items-center justify-center text-center max-w-max">
-						<p className="font-bold text-primaryBlue text-xl my-0">
+						{CommitteeList[activeIndex].currentCommittee && (
+							<div className="bg-cs50red text-white px-2 py-1 rounded-full text-xs mr-2 font-semibold">
+								<p>Current Committee</p>
+							</div>
+						)}
+						<p
+							className={`font-bold  text-xl my-0 ${
+								CommitteeList[activeIndex].currentCommittee
+									? 'text-cs50red'
+									: 'text-primaryBlue'
+							}`}>
 							{CommitteeList[activeIndex].committeeNumber}
 						</p>
 					</div>

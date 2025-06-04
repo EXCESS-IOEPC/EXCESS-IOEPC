@@ -16,10 +16,18 @@ export default function Testimonial() {
 
     const testimonials = [
         {
+			"user_id": 0,
+			"current": true,
+			"post": "EXCESS President 12'th Committee",
+			"name": "Safal Raj Basnet",
+			"body": "EXCESS is more than just a technical society—it is a community where ideas turn into actions. It creates a space for learning, sharing, and growing together. Through workshops,trainings, projects, and teamwork, we explore the world of Electronics, Communication and Information with curiosity and build skills that will stay with us for a lifetime.",
+			"profile": "./images/committee/2025-2026/Safal.jpg",
+		},
+		{
             "user_id": 1,
             "name": "Mahesh Chaudhary",
             "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
-            "profile": "./images/member/Mahesh.jpg",
+            "profile": "./images/committee/2024-2025/Mahesh.jpg",
             "post": "EXCESS President 11'th Committee"
         },
         {
@@ -95,8 +103,8 @@ export default function Testimonial() {
 
     return (
         <section className="py-14 sm:py-10 bg-offWhite lg:py-12">
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div className="flex flex-col justify-center items-center relative space-y-6">
+            <div className="mx-auto container">
+                <div className="w-full flex flex-col justify-center items-center relative space-y-6">
                     <motion.div
                         className="text-center z-10"
                         variants={fadeInFromBottom}
@@ -117,7 +125,7 @@ export default function Testimonial() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <div className="relative w-full max-w-lg max-[550px]:max-w-md max-[470px]:max-w-sm max-[410px]:max-w-xs bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none" >
+                        <div className="relative w-full bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none" >
                             <div className="flex flex-col overflow-hidden">
                                 <motion.div
                                     className="previous w-12 h-12 ml-4 md:ml-14"
@@ -163,7 +171,12 @@ export default function Testimonial() {
                                                     }}
                                                     className="testimonial-image flex-shrink-0 object-cover rounded-full w-20 h-20 sm:w-32 sm:h-32"
                                                 />
-                                                <div className="mt-4 text-center">
+                                                <div className="mt-4 text-center flex flex-col items-center">
+													{ testimonial.current && (
+														<div className="bg-primaryBlue text-white flex items-center justify-center px-2 py-1 max-w-max rounded-full text-xs mr-2 mb-2 font-semibold">
+															<p>Active President</p>
+														</div>
+													)}
                                                     <p className="font-bold text-primaryBlue max-[550px]:text-md">{testimonial.name}</p>
                                                     <p className="mt-0.5 text-sm max-[550px]:text-xs text-gray-600">{testimonial.post}</p>
                                                 </div>
