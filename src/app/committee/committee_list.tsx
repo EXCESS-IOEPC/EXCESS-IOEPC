@@ -230,22 +230,4 @@ export const CommitteeList: CommitteeListType[] = [
 			},
 		],
 	},
-	{
-		year: '2022-2023',
-		committeeNumber: "EXCESS 9'th Committee",
-		committeeMembers: [
-			{
-				name: 'Abhishek  Kumar Yadav',
-				position: 'President',
-			},
-			{
-				name: 'Siddharth Singh',
-				position: 'Vice President',
-			},
-			{
-				name: 'Shivam Kumar',
-				position: 'General Secretary',
-			},
-		],
-	},
 ];
