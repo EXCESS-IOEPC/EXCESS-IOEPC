@@ -169,4 +169,83 @@ export const CommitteeList: CommitteeListType[] = [
 			},
 		],
 	},
+	{
+		year: '2023-2024',
+		committeeNumber: "EXCESS 10'th Committee",
+		committeeMembers: [
+			{
+				photo: 'manojsir.jpg',
+				name: 'Er. Manoj Kumar Guragai',
+				position: 'Mentor',
+			},
+			{
+				photo: 'suraj.jpg',
+				name: 'Suraj Bhattarai',
+				position: 'President',
+			},
+			{
+				photo: 'Samin.jpg',
+				name: 'Samin Gaire',
+				position: 'Advisor',
+			},
+			{
+				photo: 'Mahesh.jpg',
+				name: 'Mahesh Chaudhary',
+				position: 'Vice President',
+			},
+			{
+				photo: 'sudip.jpg',
+				name: 'Sudip Parajuli',
+				position: 'Secretary',
+			},
+			{
+				photo: 'Nisha.jpg',
+				name: 'Nisha Karn',
+				position: 'Treasurer',
+			},
+			{
+				photo: 'lokesh.jpg',
+				name: 'Lokesh Kumar Mandal',
+				position: 'Vice Secretary',
+			},
+			{
+				photo: 'Sunil.jpg',
+				name: 'Sunil Poudel',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Sarthak.jpg',
+				name: 'Sarthak Chaudhary',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'kishor.jpg',
+				name: 'Kishor Thagunna',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'yogesh.jpg',
+				name: 'Yogesh Giri',
+				position: 'Executive Member',
+			},
+		],
+	},
+	{
+		year: '2022-2023',
+		committeeNumber: "EXCESS 9'th Committee",
+		committeeMembers: [
+			{
+				name: 'Abhishek  Kumar Yadav',
+				position: 'President',
+			},
+			{
+				name: 'Siddharth Singh',
+				position: 'Vice President',
+			},
+			{
+				name: 'Shivam Kumar',
+				position: 'General Secretary',
+			},
+		],
+	},
 ];
