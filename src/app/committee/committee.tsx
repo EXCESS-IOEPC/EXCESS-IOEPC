@@ -15,9 +15,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 
 interface member {
-	name: string;
-	position: string;
-	photo?: string;
+  name: string;
+  position: string;
+  photo?: string;
 }
 
 const MemberCard = ({
@@ -35,7 +35,7 @@ const MemberCard = ({
 			{member.photo ? (
 				<div className="mb-3">
 					<Image
-						src={`./images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
+						src={`/images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						width={112}
 						height={112}
