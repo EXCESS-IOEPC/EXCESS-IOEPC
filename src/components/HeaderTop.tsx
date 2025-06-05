@@ -10,7 +10,7 @@ export default function HeaderTop() {
 			<div className="header-top w-full h-11 flex flex-direction-row justify-between px-2 sm:px-9 bg-offBlue">
 				<div className="logoContainer flex flex-direction-row items-center py-2 gap-1 sm:gap-2">
 					<Image
-						src="./icon.png"
+						src="/icon.png"
 						quality={100}
 						width={35}
 						height={35}
