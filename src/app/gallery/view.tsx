@@ -94,6 +94,7 @@ const View = ({ images }: { images: Image[] }) => {
 		'X-Hack 3.0',
 		'CS50 AI Closing Ceremony',
 		'Robo Ramailo',
+		'Flutter Training',
 	];
 	const handleFilterChange = (filter: string) => {
 		setActiveFilter(filter);
