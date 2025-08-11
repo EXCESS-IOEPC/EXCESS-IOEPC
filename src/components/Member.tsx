@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-// import Slider from "react-slick";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '@/src/app/member.css';
 import '@/src/app/globals.css';
-import { Autoplay, Pagination, Navigation, Mousewheel } from 'swiper/modules';
 import {
 	FaGoogle,
 	FaFacebook,
@@ -16,7 +13,7 @@ import {
 	FaInstagram,
 	FaLinkedin,
 } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FaGlobe } from 'react-icons/fa6';
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -40,7 +37,7 @@ const item = {
 };
 
 type MemberData = {
-	id: number;
+	id?: number;
 	name: string;
 	img?: string;
 	review: string;
@@ -49,6 +46,7 @@ type MemberData = {
 	instaLink?: string;
 	linkedLink?: string;
 	githubLink?: string;
+	websiteLink?: string;
 };
 
 const excess_fbLink = 'https://www.facebook.com/excessnepal/';
@@ -56,7 +54,6 @@ const excess_linkedinLink = 'https://www.linkedin.com/company/excessioepc/';
 const excess_gmailLink = 'mailto:excessnepal@ioepc.edu.np';
 const data = [
 	{
-		id: -1,
 		name: 'Kaji Ram Karki',
 		img: './images/member/kajisir.svg',
 		review: 'Campus Chief / Patron',
@@ -65,14 +62,12 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/kaji-ram-karki-69524a1a',
 	},
 	{
-		id: 0,
 		name: 'Er. Rajnish Rajbahak',
 		img: './images/member/Rajnish.jpg',
 		review: 'Deputy Head Of Department / Mentor',
 		fbLink: 'https://www.facebook.com/rajnish.rajbahak',
 	},
 	{
-		id: 1,
 		name: 'Safal Raj Basnet',
 		img: './images/member/Safal.jpg',
 		review: 'President',
@@ -83,7 +78,6 @@ const data = [
 			'https://www.linkedin.com/in/safal-raj-basnet-730aa9281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
 	},
 	{
-		id: 2,
 		name: 'Lokesh Kumar Mandal',
 		img: './images/member/Lokesh.jpg',
 		review: 'Advisor',
@@ -93,7 +87,6 @@ const data = [
 			'https://www.instagram.com/lalitmandal27?igsh=MXd3d3J3OW1ydG1qag==',
 	},
 	{
-		id: 3,
 		name: 'Aman Kumar Shah',
 		img: './images/member/Aman.jpg',
 		review: 'Vice-President',
@@ -103,7 +96,6 @@ const data = [
 			'https://www.linkedin.com/in/aman-kumar-sah-20204128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
 	},
 	{
-		id: 4,
 		name: 'Bijaya Giri',
 		img: './images/member/Bijaya.jpg',
 		review: 'Secretary',
@@ -112,7 +104,15 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/bijaya-giri-927266251',
 	},
 	{
-		id: 5,
+		name: 'Suwarna Pyakurel',
+		img: './images/member/suwarna.jpeg',
+		review: 'PR and Outreach Lead',
+		gmailLink: 'mailto:Suwarna.079bei@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/pyakurel.suwarna',
+		linkedLink: 'https://www.linkedin.com/in/suwarnapyakurel/',
+		websiteLink: 'https://www.icrtai.com/',
+	},
+	{
 		name: 'Abhishek Niraula',
 		img: './images/member/Abhishek.jpg',
 		review: 'Vice-Secretary',
@@ -121,9 +121,9 @@ const data = [
 		instaLink: 'https://www.instagram.com/niraula_abhi07/',
 		linkedLink: 'https://www.linkedin.com/in/abhisek-niraula-a92058224/',
 		githubLink: 'https://github.com/AbhishekNiraula',
+		websiteLink: 'https://www.abhishekniraula2004.com.np/',
 	},
 	{
-		id: 6,
 		name: 'Nandini karn',
 		img: './images/member/Nandini.jpg',
 		review: 'Treasurer',
@@ -131,7 +131,6 @@ const data = [
 		fbLink: 'https://www.facebook.com/share/1GHiBPux4R/',
 	},
 	{
-		id: 7,
 		name: 'Rohan Kumar Jha',
 		img: './images/member/Rohan.webp',
 		review: 'Project Manager',
@@ -140,7 +139,6 @@ const data = [
 		githubLink: 'https://github.com/Qwax1',
 	},
 	{
-		id: 8,
 		name: 'Kiran Upadhyay',
 		img: './images/member/Kiran.jpg',
 		review: 'Project Manager',
@@ -148,7 +146,6 @@ const data = [
 		fbLink: 'https://www.facebook.com/upadhyay.kiran.7',
 	},
 	{
-		id: 9,
 		name: 'Bhagwati Prasad Thakur',
 		img: './images/member/Bhagwati.JPG',
 		review: 'Project Manager',
@@ -159,7 +156,6 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/xplorerh',
 	},
 	{
-		id: 10,
 		name: 'Sijan Adhikari',
 		img: './images/member/Sijan.jpg',
 		review: 'Executive Member',
@@ -167,7 +163,6 @@ const data = [
 		fbLink: 'https://www.facebook.com/share/15mFWFxVEL/',
 	},
 	{
-		id: 12,
 		name: 'Soniya Rajbanshi',
 		img: './images/member/Soniya.jpg',
 		review: 'Executive Member',
@@ -175,7 +170,6 @@ const data = [
 		fbLink: 'https://www.facebook.com/share/19EnQeUHAK/',
 	},
 	{
-		id: 12,
 		name: 'Sneha Karna',
 		img: './images/member/Sneha.jpg',
 		review: 'Executive Member',
@@ -185,7 +179,6 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/sneha-karna-9119a82a5/',
 	},
 	{
-		id: 13,
 		name: 'Ritesh Bogati',
 		img: './images/member/Ritesh.jpg',
 		review: 'Executive Member',
@@ -196,7 +189,6 @@ const data = [
 		githubLink: 'https://github.com/R-Bogati',
 	},
 	{
-		id: 14,
 		name: 'Pravakar Jung Thapa',
 		img: './images/member/Pravakar.jpg',
 		review: 'Executive Member',
@@ -204,7 +196,6 @@ const data = [
 		fbLink: 'https://www.facebook.com/share/1EPaBt5Zn1/',
 	},
 	{
-		id: 15,
 		name: 'Diksha Jha',
 		img: './images/member/Diksha.jpg',
 		review: 'Executive Member',
@@ -266,6 +257,14 @@ const Card = ({ d }: { d: MemberData }) => (
 						className="m-2 hover:text-blue-800 transition duration-500"
 					/>
 				</a>
+				{d.websiteLink && (
+					<a href={d.websiteLink}>
+						<FaGlobe
+							size={18}
+							className="m-2 hover:text-blue-800 transition duration-500"
+						/>
+					</a>
+				)}
 			</div>
 		</div>
 	</div>

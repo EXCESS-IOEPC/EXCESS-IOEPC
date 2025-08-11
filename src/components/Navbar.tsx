@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { FaXmark, FaBars } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
 const Path = ({ ...props }) => (
