@@ -13,7 +13,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Router } from 'next/router'; // Import Router
 import Loading from '@/src/components/Loading';
-import HackathonBanner from '@/src/components/HackathonBanner';
+// import HackathonBanner from '@/src/components/HackathonBanner';
 
 export default function Home() {
 	const mainRef = useRef<HTMLElement>(null);
@@ -55,7 +55,7 @@ export default function Home() {
 			<section id="header">
 				<HeaderTop />
 				<Navbar />
-				<HackathonBanner />
+				{/* <HackathonBanner /> */}
 				<Main isLoading={isLoading} />
 			</section>
 			<section id="about-us">

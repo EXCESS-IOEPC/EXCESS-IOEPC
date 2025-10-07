@@ -69,8 +69,8 @@ const About = () => {
 					<Image
 						alt="ERC Image"
 						src={erc_image}
-						layout="fill"
-						objectFit="cover"
+						width={1000}
+						height={1000}
 						quality={90}
 						className="rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"
 					/>

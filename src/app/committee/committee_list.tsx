@@ -7,8 +7,8 @@ export const CommitteeList: CommitteeListType[] = [
 		committeeNumber: "EXCESS 12'th Committee",
 		committeeMembers: [
 			{
-				photo: 'Rajnish.jpg',
-				name: 'Er. Rajnish Rajbahak',
+				photo: 'manojsir.jpg',
+				name: 'Er. Manoj Kumar Guragai',
 				position: 'Mentor',
 			},
 			{
@@ -22,7 +22,7 @@ export const CommitteeList: CommitteeListType[] = [
 				position: 'Advisor',
 			},
 			{
-				photo: 'Aman.jpg',
+				photo: 'Aman.jpeg',
 				name: 'Aman Kumar Shah',
 				position: 'Vice President',
 			},
@@ -60,6 +60,11 @@ export const CommitteeList: CommitteeListType[] = [
 				photo: 'Bhagwati.JPG',
 				name: 'Bhagwati Prasad Thakur',
 				position: 'Project Manager',
+			},
+			{
+				photo: 'Sandeep.jpeg',
+				name: 'Sandeep Pandey',
+				position: 'Graphics Designer',
 			},
 			{
 				photo: 'Sijan.jpg',
@@ -231,6 +236,11 @@ export const CommitteeList: CommitteeListType[] = [
 			{
 				photo: 'yogesh.jpg',
 				name: 'Yogesh Giri',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Aman.jpeg',
+				name: 'Aman Kumar Shah',
 				position: 'Executive Member',
 			},
 		],

@@ -45,9 +45,9 @@ const Footer = () => {
 		<footer className="text-gray-400 bg-white px-4 py-5 mx-auto md:px-8">
 			<div className="max-w-lg   sm:mx-auto sm:text-center">
 				<Image
-					width={12}
-					height={12}
-					src="/icon.png"
+					width={1000}
+					height={1000}
+					src="/images/icon.png"
 					quality={100}
 					alt="Excess Icon"
 					className="w-12 sm:mx-auto"
