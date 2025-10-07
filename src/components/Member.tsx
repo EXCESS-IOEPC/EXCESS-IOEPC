@@ -65,7 +65,7 @@ const data = [
 		name: 'Er. Manoj Kumar Guragai',
 		img: '/images/member/manojsir.jpg',
 		review: 'Head Of Department / Mentor',
-		fbLink: 'https://www.facebook.com/rajnish.rajbahak',
+		fbLink: 'https://www.facebook.com/manojkumar.guragai',
 	},
 	{
 		name: 'Safal Raj Basnet',
