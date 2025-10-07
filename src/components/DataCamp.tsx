@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { FaShare } from 'react-icons/fa6';
 
 const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 	return (
 		<>
 			{/* container */}
-			<div className="w-full container mx-auto px-4 sm:px-0">
+			<div className="w-full container mx-auto px-4 lg:px-0">
 				{/* header */}
 				<div className="flex flex-col justify-center items-center mx-auto text-center max-w-auto">
 					{/* data camp */}
@@ -77,7 +77,11 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							<div className="flex mt-8 font-bold active:text-black">
 								<a
 									target="_blank"
-									href="https://docs.google.com/forms/d/e/1FAIpQLScWhHxYNFB9rqB06rkIIXgDgxbEN6WIqMF456taZ7vd49gDOg/viewform"
+									onClick={(e) => {
+										e.stopPropagation();
+										var totalHeight = document.body.scrollHeight;
+										scrollTo(0, totalHeight - 1500);
+									}}
 									className="animate-bounce text-xl text-white w-auto h-auto px-20 py-6 text-center content-center rounded-xl bg-gradient-to-r from-green-400 to-green-900 mb-10 active:bg-green-800 active:bg-none">
 									Apply Now
 								</a>
@@ -97,7 +101,11 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						</div>
 					</div>
 
-					<div className="mt-3 flex text-center bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal font-bold text-lg animate-bounce mb-7">
+					<div
+						onClick={(e) => {
+							scrollBy(0, 200);
+						}}
+						className="hidden lg:flex mt-3 text-center bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal font-bold text-lg animate-bounce mb-7">
 						<h1>Scroll for more details!!</h1>
 					</div>
 				</div>
@@ -133,7 +141,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						<h1 className="text-4xl font-semibold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal">
 							Program Overview
 						</h1>
-						<div className="pt-4 text-md text-wrap">
+						<div className="pt-4 text-sm text-wrap">
 							<p>The Data Fellowship offers:</p>
 							<ul className="list-disc pl-5">
 								<li className="py-1">
@@ -176,7 +184,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							<h1 className="text-4xl font-semibold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal">
 								Fellowship Phases
 							</h1>
-							<div className="pt-4 text-md text-wrap">
+							<div className="pt-4 text-sm text-wrap">
 								<p className="pb-2">
 									<b>Step 1: Complete DataCamp Courses</b>
 								</p>
@@ -212,36 +220,6 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 					</div>
 				</div>
 
-				<div className="text-white w-full rounded-sm bg-offBlack py-16 my-10">
-					<div className="text-4xl font-bold text-center">
-						<h1>
-							Past Success of
-							<span className="bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal">
-								{' '}
-								EXCESS With DataCamp
-							</span>
-						</h1>
-					</div>
-					<div className="text-2xl font-bold text-center">
-						<h1>
-							<span className="bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal">
-								{' '}
-								DataCamp Cohort 2024/25
-							</span>
-						</h1>
-					</div>
-					<div className="text-md flex text-center max-w-[85%] lg:max-w-[70%] mx-auto mt-2">
-						<p>
-							DataCamp is a world-leading online platform providing courses in
-							data science,analytics, machine learning, and more. It offers
-							training across all skill levels from non-coding business
-							essentials to advanced programming all taught by leading industry
-							level experts.Companies like Google,Uber, and PayPal use DataCamp
-							to upskill their employee, and now, through their partnership,
-							we&apos;re bringing that same opportunity to you!{' '}
-						</p>
-					</div>
-				</div>
 				<div className="mx-auto flex flex-col lg:flex-row items-center pb-16 gap-10">
 					{/* Left - Image / Logo */}
 					<div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-1/3">
@@ -275,19 +253,19 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						<h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent leading-normal">
 							DataCamp Cohort 2024/25
 						</h2>
-						<p className="text-gray-700 text-justify text-lg leading-relaxed">
+						<p className="text-gray-700 text-justify text-md leading-relaxed">
 							The{' '}
 							<span className="font-semibold text-green-900">
 								DataCamp Cohort 2024/25
 							</span>
 							, initiated through EXCESS Nepal’s partnership with{' '}
-							<span className="font-semibold">DataCamp</span>, marked a
-							significant step in empowering students with essential skills in
-							Artificial Intelligence and Data Science . This collaboration
-							provided structured learning resources, mentorship, and real-world
-							project exposure to aspiring engineers, enabling them to build a
-							strong foundation in data-driven technologies. The cohort’s
-							success played a crucial role in supporting{' '}
+							<span className="font-semibold text-green-900">DataCamp</span>,
+							marked a significant step in empowering students with essential
+							skills in Artificial Intelligence and Data Science . This
+							collaboration provided structured learning resources, mentorship,
+							and real-world project exposure to aspiring engineers, enabling
+							them to build a strong foundation in data-driven technologies. The
+							cohort’s success played a crucial role in supporting{' '}
 							<Link
 								href="https://cs50xnepal.ioepc.edu.np/"
 								className="font-semibold text-primaryBlue hover:underline">
@@ -319,14 +297,19 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							in building a brighter, data-powered Nepal.
 						</p>
 					</div>
-					<div className="flex justify-center items-center font-bold text-white active:text-black">
+					<Link
+						target="_blank"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSeJROPPAB1kHb-rxT53S9VNgs96HwDw8mpDZQIQ_F5PHp9D7w/viewform?usp=sf_link"
+						className="flex text-white rounded bg-green-500 w-fit p-4 mx-auto justify-center items-center gap-5">
+						Open Form in New Tab
+						<FaShare />
+					</Link>
+					<div className="flex justify-center items-start">
 						<iframe
 							src="https://docs.google.com/forms/d/e/1FAIpQLSeJROPPAB1kHb-rxT53S9VNgs96HwDw8mpDZQIQ_F5PHp9D7w/viewform?embedded=true"
-							width="100%"
-							height="1500"
-							className="lg:scale-110 origin-top">
-							Loading…
-						</iframe>
+							className="w-screen h-full min-h-screen border-none"
+							allowFullScreen
+						/>
 					</div>
 				</div>
 			</div>
