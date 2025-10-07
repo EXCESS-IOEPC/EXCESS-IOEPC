@@ -14,9 +14,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 
 interface member {
-	name: string;
-	position: string;
-	photo?: string;
+  name: string;
+  position: string;
+  photo?: string;
 }
 
 const MemberCard = ({

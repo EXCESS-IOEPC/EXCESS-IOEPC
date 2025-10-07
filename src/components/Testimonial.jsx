@@ -1,16 +1,26 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { FaArrowRightLong, FaArrowLeftLong, FaQuoteLeft } from "react-icons/fa6";
-import { Parallax, Mousewheel, Autoplay, Navigation, Pagination } from "swiper/modules";
+import React from "react";
+import Image from "next/image";
+import {
+  FaArrowRightLong,
+  FaArrowLeftLong,
+  FaQuoteLeft,
+} from "react-icons/fa6";
+import {
+  Parallax,
+  Mousewheel,
+  Autoplay,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import "@/src/app/testimonial.css";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Testimonial() {
 
@@ -96,73 +106,93 @@ export default function Testimonial() {
         },
     ]
 
-    const fadeInFromBottom = {
-        hidden: { opacity: 0, y: 120 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-    };
+  const fadeInFromBottom = {
+    hidden: { opacity: 0, y: 120 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
 
-    return (
-        <section className="py-14 sm:py-10 bg-offWhite lg:py-12">
-            <div className="mx-auto container">
-                <div className="w-full flex flex-col justify-center items-center relative space-y-6">
-                    <motion.div
-                        className="text-center z-10"
-                        variants={fadeInFromBottom}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
+  return (
+    <section className="py-14 sm:py-10 bg-offWhite lg:py-12">
+      <div className="mx-auto container">
+        <div className="w-full flex flex-col justify-center items-center relative space-y-6">
+          <motion.div
+            className="text-center z-10"
+            variants={fadeInFromBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl">
+              <span className="highlight"> EXCESS</span> President&apos;s
+              Reflections
+            </h2>
+          </motion.div>
+          <FaQuoteLeft className="w-24 h-24 absolute top-[-10%] md:top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
+
+          <motion.div
+            className="relative md:mt-12 w-full bg-offWhite rounded-3xl"
+            variants={fadeInFromBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none">
+              <div className="flex flex-col overflow-hidden">
+                <motion.div
+                  className="previous w-12 h-12 ml-4 md:ml-14"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <FaArrowLeftLong className="icon" />
+                </motion.div>
+
+                <Swiper
+                  direction={"horizontal"}
+                  navigation={{
+                    enabled: true,
+                    nextEl: ".next",
+                    prevEl: ".previous",
+                  }}
+                  parallax={true}
+                  pagination={{
+                    el: ".swiper-pagination",
+                    type: "bullets",
+                    clickable: true,
+                    dynamicBullets: true,
+                  }}
+                  mousewheel={{ sensitivity: 0.5, thresholdDelta: 50 }}
+                  loop={true}
+                  watchSlidesProgress={true}
+                  slidesPerView="auto"
+                  modules={[
+                    Parallax,
+                    Mousewheel,
+                    Autoplay,
+                    Navigation,
+                    Pagination,
+                  ]}
+                >
+                  {testimonials.map((testimonial, idx) => (
+                    <SwiperSlide
+                      className="flex flex-col justify-between max-[640px]:my-auto lg:pt-8 lg:px-7"
+                      key={idx}
                     >
-                        <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl">
-                            <span className="highlight"> EXCESS</span> President&apos;s Reflections
-                        </h2>
-                    </motion.div>
-                    <FaQuoteLeft className="w-24 h-24 absolute top-[-10%] md:top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
-
-                    <motion.div
-                        className="relative md:mt-12 w-full bg-offWhite rounded-3xl"
-                        variants={fadeInFromBottom}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                    >
-                        <div className="relative w-full bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none" >
-                            <div className="flex flex-col overflow-hidden">
-                                <motion.div
-                                    className="previous w-12 h-12 ml-4 md:ml-14"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ duration: 0.8 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <FaArrowLeftLong className="icon" />
-                                </motion.div>
-
-                                <Swiper
-                                    direction={'horizontal'}
-                                    navigation={{ enabled: true, nextEl: ".next", prevEl: ".previous" }}
-                                    parallax={true}
-                                    pagination={{ el: ".swiper-pagination", type: "bullets", clickable: true, dynamicBullets: true }}
-                                    mousewheel={{ sensitivity: 0.5, thresholdDelta: 50 }}
-                                    loop={true}
-                                    watchSlidesProgress={true}
-                                    slidesPerView="auto"
-                                    modules={[Parallax, Mousewheel, Autoplay, Navigation, Pagination]}
-                                >
-                                    {testimonials.map((testimonial, idx) => (
-                                        <SwiperSlide className="flex flex-col justify-between max-[640px]:my-auto lg:pt-8 lg:px-7" key={idx}>
-                                            <div className="w-[75%] mx-auto mt-6 max-[640px]:mt-3 md:mt-6 lg:mt-0">
-                                                <blockquote>
-                                                    <p className="text-sm max-[550px]:text-xs text-center text-offBlack">
-                                                        {testimonial.body}
-                                                    </p>
-                                                </blockquote>
-                                            </div>
+                      <div className="w-[75%] mx-auto mt-6 max-[640px]:mt-3 md:mt-6 lg:mt-0">
+                        <blockquote>
+                          <p className="text-sm max-[550px]:text-xs text-center text-offBlack">
+                            {testimonial.body}
+                          </p>
+                        </blockquote>
+                      </div>
 
                                             <div className="flex flex-col items-center mt-8" >
                                                 <Image
+                                                    loader={({ src }) => src}
                                                     src={testimonial.profile ? testimonial.profile : "./images/groot.jpg"}
-                                                    width={2000}
-                                                    height={2000}
+                                                    width={32}
+                                                    height={32}
                                                     alt={testimonial.name}
                                                     onError={(event) => {
                                                         event.target.id = "./images/groot.jpg";
@@ -187,20 +217,20 @@ export default function Testimonial() {
                                     </div>
                                 </Swiper>
 
-                                <motion.div
-                                    className="next w-12 h-12 right-0 mr-4 md:mr-14"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ duration: 0.8 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <FaArrowRightLong className="icon" />
-                                </motion.div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
+                <motion.div
+                  className="next w-12 h-12 right-0 mr-4 md:mr-14"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <FaArrowRightLong className="icon" />
+                </motion.div>
+              </div>
             </div>
-        </section>
-    );
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
