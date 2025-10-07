@@ -23,7 +23,7 @@ export default function RootLayout({
 			<head>
 				<link
 					rel="icon"
-					href="/icon?<generated>"
+					href="/images/icon.png"
 					type="image/<generated>"
 					sizes="<generated>"
 				/>

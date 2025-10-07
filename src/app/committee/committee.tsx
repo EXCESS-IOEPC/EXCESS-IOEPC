@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Icon from '@/src/app/icon.png';
 import { motion } from 'framer-motion';
 import Binary from '@/public/images/Binary.svg';
 import { CommitteeList } from '@/src/app/committee/committee_list';
@@ -35,7 +34,7 @@ const MemberCard = ({
 			{member.photo ? (
 				<div className="mb-3">
 					<Image
-						src={`./images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
+						src={`/images/committee/${CommitteeList[activeIndex].year}/${member.photo}`}
 						alt={member.name}
 						width={112}
 						height={112}
@@ -97,7 +96,7 @@ export default function Committee() {
 					}}
 					className="flex flex-col items-center">
 					<Image
-						src={Icon}
+						src="/images/icon.png"
 						alt="EXCESS ICON"
 						width={200}
 						height={30}
@@ -186,43 +185,41 @@ export default function Committee() {
 					modules={[Navigation, Keyboard]}
 					className="relative w-full">
 					{CommitteeList.map((committee, index) => (
-						<div className="h-max w-full px-4" key={`Committee-${index}`}>
-							<SwiperSlide>
-								{/* First Row - 3 Members */}
-								<motion.div
-									variants={containerVariants}
-									initial="hidden"
-									animate="show"
-									className="flex justify-center items-center gap-4 flex-wrap mb-4">
-									{CommitteeList[activeIndex].committeeMembers
-										.slice(0, 3)
-										.map((member, index2) => (
-											<MemberCard
-												activeIndex={activeIndex}
-												key={index2}
-												member={member}
-											/>
-										))}
-								</motion.div>
+						<SwiperSlide key={`Committee-${index}`}>
+							{/* First Row - 3 Members */}
+							<motion.div
+								variants={containerVariants}
+								initial="hidden"
+								animate="show"
+								className="flex justify-center items-center gap-4 flex-wrap mb-4">
+								{CommitteeList[activeIndex].committeeMembers
+									.slice(0, 3)
+									.map((member, index2) => (
+										<MemberCard
+											activeIndex={activeIndex}
+											key={`TopMember-${member.name}-${index2}`}
+											member={member}
+										/>
+									))}
+							</motion.div>
 
-								{/* Remaining Members */}
-								<motion.div
-									variants={containerVariants}
-									initial="hidden"
-									animate="show"
-									className="flex flex-wrap justify-center items-center gap-4 mb-4">
-									{CommitteeList[activeIndex].committeeMembers
-										.slice(3)
-										.map((member, index2) => (
-											<MemberCard
-												activeIndex={activeIndex}
-												key={index2}
-												member={member}
-											/>
-										))}
-								</motion.div>
-							</SwiperSlide>
-						</div>
+							{/* Remaining Members */}
+							<motion.div
+								variants={containerVariants}
+								initial="hidden"
+								animate="show"
+								className="flex flex-wrap justify-center items-center gap-4 mb-4">
+								{CommitteeList[activeIndex].committeeMembers
+									.slice(3)
+									.map((member, index3) => (
+										<MemberCard
+											activeIndex={activeIndex}
+											key={`BotMember - ${member.name}-${index3}`}
+											member={member}
+										/>
+									))}
+							</motion.div>
+						</SwiperSlide>
 					))}
 				</Swiper>
 			</div>
