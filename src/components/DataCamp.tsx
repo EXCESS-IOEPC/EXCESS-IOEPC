@@ -22,7 +22,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 								{/* Excess Logo */}
 								<div className="flex-shrink-0 pr-6">
 									<Image
-										src="/icon.png"
+										src="/images/icon.png"
 										alt="Excess Logo"
 										width={54}
 										height={56}
@@ -225,7 +225,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 					<div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-1/3">
 						<div className="flex-shrink-0 pr-6">
 							<Image
-								src="/icon.png"
+								src="/images/icon.png"
 								alt="Excess Logo"
 								width={54}
 								height={56}

@@ -23,7 +23,7 @@ export const CommitteeList: CommitteeListType[] = [
 			},
 			{
 				photo: 'Aman.jpeg',
-				name: 'Aman Kumar Shah',
+				name: 'Aman Kumar Sah',
 				position: 'Vice President',
 			},
 			{
@@ -134,7 +134,7 @@ export const CommitteeList: CommitteeListType[] = [
 			},
 			{
 				photo: 'Aman.jpg',
-				name: 'Aman Kumar Shah',
+				name: 'Aman Kumar Sah',
 				position: 'Vice Secretary',
 			},
 			{
@@ -240,7 +240,7 @@ export const CommitteeList: CommitteeListType[] = [
 			},
 			{
 				photo: 'Aman.jpeg',
-				name: 'Aman Kumar Shah',
+				name: 'Aman Kumar Sah',
 				position: 'Executive Member',
 			},
 		],
