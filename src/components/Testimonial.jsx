@@ -189,10 +189,9 @@ export default function Testimonial() {
 
                                             <div className="flex flex-col items-center mt-8" >
                                                 <Image
-                                                    loader={({ src }) => src}
                                                     src={testimonial.profile ? testimonial.profile : "./images/groot.jpg"}
-                                                    width={32}
-                                                    height={32}
+                                                    width={2000}
+                                                    height={2000}
                                                     alt={testimonial.name}
                                                     onError={(event) => {
                                                         event.target.id = "./images/groot.jpg";
