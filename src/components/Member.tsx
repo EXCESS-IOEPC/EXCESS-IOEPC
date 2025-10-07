@@ -87,7 +87,7 @@ const data = [
 			'https://www.instagram.com/lalitmandal27?igsh=MXd3d3J3OW1ydG1qag==',
 	},
 	{
-		name: 'Aman Kumar Shah',
+		name: 'Aman Kumar Sah',
 		img: '/images/member/Aman.jpeg',
 		review: 'Vice-President',
 		gmailLink: 'mailto: amansah112.as9@gmail.com',
