@@ -1,7 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaShare } from 'react-icons/fa6';
+import {
+	FaShare,
+	FaFacebook,
+	FaInstagram,
+	FaLinkedin,
+	FaBell,
+} from 'react-icons/fa6';
 
 const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 	return (
@@ -74,17 +80,10 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 									skills that can shape your future.
 								</p>
 							</div>
-							<div className="flex mt-8 font-bold active:text-black">
-								<a
-									target="_blank"
-									onClick={(e) => {
-										e.stopPropagation();
-										var totalHeight = document.body.scrollHeight;
-										scrollTo(0, totalHeight - 1500);
-									}}
-									className="animate-bounce text-xl text-white w-auto h-auto px-20 py-6 text-center content-center rounded-xl bg-gradient-to-r from-green-400 to-green-900 mb-10 active:bg-green-800 active:bg-none">
-									Apply Now
-								</a>
+							<div className="flex mt-8 font-bold">
+								<div className="text-xl text-gray-600 w-auto h-auto px-20 py-6 text-center content-center rounded-xl bg-gray-200 mb-10 cursor-not-allowed">
+									Registration Ended
+								</div>
 							</div>
 						</div>
 
@@ -288,28 +287,69 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						</p>
 					</div>
 				</div>
-				{/* APPLY NOW */}
-				<div className="flex flex-col justify-center align-center">
-					<div className="mb-2 mx-auto text-justify sm:px-5">
-						<p className="font-semibold text-md text-offBlack">
-							Take the next step toward mastering data skills and shaping your
-							future! Apply for the EXCESS Data Fellowship 2025/26 and join us
-							in building a brighter, data-powered Nepal.
+
+				{/* REGISTRATION ENDED - FOLLOW US SECTION */}
+				<div className="flex flex-col justify-center items-center bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 mb-10">
+					{/* Registration Ended Message */}
+					<div className="text-center mb-8">
+						<div className="animate-pulse mb-4">
+							<FaBell className="text-4xl text-red-500 mx-auto mb-2" />
+						</div>
+						<h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent mb-4">
+							Registration Has Ended
+						</h2>
+						<p className="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
+							Thank you for your interest in the EXCESS Data Fellowship 2025/26!{' '}
+							The registration period has now closed, but don&apos;t worry -
+							there will be more opportunities ahead.
 						</p>
 					</div>
-					<Link
-						target="_blank"
-						href="https://docs.google.com/forms/d/e/1FAIpQLSeJROPPAB1kHb-rxT53S9VNgs96HwDw8mpDZQIQ_F5PHp9D7w/viewform?usp=sf_link"
-						className="flex text-white rounded bg-green-500 w-fit p-4 mx-auto justify-center items-center gap-5">
-						Open Form in New Tab
-						<FaShare />
-					</Link>
-					<div className="flex justify-center items-start">
-						<iframe
-							src="https://docs.google.com/forms/d/e/1FAIpQLSeJROPPAB1kHb-rxT53S9VNgs96HwDw8mpDZQIQ_F5PHp9D7w/viewform?embedded=true"
-							className="w-screen h-full min-h-screen border-none"
-							allowFullScreen
-						/>
+
+					{/* Follow Us Section */}
+					<div className="text-center">
+						<h3 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent mb-4">
+							Stay Updated for Next Cohort!
+						</h3>
+						<p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+							Follow us on social media to get notified about future DataCamp
+							Fellowship opportunities, upcoming events, and exciting updates
+							from EXCESS Nepal.
+						</p>
+
+						{/* Social Media Icons */}
+						<div className="flex justify-center items-center gap-6 mb-6">
+							<Link
+								href="https://www.facebook.com/excessnepal/"
+								target="_blank"
+								className="group">
+								<div className="bg-blue-600 text-white p-4 rounded-full transform transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg group-hover:animate-bounce">
+									<FaFacebook className="text-2xl" />
+								</div>
+							</Link>
+							<Link
+								href="https://www.instagram.com/excess.ioe/"
+								target="_blank"
+								className="group">
+								<div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-full transform transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg group-hover:animate-bounce">
+									<FaInstagram className="text-2xl" />
+								</div>
+							</Link>
+							<Link
+								href="https://www.linkedin.com/company/excessioepc/"
+								target="_blank"
+								className="group">
+								<div className="bg-blue-700 text-white p-4 rounded-full transform transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg group-hover:animate-bounce">
+									<FaLinkedin className="text-2xl" />
+								</div>
+							</Link>
+						</div>
+
+						{/* Animated Call to Action */}
+						<div className="bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent">
+							<p className="text-lg font-semibold animate-pulse">
+								🔔 Turn on notifications to never miss an update!
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
