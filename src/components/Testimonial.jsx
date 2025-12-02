@@ -187,7 +187,7 @@ export default function Testimonial() {
                         </blockquote>
                       </div>
 
-                                            <div className="flex flex-col items-center mt-8" >
+                                            <div className="flex flex-col justify-center items-center mt-8" >
                                                 <Image
                                                     src={testimonial.profile ? testimonial.profile : "./images/groot.jpg"}
                                                     width={2000}

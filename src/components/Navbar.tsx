@@ -55,12 +55,14 @@ function NavBar() {
 		<div className="overflow-hidden">
 			<motion.nav
 				animate={navbar ? 'open' : 'closed'}
-				className="w-full h-auto md:h-14 bg-offWhite text-offBlack top-0 left-0 right-0 z-10">
-				<div className="justify-end align-center h-full md:items-center md:flex px-2 sm:px-9">
-					<div className="flex items-center justify-end py-3 md:py-5 md:block">
-						{/* HAMBURGER BUTTON FOR MOBILE */}
-						<div className="md:hidden flex items-center justify-center align-middle">
-							<button onClick={() => setNavbar(!navbar)}>
+				className="w-full h-auto lg:h-14 bg-offWhite text-offBlack top-0 left-0 right-0 z-10">
+				<div className="justify-end align-center h-full lg:items-center lg:flex px-4 sm:px-6 lg:px-9">
+					<div className="flex items-center justify-end py-3 lg:py-5 lg:block">
+						{/* HAMBURGER BUTTON FOR MOBILE AND TABLET */}
+						<div className="lg:hidden flex items-center justify-center align-middle">
+							<button
+								onClick={() => setNavbar(!navbar)}
+								aria-label="Toggle menu">
 								<svg width="23" height="23" viewBox="0 0 23 23">
 									<Path
 										variants={{
@@ -86,36 +88,38 @@ function NavBar() {
 							</button>
 						</div>
 					</div>
-					<div>
+					<div className="w-full lg:w-auto">
 						<div
-							className={`flex-1 justify-self-center md:block md:pb-0 md:mt-0 ${
-								navbar ? 'md:p-0 block py-8' : 'hidden'
+							className={`flex-1 justify-self-center lg:block lg:pb-0 lg:mt-0 ${
+								navbar ? 'lg:p-0 block py-4 pb-6' : 'hidden'
 							}`}>
 							<motion.ul
 								variants={navUL}
-								className="md:h-auto items-center justify-center md:flex font-semibold ">
+								className="lg:h-auto items-center justify-center lg:flex font-semibold flex-col lg:flex-row">
 								{navItems.map(([link, title], index) => (
 									<motion.li
 										key={index}
 										variants={variants}
-										className={`text-sm py-2 max-[910px]:px-2 px-6 overflow-hidden nav-item h-14 content-center text-center hover:text-primaryBlue ${
+										className={`text-sm py-2 px-3 lg:px-4 xl:px-6 overflow-hidden nav-item lg:h-14 h-auto content-center text-center hover:text-primaryBlue ${
 											pathname == link ? 'active' : ''
 										}`}>
 										<Link href={link}>{title}</Link>
 									</motion.li>
 								))}
-								<div className="md:flex md:ml-2 text-sm gap-2 max-[550px]:gap-1 md:mt-0 mt-2 md:space-y-0 space-y-2 justify-center content-center items-center">
-									<motion.li variants={variants}>
-										<Link href="https://cs50xnepal.ioepc.edu.np/">
-											<button className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-all duration-500 bg-cs50red border-2 border-transparent md:w-auto rounded-md hover:bg-transparent hover:border-cs50red hover:text-cs50red font-bold">
-												CS50xNepal
+								<div className="flex flex-col lg:flex-row lg:ml-2 text-sm gap-2 lg:mt-0 mt-3 justify-center content-center items-center px-3 lg:px-0">
+									<motion.li variants={variants} className="w-full lg:w-auto">
+										<Link href="/datacamp" className="block">
+											<button className="inline-flex items-center justify-center w-full px-2 xl:px-3 py-2 text-offWhite text-[11px] xl:text-xs transition-all duration-500 bg-datacamp border-2 border-transparent lg:w-auto rounded-md hover:bg-transparent hover:border-datacamp hover:text-datacamp font-bold whitespace-nowrap">
+												DataCamp
 											</button>
 										</Link>
 									</motion.li>
-									<motion.li variants={variants}>
-										<Link href="/datacamp">
-											<button className="inline-flex items-center justify-center w-full px-4 py-2 text-offWhite transition-all duration-500 bg-datacamp border-2 border-transparent md:w-auto rounded-md hover:bg-transparent hover:border-datacamp hover:text-datacamp font-bold">
-												DataCamp
+									<motion.li variants={variants} className="w-full lg:w-auto">
+										<Link
+											href="https://taranga.ioepc.edu.np/"
+											className="block">
+											<button className="inline-flex items-center justify-center w-full px-2 xl:px-3 py-2 text-white text-[11px] xl:text-xs transition-all duration-500 bg-[#3b82f6] border-2 border-transparent lg:w-auto rounded-md hover:bg-white hover:border-[#3b82f6] hover:text-[#3b82f6] font-bold whitespace-nowrap animate-bounce">
+												Taranga: ACESxEXCESS
 											</button>
 										</Link>
 									</motion.li>
