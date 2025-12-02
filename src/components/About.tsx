@@ -7,16 +7,16 @@ const erc_image = '/images/erc-scaled.jpg';
 
 const About = () => {
 	return (
-		<section className="py-10">
-			<div className="container mx-auto m-10 h-4/6 rounded-2xl bg-gradient-to-br from-orange-300 to-white-500 cursor-pointer flex flex-col-reverse md:flex-row justify-center">
+		<section className="py-10 px-4 sm:px-6 lg:px-0 flex items-center justify-center">
+			<div className="container mx-auto lg:m-10 rounded-2xl bg-gradient-to-br from-orange-300 to-white-500 cursor-pointer flex flex-col lg:flex-row justify-center overflow-hidden">
 				<motion.div
-					className="bg-line bg-no-repeat md:w-3/5"
+					className="bg-line bg-no-repeat lg:w-3/5 flex flex-col justify-center"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}>
 					<motion.h1
-						className="text-center font-bold text-2xl pt-5 text-primaryBlue"
+						className="text-center font-bold text-xl sm:text-2xl pt-5 text-primaryBlue"
 						initial={{ opacity: 0, y: 10 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -24,7 +24,7 @@ const About = () => {
 						ABOUT US
 					</motion.h1>
 					<motion.p
-						className="text-xs p-5"
+						className="text-xs sm:text-sm p-5 lg:p-8"
 						initial={{ opacity: 0, y: 10 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.4 }}
@@ -61,7 +61,7 @@ const About = () => {
 					</motion.p>
 				</motion.div>
 				<motion.div
-					className="md:w-2/5 h-[300px] md:h-auto border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue relative"
+					className="lg:w-2/5 h-[250px] sm:h-[350px] lg:h-auto border-t-4 lg:border-l-4 lg:border-t-0 border-primaryBlue relative"
 					initial={{ opacity: 0, x: 20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
@@ -69,10 +69,9 @@ const About = () => {
 					<Image
 						alt="ERC Image"
 						src={erc_image}
-						width={1000}
-						height={1000}
+						fill
 						quality={90}
-						className="rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"
+						className="rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none brightness-50 object-cover"
 					/>
 				</motion.div>
 			</div>

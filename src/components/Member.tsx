@@ -166,13 +166,6 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/sandeep-pandey-157624282/',
 	},
 	{
-		name: 'Sijan Adhikari',
-		img: '/images/member/Sijan.jpg',
-		review: 'Executive Member',
-		gmailLink: 'mailto: 078bei039@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/share/15mFWFxVEL/',
-	},
-	{
 		name: 'Soniya Rajbanshi',
 		img: '/images/member/Soniya.jpg',
 		review: 'Executive Member',

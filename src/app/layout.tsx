@@ -28,7 +28,7 @@ export default function RootLayout({
 					sizes="<generated>"
 				/>
 			</head>
-			<body className={`bg-offWhite ${poppins.className}`}>
+			<body className={`bg-offWhite overflow-x-hidden ${poppins.className}`}>
 				{children}
 				<section id="footer">
 					<Footer />

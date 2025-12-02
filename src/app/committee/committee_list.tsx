@@ -67,11 +67,6 @@ export const CommitteeList: CommitteeListType[] = [
 				position: 'Graphics Designer',
 			},
 			{
-				photo: 'Sijan.jpg',
-				name: 'Sijan Adhikari',
-				position: 'Executive Member',
-			},
-			{
 				photo: 'Soniya.jpg',
 				name: 'Soniya Rajbanshi',
 				position: 'Executive Member',
