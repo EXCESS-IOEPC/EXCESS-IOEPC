@@ -83,7 +83,7 @@ const Footer = () => {
 				<div className="mt-4 sm:mt-0 text-[15px]">
 					&copy; Designed and Developed by{' '}
 					<a
-						href="https://www.facebook.com/profile.php?id=100083009736365"
+						href="https://www.abhishekniraula2004.com.np/"
 						className="text-primaryBlue">
 						Abhishek Niraula
 					</a>{' '}
