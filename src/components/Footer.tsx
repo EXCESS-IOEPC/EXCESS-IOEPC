@@ -57,7 +57,9 @@ const Footer = () => {
 					innovation preparing students to shape a meaningful future.
 					<br />
 					Email:{' '}
-					<a className="text-primaryBlue" href="mailto:excess@ioepc.edu.np">
+					<a
+						className="text-primaryBlue"
+						href="mailto:excessnepal@ioepc.edu.np">
 						excessnepal@ioepc.edu.np
 					</a>
 					<br />
@@ -81,7 +83,7 @@ const Footer = () => {
 				<div className="mt-4 sm:mt-0 text-[15px]">
 					&copy; Designed and Developed by{' '}
 					<a
-						href="https://www.facebook.com/profile.php?id=100083009736365"
+						href="https://www.abhishekniraula2004.com.np/"
 						className="text-primaryBlue">
 						Abhishek Niraula
 					</a>{' '}

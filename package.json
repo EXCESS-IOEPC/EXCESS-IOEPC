@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^5.2.2",
     "@nextui-org/card": "^2.0.34",
     "@nextui-org/progress": "^2.0.33",
     "@nextui-org/react": "^2.6.11",
@@ -33,7 +34,8 @@
     "pnpm": "^9.15.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.64.0",
+    "react-hook-form": "^7.68.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "react-image-gallery": "^1.4.0",
     "react-loader-spinner": "^6.1.6",
@@ -42,7 +44,8 @@
     "react-social-icons": "^6.25.0",
     "react-spinners": "^0.14.1",
     "send-email": "^1.1.3",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",

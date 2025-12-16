@@ -92,7 +92,7 @@ const Main = ({ isLoading }: { isLoading: boolean }) => {
 								whileHover={{ scale: 1.1 }}
 								href="https://taranga.ioepc.edu.np/"
 								title=""
-								className="inline-flex items-center justify-center w-full px-2 xl:px-3 py-2 text-white text-[11px] xl:text-xs transition-all duration-500 bg-[#3b82f6] border-2 border-transparent lg:w-auto rounded-md hover:bg-white hover:border-[#3b82f6] hover:text-[#3b82f6] font-bold whitespace-nowrap animate-bounce"
+								className="inline-flex items-center justify-center w-full sm:max-w-max px-2 xl:px-3 py-2 text-white text-[11px] xl:text-xs transition-all duration-500 bg-[#3b82f6] border-2 border-transparent lg:w-auto rounded-md hover:bg-white hover:border-[#3b82f6] hover:text-[#3b82f6] font-bold whitespace-nowrap animate-bounce"
 								role="button"
 								variants={childVariants}>
 								Taranga: ACESxEXCESS
