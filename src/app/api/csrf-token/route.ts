@@ -1,34 +1,23 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { doubleCsrf } from 'csrf-csrf';
+import crypto from 'crypto';
 
-// Initialize CSRF protection
-const { generateCsrfToken } = doubleCsrf({
-	getSecret: () =>
-		process.env.CSRF_SECRET || 'default-secret-change-in-production',
-	cookieName: '__Host.excess-csrf',
-	cookieOptions: {
-		sameSite: 'lax',
-		path: '/',
-		secure: process.env.NODE_ENV === 'production',
-		httpOnly: true,
-	},
-	size: 64,
-	getSessionIdentifier: (req: any) => {
-		const forwarded =
-			req.headers?.get?.('x-forwarded-for') || req.headers?.['x-forwarded-for'];
-		const ip = forwarded
-			? typeof forwarded === 'string'
-				? forwarded.split(',')[0]
-				: forwarded
-			: 'unknown';
-		const userAgent =
-			req.headers?.get?.('user-agent') ||
-			req.headers?.['user-agent'] ||
-			'unknown';
-		return `${ip}-${userAgent}`;
-	},
-});
+/**
+ * Generate CSRF token with HMAC signature
+ */
+function generateCsrfToken(): string {
+	const secret =
+		process.env.CSRF_SECRET || 'default-secret-change-in-production';
+	const timestamp = Date.now().toString(36);
+	const randomBytes = crypto.randomBytes(32).toString('hex');
+
+	// Create HMAC signature
+	const hmac = crypto.createHmac('sha256', secret);
+	hmac.update(`${timestamp}.${randomBytes}`);
+	const signature = hmac.digest('hex');
+
+	return `${timestamp}.${randomBytes}.${signature}`;
+}
 
 /**
  * GET CSRF Token
@@ -36,15 +25,15 @@ const { generateCsrfToken } = doubleCsrf({
  */
 export async function GET(request: NextRequest) {
 	try {
-		// Generate token with csrf-csrf library
-		const token = generateCsrfToken(request as any, {} as any);
+		// Generate token
+		const token = generateCsrfToken();
 
 		const response = NextResponse.json({
 			success: true,
 			csrfToken: token,
 		});
 
-		// Set the CSRF cookie manually for Next.js
+		// Set the CSRF cookie for double-submit pattern
 		response.cookies.set('__Host.excess-csrf', token, {
 			sameSite: 'lax',
 			path: '/',
@@ -55,6 +44,7 @@ export async function GET(request: NextRequest) {
 
 		return response;
 	} catch (error) {
+		console.error('CSRF token generation error:', error);
 		return NextResponse.json(
 			{
 				success: false,

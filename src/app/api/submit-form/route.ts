@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import crypto from 'crypto';
 import {
 	checkRateLimit,
 	sanitizeInput,
@@ -7,39 +8,43 @@ import {
 	markUserSubmitted,
 	hasUserSubmitted,
 } from '@/src/lib/formSecurity';
-import { doubleCsrf } from 'csrf-csrf';
 
-// Initialize CSRF protection
-const { validateRequest } = doubleCsrf({
-	getSecret: () =>
-		process.env.CSRF_SECRET || 'default-secret-change-in-production',
-	cookieName: '__Host.excess-csrf',
-	cookieOptions: {
-		sameSite: 'lax',
-		path: '/',
-		secure: process.env.NODE_ENV === 'production',
-		httpOnly: true,
-	},
-	size: 64,
-	getSessionIdentifier: (req: any) => {
-		const forwarded =
-			req.headers?.get?.('x-forwarded-for') || req.headers?.['x-forwarded-for'];
-		const ip = forwarded
-			? typeof forwarded === 'string'
-				? forwarded.split(',')[0]
-				: forwarded
-			: 'unknown';
-		const userAgent =
-			req.headers?.get?.('user-agent') ||
-			req.headers?.['user-agent'] ||
-			'unknown';
-		return `${ip}-${userAgent}`;
-	},
-	getCsrfTokenFromRequest: (req: any) => {
-		// Extract token from request body
-		return req.bodyData?.csrfToken || req.body?.csrfToken;
-	},
-});
+/**
+ * Verify CSRF token with HMAC signature
+ */
+function verifyCsrfToken(token: string, cookie: string): boolean {
+	if (!token || !cookie || token !== cookie) return false;
+
+	const parts = token.split('.');
+	if (parts.length !== 3) return false;
+
+	const [timestampStr, randomStr, receivedSignature] = parts;
+
+	// Verify timestamp (not expired - 1 hour)
+	const timestamp = parseInt(timestampStr, 36);
+	if (isNaN(timestamp)) return false;
+
+	const now = Date.now();
+	const maxAge = 60 * 60 * 1000; // 1 hour
+	if (now - timestamp > maxAge) return false;
+
+	// Verify HMAC signature
+	const secret =
+		process.env.CSRF_SECRET || 'default-secret-change-in-production';
+	const hmac = crypto.createHmac('sha256', secret);
+	hmac.update(`${timestampStr}.${randomStr}`);
+	const expectedSignature = hmac.digest('hex');
+
+	// Constant-time comparison
+	try {
+		return crypto.timingSafeEqual(
+			Buffer.from(receivedSignature),
+			Buffer.from(expectedSignature)
+		);
+	} catch {
+		return false;
+	}
+}
 
 export async function POST(request: NextRequest) {
 	try {
@@ -68,16 +73,7 @@ export async function POST(request: NextRequest) {
 		}
 
 		// Validate CSRF token against cookie
-		try {
-			const mockReq = {
-				...request,
-				body: rawData,
-				bodyData: rawData,
-				cookies: { '__Host.excess-csrf': csrfCookie },
-				headers: request.headers,
-			};
-			validateRequest(mockReq as any);
-		} catch (csrfError) {
+		if (!verifyCsrfToken(csrfToken, csrfCookie)) {
 			return NextResponse.json(
 				{
 					success: false,
