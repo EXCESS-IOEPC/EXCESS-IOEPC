@@ -57,7 +57,9 @@ const Footer = () => {
 					innovation preparing students to shape a meaningful future.
 					<br />
 					Email:{' '}
-					<a className="text-primaryBlue" href="mailto:excess@ioepc.edu.np">
+					<a
+						className="text-primaryBlue"
+						href="mailto:excessnepal@ioepc.edu.np">
 						excessnepal@ioepc.edu.np
 					</a>
 					<br />

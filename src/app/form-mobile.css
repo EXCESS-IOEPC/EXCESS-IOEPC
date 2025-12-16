@@ -1,0 +1,65 @@
+/* Mobile Form Optimizations */
+
+/* Reduce form input padding on mobile */
+@media (max-width: 640px) {
+  /* Input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
+  select,
+  textarea {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Form labels */
+  label {
+    font-size: 0.875rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Section headings */
+  .form-section-title {
+    font-size: 1.125rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .form-section-description {
+    font-size: 0.75rem !important;
+  }
+
+  /* Radio and checkbox options */
+  .radio-option,
+  .checkbox-option {
+    padding: 0.5rem !important;
+  }
+
+  .radio-label,
+  .checkbox-label {
+    font-size: 0.75rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  /* Buttons */
+  button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Grid gaps */
+  .form-grid {
+    gap: 0.75rem !important;
+  }
+
+  /* Form container padding */
+  .form-container {
+    padding: 1rem !important;
+  }
+
+  /* Section margins */
+  .form-section {
+    margin-bottom: 1rem !important;
+  }
+}

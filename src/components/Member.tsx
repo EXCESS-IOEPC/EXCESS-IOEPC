@@ -110,8 +110,10 @@ const data = [
 		review: 'PR and Outreach Lead',
 		gmailLink: 'mailto:Suwarna.079bei@ioepc.edu.np',
 		fbLink: 'https://www.facebook.com/pyakurel.suwarna',
+		instaLink: ' https://www.instagram.com/pyakurel.suwarna/',
 		linkedLink: 'https://www.linkedin.com/in/suwarnapyakurel/',
-		websiteLink: 'https://www.icrtai.com/',
+		githubLink: 'https://github.com/suwarna-wave',
+		websiteLink: 'https://www.suwarnapyakurel.com.np/',
 	},
 	{
 		name: 'Abhishek Niraula',

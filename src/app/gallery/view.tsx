@@ -72,7 +72,7 @@ const View = ({ images }: { images: Image[] }) => {
 		return () => {
 			document.removeEventListener('keydown', handleKeyDown);
 		};
-	}, [isOpen]);
+	}, [isOpen, handleNext, handlePrev]);
 
 	// Filtering the image based on filters
 	const filters = [
