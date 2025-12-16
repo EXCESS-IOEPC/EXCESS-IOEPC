@@ -13,14 +13,7 @@ import {
 } from '@/src/lib/formValidation';
 
 // Predefined options for security - users cannot add custom values
-const YEAR_OPTIONS = [
-	'1st Year',
-	'2nd Year',
-	'3rd Year',
-	'4th Year',
-	'Graduate',
-	'Other',
-] as const;
+const YEAR_OPTIONS = ['1st Year', '2nd Year', '3rd Year', '4th Year'] as const;
 
 const FACULTY_OPTIONS = [
 	'Electronics, Communication and Information Engineering',
@@ -33,17 +26,7 @@ const FACULTY_OPTIONS = [
 	'Other',
 ] as const;
 
-const SEMESTER_OPTIONS = [
-	'1st Semester',
-	'2nd Semester',
-	'3rd Semester',
-	'4th Semester',
-	'5th Semester',
-	'6th Semester',
-	'7th Semester',
-	'8th Semester',
-	'Other',
-] as const;
+const SEMESTER_OPTIONS = ['1st Part', '2nd Part'] as const;
 
 const PYTHON_EXPERIENCE = [
 	'No Experience',
@@ -99,7 +82,7 @@ export const eventRegistrationSchema = z.object({
 	iotProjectExperience: paragraphWithLimit(0, 500, 'IoT Project Experience'),
 
 	//Expectations and Improvements
-	expectations: paragraphWithLimit(300, 1500, 'Expectations'),
+	expectations: paragraphWithLimit(400, 1500, 'Expectations'),
 	improvementSuggestions: paragraphWithLimit(20, 500, 'Improvement Suggestions')
 		.optional()
 		.or(z.literal('')),
@@ -200,7 +183,7 @@ export const eventRegistrationConfig: FormConfig = {
 					showCharCount: true,
 					gridSpan: 2,
 					helperText:
-						'Provide from where would you commute to the training venue.',
+						'Provide from where you would commute to the training venue.',
 				},
 			],
 		},

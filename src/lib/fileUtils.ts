@@ -1,8 +1,4 @@
 /**
- * Utility functions for handling file uploads in forms
- */
-
-/**
  * Convert File to base64 string
  */
 export async function fileToBase64(file: File): Promise<string> {
