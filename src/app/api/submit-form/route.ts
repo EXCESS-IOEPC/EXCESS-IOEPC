@@ -4,10 +4,42 @@ import {
 	checkRateLimit,
 	sanitizeInput,
 	prepareDataForSheets,
-	verifyCsrfToken,
 	markUserSubmitted,
 	hasUserSubmitted,
 } from '@/src/lib/formSecurity';
+import { doubleCsrf } from 'csrf-csrf';
+
+// Initialize CSRF protection
+const { validateRequest } = doubleCsrf({
+	getSecret: () =>
+		process.env.CSRF_SECRET || 'default-secret-change-in-production',
+	cookieName: '__Host.excess-csrf',
+	cookieOptions: {
+		sameSite: 'lax',
+		path: '/',
+		secure: process.env.NODE_ENV === 'production',
+		httpOnly: true,
+	},
+	size: 64,
+	getSessionIdentifier: (req: any) => {
+		const forwarded =
+			req.headers?.get?.('x-forwarded-for') || req.headers?.['x-forwarded-for'];
+		const ip = forwarded
+			? typeof forwarded === 'string'
+				? forwarded.split(',')[0]
+				: forwarded
+			: 'unknown';
+		const userAgent =
+			req.headers?.get?.('user-agent') ||
+			req.headers?.['user-agent'] ||
+			'unknown';
+		return `${ip}-${userAgent}`;
+	},
+	getCsrfTokenFromRequest: (req: any) => {
+		// Extract token from request body
+		return req.bodyData?.csrfToken || req.body?.csrfToken;
+	},
+});
 
 export async function POST(request: NextRequest) {
 	try {
@@ -20,9 +52,32 @@ export async function POST(request: NextRequest) {
 		// Parse request body
 		const rawData = await request.json();
 
-		// Verify CSRF token
+		// Verify CSRF token with cookie validation
 		const csrfToken = rawData.csrfToken;
-		if (!verifyCsrfToken(csrfToken)) {
+		const csrfCookie = request.cookies.get('__Host.excess-csrf')?.value;
+
+		if (!csrfToken || !csrfCookie) {
+			return NextResponse.json(
+				{
+					success: false,
+					error:
+						'Missing security token. Please refresh the page and try again.',
+				},
+				{ status: 403 }
+			);
+		}
+
+		// Validate CSRF token against cookie
+		try {
+			const mockReq = {
+				...request,
+				body: rawData,
+				bodyData: rawData,
+				cookies: { '__Host.excess-csrf': csrfCookie },
+				headers: request.headers,
+			};
+			validateRequest(mockReq as any);
+		} catch (csrfError) {
 			return NextResponse.json(
 				{
 					success: false,

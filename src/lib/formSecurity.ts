@@ -1,15 +1,51 @@
 /**
  * Form Security Utilities
- * 
+ *
  * Provides security measures for form submissions:
  * - Rate limiting to prevent spam (in-memory, use Redis in production)
  * - XSS prevention through input sanitization
- * - CSRF token generation and validation
+ * - CSRF token generation and validation (using csrf-csrf library)
  * - Submission tracking to prevent duplicates
- * 
+ *
  * PRODUCTION NOTE: Replace in-memory Maps with Redis or database
  * for persistent rate limiting and submission tracking across server restarts.
  */
+
+import { doubleCsrf } from 'csrf-csrf';
+
+// Initialize CSRF protection with Double Submit Cookie pattern
+const { generateCsrfToken, validateRequest } = doubleCsrf({
+	getSecret: () =>
+		process.env.CSRF_SECRET || 'default-secret-change-in-production',
+	cookieName: '__Host.excess-csrf',
+	cookieOptions: {
+		sameSite: 'lax',
+		path: '/',
+		secure: process.env.NODE_ENV === 'production',
+		httpOnly: true,
+	},
+	size: 64,
+	ignoredMethods: ['GET', 'HEAD', 'OPTIONS'],
+	getSessionIdentifier: (req: any) => {
+		// Use IP + User Agent as session identifier for stateless approach
+		const forwarded =
+			req.headers?.get?.('x-forwarded-for') || req.headers?.['x-forwarded-for'];
+		const ip = forwarded
+			? typeof forwarded === 'string'
+				? forwarded.split(',')[0]
+				: forwarded
+			: 'unknown';
+		const userAgent =
+			req.headers?.get?.('user-agent') ||
+			req.headers?.['user-agent'] ||
+			'unknown';
+		return `${ip}-${userAgent}`;
+	},
+	getCsrfTokenFromRequest: (req: any) => {
+		// Get token from request body for API routes
+		return req.bodyData?.csrfToken || req.body?.csrfToken;
+	},
+});
 
 // In-memory rate limiter (use Redis in production)
 const submissionTracker = new Map<
@@ -218,8 +254,10 @@ const submittedUsers = new Map<
 
 /**
  * Generate CSRF token for form protection
+ * Uses csrf-csrf library for industry-standard Double Submit Cookie pattern
  */
-export function generateCsrfToken(): string {
+export function generateCsrfTokenForClient(): string {
+	// For client-side - generate a simple token that will be validated server-side
 	const timestamp = Date.now().toString(36);
 	const randomBytes = crypto.getRandomValues(new Uint8Array(32));
 	const randomStr = Array.from(randomBytes, (byte) =>
@@ -229,26 +267,21 @@ export function generateCsrfToken(): string {
 }
 
 /**
- * Verify CSRF token
+ * Verify CSRF token (server-side only)
  */
-export function verifyCsrfToken(
-	token: string,
-	maxAge: number = 3600000
-): boolean {
+export function verifyCsrfToken(token: string, req: any): boolean {
 	if (!token) return false;
 
-	const parts = token.split('.');
-	if (parts.length !== 2) return false;
-
-	const timestamp = parseInt(parts[0], 36);
-	if (isNaN(timestamp)) return false;
-
-	// Check if token is expired (default 1 hour)
-	const now = Date.now();
-	if (now - timestamp > maxAge) return false;
-
-	return true;
+	try {
+		validateRequest(req);
+		return true;
+	} catch (error) {
+		return false;
+	}
 }
+
+// Export the library functions for direct use in API routes
+export { generateCsrfToken, validateRequest };
 
 /**
  * Mark user as submitted
