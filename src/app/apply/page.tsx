@@ -12,6 +12,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { processFileList } from '@/src/lib/fileUtils';
 import '@/src/app/form-mobile.css';
 import Link from 'next/link';
+import Image from 'next/image';
 export default function ApplyPage() {
 	// Toggle this to enable/disable event registration
 	const EVENTS_ACTIVE = true;
@@ -156,7 +157,7 @@ export default function ApplyPage() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-offWhite via-white to-offBlueTrans">
+		<div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-offWhite via-white to-offBlueTrans">
 			<Toaster
 				position="top-center"
 				toastOptions={{
@@ -181,12 +182,14 @@ export default function ApplyPage() {
 			/>
 			<Navbar />
 
-			<div className="container mx-auto px-4 py-12 pt-10">
+			<div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 md:py-12">
 				{/* Loading State */}
 				{checkingStatus ? (
 					<div className="max-w-2xl mx-auto text-center py-16">
 						<div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primaryBlue mb-4"></div>
-						<p className="text-gray-600">Checking submission status...</p>
+						<p className="text-sm text-gray-600">
+							Checking submission status...
+						</p>
 					</div>
 				) : !EVENTS_ACTIVE ? (
 					// No Events Available
@@ -222,22 +225,149 @@ export default function ApplyPage() {
 					// Events are active - Show normal registration form
 					<>
 						{/* Header */}
-						<div className="text-center mb-6 md:mb-12">
-							<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-offBlack mb-2 md:mb-4">
-								Register:{' '}
-								<span className="text-primaryBlue">IoT with Raspberry Pi</span>
-							</h1>
-							<p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-3">
-								Join us for an exciting learning experience. Fill out the form
-								below to secure your spot.
-							</p>
-							{/* Syllabus Link */}
-							<p className="text-sm md:text-base text-gray-700">
+						<div className="max-w-4xl mx-auto mb-6 md:mb-8 lg:mb-12">
+							{/* Logos */}
+							<div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-6 md:mb-8">
+								<div className="flex items-center justify-center">
+									<Image
+										src="/images/forms/taranga.png"
+										alt="Digital Pathshala Logo"
+										width={100}
+										height={80}
+										className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
+									/>
+								</div>
+								<div className="h-12 sm:h-14 md:h-16 lg:h-20 w-px bg-gray-300"></div>
+								<div className="flex items-center justify-center">
+									<Image
+										src="/images/forms/logo-aces.webp"
+										alt="ACES Logo"
+										width={100}
+										height={80}
+										className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
+									/>
+								</div>
+								<div className="h-12 sm:h-14 md:h-16 lg:h-20 w-px bg-gray-300"></div>
+								<div className="flex items-center justify-center">
+									<Image
+										src="/images/icon.png"
+										alt="EXCESS Logo"
+										width={100}
+										height={80}
+										className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
+									/>
+								</div>
+							</div>
+
+							<div className="text-center mb-6 md:mb-8">
+								<h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primaryBlue mb-3 md:mb-4 px-2">
+									IoT with Raspberry Pi Training
+								</h1>
+								{/* Supported by */}
+								<div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-3 md:mb-4">
+									<span className="text-xs sm:text-sm text-gray-600">
+										Supported by
+									</span>
+									<Link
+										href="https://robotics.ioepc.edu.np/"
+										target="_blank"
+										className="text-xs sm:text-sm font-semibold text-purple-600 hover:text-purple-700 hover:underline">
+										Robotics Club
+									</Link>
+								</div>
+								<p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-3xl mx-auto px-2">
+									Pre-event of{' '}
+									<span className="font-semibold">
+										Taranga: The Wave of Technology
+									</span>{' '}
+									— A hands-on bootcamp to explore IoT fundamentals and advanced
+									concepts in robotics and microelectronics. Jointly coordinated
+									by <span className="font-semibold">EXCESS</span> and{' '}
+									<span className="font-semibold">ACES</span>, title sponsored
+									by <span className="font-semibold">Digital Pathshala</span>.
+								</p>
+							</div>
+
+							{/* Key Details */}
+							<div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-5 md:p-6 mb-4 md:mb-6">
+								<div className="grid sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
+									<div>
+										<p className="text-gray-600 mb-0.5 sm:mb-1 text-xs sm:text-sm">
+											📅 Event Begins
+										</p>
+										<p className="font-semibold text-offBlack text-xs sm:text-sm">
+											Poush 8, 2082
+										</p>
+									</div>
+									<div>
+										<p className="text-gray-600 mb-0.5 sm:mb-1 text-xs sm:text-sm">
+											💸 Registration Fee
+										</p>
+										<p className="font-semibold text-offBlack text-xs sm:text-sm">
+											Card Holders: Rs. 250 | Non-Card: Rs. 300
+										</p>
+									</div>
+									<div>
+										<p className="text-gray-600 mb-0.5 sm:mb-1 text-xs sm:text-sm">
+											🎯 Seats
+										</p>
+										<p className="font-semibold text-offBlack text-xs sm:text-sm">
+											Limited (First Come First Serve)
+										</p>
+									</div>
+									<div>
+										<p className="text-gray-600 mb-0.5 sm:mb-1 text-xs sm:text-sm">
+											📍 Venue & Time
+										</p>
+										<p className="font-semibold text-offBlack text-xs sm:text-sm">
+											Communicated via email
+										</p>
+									</div>
+								</div>
+							</div>
+
+							{/* Action Buttons */}
+							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
 								<Link
-									href=""
+									href="https://drive.google.com/drive/folders/11hyC2VmJ9n2SGy95aa8W8lGZaa3oh1fp?usp=drive_link"
 									target="_blank"
-									className="text-primaryBlue hover:underline font-medium">
-									Click here to view event syllabus
+									className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg">
+									<svg
+										className="w-4 h-4 sm:w-5 sm:h-5"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24">
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+										/>
+									</svg>
+									View Syllabus
+									<svg
+										className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24">
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth={2}
+											d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+										/>
+									</svg>
+								</Link>
+							</div>
+
+							{/* Alternative Form Link */}
+							<p className="text-center text-xs sm:text-sm text-gray-600 mt-4 sm:mt-6 px-2">
+								Having trouble with the form?{' '}
+								<Link
+									href="https://forms.gle/iJ9EGvkGXDdcyaeZ6"
+									target="_blank"
+									className="text-purple-600 hover:text-purple-700 font-medium hover:underline">
+									Click here to use Google Forms instead
 								</Link>
 							</p>
 						</div>
@@ -353,11 +483,11 @@ export default function ApplyPage() {
 						)}
 
 						{/* Footer Info */}
-						<div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-gray-200">
-							<div className="bg-blue-50 border border-primaryBlue/20 rounded-lg p-6">
-								<h3 className="text-lg font-semibold text-offBlack mb-3 flex items-center">
+						<div className="max-w-4xl mx-auto mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
+							<div className="bg-blue-50 border border-primaryBlue/20 rounded-lg p-4 sm:p-5 md:p-6">
+								<h3 className="text-base sm:text-lg font-semibold text-offBlack mb-2 sm:mb-3 flex items-center">
 									<svg
-										className="w-5 h-5 mr-2 text-primaryBlue"
+										className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primaryBlue"
 										fill="currentColor"
 										viewBox="0 0 20 20">
 										<path
@@ -368,7 +498,7 @@ export default function ApplyPage() {
 									</svg>
 									Important Information
 								</h3>
-								<ul className="space-y-2 text-sm text-gray-700">
+								<ul className="space-y-2 text-xs sm:text-sm text-gray-700">
 									<li className="flex items-start">
 										<svg
 											className="w-4 h-4 mr-2 text-primaryBlue mt-0.5 flex-shrink-0"
@@ -412,6 +542,18 @@ export default function ApplyPage() {
 									</li>
 								</ul>
 							</div>
+
+							{/* Developer Credit */}
+							<p className="text-center text-xs text-gray-500 mt-4">
+								Developed by{' '}
+								<Link
+									href="https://www.abhishekniraula2004.com.np/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-purple-600 hover:text-purple-700 font-medium hover:underline">
+									Abhishek Niraula
+								</Link>
+							</p>
 						</div>
 					</>
 				)}

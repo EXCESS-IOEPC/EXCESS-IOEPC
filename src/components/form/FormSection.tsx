@@ -81,7 +81,7 @@ export const FormSection: React.FC<FormSectionProps> = ({
 												ACES/EXCESS Card Holders
 											</p>
 											<p className="text-2xl font-bold text-green-700">
-												Rs. --
+												Rs. 250
 											</p>
 										</div>
 										<div className="bg-green-200 p-2 rounded-full">
@@ -104,7 +104,9 @@ export const FormSection: React.FC<FormSectionProps> = ({
 											<p className="text-xs text-gray-600 mb-1">
 												Non-Card Holders
 											</p>
-											<p className="text-2xl font-bold text-blue-700">Rs. --</p>
+											<p className="text-2xl font-bold text-blue-700">
+												Rs. 300
+											</p>
 										</div>
 										<div className="bg-blue-200 p-2 rounded-full">
 											<svg
@@ -131,7 +133,7 @@ export const FormSection: React.FC<FormSectionProps> = ({
 							<div className="flex-shrink-0 relative group">
 								<div className="bg-white p-4 rounded-lg shadow-md">
 									<Image
-										src="/images/Treasurer-EXCESS.jpeg"
+										src="/images/forms/Treasurer-EXCESS.jpg"
 										width={224}
 										height={224}
 										alt="Payment QR Code"
@@ -259,7 +261,7 @@ export const FormSection: React.FC<FormSectionProps> = ({
 									<div className="flex justify-center mb-4">
 										<div className="bg-white p-4 rounded-xl shadow-lg border-2 border-primaryBlue/20">
 											<Image
-												src="/images/Treasurer-EXCESS.jpeg"
+												src="/images/forms/Treasurer-EXCESS.jpg"
 												width={400}
 												height={400}
 												alt="Payment QR Code - Enlarged"

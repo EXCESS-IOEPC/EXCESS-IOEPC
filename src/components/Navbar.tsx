@@ -72,9 +72,9 @@ function NavBar() {
 	];
 
 	return (
-		<div className="overflow-hidden">
+		<div className="w-full overflow-x-hidden">
 			<nav className="w-full h-auto lg:h-14 bg-offWhite text-offBlack top-0 left-0 right-0 z-10">
-				<div className="justify-end align-center h-full lg:items-center lg:flex px-4 sm:px-6 lg:px-9">
+				<div className="justify-end align-center h-full lg:items-center lg:flex px-4 sm:px-6 lg:px-9 max-w-screen-2xl mx-auto">
 					<div className="flex items-center justify-end py-3 lg:py-5 lg:block">
 						{/* HAMBURGER BUTTON FOR MOBILE AND TABLET */}
 						<div className="lg:hidden flex items-center justify-center align-middle">
@@ -118,23 +118,23 @@ function NavBar() {
 					</div>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg:block w-full lg:w-auto">
-						<ul className="lg:h-auto items-center justify-center lg:flex font-semibold flex-row">
+					<div className="hidden lg:block w-full">
+						<ul className="lg:h-auto items-center justify-end lg:flex font-semibold flex-row flex-wrap gap-1">
 							{navItems.map(([link, title], index) => (
 								<li
 									key={index}
-									className={`text-sm py-2 px-3 lg:px-4 xl:px-6 overflow-hidden nav-item lg:h-14 h-auto content-center text-center hover:text-primaryBlue ${
+									className={`text-xs xl:text-sm py-2 px-2 xl:px-3 2xl:px-4 overflow-hidden nav-item lg:h-14 h-auto content-center text-center hover:text-primaryBlue whitespace-nowrap ${
 										pathname == link ? 'active' : ''
 									}`}>
 									<Link href={link}>{title}</Link>
 								</li>
 							))}
-							<div className="flex flex-row lg:ml-2 text-sm gap-2 justify-center content-center items-center">
+							<div className="flex flex-row lg:ml-1 xl:ml-2 text-sm gap-1 xl:gap-2 justify-center content-center items-center">
 								<li className="w-auto">
 									<Link href="/apply" className="block">
-										<button className="inline-flex items-center justify-center px-3 xl:px-4 py-2 text-white text-[11px] xl:text-xs transition-all duration-300 bg-gradient-to-r from-primaryBlue to-blue-600 border-2 border-transparent rounded-md hover:from-white hover:to-white hover:border-primaryBlue hover:text-primaryBlue font-bold whitespace-nowrap shadow-lg hover:shadow-xl transform hover:scale-105">
+										<button className="inline-flex items-center justify-center px-2 xl:px-3 2xl:px-4 py-1.5 xl:py-2 text-white text-[10px] xl:text-[11px] 2xl:text-xs transition-all duration-300 bg-gradient-to-r from-primaryBlue to-blue-600 border-2 border-transparent rounded-md hover:from-white hover:to-white hover:border-primaryBlue hover:text-primaryBlue font-bold whitespace-nowrap shadow-lg hover:shadow-xl transform hover:scale-105">
 											<svg
-												className="w-3 h-3 xl:w-4 xl:h-4 mr-1"
+												className="w-3 h-3 xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 mr-1"
 												fill="currentColor"
 												viewBox="0 0 20 20">
 												<path
@@ -149,7 +149,7 @@ function NavBar() {
 								</li>
 								<li className="w-auto">
 									<Link href="https://taranga.ioepc.edu.np/" className="block">
-										<button className="inline-flex items-center justify-center px-2 xl:px-3 py-2 text-white text-[11px] xl:text-xs transition-all duration-500 bg-[#3b82f6] border-2 border-transparent rounded-md hover:bg-white hover:border-[#3b82f6] hover:text-[#3b82f6] font-bold whitespace-nowrap">
+										<button className="inline-flex items-center justify-center px-2 xl:px-2.5 2xl:px-3 py-1.5 xl:py-2 text-white text-[10px] xl:text-[11px] 2xl:text-xs transition-all duration-500 bg-[#3b82f6] border-2 border-transparent rounded-md hover:bg-white hover:border-[#3b82f6] hover:text-[#3b82f6] font-bold whitespace-nowrap">
 											Taranga: ACESxEXCESS
 										</button>
 									</Link>
