@@ -5,14 +5,35 @@ import { sanitizeInput, prepareDataForSheets } from '@/src/lib/formSecurity';
 export async function POST(request: NextRequest) {
 	try {
 		// Parse request body
-		const rawData = await request.json();
+		let rawData;
+		try {
+			rawData = await request.json();
+		} catch (parseError) {
+			if (process.env.NODE_ENV === 'development') {
+				console.error('JSON Parse Error:', parseError);
+			}
+			return NextResponse.json(
+				{
+					success: false,
+					error: 'Invalid request data. Please try again.',
+				},
+				{ status: 400 }
+			);
+		}
 
 		// Sanitize input
 		const sanitizedData = sanitizeInput(rawData);
 
+		if (process.env.NODE_ENV === 'development') {
+			console.log('Sanitized Data:', JSON.stringify(sanitizedData, null, 2));
+		}
+
 		// Prepare data for Google Sheets
 		const sheetsData = prepareDataForSheets(sanitizedData);
 
+		if (process.env.NODE_ENV === 'development') {
+			console.log('Sheets Data:', JSON.stringify(sheetsData, null, 2));
+		}
 		const sheetsResponse = await sendToGoogleSheets(sheetsData);
 		if (!sheetsResponse.success) {
 			throw new Error(
@@ -33,7 +54,9 @@ export async function POST(request: NextRequest) {
 			{
 				success: false,
 				error:
-					'An error occurred while processing your submission. Please try again later.',
+					error instanceof Error
+						? error.message
+						: 'An error occurred while processing your submission. Please try again later.',
 			},
 			{ status: 500 }
 		);
@@ -64,12 +87,33 @@ async function sendToGoogleSheets(
 
 		if (!response.ok) {
 			const errorText = await response.text();
+			if (process.env.NODE_ENV === 'development') {
+				console.error('Google Apps Script Error Response:', errorText);
+			}
 			throw new Error(
-				`Google Apps Script returned ${response.status}: ${errorText}`
+				`Google Apps Script returned ${response.status}: ${errorText.substring(
+					0,
+					200
+				)}`
 			);
 		}
 
-		const result = await response.json();
+		let result;
+		try {
+			const responseText = await response.text();
+			if (process.env.NODE_ENV === 'development') {
+				console.log('Google Apps Script Response:', responseText);
+			}
+			result = JSON.parse(responseText);
+		} catch (parseError) {
+			if (process.env.NODE_ENV === 'development') {
+				console.error(
+					'Failed to parse Google Apps Script response:',
+					parseError
+				);
+			}
+			throw new Error('Invalid response from Google Sheets service');
+		}
 
 		if (!result.success) {
 			throw new Error(result.message || 'Failed to save to Google Sheets');

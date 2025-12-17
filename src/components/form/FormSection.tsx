@@ -133,7 +133,7 @@ export const FormSection: React.FC<FormSectionProps> = ({
 							<div className="flex-shrink-0 relative group">
 								<div className="bg-white p-4 rounded-lg shadow-md">
 									<Image
-										src="/images/forms/Treasurer-EXCESS.jpg"
+										src="/images/forms/Treasurer-Aman.jpeg"
 										width={224}
 										height={224}
 										alt="Payment QR Code"
@@ -261,7 +261,7 @@ export const FormSection: React.FC<FormSectionProps> = ({
 									<div className="flex justify-center mb-4">
 										<div className="bg-white p-4 rounded-xl shadow-lg border-2 border-primaryBlue/20">
 											<Image
-												src="/images/forms/Treasurer-EXCESS.jpg"
+												src="/images/forms/Treasurer-Aman.jpeg"
 												width={400}
 												height={400}
 												alt="Payment QR Code - Enlarged"
