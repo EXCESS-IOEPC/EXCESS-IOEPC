@@ -20,73 +20,7 @@ export default function ApplyPage() {
 	const [submitStatus, setSubmitStatus] = useState<{
 		type: 'success' | 'error' | null;
 		message: string;
-		submissionId?: string;
 	}>({ type: null, message: '' });
-
-	const [csrfToken, setCsrfToken] = useState<string>('');
-	const [alreadySubmitted, setAlreadySubmitted] = useState(false);
-	const [checkingStatus, setCheckingStatus] = useState(true);
-
-	// Check submission status and get CSRF token on mount
-	useEffect(() => {
-		const initialize = async () => {
-			try {
-				// Check if user has already submitted
-				const statusResponse = await fetch('/api/submission-status');
-				const statusData = await statusResponse.json();
-
-				if (statusData.submitted) {
-					setAlreadySubmitted(true);
-					setSubmitStatus({
-						type: 'success',
-						message: 'You have already submitted a registration.',
-						submissionId: statusData.submissionId,
-					});
-				}
-
-				// Get CSRF token
-				const csrfResponse = await fetch('/api/csrf-token');
-				const csrfData = await csrfResponse.json();
-				if (csrfData.csrfToken) {
-					setCsrfToken(csrfData.csrfToken);
-				}
-			} catch (error) {
-				// Silent fail - form can still work without CSRF in dev mode
-			} finally {
-				setCheckingStatus(false);
-			}
-		};
-
-		initialize();
-	}, []);
-
-	const handleSubmitAnother = async () => {
-		try {
-			const response = await fetch('/api/submission-status', {
-				method: 'DELETE',
-			});
-
-			const result = await response.json();
-
-			if (response.ok) {
-				toast.success('You can now submit another response!');
-				setAlreadySubmitted(false);
-				setSubmitStatus({ type: null, message: '' });
-
-				// Get new CSRF token
-				const csrfResponse = await fetch('/api/csrf-token');
-				const csrfData = await csrfResponse.json();
-				if (csrfData.csrfToken) {
-					setCsrfToken(csrfData.csrfToken);
-				}
-
-				// Scroll to form
-				window.scrollTo({ top: 0, behavior: 'smooth' });
-			}
-		} catch (error) {
-			toast.error('Failed to reset submission status. Please try again.');
-		}
-	};
 
 	const handleFormSubmit = async (data: EventRegistrationFormData) => {
 		const loadingToast = toast.loading('Submitting your registration...');
@@ -99,7 +33,6 @@ export default function ApplyPage() {
 			// Prepare submission data
 			const submissionData = {
 				...data,
-				csrfToken,
 				paymentFile,
 				membershipFile,
 				// Remove FileList objects
@@ -118,15 +51,6 @@ export default function ApplyPage() {
 			const result = await response.json();
 
 			if (!response.ok) {
-				// Handle already submitted case
-				if (result.alreadySubmitted) {
-					setAlreadySubmitted(true);
-					setSubmitStatus({
-						type: 'success',
-						message: 'You have already submitted a registration.',
-						submissionId: result.submissionId,
-					});
-				}
 				throw new Error(result.error || 'Submission failed');
 			}
 
@@ -135,11 +59,9 @@ export default function ApplyPage() {
 				duration: 5000,
 			});
 
-			setAlreadySubmitted(true);
 			setSubmitStatus({
 				type: 'success',
 				message: result.message,
-				submissionId: result.submissionId,
 			});
 
 			window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -183,15 +105,7 @@ export default function ApplyPage() {
 			<Navbar />
 
 			<div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 md:py-12">
-				{/* Loading State */}
-				{checkingStatus ? (
-					<div className="max-w-2xl mx-auto text-center py-16">
-						<div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primaryBlue mb-4"></div>
-						<p className="text-sm text-gray-600">
-							Checking submission status...
-						</p>
-					</div>
-				) : !EVENTS_ACTIVE ? (
+				{!EVENTS_ACTIVE ? (
 					// No Events Available
 					<div className="max-w-2xl mx-auto text-center py-16">
 						<div className="inline-block p-4 bg-gray-100 rounded-full mb-6">
@@ -395,14 +309,6 @@ export default function ApplyPage() {
 												<p className="text-green-700 mb-2">
 													{submitStatus.message}
 												</p>
-												{submitStatus.submissionId && (
-													<p className="text-sm text-green-600">
-														Reference ID:{' '}
-														<span className="font-mono font-medium">
-															{submitStatus.submissionId}
-														</span>
-													</p>
-												)}
 											</div>
 										</div>
 									</div>
@@ -432,55 +338,11 @@ export default function ApplyPage() {
 						)}
 
 						{/* Form */}
-						{!alreadySubmitted && submitStatus.type !== 'success' && (
-							<MultiSectionForm
-								config={eventRegistrationConfig}
-								validationSchema={eventRegistrationSchema}
-								onSubmit={handleFormSubmit}
-							/>
-						)}
-
-						{/* Success Actions */}
-						{alreadySubmitted && submitStatus.type === 'success' && (
-							<div className="max-w-4xl mx-auto text-center mt-8">
-								<div className="flex flex-col sm:flex-row gap-4 justify-center">
-									<a
-										href="/"
-										className="inline-flex items-center justify-center px-6 py-3 bg-primaryBlue text-white rounded-lg font-medium hover:bg-blue-600 transition-all duration-200 shadow-md hover:shadow-lg">
-										<svg
-											className="w-5 h-5 mr-2"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24">
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth={2}
-												d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-											/>
-										</svg>
-										Back to Home
-									</a>
-									<button
-										onClick={handleSubmitAnother}
-										className="inline-flex items-center justify-center px-6 py-3 bg-white text-offBlack border-2 border-gray-200 rounded-lg font-medium hover:border-primaryBlue hover:bg-gray-50 transition-all duration-200">
-										<svg
-											className="w-5 h-5 mr-2"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24">
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth={2}
-												d="M12 4v16m8-8H4"
-											/>
-										</svg>
-										Submit Another Response
-									</button>
-								</div>
-							</div>
-						)}
+						<MultiSectionForm
+							config={eventRegistrationConfig}
+							validationSchema={eventRegistrationSchema}
+							onSubmit={handleFormSubmit}
+						/>
 
 						{/* Footer Info */}
 						<div className="max-w-4xl mx-auto mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
