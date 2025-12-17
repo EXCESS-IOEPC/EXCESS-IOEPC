@@ -40,6 +40,10 @@ export default function ApplyPage() {
 				membershipCard: undefined,
 			};
 
+			console.log('Submitting data:', submissionData);
+			console.log('Faculty value:', submissionData.faculty);
+			console.log('Year value:', submissionData.yearOfStudy);
+
 			const response = await fetch('/api/submit-form', {
 				method: 'POST',
 				headers: {
@@ -48,12 +52,17 @@ export default function ApplyPage() {
 				body: JSON.stringify(submissionData),
 			});
 
-			const result = await response.json();
+			let result;
+			try {
+				result = await response.json();
+			} catch (parseError) {
+				console.error('Failed to parse response:', parseError);
+				throw new Error('Invalid response from server. Please try again.');
+			}
 
 			if (!response.ok) {
 				throw new Error(result.error || 'Submission failed');
 			}
-
 			toast.success(result.message || 'Registration successful!', {
 				id: loadingToast,
 				duration: 5000,
