@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
 		});
 
 		// Set the CSRF cookie for double-submit pattern
-		response.cookies.set('__Host.excess-csrf', token, {
+		response.cookies.set('excess-csrf', token, {
 			sameSite: 'lax',
 			path: '/',
 			secure: process.env.NODE_ENV === 'production',

@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
 
 		// Verify CSRF token with cookie validation
 		const csrfToken = rawData.csrfToken;
-		const csrfCookie = request.cookies.get('__Host.excess-csrf')?.value;
+		const csrfCookie = request.cookies.get('excess-csrf')?.value;
 
 		if (!csrfToken || !csrfCookie) {
 			return NextResponse.json(
