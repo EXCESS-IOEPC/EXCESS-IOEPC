@@ -1,115 +1,11 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import crypto from 'crypto';
-import {
-	checkRateLimit,
-	sanitizeInput,
-	prepareDataForSheets,
-	markUserSubmitted,
-	hasUserSubmitted,
-} from '@/src/lib/formSecurity';
-
-/**
- * Verify CSRF token with HMAC signature
- */
-function verifyCsrfToken(token: string, cookie: string): boolean {
-	if (!token || !cookie || token !== cookie) return false;
-
-	const parts = token.split('.');
-	if (parts.length !== 3) return false;
-
-	const [timestampStr, randomStr, receivedSignature] = parts;
-
-	// Verify timestamp (not expired - 1 hour)
-	const timestamp = parseInt(timestampStr, 36);
-	if (isNaN(timestamp)) return false;
-
-	const now = Date.now();
-	const maxAge = 60 * 60 * 1000; // 1 hour
-	if (now - timestamp > maxAge) return false;
-
-	// Verify HMAC signature
-	const secret =
-		process.env.CSRF_SECRET || 'default-secret-change-in-production';
-	const hmac = crypto.createHmac('sha256', secret);
-	hmac.update(`${timestampStr}.${randomStr}`);
-	const expectedSignature = hmac.digest('hex');
-
-	// Constant-time comparison
-	try {
-		return crypto.timingSafeEqual(
-			Buffer.from(receivedSignature),
-			Buffer.from(expectedSignature)
-		);
-	} catch {
-		return false;
-	}
-}
+import { sanitizeInput, prepareDataForSheets } from '@/src/lib/formSecurity';
 
 export async function POST(request: NextRequest) {
 	try {
-		// Get user identifier for rate limiting and submission tracking
-		const forwarded = request.headers.get('x-forwarded-for');
-		const ip = forwarded ? forwarded.split(',')[0] : 'unknown';
-		const userAgent = request.headers.get('user-agent') || 'unknown';
-		const identifier = `${ip}-${userAgent}`;
-
 		// Parse request body
 		const rawData = await request.json();
-
-		// Verify CSRF token with cookie validation
-		const csrfToken = rawData.csrfToken;
-		const csrfCookie = request.cookies.get('excess-csrf')?.value;
-
-		if (!csrfToken || !csrfCookie) {
-			return NextResponse.json(
-				{
-					success: false,
-					error:
-						'Missing security token. Please refresh the page and try again.',
-				},
-				{ status: 403 }
-			);
-		}
-
-		// Validate CSRF token against cookie
-		if (!verifyCsrfToken(csrfToken, csrfCookie)) {
-			return NextResponse.json(
-				{
-					success: false,
-					error:
-						'Invalid or expired security token. Please refresh the page and try again.',
-				},
-				{ status: 403 }
-			);
-		}
-
-		// Check if user has already submitted
-		const submissionStatus = hasUserSubmitted(identifier);
-		if (submissionStatus.submitted) {
-			return NextResponse.json(
-				{
-					success: false,
-					error:
-						'You have already submitted a response. Please use "Submit Another Response" if you need to submit again.',
-					alreadySubmitted: true,
-					submissionId: submissionStatus.submissionId,
-				},
-				{ status: 409 }
-			);
-		}
-
-		// Check rate limit
-		const rateLimitCheck = checkRateLimit(identifier);
-		if (!rateLimitCheck.allowed) {
-			return NextResponse.json(
-				{
-					success: false,
-					error: `Too many submissions. Please try again in ${rateLimitCheck.remainingTime} minutes.`,
-				},
-				{ status: 429 }
-			);
-		}
 
 		// Sanitize input
 		const sanitizedData = sanitizeInput(rawData);
@@ -124,16 +20,10 @@ export async function POST(request: NextRequest) {
 			);
 		}
 
-		// Generate submission ID and mark user as submitted
-		const submissionId = generateSubmissionId();
-		markUserSubmitted(identifier, submissionId);
-
 		// Send success response
 		return NextResponse.json({
 			success: true,
-			message:
-				'Registration submitted successfully! You will receive a confirmation email shortly.',
-			submissionId,
+			message: 'Registration submitted successfully!',
 		});
 	} catch (error) {
 		if (process.env.NODE_ENV === 'development') {
@@ -148,15 +38,6 @@ export async function POST(request: NextRequest) {
 			{ status: 500 }
 		);
 	}
-}
-
-/**
- * Generate a unique submission ID
- */
-function generateSubmissionId(): string {
-	const timestamp = Date.now().toString(36);
-	const randomStr = Math.random().toString(36).substring(2, 9);
-	return `SUB-${timestamp}-${randomStr}`.toUpperCase();
 }
 
 async function sendToGoogleSheets(

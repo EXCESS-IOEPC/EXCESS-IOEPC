@@ -1,52 +1,10 @@
 /**
  * Form Security Utilities
  *
- * Provides security measures for form submissions:
- * - Rate limiting to prevent spam (in-memory, use Redis in production)
+ * Provides basic security for form submissions:
  * - XSS prevention through input sanitization
- * - CSRF token generation and validation (using Node.js crypto)
- * - Submission tracking to prevent duplicates
- *
- * PRODUCTION NOTE: Replace in-memory Maps with Redis or database
- * for persistent rate limiting and submission tracking across server restarts.
+ * - Data preparation for Google Sheets
  */
-
-// In-memory rate limiter (use Redis in production)
-const submissionTracker = new Map<
-	string,
-	{ count: number; resetTime: number }
->();
-
-const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
-const MAX_SUBMISSIONS_PER_WINDOW = 3; // Maximum 3 submissions per hour per IP/identifier
-
-/**
- * Check if user has exceeded rate limit
- */
-export function checkRateLimit(identifier: string): {
-	allowed: boolean;
-	remainingTime?: number;
-} {
-	const now = Date.now();
-	const userRecord = submissionTracker.get(identifier);
-
-	if (!userRecord || now > userRecord.resetTime) {
-		// Reset or create new record
-		submissionTracker.set(identifier, {
-			count: 1,
-			resetTime: now + RATE_LIMIT_WINDOW,
-		});
-		return { allowed: true };
-	}
-
-	if (userRecord.count >= MAX_SUBMISSIONS_PER_WINDOW) {
-		const remainingTime = Math.ceil((userRecord.resetTime - now) / 1000 / 60); // minutes
-		return { allowed: false, remainingTime };
-	}
-
-	userRecord.count += 1;
-	return { allowed: true };
-}
 
 /**
  * Sanitize user input to prevent XSS attacks
@@ -99,48 +57,6 @@ export function validatePredefinedOptions(
 		return value.every((item) => allowedOptions.includes(item));
 	}
 	return allowedOptions.includes(value);
-}
-
-/**
- * Generate a simple fingerprint for rate limiting
- * In production, combine with IP address from request headers
- */
-export function generateUserFingerprint(): string {
-	// Browser fingerprint (basic - for production use a library like FingerprintJS)
-	const nav = typeof navigator !== 'undefined' ? navigator : null;
-	const screen = typeof window !== 'undefined' ? window.screen : null;
-
-	const fingerprint = [
-		nav?.userAgent || '',
-		nav?.language || '',
-		screen?.colorDepth || '',
-		screen?.width || '',
-		screen?.height || '',
-		new Date().getTimezoneOffset(),
-	].join('|');
-
-	// Simple hash function
-	let hash = 0;
-	for (let i = 0; i < fingerprint.length; i++) {
-		const char = fingerprint.charCodeAt(i);
-		hash = (hash << 5) - hash + char;
-		hash = hash & hash; // Convert to 32-bit integer
-	}
-
-	return Math.abs(hash).toString(36);
-}
-
-/**
- * Validate email domain (optional extra security)
- */
-export function isValidEmailDomain(
-	email: string,
-	allowedDomains?: string[]
-): boolean {
-	if (!allowedDomains || allowedDomains.length === 0) return true;
-
-	const domain = email.split('@')[1]?.toLowerCase();
-	return allowedDomains.some((allowed) => domain === allowed.toLowerCase());
 }
 
 /**
@@ -208,66 +124,6 @@ export function prepareDataForSheets(data: any): any {
 	});
 
 	return prepared;
-}
-
-// Store submitted users (in production, use Redis or database)
-const submittedUsers = new Map<
-	string,
-	{ submittedAt: number; submissionId: string }
->();
-
-/**
- * Generate CSRF token for form protection
- * Uses csrf-csrf library for industry-standard Double Submit Cookie pattern
- */
-export function generateCsrfTokenForClient(): string {
-	// For client-side - generate a simple token that will be validated server-side
-	const timestamp = Date.now().toString(36);
-	const randomBytes = crypto.getRandomValues(new Uint8Array(32));
-	const randomStr = Array.from(randomBytes, (byte) =>
-		byte.toString(16).padStart(2, '0')
-	).join('');
-	return `${timestamp}.${randomStr}`;
-}
-
-/**
- * Mark user as submitted
- */
-export function markUserSubmitted(
-	identifier: string,
-	submissionId: string
-): void {
-	submittedUsers.set(identifier, {
-		submittedAt: Date.now(),
-		submissionId,
-	});
-}
-
-/**
- * Check if user has already submitted
- */
-export function hasUserSubmitted(identifier: string): {
-	submitted: boolean;
-	submissionId?: string;
-	submittedAt?: number;
-} {
-	const submission = submittedUsers.get(identifier);
-	if (!submission) {
-		return { submitted: false };
-	}
-
-	return {
-		submitted: true,
-		submissionId: submission.submissionId,
-		submittedAt: submission.submittedAt,
-	};
-}
-
-/**
- * Clear user submission status (for "submit another response")
- */
-export function clearUserSubmission(identifier: string): void {
-	submittedUsers.delete(identifier);
 }
 
 /**

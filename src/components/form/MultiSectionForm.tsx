@@ -148,6 +148,11 @@ export const MultiSectionForm: React.FC<MultiSectionFormProps> = ({
 					}
 				});
 			}
+			// Reset form fields
+			reset();
+			// Reset form state
+			setCurrentSection(0);
+			setCompletedSections(new Set());
 		} catch (error) {
 			// Error handling is done by parent component
 		} finally {
