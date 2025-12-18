@@ -30,14 +30,12 @@ export default function ApplyPage() {
 			const paymentFile = await processFileList(data.paymentScreenshot as any);
 			const membershipFile = await processFileList(data.membershipCard as any);
 
-			// Prepare submission data
+			// Prepare submission data with correct field names for Google Sheets
 			const submissionData = {
 				...data,
-				paymentFile,
-				membershipFile,
-				// Remove FileList objects
-				paymentScreenshot: undefined,
-				membershipCard: undefined,
+				// Use the same field names as defined in the schema
+				paymentScreenshot: paymentFile,
+				membershipCard: membershipFile,
 			};
 
 			console.log('Submitting data:', submissionData);
