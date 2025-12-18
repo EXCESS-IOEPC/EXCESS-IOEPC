@@ -17,6 +17,11 @@ const nextConfig = {
                 },
             };
         }
+        
+        // Fix webpack cache errors by disabling filesystem cache in development
+        // This prevents ENOENT errors during cache file renames
+        config.cache = false;
+        
         return config;
     },
 };
