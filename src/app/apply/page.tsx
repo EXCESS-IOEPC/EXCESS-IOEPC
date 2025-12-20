@@ -15,7 +15,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function ApplyPage() {
 	// Toggle this to enable/disable event registration
-	const EVENTS_ACTIVE = true;
+	const EVENTS_ACTIVE = false;
 
 	const [submitStatus, setSubmitStatus] = useState<{
 		type: 'success' | 'error' | null;
