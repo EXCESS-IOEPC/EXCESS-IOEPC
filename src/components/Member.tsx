@@ -62,44 +62,21 @@ const data = [
 		linkedLink: 'https://www.linkedin.com/in/kaji-ram-karki-69524a1a',
 	},
 	{
-		name: 'Er. Manoj Kumar Guragai',
+		name: 'Er. Manoj Kumar Guragain',
 		img: '/images/member/manojsir.jpg',
 		review: 'Head Of Department / Mentor',
 		fbLink: 'https://www.facebook.com/manojkumar.guragai',
 	},
 	{
-		name: 'Safal Raj Basnet',
-		img: '/images/member/Safal.jpg',
-		review: 'President',
-		fbLink: 'https://www.facebook.com/share/12LdnbSJ2yT/',
-		instaLink: 'https://www.instagram.com/safalrajbasnet/',
-		gmailLink: 'mailto: safalbasnet12@gmail.com',
-		linkedLink:
-			'https://www.linkedin.com/in/safal-raj-basnet-730aa9281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-	},
-	{
-		name: 'Lokesh Kumar Mandal',
-		img: '/images/member/Lokesh.jpg',
-		review: 'Advisor',
-		gmailLink: 'mailto: 078bei017@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/lalit.mandal.31924',
-		instaLink:
-			'https://www.instagram.com/lalitmandal27?igsh=MXd3d3J3OW1ydG1qag==',
-	},
-	{
-		name: 'Aman Kumar Sah',
-		img: '/images/member/Aman.jpeg',
-		review: 'Vice-President',
-		gmailLink: 'mailto: amansah112.as9@gmail.com',
-		fbLink: 'https://www.facebook.com/share/19PkNC4UJp/',
-		websiteLink: 'https://sahaman.com.np',
-		linkedLink:
-			'https://www.linkedin.com/in/aman-kumar-sah-20204128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+		name: 'Er. Dharti Raj Shah',
+		img: '/images/member/dhartisir.png',
+		review: 'Deputy Head Of Department / Mentor',
+		fbLink: 'https://www.facebook.com/dhartiraj',
 	},
 	{
 		name: 'Bijaya Giri',
 		img: '/images/member/Bijaya.jpg',
-		review: 'Secretary',
+		review: 'President',
 		gmailLink: 'mailto: 079bei013@ioepc.edu.np',
 		fbLink: 'https://www.facebook.com/bijaya.giribro',
 		linkedLink: 'https://www.linkedin.com/in/bijaya-giri-927266251',
@@ -107,7 +84,7 @@ const data = [
 	{
 		name: 'Suwarna Pyakurel',
 		img: '/images/member/suwarna.jpeg',
-		review: 'PR and Outreach Lead',
+		review: 'Advisor',
 		gmailLink: 'mailto:Suwarna.079bei@ioepc.edu.np',
 		fbLink: 'https://www.facebook.com/pyakurel.suwarna',
 		instaLink: ' https://www.instagram.com/pyakurel.suwarna/',
@@ -116,30 +93,38 @@ const data = [
 		websiteLink: 'https://www.suwarnapyakurel.com.np/',
 	},
 	{
+		name: 'Sneha Karna',
+		img: '/images/member/Sneha.png',
+		review: 'Vice President',
+		gmailLink: 'mailto: 080bei042@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/sneha.karna.633797',
+		instaLink: 'https://www.instagram.com/snehahahhaa90/',
+		linkedLink: 'https://www.linkedin.com/in/sneha-karna-9119a82a5/',
+	},
+	{
 		name: 'Abhishek Niraula',
 		img: '/images/member/Abhishek.jpg',
-		review: 'Vice-Secretary',
+		review: 'Secretary',
 		gmailLink: 'mailto: 080bei004@ioepc.edu.np',
 		fbLink: 'https://www.facebook.com/abhisek.niraula.2025',
 		instaLink: 'https://www.instagram.com/niraula_abhi07/',
-		linkedLink: 'https://www.linkedin.com/in/abhisek-niraula-a92058224/',
+		linkedLink: 'https://www.linkedin.com/in/abhishekniraula/',
 		githubLink: 'https://github.com/AbhishekNiraula',
 		websiteLink: 'https://www.abhishekniraula2004.com.np/',
 	},
 	{
-		name: 'Nandini karn',
-		img: '/images/member/Nandini.jpg',
-		review: 'Treasurer',
-		gmailLink: 'mailto: 080bei024@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/share/1GHiBPux4R/',
+		name: 'Bibhav Acharya',
+		img: '/images/member/Bibhav.jpg',
+		review: 'Vice Secretary',
+		gmailLink: 'mailto: bibhavacharya9@gmail.com',
+		linkedLink: 'https://www.linkedin.com/in/bibhav-acharya-b71815320',
 	},
 	{
-		name: 'Rohan Kumar Jha',
-		img: '/images/member/Rohan.webp',
-		review: 'Project Manager',
-		gmailLink: 'mailto: 079bei033@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/rohan.jha.50411',
-		githubLink: 'https://github.com/Qwax1',
+		name: 'Shitala Adhikari',
+		img: '/images/member/Shitala.jpg',
+		review: 'Treasurer',
+		gmailLink: 'mailto: 081bei030@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/shitala.adhikari',
 	},
 	{
 		name: 'Kiran Upadhyay',
@@ -149,63 +134,60 @@ const data = [
 		fbLink: 'https://www.facebook.com/upadhyay.kiran.7',
 	},
 	{
-		name: 'Bhagwati Prasad Thakur',
-		img: '/images/member/Bhagwati.JPG',
+		name: 'Saugat Rijal',
+		img: '/images/member/Saugat.jpg',
 		review: 'Project Manager',
-		gmailLink: 'mailto: 080bei010@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/xplorerh',
-		githubLink: 'https://www.github.com/xplorerh',
-		instaLink: 'https://www.instagram.com/xplorerh/',
-		linkedLink: 'https://www.linkedin.com/in/xplorerh',
+		gmailLink: 'mailto: 081bei028@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/saughat.rizal',
 	},
 	{
-		name: 'Sandeep Pandey',
-		img: '/images/member/Sandeep.jpeg',
-		review: 'Graphics Designer',
-		gmailLink: 'mailto: 081bei026@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/sandeep.pandey.89008',
-		instaLink: 'https://www.instagram.com/sndp.pandey.30/',
-		linkedLink: 'https://www.linkedin.com/in/sandeep-pandey-157624282/',
+		name: 'Sandesh Shrestha',
+		img: '/images/member/Sandesh.jpg',
+		review: 'Project Manager',
+		gmailLink: 'mailto: 081bei027@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/sandesh.shrestha.612511',
 	},
 	{
-		name: 'Soniya Rajbanshi',
-		img: '/images/member/Soniya.jpg',
+		name: 'Aayush Gautam',
+		img: '/images/member/Aayush.jpg',
 		review: 'Executive Member',
-		gmailLink: 'mailto: 079bei039@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/share/19EnQeUHAK/',
+		gmailLink: 'mailto: 079bei003@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/share/1H8UreYWWF/',
 	},
 	{
-		name: 'Sneha Karna',
-		img: '/images/member/Sneha.jpg',
+		name: 'Prashan Chenta Rai',
+		img: '/images/member/Prashan.png',
 		review: 'Executive Member',
-		gmailLink: 'mailto: 080bei042@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/sneha.karna.633797',
-		instaLink: 'https://www.instagram.com/snehahahhaa90/',
-		linkedLink: 'https://www.linkedin.com/in/sneha-karna-9119a82a5/',
+		gmailLink: 'mailto: 080bei030@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/Prashan.Raiii',
+		linkedLink: 'https://www.linkedin.com/in/prashanrai/',
 	},
 	{
-		name: 'Ritesh Bogati',
-		img: '/images/member/Ritesh.jpg',
+		name: 'Rabiya Ansari',
+		img: '/images/member/Rabiya.png',
 		review: 'Executive Member',
-		gmailLink: 'mailto: 080bei034@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/ritesh.bogati.559579?mibextid=ZbWKwL',
-		instaLink: 'https://www.instagram.com/ritesh_bogati?igsh=bmNqZmZ3NXFta3ps',
-		linkedLink: 'https://www.linkedin.com/in/ritesh-bogati-a423a32b4',
-		githubLink: 'https://github.com/R-Bogati',
+		gmailLink: 'mailto: 081bei023@ioepc.edu.np',
+		fbLink: 'https://www.facebook.com/share/1au3KXijPN/',
 	},
 	{
-		name: 'Pravakar Jung Thapa',
-		img: '/images/member/Pravakar.jpg',
+		name: 'Nitik Rauniyar',
+		img: '/images/member/Nitik.webp',
 		review: 'Executive Member',
-		gmailLink: 'mailto: 081bei022@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/share/1EPaBt5Zn1/',
+		gmailLink: 'mailto: 081bei020@ioepc.edu.np',
+		websiteLink: 'https://nitikrauniyar.com.np/',
 	},
 	{
-		name: 'Diksha Jha',
-		img: '/images/member/Diksha.jpg',
+		name: 'Matin Niroula',
+		img: '/images/member/Matin.jpg',
 		review: 'Executive Member',
-		gmailLink: 'mailto: 081bei013@ioepc.edu.np',
-		fbLink: 'https://www.facebook.com/diksha.jha.942977/',
+		gmailLink: 'mailto: martinniraula2@gmail.com',
+		linkedLink: 'http://www.linkedin.com/in/matin-niroula',
+	},
+	{
+		name: 'Reeya Pokharel',
+		img: '/images/member/Reeya.png',
+		review: 'Executive Member',
+		gmailLink: 'mailto: reeyyaapokharel@gmail.com',
 	},
 ];
 
@@ -275,9 +257,9 @@ const Card = ({ d }: { d: MemberData }) => (
 );
 
 const Member = () => {
-	const first = data.slice(0, 2);
-	const second = data.slice(2, 5);
-	const third = data.slice(5);
+	const first = data.slice(0, 3);
+	const second = data.slice(3, 6);
+	const third = data.slice(6);
 	return (
 		<div className="py-10 members">
 			<div className=" container m-auto text-center">
@@ -289,7 +271,7 @@ const Member = () => {
 						EXCESS 12&apos;th Executive Committee
 					</h2>
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-2 container gap-9 mt-8">
+				<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 container gap-9 mt-8">
 					{first.map((d, idx) => (
 						<Card key={idx} d={d} />
 					))}

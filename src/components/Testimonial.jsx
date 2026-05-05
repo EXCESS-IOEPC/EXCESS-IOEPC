@@ -28,6 +28,13 @@ export default function Testimonial() {
         {
 			"user_id": 0,
 			"current": true,
+			"post": "EXCESS President 13'th Committee",
+			"name": "Bijaya Giri",
+			"body": "EXCESS is more than just a technical society—it is a community where ideas turn into actions. It creates a space for learning, sharing, and growing together. Through workshops,trainings, projects, and teamwork, we explore the world of Electronics, Communication and Information with curiosity and build skills that will stay with us for a lifetime.",
+			"profile": "/images/committee/2026-2027/Bijaya.jpg",
+		},
+		{
+			"user_id": 0,
 			"post": "EXCESS President 12'th Committee",
 			"name": "Safal Raj Basnet",
 			"body": "EXCESS is more than just a technical society—it is a community where ideas turn into actions. It creates a space for learning, sharing, and growing together. Through workshops,trainings, projects, and teamwork, we explore the world of Electronics, Communication and Information with curiosity and build skills that will stay with us for a lifetime.",

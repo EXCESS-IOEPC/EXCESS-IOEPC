@@ -144,13 +144,13 @@ const About = ({ isLoading }: { isLoading: boolean }) => {
 									className="mt-1 text-sm text-offBlack"
 									variants={textVariants}
 									transition={{ duration: 0.6, delay: 0.2 }}>
-									Safal Raj Basnet (President): +977 9865199641
+									Bijaya Giri (President): +977 9811024286
 								</motion.p>
 								<motion.p
 									className="mt-1 text-sm text-offBlack"
 									variants={textVariants}
 									transition={{ duration: 0.6, delay: 0.2 }}>
-									Aman Sah (Vice-President): +977 9820393041
+									Sneha Karna (Vice President): +977 9840171222
 								</motion.p>
 							</motion.div>
 						</motion.div>
