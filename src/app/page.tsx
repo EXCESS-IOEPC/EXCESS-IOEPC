@@ -7,7 +7,6 @@ import Testimonial from '@/src/components/Testimonial';
 import About from '@/src/components/About';
 import Navbar from '@/src/components/Navbar';
 import Member from '@/src/components/Member';
-import TarangaModal from '@/src/components/TarangaModal';
 import { useRef } from 'react';
 import Progressbar from '@/src/components/ProgressBar';
 import React, { useState, useEffect } from 'react';
@@ -52,7 +51,6 @@ export default function Home() {
 	return (
 		<main ref={mainRef}>
 			{isLoading ? <Loading /> : ''}
-			<TarangaModal />
 			<Progressbar target={mainRef} />
 			<section id="header">
 				<HeaderTop />

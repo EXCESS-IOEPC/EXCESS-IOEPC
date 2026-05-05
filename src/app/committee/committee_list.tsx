@@ -2,13 +2,105 @@ import { CommitteeListType } from './committee_list_type';
 
 export const CommitteeList: CommitteeListType[] = [
 	{
-		year: '2025-2026',
+		year: '2026-2027',
 		currentCommittee: true,
+		committeeNumber: "EXCESS 13'th Committee",
+		committeeMembers: [
+			{
+				photo: 'manojsir.jpg',
+				name: 'Er. Manoj Kumar Guragain',
+				position: 'Mentor',
+			},
+			{
+				photo: 'dhartisir.png',
+				name: 'Er. Dharti Raj Shah',
+				position: 'Mentor',
+			},
+			{
+				photo: 'Bijaya.jpg',
+				name: 'Bijaya Giri',
+				position: 'President',
+			},
+			{
+				photo: 'suwarna.jpeg',
+				name: 'Suwarna Pyakurel',
+				position: 'Advisor',
+			},
+			{
+				photo: 'Sneha.png',
+				name: 'Sneha Karna',
+				position: 'Vice President',
+			},
+			{
+				photo: 'Abhishek.jpg',
+				name: 'Abhishek Niraula',
+				position: 'Secretary',
+			},
+			{
+				photo: 'Bibhav.jpg',
+				name: 'Bibhav Acharya',
+				position: 'Vice Secretary',
+			},
+			{
+				photo: 'Shitala.jpg',
+				name: 'Shitala Adhikari',
+				position: 'Treasurer',
+			},
+			{
+				photo: 'Kiran.jpg',
+				name: 'Kiran Upadhyay',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Saugat.jpg',
+				name: 'Saugat Rijal',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Sandesh.jpg',
+				name: 'Sandesh Shrestha',
+				position: 'Project Manager',
+			},
+			{
+				photo: 'Aayush.jpg',
+				name: 'Aayush Gautam',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Prashan.png',
+				name: 'Prashan Chenta Rai',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Rabiya.png',
+				name: 'Rabiya Ansari',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Nitik.webp',
+				name: 'Nitik Rauniyar',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Matin.jpg',
+				name: 'Matin Niroula',
+				position: 'Executive Member',
+			},
+			{
+				photo: 'Reeya.png',
+				name: 'Reeya Pokharel',
+				position: 'Executive Member',
+			},
+		],
+	},
+	{
+		year: '2025-2026',
+		currentCommittee: false,
 		committeeNumber: "EXCESS 12'th Committee",
 		committeeMembers: [
 			{
 				photo: 'manojsir.jpg',
-				name: 'Er. Manoj Kumar Guragai',
+				name: 'Er. Manoj Kumar Guragain',
 				position: 'Mentor',
 			},
 			{
@@ -180,7 +272,7 @@ export const CommitteeList: CommitteeListType[] = [
 		committeeMembers: [
 			{
 				photo: 'manojsir.jpg',
-				name: 'Er. Manoj Kumar Guragai',
+				name: 'Er. Manoj Kumar Guragain',
 				position: 'Mentor',
 			},
 			{
