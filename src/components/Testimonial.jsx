@@ -30,7 +30,7 @@ export default function Testimonial() {
 			"current": true,
 			"post": "EXCESS President 13'th Committee",
 			"name": "Bijaya Giri",
-			"body": "EXCESS is more than just a technical society—it is a community where ideas turn into actions. It creates a space for learning, sharing, and growing together. Through workshops,trainings, projects, and teamwork, we explore the world of Electronics, Communication and Information with curiosity and build skills that will stay with us for a lifetime.",
+      		"body": "As the President of EXCESS, my focus has always been on promoting research, technical training, seminars, and skill-development activities among students. The successful completion of programs like CS50 and other interactive learning sessions reflects our commitment to building a strong technical and innovative community. We look forward to organizing many more opportunities that encourage practical learning, collaboration, and growth in the fields of technology and engineering.",
 			"profile": "/images/committee/2026-2027/Bijaya.jpg",
 		},
 		{
@@ -130,7 +130,7 @@ export default function Testimonial() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl">
-              <span className="highlight"> EXCESS</span> President&apos;s
+              <span className="highlight"> EXCESS </span> President&apos;s
               Reflections
             </h2>
           </motion.div>

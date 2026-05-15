@@ -19,6 +19,26 @@ interface member {
 	photo?: string;
 }
 
+const getMemberInitials = (name: string) => {
+	const words = name
+		.split(/\s+/)
+		.map((word) => word.replace(/[^a-zA-Z0-9]/g, ''))
+		.filter(Boolean)
+		.filter(
+			(word) => !['er', 'mr', 'mrs', 'ms', 'dr'].includes(word.toLowerCase()),
+		);
+
+	if (words.length === 0) {
+		return '?';
+	}
+
+	if (words.length === 1) {
+		return words[0].slice(0, 2).toUpperCase();
+	}
+
+	return `${words[0][0]}${words[words.length - 1][0]}`.toUpperCase();
+};
+
 const MemberCard = ({
 	member,
 	activeIndex,
@@ -42,9 +62,9 @@ const MemberCard = ({
 					/>
 				</div>
 			) : (
-				<div className="w-28 h-28 rounded-full bg-gray-200 flex items-center justify-center mb-3">
-					<span className="text-gray-500 text-3xl font-bold">
-						{member.name.charAt(0)}
+				<div className="w-28 h-28 rounded-full bg-primaryBlue flex items-center justify-center mb-3 shadow-md">
+					<span className="text-white text-3xl font-bold">
+						{getMemberInitials(member.name)}
 					</span>
 				</div>
 			)}
