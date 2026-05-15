@@ -1,13 +1,13 @@
-'use client'; // For client side vanilla js loading;
+'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { SocialIcon } from 'react-social-icons';
 
 export default function HeaderTop() {
 	return (
 		<>
-			<div className="header-top w-full h-11 flex flex-direction-row justify-between px-2 sm:px-9 bg-offBlue">
+			<div className="fixed top-0 left-0 right-0 z-50 header-top w-full h-11 flex flex-direction-row justify-between px-2 sm:px-9 bg-offBlue">
 				<div className="logoContainer flex flex-direction-row items-center py-2 gap-1 sm:gap-2">
 					<Image
 						src="/images/icon.png"
@@ -16,7 +16,7 @@ export default function HeaderTop() {
 						height={35}
 						alt="EXCESS ICON Image"
 					/>
-					<h1 className="font-extrabold text-primaryBlue text-l">
+					<h1 className="font-extrabold text-black text-l">
 						{' '}
 						<a href="/">EXCESS NEPAL</a>
 					</h1>
@@ -39,6 +39,7 @@ export default function HeaderTop() {
 					))}
 				</div>
 			</div>
+			<div aria-hidden="true" className="h-11 w-full" />
 		</>
 	);
 }
