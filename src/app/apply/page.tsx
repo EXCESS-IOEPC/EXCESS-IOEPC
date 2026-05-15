@@ -10,12 +10,14 @@ import {
 import Navbar from '@/src/components/Navbar';
 import toast, { Toaster } from 'react-hot-toast';
 import { processFileList } from '@/src/lib/fileUtils';
+import { prepareDataForSheets } from '@/src/lib/formSecurity';
 import '@/src/app/form-mobile.css';
 import Link from 'next/link';
 import Image from 'next/image';
 export default function ApplyPage() {
 	// Toggle this to enable/disable event registration
 	const EVENTS_ACTIVE = false;
+	const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
 
 	const [submitStatus, setSubmitStatus] = useState<{
 		type: 'success' | 'error' | null;
@@ -37,17 +39,20 @@ export default function ApplyPage() {
 				paymentScreenshot: paymentFile,
 				membershipCard: membershipFile,
 			};
+			const sheetsData = prepareDataForSheets(submissionData);
 
-			console.log('Submitting data:', submissionData);
-			console.log('Faculty value:', submissionData.faculty);
-			console.log('Year value:', submissionData.yearOfStudy);
+			if (!GOOGLE_SCRIPT_URL) {
+				throw new Error(
+					'Form submission is not configured. Please contact support.',
+				);
+			}
 
-			const response = await fetch('/api/submit-form', {
+			const response = await fetch(GOOGLE_SCRIPT_URL, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify(submissionData),
+				body: JSON.stringify(sheetsData),
 			});
 
 			let result;
